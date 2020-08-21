@@ -1,0 +1,34 @@
+/* output.h */
+
+void print_params(FILE *fp);
+void print_opfiles(FILE *fp);
+void start_output();
+void step_output(int t);
+void run_output();
+void fprint_pop(FILE *fp);
+void fprint_threshrange(FILE *fp);
+void fprint_stats(FILE *fp);
+void fprint_stepthresh(FILE *fp, int t);
+void fprint_stepsummary(FILE *fp, int t);
+void fprint_stepdemand(FILE *fp, int t);
+void fprint_steptargetpath(FILE *fp, int t);
+void fprint_steptrackerpath(FILE *fp, int t);
+void fprint_stepnorthsouth(FILE *fp, int t);
+void fprint_stepeastwest(FILE *fp, int t);
+void fprint_stepdistance(FILE *fp, int t);
+void fprint_finalstats(FILE *fp);
+void fprint_stepagentaction(FILE *fp, int t);
+void fprint_stepagentactionwtime(FILE *fp, int t);
+void fprint_stepagentactionxyz(FILE *fp, int t);
+void fprint_finalagent(FILE *fp);
+void fprint_agentthresh(FILE *fp, int n);
+void fprint_intensities(FILE *fp);
+void fprint_stephistnorth(FILE *fp, int timestep);
+void fprint_stephistsouth(FILE *fp, int timestep);
+void fprint_stephisteast(FILE *fp, int timestep);
+void fprint_stephistwest(FILE *fp, int timestep);
+void fprint_intensityranges(FILE *fp);
+void fprint_stepthreshnorth(FILE *fp, int t);
+void fprint_stepthreshsouth(FILE *fp, int t);
+void fprint_stepthresheast(FILE *fp, int t);
+void fprint_stepthreshwest(FILE *fp, int t);

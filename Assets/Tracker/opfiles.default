@@ -1,0 +1,53 @@
+28
+# random always has to be first.  Rest of order doesn't matter
+random		1
+params		1
+# initial population
+initpop		1
+# final population
+finalpop	1
+# gnuplot files
+gnu		1
+# summary of relevant data from each timestep
+stepsummary	1
+# demand and delivery for each task in each timestep
+stepdemand	1
+# track both tracker and target paths in north and south directions
+stepnorthsouth	1
+# track both tracker and target paths in east and west directions
+stepeastwest	1
+# what action each agent took in each timestep
+# one row for each timestep, all agent values printed in row
+# 0 = none, 1 = north, 2 = east, 3 = south, 4 = west
+stepagentaction	1
+# same as above with timestep added in column 1 of each row
+stepagentactionwtime	1
+# what action each agent took in each timestep
+# in x,y,z format for plotting using splot in gnuplot
+stepagentactionxyz	1
+# final statistics at end of run, including:
+# final distances travelled by target and tracker, avg difference per timestep
+finalstats	1
+# how much time each agent spent on each task
+finalagent	1
+# target path
+steptargetpath	0
+# tracker path
+steptrackerpath	0
+# agent thresholds each step
+stepthresh	0
+stepthreshnorth	0
+stepthreshsouth	0
+stepthresheast	0
+stepthreshwest	0
+# agent threshold ranges
+threshrange	0
+# agent average intensities
+finalintensity   1
+# intensity distributions
+stephistnorth   1
+stephistsouth   1
+stephisteast    1
+stephistwest    1
+# intensity ranges
+intensityranges 1
