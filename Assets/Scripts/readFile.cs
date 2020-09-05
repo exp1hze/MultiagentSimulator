@@ -13,18 +13,20 @@ public class readFile : MonoBehaviour
     {
         _params = new Hashtable();
         readPath = Application.dataPath + "/Tracker/params";
-        Read(readPath);
+        ReadParams(readPath);
+        this.gameObject.GetComponent<writeFile>().WriteParams(readPath);
     }
 
-    public void Read(string path)
+    public void ReadParams(string path)
     {
         StreamReader sr = new StreamReader(path, Encoding.Default);
         string line;
-        while ((line = sr.ReadLine()) != null)
+        while ((line = sr.ReadLine()) != null)          //Read from top to bottom, then put variable name as key, value as value to a hashtable.
         {
             BuildParams(line);
         }
         Debug.Log("Rerun : " + _params["Rerun"]);
+        sr.Close();
     }
 
     public void BuildParams(string line)
