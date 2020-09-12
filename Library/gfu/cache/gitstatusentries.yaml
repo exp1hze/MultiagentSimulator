@@ -13,42 +13,102 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cacheType: 6
-  lastUpdatedAtString: 2020-09-12T14:41:40.608-05:00
-  initializedAtString: 2020-08-21T15:03:51.245-05:00
+  lastUpdatedAtString: 2020-09-12T14:48:16.133-05:00
+  initializedAtString: 2020-09-12T14:24:21.588-05:00
   entries:
+  - path: Assembly-CSharp.csproj
+    fullPath: /Users/lijiashu/project_1/Assembly-CSharp.csproj
+    projectPath: Assembly-CSharp.csproj
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Assembly-CSharp-Editor-firstpass.csproj
+    fullPath: /Users/lijiashu/project_1/Assembly-CSharp-Editor-firstpass.csproj
+    projectPath: Assembly-CSharp-Editor-firstpass.csproj
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Assets/Prefabs.meta
+    fullPath: /Users/lijiashu/project_1/Assets/Prefabs.meta
+    projectPath: Assets/Prefabs.meta
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Assets/Scripts/NewBehaviourScript.cs
+    fullPath: /Users/lijiashu/project_1/Assets/Scripts/NewBehaviourScript.cs
+    projectPath: Assets/Scripts/NewBehaviourScript.cs
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Assets/Scripts/NewBehaviourScript.cs.meta
+    fullPath: /Users/lijiashu/project_1/Assets/Scripts/NewBehaviourScript.cs.meta
+    projectPath: Assets/Scripts/NewBehaviourScript.cs.meta
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Library/Artifacts/6c/6ca06b3f4ea7eeea9defb1fef68a259d
+    fullPath: /Users/lijiashu/project_1/Library/Artifacts/6c/6ca06b3f4ea7eeea9defb1fef68a259d
+    projectPath: Library/Artifacts/6c/6ca06b3f4ea7eeea9defb1fef68a259d
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Library/Artifacts/99/998e2486d28fac1d63cfd26b2edea6cf
+    fullPath: /Users/lijiashu/project_1/Library/Artifacts/99/998e2486d28fac1d63cfd26b2edea6cf
+    projectPath: Library/Artifacts/99/998e2486d28fac1d63cfd26b2edea6cf
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Library/Artifacts/d2/d28d29f2e919df2f933c7eabd667171a
+    fullPath: /Users/lijiashu/project_1/Library/Artifacts/d2/d28d29f2e919df2f933c7eabd667171a
+    projectPath: Library/Artifacts/d2/d28d29f2e919df2f933c7eabd667171a
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
   - path: Library/gfu/cache/branches.yaml
-    fullPath: /Users/mirageele/cpp test/Library/gfu/cache/branches.yaml
+    fullPath: /Users/lijiashu/project_1/Library/gfu/cache/branches.yaml
     projectPath: Library/gfu/cache/branches.yaml
     originalPath: 
     indexStatus: 0
     workTreeStatus: 3
   - path: Library/gfu/cache/gitlocks.yaml
-    fullPath: /Users/mirageele/cpp test/Library/gfu/cache/gitlocks.yaml
+    fullPath: /Users/lijiashu/project_1/Library/gfu/cache/gitlocks.yaml
     projectPath: Library/gfu/cache/gitlocks.yaml
     originalPath: 
     indexStatus: 0
     workTreeStatus: 3
   - path: Library/gfu/cache/gitlog.yaml
-    fullPath: /Users/mirageele/cpp test/Library/gfu/cache/gitlog.yaml
+    fullPath: /Users/lijiashu/project_1/Library/gfu/cache/gitlog.yaml
     projectPath: Library/gfu/cache/gitlog.yaml
     originalPath: 
     indexStatus: 0
     workTreeStatus: 3
   - path: Library/gfu/cache/gitstatusentries.yaml
-    fullPath: /Users/mirageele/cpp test/Library/gfu/cache/gitstatusentries.yaml
+    fullPath: /Users/lijiashu/project_1/Library/gfu/cache/gitstatusentries.yaml
     projectPath: Library/gfu/cache/gitstatusentries.yaml
     originalPath: 
     indexStatus: 0
     workTreeStatus: 3
   - path: Library/gfu/cache/gittrackingstatus.yaml
-    fullPath: /Users/mirageele/cpp test/Library/gfu/cache/gittrackingstatus.yaml
+    fullPath: /Users/lijiashu/project_1/Library/gfu/cache/gittrackingstatus.yaml
     projectPath: Library/gfu/cache/gittrackingstatus.yaml
     originalPath: 
     indexStatus: 0
     workTreeStatus: 3
-  - path: Library/gfu/cache/repoinfo.yaml
-    fullPath: /Users/mirageele/cpp test/Library/gfu/cache/repoinfo.yaml
-    projectPath: Library/gfu/cache/repoinfo.yaml
+  - path: Library/ScriptAssemblies/BuiltinAssemblies.stamp
+    fullPath: /Users/lijiashu/project_1/Library/ScriptAssemblies/BuiltinAssemblies.stamp
+    projectPath: Library/ScriptAssemblies/BuiltinAssemblies.stamp
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 5
+  - path: project_1.sln
+    fullPath: /Users/lijiashu/project_1/project_1.sln
+    projectPath: project_1.sln
     originalPath: 
     indexStatus: 0
     workTreeStatus: 3
+  - path: Temp/UnityTempFile-388709426c6c043d89886a1a45b2892f
+    fullPath: /Users/lijiashu/project_1/Temp/UnityTempFile-388709426c6c043d89886a1a45b2892f
+    projectPath: Temp/UnityTempFile-388709426c6c043d89886a1a45b2892f
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
