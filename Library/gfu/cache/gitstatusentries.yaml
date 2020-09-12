@@ -13,102 +13,120 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cacheType: 6
-  lastUpdatedAtString: 2020-09-12T14:48:16.133-05:00
-  initializedAtString: 2020-09-12T14:24:21.588-05:00
+  lastUpdatedAtString: 2020-09-12T15:32:12.233-05:00
+  initializedAtString: 2020-09-12T15:13:23.513-05:00
   entries:
-  - path: Assembly-CSharp.csproj
-    fullPath: /Users/lijiashu/project_1/Assembly-CSharp.csproj
-    projectPath: Assembly-CSharp.csproj
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 3
-  - path: Assembly-CSharp-Editor-firstpass.csproj
-    fullPath: /Users/lijiashu/project_1/Assembly-CSharp-Editor-firstpass.csproj
-    projectPath: Assembly-CSharp-Editor-firstpass.csproj
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Assets/Prefabs.meta
-    fullPath: /Users/lijiashu/project_1/Assets/Prefabs.meta
-    projectPath: Assets/Prefabs.meta
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 3
   - path: Assets/Scripts/NewBehaviourScript.cs
-    fullPath: /Users/lijiashu/project_1/Assets/Scripts/NewBehaviourScript.cs
+    fullPath: /Users/mirageele/capstone/Assets/Scripts/NewBehaviourScript.cs
     projectPath: Assets/Scripts/NewBehaviourScript.cs
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
   - path: Assets/Scripts/NewBehaviourScript.cs.meta
-    fullPath: /Users/lijiashu/project_1/Assets/Scripts/NewBehaviourScript.cs.meta
+    fullPath: /Users/mirageele/capstone/Assets/Scripts/NewBehaviourScript.cs.meta
     projectPath: Assets/Scripts/NewBehaviourScript.cs.meta
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
-  - path: Library/Artifacts/6c/6ca06b3f4ea7eeea9defb1fef68a259d
-    fullPath: /Users/lijiashu/project_1/Library/Artifacts/6c/6ca06b3f4ea7eeea9defb1fef68a259d
-    projectPath: Library/Artifacts/6c/6ca06b3f4ea7eeea9defb1fef68a259d
+  - path: Library/Artifacts/32/328fd7c2d02c1d1e9b4abeb651882cef
+    fullPath: /Users/mirageele/capstone/Library/Artifacts/32/328fd7c2d02c1d1e9b4abeb651882cef
+    projectPath: Library/Artifacts/32/328fd7c2d02c1d1e9b4abeb651882cef
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
-  - path: Library/Artifacts/99/998e2486d28fac1d63cfd26b2edea6cf
-    fullPath: /Users/lijiashu/project_1/Library/Artifacts/99/998e2486d28fac1d63cfd26b2edea6cf
-    projectPath: Library/Artifacts/99/998e2486d28fac1d63cfd26b2edea6cf
+  - path: Library/Artifacts/7e/7e76d93cb3169cf6d3b93c823ef10605
+    fullPath: /Users/mirageele/capstone/Library/Artifacts/7e/7e76d93cb3169cf6d3b93c823ef10605
+    projectPath: Library/Artifacts/7e/7e76d93cb3169cf6d3b93c823ef10605
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
-  - path: Library/Artifacts/d2/d28d29f2e919df2f933c7eabd667171a
-    fullPath: /Users/lijiashu/project_1/Library/Artifacts/d2/d28d29f2e919df2f933c7eabd667171a
-    projectPath: Library/Artifacts/d2/d28d29f2e919df2f933c7eabd667171a
+  - path: Library/Artifacts/c4/c49f1ff25505f4b09e3919104756e228
+    fullPath: /Users/mirageele/capstone/Library/Artifacts/c4/c49f1ff25505f4b09e3919104756e228
+    projectPath: Library/Artifacts/c4/c49f1ff25505f4b09e3919104756e228
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
-  - path: Library/gfu/cache/branches.yaml
-    fullPath: /Users/lijiashu/project_1/Library/gfu/cache/branches.yaml
-    projectPath: Library/gfu/cache/branches.yaml
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 3
   - path: Library/gfu/cache/gitlocks.yaml
-    fullPath: /Users/lijiashu/project_1/Library/gfu/cache/gitlocks.yaml
+    fullPath: /Users/mirageele/capstone/Library/gfu/cache/gitlocks.yaml
     projectPath: Library/gfu/cache/gitlocks.yaml
     originalPath: 
     indexStatus: 0
     workTreeStatus: 3
-  - path: Library/gfu/cache/gitlog.yaml
-    fullPath: /Users/lijiashu/project_1/Library/gfu/cache/gitlog.yaml
-    projectPath: Library/gfu/cache/gitlog.yaml
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 3
   - path: Library/gfu/cache/gitstatusentries.yaml
-    fullPath: /Users/lijiashu/project_1/Library/gfu/cache/gitstatusentries.yaml
+    fullPath: /Users/mirageele/capstone/Library/gfu/cache/gitstatusentries.yaml
     projectPath: Library/gfu/cache/gitstatusentries.yaml
     originalPath: 
     indexStatus: 0
     workTreeStatus: 3
   - path: Library/gfu/cache/gittrackingstatus.yaml
-    fullPath: /Users/lijiashu/project_1/Library/gfu/cache/gittrackingstatus.yaml
+    fullPath: /Users/mirageele/capstone/Library/gfu/cache/gittrackingstatus.yaml
     projectPath: Library/gfu/cache/gittrackingstatus.yaml
     originalPath: 
     indexStatus: 0
     workTreeStatus: 3
+  - path: Library/ScriptAssemblies/Assembly-CSharp.dll
+    fullPath: /Users/mirageele/capstone/Library/ScriptAssemblies/Assembly-CSharp.dll
+    projectPath: Library/ScriptAssemblies/Assembly-CSharp.dll
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Library/ScriptAssemblies/Assembly-CSharp.pdb
+    fullPath: /Users/mirageele/capstone/Library/ScriptAssemblies/Assembly-CSharp.pdb
+    projectPath: Library/ScriptAssemblies/Assembly-CSharp.pdb
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
   - path: Library/ScriptAssemblies/BuiltinAssemblies.stamp
-    fullPath: /Users/lijiashu/project_1/Library/ScriptAssemblies/BuiltinAssemblies.stamp
+    fullPath: /Users/mirageele/capstone/Library/ScriptAssemblies/BuiltinAssemblies.stamp
     projectPath: Library/ScriptAssemblies/BuiltinAssemblies.stamp
     originalPath: 
     indexStatus: 0
     workTreeStatus: 5
-  - path: project_1.sln
-    fullPath: /Users/lijiashu/project_1/project_1.sln
-    projectPath: project_1.sln
+  - path: Library/StateCache/Hierarchy/784b35-mainStage.json
+    fullPath: /Users/mirageele/capstone/Library/StateCache/Hierarchy/784b35-mainStage.json
+    projectPath: Library/StateCache/Hierarchy/784b35-mainStage.json
     originalPath: 
     indexStatus: 0
     workTreeStatus: 3
-  - path: Temp/UnityTempFile-388709426c6c043d89886a1a45b2892f
-    fullPath: /Users/lijiashu/project_1/Temp/UnityTempFile-388709426c6c043d89886a1a45b2892f
-    projectPath: Temp/UnityTempFile-388709426c6c043d89886a1a45b2892f
+  - path: Library/StateCache/SceneView/d82d06-mainStage.json
+    fullPath: /Users/mirageele/capstone/Library/StateCache/SceneView/d82d06-mainStage.json
+    projectPath: Library/StateCache/SceneView/d82d06-mainStage.json
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Library/Style.catalog
+    fullPath: /Users/mirageele/capstone/Library/Style.catalog
+    projectPath: Library/Style.catalog
+    originalPath: 
+    indexStatus: 0
+    workTreeStatus: 3
+  - path: Temp/ghu-diffs/left/UnityTempFile-c2b8df0ce4ec14e1696a24bcb8b7e680_/Temp/UnityTempFile-c2b8df0ce4ec14e1696a24bcb8b7e680
+    fullPath: /Users/mirageele/capstone/Temp/ghu-diffs/left/UnityTempFile-c2b8df0ce4ec14e1696a24bcb8b7e680_/Temp/UnityTempFile-c2b8df0ce4ec14e1696a24bcb8b7e680
+    projectPath: Temp/ghu-diffs/left/UnityTempFile-c2b8df0ce4ec14e1696a24bcb8b7e680_/Temp/UnityTempFile-c2b8df0ce4ec14e1696a24bcb8b7e680
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Temp/UnityTempFile-9ebc3bd9bcf8140ed93f608d665c24ef
+    fullPath: /Users/mirageele/capstone/Temp/UnityTempFile-9ebc3bd9bcf8140ed93f608d665c24ef
+    projectPath: Temp/UnityTempFile-9ebc3bd9bcf8140ed93f608d665c24ef
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Temp/UnityTempFile-b179d6174e6064fa6b915acf61cf85e2
+    fullPath: /Users/mirageele/capstone/Temp/UnityTempFile-b179d6174e6064fa6b915acf61cf85e2
+    projectPath: Temp/UnityTempFile-b179d6174e6064fa6b915acf61cf85e2
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Temp/UnityTempFile-de9c4477c24e74922bce3d3e9c55240f
+    fullPath: /Users/mirageele/capstone/Temp/UnityTempFile-de9c4477c24e74922bce3d3e9c55240f
+    projectPath: Temp/UnityTempFile-de9c4477c24e74922bce3d3e9c55240f
+    originalPath: 
+    indexStatus: 1
+    workTreeStatus: 1
+  - path: Temp/UnityTempFile-ee11fde16a1104879a4524ab096a8aa7
+    fullPath: /Users/mirageele/capstone/Temp/UnityTempFile-ee11fde16a1104879a4524ab096a8aa7
+    projectPath: Temp/UnityTempFile-ee11fde16a1104879a4524ab096a8aa7
     originalPath: 
     indexStatus: 1
     workTreeStatus: 1
