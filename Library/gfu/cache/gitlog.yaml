@@ -13,9 +13,105 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cacheType: 3
-  lastUpdatedAtString: 2020-09-11T13:16:56.750-05:00
+  lastUpdatedAtString: 2020-09-12T14:32:23.924-05:00
   initializedAtString: 2020-08-21T15:06:01.808-05:00
   log:
+  - commitID: c4e62b05914753d58401123256c9a9acc2f4dd27
+    mergeA: 
+    mergeB: 
+    authorName: Ziyu
+    authorEmail: 854572026@qq.com
+    commitEmail: 854572026@qq.com
+    commitName: Ziyu
+    summary: test1
+    description: 
+    timeString: 2020-09-12T14:25:40.000-05:00
+    commitTimeString: 2020-09-12T14:25:40.000-05:00
+    changes:
+    - path: Assets/Prefabs.meta
+      fullPath: /Users/mirageele/cpp test/Assets/Prefabs.meta
+      projectPath: Assets/Prefabs.meta
+      originalPath: Assets/Plus.meta
+      indexStatus: 6
+      workTreeStatus: 0
+    - path: Assets/Tracker/Output/.DS_Store
+      fullPath: /Users/mirageele/cpp test/Assets/Tracker/Output/.DS_Store
+      projectPath: Assets/Tracker/Output/.DS_Store
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: Library/Artifacts/f0/f04e9e33b62c137be69eacf1f155cf82
+      fullPath: /Users/mirageele/cpp test/Library/Artifacts/f0/f04e9e33b62c137be69eacf1f155cf82
+      projectPath: Library/Artifacts/f0/f04e9e33b62c137be69eacf1f155cf82
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Library/ShaderCache/2/2e4900ba73922e175947e397222513d1.bin
+      fullPath: /Users/mirageele/cpp test/Library/ShaderCache/2/2e4900ba73922e175947e397222513d1.bin
+      projectPath: Library/ShaderCache/2/2e4900ba73922e175947e397222513d1.bin
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Library/ShaderCache/EditorEncounteredVariants
+      fullPath: /Users/mirageele/cpp test/Library/ShaderCache/EditorEncounteredVariants
+      projectPath: Library/ShaderCache/EditorEncounteredVariants
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: Library/ShaderCache/e/e6da67feb6c62a5410a6db537dcb29a6.bin
+      fullPath: /Users/mirageele/cpp test/Library/ShaderCache/e/e6da67feb6c62a5410a6db537dcb29a6.bin
+      projectPath: Library/ShaderCache/e/e6da67feb6c62a5410a6db537dcb29a6.bin
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Library/gfu/cache/branches.yaml
+      fullPath: /Users/mirageele/cpp test/Library/gfu/cache/branches.yaml
+      projectPath: Library/gfu/cache/branches.yaml
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: Library/gfu/cache/gitlocks.yaml
+      fullPath: /Users/mirageele/cpp test/Library/gfu/cache/gitlocks.yaml
+      projectPath: Library/gfu/cache/gitlocks.yaml
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: Library/gfu/cache/gitlog.yaml
+      fullPath: /Users/mirageele/cpp test/Library/gfu/cache/gitlog.yaml
+      projectPath: Library/gfu/cache/gitlog.yaml
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: Library/gfu/cache/gitstatusentries.yaml
+      fullPath: /Users/mirageele/cpp test/Library/gfu/cache/gitstatusentries.yaml
+      projectPath: Library/gfu/cache/gitstatusentries.yaml
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: Library/gfu/cache/gittrackingstatus.yaml
+      fullPath: /Users/mirageele/cpp test/Library/gfu/cache/gittrackingstatus.yaml
+      projectPath: Library/gfu/cache/gittrackingstatus.yaml
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: Library/gfu/cache/repoinfo.yaml
+      fullPath: /Users/mirageele/cpp test/Library/gfu/cache/repoinfo.yaml
+      projectPath: Library/gfu/cache/repoinfo.yaml
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: Library/shadercompiler-UnityShaderCompiler1.log
+      fullPath: /Users/mirageele/cpp test/Library/shadercompiler-UnityShaderCompiler1.log
+      projectPath: Library/shadercompiler-UnityShaderCompiler1.log
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: Library/shadercompiler-UnityShaderCompiler2.log
+      fullPath: /Users/mirageele/cpp test/Library/shadercompiler-UnityShaderCompiler2.log
+      projectPath: Library/shadercompiler-UnityShaderCompiler2.log
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
   - commitID: da7b6f122ad7558f2d2c1227c2858e31f6148c29
     mergeA: 
     mergeB: 

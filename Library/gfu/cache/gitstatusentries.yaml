@@ -13,33 +13,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cacheType: 6
-  lastUpdatedAtString: 2020-09-12T14:25:10.624-05:00
+  lastUpdatedAtString: 2020-09-12T14:41:40.608-05:00
   initializedAtString: 2020-08-21T15:03:51.245-05:00
   entries:
-  - path: Assets/Plus.meta
-    fullPath: /Users/mirageele/cpp test/Assets/Plus.meta
-    projectPath: Assets/Plus.meta
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 5
-  - path: Assets/Prefabs.meta
-    fullPath: /Users/mirageele/cpp test/Assets/Prefabs.meta
-    projectPath: Assets/Prefabs.meta
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Assets/Tracker/Output/.DS_Store
-    fullPath: /Users/mirageele/cpp test/Assets/Tracker/Output/.DS_Store
-    projectPath: Assets/Tracker/Output/.DS_Store
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 3
-  - path: Library/Artifacts/f0/f04e9e33b62c137be69eacf1f155cf82
-    fullPath: /Users/mirageele/cpp test/Library/Artifacts/f0/f04e9e33b62c137be69eacf1f155cf82
-    projectPath: Library/Artifacts/f0/f04e9e33b62c137be69eacf1f155cf82
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
   - path: Library/gfu/cache/branches.yaml
     fullPath: /Users/mirageele/cpp test/Library/gfu/cache/branches.yaml
     projectPath: Library/gfu/cache/branches.yaml
@@ -73,36 +49,6 @@ MonoBehaviour:
   - path: Library/gfu/cache/repoinfo.yaml
     fullPath: /Users/mirageele/cpp test/Library/gfu/cache/repoinfo.yaml
     projectPath: Library/gfu/cache/repoinfo.yaml
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 3
-  - path: Library/ShaderCache/2/2e4900ba73922e175947e397222513d1.bin
-    fullPath: /Users/mirageele/cpp test/Library/ShaderCache/2/2e4900ba73922e175947e397222513d1.bin
-    projectPath: Library/ShaderCache/2/2e4900ba73922e175947e397222513d1.bin
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Library/ShaderCache/e/e6da67feb6c62a5410a6db537dcb29a6.bin
-    fullPath: /Users/mirageele/cpp test/Library/ShaderCache/e/e6da67feb6c62a5410a6db537dcb29a6.bin
-    projectPath: Library/ShaderCache/e/e6da67feb6c62a5410a6db537dcb29a6.bin
-    originalPath: 
-    indexStatus: 1
-    workTreeStatus: 1
-  - path: Library/ShaderCache/EditorEncounteredVariants
-    fullPath: /Users/mirageele/cpp test/Library/ShaderCache/EditorEncounteredVariants
-    projectPath: Library/ShaderCache/EditorEncounteredVariants
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 3
-  - path: Library/shadercompiler-UnityShaderCompiler1.log
-    fullPath: /Users/mirageele/cpp test/Library/shadercompiler-UnityShaderCompiler1.log
-    projectPath: Library/shadercompiler-UnityShaderCompiler1.log
-    originalPath: 
-    indexStatus: 0
-    workTreeStatus: 3
-  - path: Library/shadercompiler-UnityShaderCompiler2.log
-    fullPath: /Users/mirageele/cpp test/Library/shadercompiler-UnityShaderCompiler2.log
-    projectPath: Library/shadercompiler-UnityShaderCompiler2.log
     originalPath: 
     indexStatus: 0
     workTreeStatus: 3
