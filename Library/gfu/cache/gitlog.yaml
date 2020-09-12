@@ -13,9 +13,183 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cacheType: 3
-  lastUpdatedAtString: 2020-09-10T12:00:39.209-05:00
+  lastUpdatedAtString: 2020-09-11T13:16:56.750-05:00
   initializedAtString: 2020-08-21T15:06:01.808-05:00
   log:
+  - commitID: da7b6f122ad7558f2d2c1227c2858e31f6148c29
+    mergeA: 
+    mergeB: 
+    authorName: Ziyu
+    authorEmail: 854572026@qq.com
+    commitEmail: 854572026@qq.com
+    commitName: Ziyu
+    summary: Add read Output file params
+    description: 
+    timeString: 2020-09-11T13:16:38.000-05:00
+    commitTimeString: 2020-09-11T13:16:38.000-05:00
+    changes:
+    - path: Assets/Scripts/Target.cs
+      fullPath: /Users/mirageele/cpp test/Assets/Scripts/Target.cs
+      projectPath: Assets/Scripts/Target.cs
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets/Scripts/Target.cs.meta
+      fullPath: /Users/mirageele/cpp test/Assets/Scripts/Target.cs.meta
+      projectPath: Assets/Scripts/Target.cs.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets/Scripts/Tracker.cs
+      fullPath: /Users/mirageele/cpp test/Assets/Scripts/Tracker.cs
+      projectPath: Assets/Scripts/Tracker.cs
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets/Scripts/Tracker.cs.meta
+      fullPath: /Users/mirageele/cpp test/Assets/Scripts/Tracker.cs.meta
+      projectPath: Assets/Scripts/Tracker.cs.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets/Scripts/readOutput.cs
+      fullPath: /Users/mirageele/cpp test/Assets/Scripts/readOutput.cs
+      projectPath: Assets/Scripts/readOutput.cs
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets/Scripts/readOutput.cs.meta
+      fullPath: /Users/mirageele/cpp test/Assets/Scripts/readOutput.cs.meta
+      projectPath: Assets/Scripts/readOutput.cs.meta
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets/Tracker/Output/.DS_Store
+      fullPath: /Users/mirageele/cpp test/Assets/Tracker/Output/.DS_Store
+      projectPath: Assets/Tracker/Output/.DS_Store
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: Library/Artifacts/2a/2a3b8025ba808992478fd843458cf6e0
+      fullPath: /Users/mirageele/cpp test/Library/Artifacts/2a/2a3b8025ba808992478fd843458cf6e0
+      projectPath: Library/Artifacts/2a/2a3b8025ba808992478fd843458cf6e0
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Library/Artifacts/3c/3c8ac0b240d3fa38207400cf0a4647c6
+      fullPath: /Users/mirageele/cpp test/Library/Artifacts/3c/3c8ac0b240d3fa38207400cf0a4647c6
+      projectPath: Library/Artifacts/3c/3c8ac0b240d3fa38207400cf0a4647c6
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Library/Artifacts/7f/7fe84f262046dc95a4c832c6769d9f93
+      fullPath: /Users/mirageele/cpp test/Library/Artifacts/7f/7fe84f262046dc95a4c832c6769d9f93
+      projectPath: Library/Artifacts/7f/7fe84f262046dc95a4c832c6769d9f93
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Library/Artifacts/90/9086ffb7d688791461406fe644985bd6
+      fullPath: /Users/mirageele/cpp test/Library/Artifacts/90/9086ffb7d688791461406fe644985bd6
+      projectPath: Library/Artifacts/90/9086ffb7d688791461406fe644985bd6
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Library/Artifacts/c0/c0f5b8b0e41d40de35e060f54592ac20
+      fullPath: /Users/mirageele/cpp test/Library/Artifacts/c0/c0f5b8b0e41d40de35e060f54592ac20
+      projectPath: Library/Artifacts/c0/c0f5b8b0e41d40de35e060f54592ac20
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Library/Artifacts/c4/c460ec076e29315152897fbf06110df2
+      fullPath: /Users/mirageele/cpp test/Library/Artifacts/c4/c460ec076e29315152897fbf06110df2
+      projectPath: Library/Artifacts/c4/c460ec076e29315152897fbf06110df2
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Library/Artifacts/f0/f0604657e34d4e559ac953858744eca2
+      fullPath: /Users/mirageele/cpp test/Library/Artifacts/f0/f0604657e34d4e559ac953858744eca2
+      projectPath: Library/Artifacts/f0/f0604657e34d4e559ac953858744eca2
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Library/ScriptAssemblies/Assembly-CSharp.dll
+      fullPath: /Users/mirageele/cpp test/Library/ScriptAssemblies/Assembly-CSharp.dll
+      projectPath: Library/ScriptAssemblies/Assembly-CSharp.dll
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: Library/ScriptAssemblies/Assembly-CSharp.pdb
+      fullPath: /Users/mirageele/cpp test/Library/ScriptAssemblies/Assembly-CSharp.pdb
+      projectPath: Library/ScriptAssemblies/Assembly-CSharp.pdb
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: Library/gfu/cache/branches.yaml
+      fullPath: /Users/mirageele/cpp test/Library/gfu/cache/branches.yaml
+      projectPath: Library/gfu/cache/branches.yaml
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: Library/gfu/cache/gitlocks.yaml
+      fullPath: /Users/mirageele/cpp test/Library/gfu/cache/gitlocks.yaml
+      projectPath: Library/gfu/cache/gitlocks.yaml
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: Library/gfu/cache/gitlog.yaml
+      fullPath: /Users/mirageele/cpp test/Library/gfu/cache/gitlog.yaml
+      projectPath: Library/gfu/cache/gitlog.yaml
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: Library/gfu/cache/gitstatusentries.yaml
+      fullPath: /Users/mirageele/cpp test/Library/gfu/cache/gitstatusentries.yaml
+      projectPath: Library/gfu/cache/gitstatusentries.yaml
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: Library/gfu/cache/gittrackingstatus.yaml
+      fullPath: /Users/mirageele/cpp test/Library/gfu/cache/gittrackingstatus.yaml
+      projectPath: Library/gfu/cache/gittrackingstatus.yaml
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: Library/gfu/cache/repoinfo.yaml
+      fullPath: /Users/mirageele/cpp test/Library/gfu/cache/repoinfo.yaml
+      projectPath: Library/gfu/cache/repoinfo.yaml
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: Temp/UnityTempFile-72a5a21af3e544430bfd20fc72df3cd0
+      fullPath: /Users/mirageele/cpp test/Temp/UnityTempFile-72a5a21af3e544430bfd20fc72df3cd0
+      projectPath: Temp/UnityTempFile-72a5a21af3e544430bfd20fc72df3cd0
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Temp/UnityTempFile-740c18245d38a4a548eaec96d3bd37b7
+      fullPath: /Users/mirageele/cpp test/Temp/UnityTempFile-740c18245d38a4a548eaec96d3bd37b7
+      projectPath: Temp/UnityTempFile-740c18245d38a4a548eaec96d3bd37b7
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Temp/UnityTempFile-8cf30921238904df0afb10c9838b6e4e
+      fullPath: /Users/mirageele/cpp test/Temp/UnityTempFile-8cf30921238904df0afb10c9838b6e4e
+      projectPath: Temp/UnityTempFile-8cf30921238904df0afb10c9838b6e4e
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Temp/UnityTempFile-9f6e56e1e70244aada6b23075c9c95cf
+      fullPath: /Users/mirageele/cpp test/Temp/UnityTempFile-9f6e56e1e70244aada6b23075c9c95cf
+      projectPath: Temp/UnityTempFile-9f6e56e1e70244aada6b23075c9c95cf
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Temp/UnityTempFile-bfcdf8441962443e8888f0198f89a627
+      fullPath: /Users/mirageele/cpp test/Temp/UnityTempFile-bfcdf8441962443e8888f0198f89a627
+      projectPath: Temp/UnityTempFile-bfcdf8441962443e8888f0198f89a627
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
   - commitID: 5f35dc9616d3245ee0f594329a29b75a3b694b1d
     mergeA: 
     mergeB: 
