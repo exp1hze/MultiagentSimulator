@@ -13,9 +13,291 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cacheType: 3
-  lastUpdatedAtString: 2020-09-12T17:15:31.415-05:00
+  lastUpdatedAtString: 2020-09-12T17:26:12.311-05:00
   initializedAtString: 2020-09-12T15:13:46.765-05:00
   log:
+  - commitID: d8c942729e19950540e725d309243ad8e30567f9
+    mergeA: 
+    mergeB: 
+    authorName: Ziyu
+    authorEmail: 854572026@qq.com
+    commitEmail: 854572026@qq.com
+    commitName: Ziyu
+    summary: Add run scene
+    description: 
+    timeString: 2020-09-12T17:16:08.000-05:00
+    commitTimeString: 2020-09-12T17:16:08.000-05:00
+    changes:
+    - path: Assets/Prefabs/Canvas.prefab
+      fullPath: /Users/mirageele/capstone/Assets/Prefabs/Canvas.prefab
+      projectPath: Assets/Prefabs/Canvas.prefab
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: Assets/Prefabs/InputText.prefab
+      fullPath: /Users/mirageele/capstone/Assets/Prefabs/InputText.prefab
+      projectPath: Assets/Prefabs/InputText.prefab
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Assets/Prefabs/InputText.prefab.meta
+      fullPath: /Users/mirageele/capstone/Assets/Prefabs/InputText.prefab.meta
+      projectPath: Assets/Prefabs/InputText.prefab.meta
+      originalPath: Assets/Scenes/SampleScene.unity.meta
+      indexStatus: 6
+      workTreeStatus: 0
+    - path: Assets/Scenes/SampleScene.unity
+      fullPath: /Users/mirageele/capstone/Assets/Scenes/SampleScene.unity
+      projectPath: Assets/Scenes/SampleScene.unity
+      originalPath: 
+      indexStatus: 5
+      workTreeStatus: 0
+    - path: Assets/Scripts/NewBehaviourScript.cs
+      fullPath: /Users/mirageele/capstone/Assets/Scripts/NewBehaviourScript.cs
+      projectPath: Assets/Scripts/NewBehaviourScript.cs
+      originalPath: 
+      indexStatus: 5
+      workTreeStatus: 0
+    - path: Assets/Scripts/NewBehaviourScript.cs.meta
+      fullPath: /Users/mirageele/capstone/Assets/Scripts/NewBehaviourScript.cs.meta
+      projectPath: Assets/Scripts/NewBehaviourScript.cs.meta
+      originalPath: 
+      indexStatus: 5
+      workTreeStatus: 0
+    - path: Assets/Scripts/hzezhezhe.cs
+      fullPath: /Users/mirageele/capstone/Assets/Scripts/hzezhezhe.cs
+      projectPath: Assets/Scripts/hzezhezhe.cs
+      originalPath: 
+      indexStatus: 5
+      workTreeStatus: 0
+    - path: Assets/Scripts/hzezhezhe.cs.meta
+      fullPath: /Users/mirageele/capstone/Assets/Scripts/hzezhezhe.cs.meta
+      projectPath: Assets/Scripts/hzezhezhe.cs.meta
+      originalPath: 
+      indexStatus: 5
+      workTreeStatus: 0
+    - path: Library/Artifacts/00/00260ebffe4c427095f79bfad3dab5e3
+      fullPath: /Users/mirageele/capstone/Library/Artifacts/00/00260ebffe4c427095f79bfad3dab5e3
+      projectPath: Library/Artifacts/00/00260ebffe4c427095f79bfad3dab5e3
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Library/Artifacts/09/09eab82c9ba0633f9c920deb4654eb20
+      fullPath: /Users/mirageele/capstone/Library/Artifacts/09/09eab82c9ba0633f9c920deb4654eb20
+      projectPath: Library/Artifacts/09/09eab82c9ba0633f9c920deb4654eb20
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Library/Artifacts/3d/3d3273efc04864c29e2020ec62554a14
+      fullPath: /Users/mirageele/capstone/Library/Artifacts/3d/3d3273efc04864c29e2020ec62554a14
+      projectPath: Library/Artifacts/3d/3d3273efc04864c29e2020ec62554a14
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Library/Artifacts/4d/4d41e2c600bd72ba98b1bf4f3f34be52
+      fullPath: /Users/mirageele/capstone/Library/Artifacts/4d/4d41e2c600bd72ba98b1bf4f3f34be52
+      projectPath: Library/Artifacts/4d/4d41e2c600bd72ba98b1bf4f3f34be52
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Library/Artifacts/52/52fb6b08583dca816807d38ee1a45c08
+      fullPath: /Users/mirageele/capstone/Library/Artifacts/52/52fb6b08583dca816807d38ee1a45c08
+      projectPath: Library/Artifacts/52/52fb6b08583dca816807d38ee1a45c08
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Library/Artifacts/59/59396407dcfa0166bdab8042b9221a2b
+      fullPath: /Users/mirageele/capstone/Library/Artifacts/59/59396407dcfa0166bdab8042b9221a2b
+      projectPath: Library/Artifacts/59/59396407dcfa0166bdab8042b9221a2b
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Library/Artifacts/6e/6ede00e0a33840084f4312daf9b62746
+      fullPath: /Users/mirageele/capstone/Library/Artifacts/6e/6ede00e0a33840084f4312daf9b62746
+      projectPath: Library/Artifacts/6e/6ede00e0a33840084f4312daf9b62746
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Library/Artifacts/7f/7f94385a39969ee053df348c0dc157b6
+      fullPath: /Users/mirageele/capstone/Library/Artifacts/7f/7f94385a39969ee053df348c0dc157b6
+      projectPath: Library/Artifacts/7f/7f94385a39969ee053df348c0dc157b6
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Library/Artifacts/ac/acb5436619ed7e010533dd9346b0559c
+      fullPath: /Users/mirageele/capstone/Library/Artifacts/ac/acb5436619ed7e010533dd9346b0559c
+      projectPath: Library/Artifacts/ac/acb5436619ed7e010533dd9346b0559c
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Library/Artifacts/af/afcd718787ab8b476f2e7c0a50b9bc8f
+      fullPath: /Users/mirageele/capstone/Library/Artifacts/af/afcd718787ab8b476f2e7c0a50b9bc8f
+      projectPath: Library/Artifacts/af/afcd718787ab8b476f2e7c0a50b9bc8f
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Library/Artifacts/b4/b41adce3c82815e43c7c083d98e0a499
+      fullPath: /Users/mirageele/capstone/Library/Artifacts/b4/b41adce3c82815e43c7c083d98e0a499
+      projectPath: Library/Artifacts/b4/b41adce3c82815e43c7c083d98e0a499
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Library/Artifacts/bf/bf004703785a1a113214255510371101
+      fullPath: /Users/mirageele/capstone/Library/Artifacts/bf/bf004703785a1a113214255510371101
+      projectPath: Library/Artifacts/bf/bf004703785a1a113214255510371101
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Library/Artifacts/c4/c4881124a934dcb2a45623532a13becd
+      fullPath: /Users/mirageele/capstone/Library/Artifacts/c4/c4881124a934dcb2a45623532a13becd
+      projectPath: Library/Artifacts/c4/c4881124a934dcb2a45623532a13becd
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Library/Artifacts/d2/d2575b0078b01cded8e0949d05dfd6b2
+      fullPath: /Users/mirageele/capstone/Library/Artifacts/d2/d2575b0078b01cded8e0949d05dfd6b2
+      projectPath: Library/Artifacts/d2/d2575b0078b01cded8e0949d05dfd6b2
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Library/SceneVisibilityState.asset
+      fullPath: /Users/mirageele/capstone/Library/SceneVisibilityState.asset
+      projectPath: Library/SceneVisibilityState.asset
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: Library/ScriptAssemblies/Assembly-CSharp.dll
+      fullPath: /Users/mirageele/capstone/Library/ScriptAssemblies/Assembly-CSharp.dll
+      projectPath: Library/ScriptAssemblies/Assembly-CSharp.dll
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: Library/ScriptAssemblies/Assembly-CSharp.pdb
+      fullPath: /Users/mirageele/capstone/Library/ScriptAssemblies/Assembly-CSharp.pdb
+      projectPath: Library/ScriptAssemblies/Assembly-CSharp.pdb
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: Library/ScriptAssemblies/BuiltinAssemblies.stamp
+      fullPath: /Users/mirageele/capstone/Library/ScriptAssemblies/BuiltinAssemblies.stamp
+      projectPath: Library/ScriptAssemblies/BuiltinAssemblies.stamp
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Library/ShaderCache/EditorEncounteredVariants
+      fullPath: /Users/mirageele/capstone/Library/ShaderCache/EditorEncounteredVariants
+      projectPath: Library/ShaderCache/EditorEncounteredVariants
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: Library/ShaderCache/a/aa0846216a0923321e03f7068677071a.bin
+      fullPath: /Users/mirageele/capstone/Library/ShaderCache/a/aa0846216a0923321e03f7068677071a.bin
+      projectPath: Library/ShaderCache/a/aa0846216a0923321e03f7068677071a.bin
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Library/ShaderCache/e/ec430588e6460e05700e7c0be29f2db9.bin
+      fullPath: /Users/mirageele/capstone/Library/ShaderCache/e/ec430588e6460e05700e7c0be29f2db9.bin
+      projectPath: Library/ShaderCache/e/ec430588e6460e05700e7c0be29f2db9.bin
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Library/StateCache/Hierarchy/784b35-1c6b11a282d7945f5b.json
+      fullPath: /Users/mirageele/capstone/Library/StateCache/Hierarchy/784b35-1c6b11a282d7945f5b.json
+      projectPath: Library/StateCache/Hierarchy/784b35-1c6b11a282d7945f5b.json
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Library/StateCache/Hierarchy/784b35-d2db3d0b29f0c4e188.json
+      fullPath: /Users/mirageele/capstone/Library/StateCache/Hierarchy/784b35-d2db3d0b29f0c4e188.json
+      projectPath: Library/StateCache/Hierarchy/784b35-d2db3d0b29f0c4e188.json
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Library/StateCache/Hierarchy/784b35-mainStage.json
+      fullPath: /Users/mirageele/capstone/Library/StateCache/Hierarchy/784b35-mainStage.json
+      projectPath: Library/StateCache/Hierarchy/784b35-mainStage.json
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: Library/StateCache/SceneView/d82d06-1c6b11a282d7945f5b.json
+      fullPath: /Users/mirageele/capstone/Library/StateCache/SceneView/d82d06-1c6b11a282d7945f5b.json
+      projectPath: Library/StateCache/SceneView/d82d06-1c6b11a282d7945f5b.json
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Library/StateCache/SceneView/d82d06-d2db3d0b29f0c4e188.json
+      fullPath: /Users/mirageele/capstone/Library/StateCache/SceneView/d82d06-d2db3d0b29f0c4e188.json
+      projectPath: Library/StateCache/SceneView/d82d06-d2db3d0b29f0c4e188.json
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Library/StateCache/SceneView/d82d06-mainStage.json
+      fullPath: /Users/mirageele/capstone/Library/StateCache/SceneView/d82d06-mainStage.json
+      projectPath: Library/StateCache/SceneView/d82d06-mainStage.json
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: Library/gfu/cache/branches.yaml
+      fullPath: /Users/mirageele/capstone/Library/gfu/cache/branches.yaml
+      projectPath: Library/gfu/cache/branches.yaml
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: Library/gfu/cache/gitlocks.yaml
+      fullPath: /Users/mirageele/capstone/Library/gfu/cache/gitlocks.yaml
+      projectPath: Library/gfu/cache/gitlocks.yaml
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: Library/gfu/cache/gitlog.yaml
+      fullPath: /Users/mirageele/capstone/Library/gfu/cache/gitlog.yaml
+      projectPath: Library/gfu/cache/gitlog.yaml
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: Library/gfu/cache/gitstatusentries.yaml
+      fullPath: /Users/mirageele/capstone/Library/gfu/cache/gitstatusentries.yaml
+      projectPath: Library/gfu/cache/gitstatusentries.yaml
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: Library/gfu/cache/gittrackingstatus.yaml
+      fullPath: /Users/mirageele/capstone/Library/gfu/cache/gittrackingstatus.yaml
+      projectPath: Library/gfu/cache/gittrackingstatus.yaml
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: Library/gfu/cache/repoinfo.yaml
+      fullPath: /Users/mirageele/capstone/Library/gfu/cache/repoinfo.yaml
+      projectPath: Library/gfu/cache/repoinfo.yaml
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: Library/shadercompiler-UnityShaderCompiler3.log
+      fullPath: /Users/mirageele/capstone/Library/shadercompiler-UnityShaderCompiler3.log
+      projectPath: Library/shadercompiler-UnityShaderCompiler3.log
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
+    - path: Temp/UnityTempFile-0ed125fbd22124929929b20afb62bab4
+      fullPath: /Users/mirageele/capstone/Temp/UnityTempFile-0ed125fbd22124929929b20afb62bab4
+      projectPath: Temp/UnityTempFile-0ed125fbd22124929929b20afb62bab4
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Temp/UnityTempFile-bbcddd63ee9ed49c088d62ddb7ee0585
+      fullPath: /Users/mirageele/capstone/Temp/UnityTempFile-bbcddd63ee9ed49c088d62ddb7ee0585
+      projectPath: Temp/UnityTempFile-bbcddd63ee9ed49c088d62ddb7ee0585
+      originalPath: 
+      indexStatus: 4
+      workTreeStatus: 0
+    - path: Temp/__Backupscenes/0.backup
+      fullPath: /Users/mirageele/capstone/Temp/__Backupscenes/0.backup
+      projectPath: Temp/__Backupscenes/0.backup
+      originalPath: 
+      indexStatus: 3
+      workTreeStatus: 0
   - commitID: cc368b77c0c769ff9886fc9aac46575d8d9658d7
     mergeA: 
     mergeB: 
