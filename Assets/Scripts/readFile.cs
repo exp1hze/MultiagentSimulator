@@ -11,6 +11,7 @@ public class readFile : MonoBehaviour
     public Hashtable _params;
     void Start()
     {
+        Debug.Log("dsadadsdasdsdasddasdsadasdasdasds");
         _params = new Hashtable();
         readPath = Application.dataPath + "/Tracker/params";
         ReadParams(readPath);
