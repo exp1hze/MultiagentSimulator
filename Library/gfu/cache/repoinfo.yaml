@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cacheType: 1
-  lastUpdatedAtString: 2020-09-13T14:12:55.086-05:00
-  initializedAtString: 2020-09-13T14:12:55.086-05:00
+  lastUpdatedAtString: 2020-09-13T14:43:38.856-05:00
+  initializedAtString: 2020-09-13T14:43:38.856-05:00
   currentGitRemote:
     name: origin
-    url: git@github.com:exp1hze/MultiagentSimulator.git
+    url: https://github.com/exp1hze/MultiagentSimulator.git
     login: 
     user: 
     host: 
@@ -25,14 +25,14 @@ MonoBehaviour:
     token: 
   currentGitBranch:
     name: master
-    tracking: 
+    tracking: origin/master
   currentConfigBranch:
     name: master
     remote:
-      name: 
-      url: 
-    trackingBranch: 
+      name: origin
+      url: https://github.com/exp1hze/MultiagentSimulator.git
+    trackingBranch: master
   currentConfigRemote:
     name: origin
-    url: git@github.com:exp1hze/MultiagentSimulator.git
+    url: https://github.com/exp1hze/MultiagentSimulator.git
   currentHead: 
