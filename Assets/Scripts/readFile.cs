@@ -14,7 +14,7 @@ public class readFile : MonoBehaviour
         _params = new Hashtable();
         readPath = Application.dataPath + "/Tracker/params";
         ReadParams(readPath);
-        this.gameObject.GetComponent<writeFile>().WriteParams(readPath);
+        //this.gameObject.GetComponent<writeFile>().WriteParams(readPath);
     }
 
     public void ReadParams(string path)
@@ -25,7 +25,7 @@ public class readFile : MonoBehaviour
         {
             BuildParams(line);
         }
-        Debug.Log("Rerun : " + _params["Rerun"]);
+        //Debug.Log("Rerun : " + _params["Rerun"]);
         sr.Close();
     }
 
@@ -33,5 +33,6 @@ public class readFile : MonoBehaviour
     {
         string[] param = Regex.Split(line,"\\s+",RegexOptions.IgnoreCase);
         _params.Add(param[0],param[1]);
+        //Debug.Log(param[0] + " " + param[1]);
     }
 }

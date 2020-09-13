@@ -63,11 +63,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\InputText.cs" />
     <Compile Include="Assets\Scripts\Target.cs" />
     <Compile Include="Assets\Scripts\Tracker.cs" />
-    <Compile Include="Assets\Scripts\hzezhezhe.cs" />
     <Compile Include="Assets\Scripts\readFile.cs" />
     <Compile Include="Assets\Scripts\readOutput.cs" />
+    <Compile Include="Assets\Scripts\runButton.cs" />
     <Compile Include="Assets\Scripts\test.cs" />
     <Compile Include="Assets\Scripts\writeFile.cs" />
     <Reference Include="UnityEngine">
