@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.Diagnostics;
@@ -9,6 +9,7 @@ public class test : MonoBehaviour
     public string result;
     public string state;
     public string ProjectPath;
+    public string zg;
     void Start()
     {
         
