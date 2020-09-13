@@ -1,2 +1,7 @@
 Library/
 Temp/
+.vs/
+Obj/
+Logs/
+Assembly-CSharp-Editor-firstpass.csproj
+Assembly-CSharp.csproj
