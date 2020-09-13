@@ -9,7 +9,7 @@ public class test : MonoBehaviour
     public string result;
     public string state;
     public string ProjectPath;
-    public string zg;
+    public string haze;
     void Start()
     {
         
