@@ -13,8 +13,10 @@ public class runButton : MonoBehaviour
     public string readPath;
     public Hashtable _params;
     // Start is called before the first frame update
+    public GameObject mainCamera;
     void Start()
     {
+    
         _params = new Hashtable();
         readPath = Application.dataPath + "/Tracker/params";
         ReadParams(readPath);
@@ -78,10 +80,14 @@ public class runButton : MonoBehaviour
 
             sw.Close();
             fs.Close();
+            mainCamera = GameObject.Find("Main Camera");
+            mainCamera.GetComponent<test>().run();
         }
         catch (IOException)
         {
             Debug.Log("The params file may opened by another program!");
         }
     }
+
+
 }

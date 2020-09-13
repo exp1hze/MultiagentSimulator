@@ -9,15 +9,14 @@ public class test : MonoBehaviour
     public string result;
     public string state;
     public string ProjectPath;
-    public string haze;
     void Start()
     {
         
         ProjectPath = Application.dataPath + "/Tracker";
-        run();
+
     }
 
-    private void run()
+    public void run()
     {
         string shell = "run.sh";
         Process process = new Process();
