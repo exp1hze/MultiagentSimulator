@@ -13,6 +13,7 @@
  T    -1 Bin   12 Count    0 
  T    -1 Bin   13 Count    0 
  T    -1 Bin   14 Count    0 
+<<<<<<< HEAD
  T     0 Bin    0 Count   19 
  T     0 Bin    1 Count   20 
  T     0 Bin    2 Count   29 
@@ -23,11 +24,24 @@
  T     0 Bin    7 Count    5 
  T     0 Bin    8 Count   16 
  T     0 Bin    9 Count   35 
+=======
+ T     0 Bin    0 Count   14 
+ T     0 Bin    1 Count   26 
+ T     0 Bin    2 Count   17 
+ T     0 Bin    3 Count   26 
+ T     0 Bin    4 Count   15 
+ T     0 Bin    5 Count   20 
+ T     0 Bin    6 Count   19 
+ T     0 Bin    7 Count   18 
+ T     0 Bin    8 Count    6 
+ T     0 Bin    9 Count   39 
+>>>>>>> 839c391523a21b339fb2ba1614e8080cd891d9a5
  T     0 Bin   10 Count    0 
  T     0 Bin   11 Count    0 
  T     0 Bin   12 Count    0 
  T     0 Bin   13 Count    0 
  T     0 Bin   14 Count    0 
+<<<<<<< HEAD
  T     1 Bin    0 Count   25 
  T     1 Bin    1 Count   21 
  T     1 Bin    2 Count   31 
@@ -38,6 +52,18 @@
  T     1 Bin    7 Count    4 
  T     1 Bin    8 Count   19 
  T     1 Bin    9 Count   29 
+=======
+ T     1 Bin    0 Count   24 
+ T     1 Bin    1 Count   23 
+ T     1 Bin    2 Count   18 
+ T     1 Bin    3 Count   21 
+ T     1 Bin    4 Count   22 
+ T     1 Bin    5 Count   18 
+ T     1 Bin    6 Count   15 
+ T     1 Bin    7 Count   15 
+ T     1 Bin    8 Count   10 
+ T     1 Bin    9 Count   34 
+>>>>>>> 839c391523a21b339fb2ba1614e8080cd891d9a5
  T     1 Bin   10 Count    0 
  T     1 Bin   11 Count    0 
  T     1 Bin   12 Count    0 
@@ -45,6 +71,7 @@
  T     1 Bin   14 Count    0 
  T     2 Bin    0 Count   26 
  T     2 Bin    1 Count   23 
+<<<<<<< HEAD
  T     2 Bin    2 Count   32 
  T     2 Bin    3 Count   18 
  T     2 Bin    4 Count   16 
@@ -53,11 +80,22 @@
  T     2 Bin    7 Count    8 
  T     2 Bin    8 Count   15 
  T     2 Bin    9 Count   28 
+=======
+ T     2 Bin    2 Count   21 
+ T     2 Bin    3 Count   21 
+ T     2 Bin    4 Count   20 
+ T     2 Bin    5 Count   17 
+ T     2 Bin    6 Count   20 
+ T     2 Bin    7 Count    9 
+ T     2 Bin    8 Count   17 
+ T     2 Bin    9 Count   26 
+>>>>>>> 839c391523a21b339fb2ba1614e8080cd891d9a5
  T     2 Bin   10 Count    0 
  T     2 Bin   11 Count    0 
  T     2 Bin   12 Count    0 
  T     2 Bin   13 Count    0 
  T     2 Bin   14 Count    0 
+<<<<<<< HEAD
  T     3 Bin    0 Count   31 
  T     3 Bin    1 Count   29 
  T     3 Bin    2 Count   24 
@@ -68,11 +106,24 @@
  T     3 Bin    7 Count   12 
  T     3 Bin    8 Count   13 
  T     3 Bin    9 Count   26 
+=======
+ T     3 Bin    0 Count   32 
+ T     3 Bin    1 Count   23 
+ T     3 Bin    2 Count   24 
+ T     3 Bin    3 Count   13 
+ T     3 Bin    4 Count   21 
+ T     3 Bin    5 Count   20 
+ T     3 Bin    6 Count   18 
+ T     3 Bin    7 Count    8 
+ T     3 Bin    8 Count   18 
+ T     3 Bin    9 Count   23 
+>>>>>>> 839c391523a21b339fb2ba1614e8080cd891d9a5
  T     3 Bin   10 Count    0 
  T     3 Bin   11 Count    0 
  T     3 Bin   12 Count    0 
  T     3 Bin   13 Count    0 
  T     3 Bin   14 Count    0 
+<<<<<<< HEAD
  T     4 Bin    0 Count   39 
  T     4 Bin    1 Count   29 
  T     4 Bin    2 Count   21 
@@ -83,11 +134,24 @@
  T     4 Bin    7 Count   16 
  T     4 Bin    8 Count   11 
  T     4 Bin    9 Count   24 
+=======
+ T     4 Bin    0 Count   40 
+ T     4 Bin    1 Count   17 
+ T     4 Bin    2 Count   26 
+ T     4 Bin    3 Count   15 
+ T     4 Bin    4 Count   20 
+ T     4 Bin    5 Count   19 
+ T     4 Bin    6 Count   18 
+ T     4 Bin    7 Count    6 
+ T     4 Bin    8 Count   17 
+ T     4 Bin    9 Count   22 
+>>>>>>> 839c391523a21b339fb2ba1614e8080cd891d9a5
  T     4 Bin   10 Count    0 
  T     4 Bin   11 Count    0 
  T     4 Bin   12 Count    0 
  T     4 Bin   13 Count    0 
  T     4 Bin   14 Count    0 
+<<<<<<< HEAD
  T     5 Bin    0 Count   46 
  T     5 Bin    1 Count   31 
  T     5 Bin    2 Count   16 
@@ -97,6 +161,17 @@
  T     5 Bin    6 Count    4 
  T     5 Bin    7 Count   19 
  T     5 Bin    8 Count    7 
+=======
+ T     5 Bin    0 Count   47 
+ T     5 Bin    1 Count   18 
+ T     5 Bin    2 Count   21 
+ T     5 Bin    3 Count   22 
+ T     5 Bin    4 Count   18 
+ T     5 Bin    5 Count   15 
+ T     5 Bin    6 Count   15 
+ T     5 Bin    7 Count   10 
+ T     5 Bin    8 Count   12 
+>>>>>>> 839c391523a21b339fb2ba1614e8080cd891d9a5
  T     5 Bin    9 Count   22 
  T     5 Bin   10 Count    0 
  T     5 Bin   11 Count    0 
@@ -104,6 +179,7 @@
  T     5 Bin   13 Count    0 
  T     5 Bin   14 Count    0 
  T     6 Bin    0 Count   49 
+<<<<<<< HEAD
  T     6 Bin    1 Count   32 
  T     6 Bin    2 Count   18 
  T     6 Bin    3 Count   16 
@@ -113,11 +189,23 @@
  T     6 Bin    7 Count   15 
  T     6 Bin    8 Count    8 
  T     6 Bin    9 Count   20 
+=======
+ T     6 Bin    1 Count   21 
+ T     6 Bin    2 Count   21 
+ T     6 Bin    3 Count   20 
+ T     6 Bin    4 Count   17 
+ T     6 Bin    5 Count   20 
+ T     6 Bin    6 Count    9 
+ T     6 Bin    7 Count   17 
+ T     6 Bin    8 Count    7 
+ T     6 Bin    9 Count   19 
+>>>>>>> 839c391523a21b339fb2ba1614e8080cd891d9a5
  T     6 Bin   10 Count    0 
  T     6 Bin   11 Count    0 
  T     6 Bin   12 Count    0 
  T     6 Bin   13 Count    0 
  T     6 Bin   14 Count    0 
+<<<<<<< HEAD
  T     7 Bin    0 Count   60 
  T     7 Bin    1 Count   24 
  T     7 Bin    2 Count   21 
@@ -128,11 +216,24 @@
  T     7 Bin    7 Count   13 
  T     7 Bin    8 Count    7 
  T     7 Bin    9 Count   19 
+=======
+ T     7 Bin    0 Count   55 
+ T     7 Bin    1 Count   24 
+ T     7 Bin    2 Count   13 
+ T     7 Bin    3 Count   21 
+ T     7 Bin    4 Count   20 
+ T     7 Bin    5 Count   18 
+ T     7 Bin    6 Count    8 
+ T     7 Bin    7 Count   18 
+ T     7 Bin    8 Count    6 
+ T     7 Bin    9 Count   17 
+>>>>>>> 839c391523a21b339fb2ba1614e8080cd891d9a5
  T     7 Bin   10 Count    0 
  T     7 Bin   11 Count    0 
  T     7 Bin   12 Count    0 
  T     7 Bin   13 Count    0 
  T     7 Bin   14 Count    0 
+<<<<<<< HEAD
  T     8 Bin    0 Count   68 
  T     8 Bin    1 Count   21 
  T     8 Bin    2 Count   18 
@@ -143,11 +244,24 @@
  T     8 Bin    7 Count   11 
  T     8 Bin    8 Count    7 
  T     8 Bin    9 Count   17 
+=======
+ T     8 Bin    0 Count   57 
+ T     8 Bin    1 Count   26 
+ T     8 Bin    2 Count   15 
+ T     8 Bin    3 Count   20 
+ T     8 Bin    4 Count   19 
+ T     8 Bin    5 Count   18 
+ T     8 Bin    6 Count    6 
+ T     8 Bin    7 Count   17 
+ T     8 Bin    8 Count    7 
+ T     8 Bin    9 Count   15 
+>>>>>>> 839c391523a21b339fb2ba1614e8080cd891d9a5
  T     8 Bin   10 Count    0 
  T     8 Bin   11 Count    0 
  T     8 Bin   12 Count    0 
  T     8 Bin   13 Count    0 
  T     8 Bin   14 Count    0 
+<<<<<<< HEAD
  T     9 Bin    0 Count   77 
  T     9 Bin    1 Count   16 
  T     9 Bin    2 Count   17 
@@ -156,6 +270,16 @@
  T     9 Bin    5 Count    4 
  T     9 Bin    6 Count   19 
  T     9 Bin    7 Count    7 
+=======
+ T     9 Bin    0 Count   65 
+ T     9 Bin    1 Count   21 
+ T     9 Bin    2 Count   22 
+ T     9 Bin    3 Count   18 
+ T     9 Bin    4 Count   15 
+ T     9 Bin    5 Count   15 
+ T     9 Bin    6 Count   10 
+ T     9 Bin    7 Count   12 
+>>>>>>> 839c391523a21b339fb2ba1614e8080cd891d9a5
  T     9 Bin    8 Count    9 
  T     9 Bin    9 Count   13 
  T     9 Bin   10 Count    0 
@@ -163,6 +287,7 @@
  T     9 Bin   12 Count    0 
  T     9 Bin   13 Count    0 
  T     9 Bin   14 Count    0 
+<<<<<<< HEAD
  T    10 Bin    0 Count   81 
  T    10 Bin    1 Count   18 
  T    10 Bin    2 Count   16 
@@ -173,11 +298,24 @@
  T    10 Bin    7 Count    8 
  T    10 Bin    8 Count    7 
  T    10 Bin    9 Count   13 
+=======
+ T    10 Bin    0 Count   70 
+ T    10 Bin    1 Count   21 
+ T    10 Bin    2 Count   20 
+ T    10 Bin    3 Count   17 
+ T    10 Bin    4 Count   20 
+ T    10 Bin    5 Count    9 
+ T    10 Bin    6 Count   17 
+ T    10 Bin    7 Count    7 
+ T    10 Bin    8 Count    7 
+ T    10 Bin    9 Count   12 
+>>>>>>> 839c391523a21b339fb2ba1614e8080cd891d9a5
  T    10 Bin   10 Count    0 
  T    10 Bin   11 Count    0 
  T    10 Bin   12 Count    0 
  T    10 Bin   13 Count    0 
  T    10 Bin   14 Count    0 
+<<<<<<< HEAD
  T    11 Bin    0 Count   84 
  T    11 Bin    1 Count   21 
  T    11 Bin    2 Count   12 
@@ -188,11 +326,24 @@
  T    11 Bin    7 Count    7 
  T    11 Bin    8 Count    8 
  T    11 Bin    9 Count   11 
+=======
+ T    11 Bin    0 Count   79 
+ T    11 Bin    1 Count   13 
+ T    11 Bin    2 Count   21 
+ T    11 Bin    3 Count   20 
+ T    11 Bin    4 Count   18 
+ T    11 Bin    5 Count    8 
+ T    11 Bin    6 Count   18 
+ T    11 Bin    7 Count    6 
+ T    11 Bin    8 Count    7 
+ T    11 Bin    9 Count   10 
+>>>>>>> 839c391523a21b339fb2ba1614e8080cd891d9a5
  T    11 Bin   10 Count    0 
  T    11 Bin   11 Count    0 
  T    11 Bin   12 Count    0 
  T    11 Bin   13 Count    0 
  T    11 Bin   14 Count    0 
+<<<<<<< HEAD
  T    12 Bin    0 Count   89 
  T    12 Bin    1 Count   18 
  T    12 Bin    2 Count   16 
@@ -203,11 +354,24 @@
  T    12 Bin    7 Count    7 
  T    12 Bin    8 Count    7 
  T    12 Bin    9 Count   10 
+=======
+ T    12 Bin    0 Count   83 
+ T    12 Bin    1 Count   15 
+ T    12 Bin    2 Count   20 
+ T    12 Bin    3 Count   19 
+ T    12 Bin    4 Count   18 
+ T    12 Bin    5 Count    6 
+ T    12 Bin    6 Count   17 
+ T    12 Bin    7 Count    7 
+ T    12 Bin    8 Count    6 
+ T    12 Bin    9 Count    9 
+>>>>>>> 839c391523a21b339fb2ba1614e8080cd891d9a5
  T    12 Bin   10 Count    0 
  T    12 Bin   11 Count    0 
  T    12 Bin   12 Count    0 
  T    12 Bin   13 Count    0 
  T    12 Bin   14 Count    0 
+<<<<<<< HEAD
  T    13 Bin    0 Count   93 
  T    13 Bin    1 Count   17 
  T    13 Bin    2 Count   13 
@@ -218,11 +382,24 @@
  T    13 Bin    7 Count    9 
  T    13 Bin    8 Count    3 
  T    13 Bin    9 Count   10 
+=======
+ T    13 Bin    0 Count   86 
+ T    13 Bin    1 Count   22 
+ T    13 Bin    2 Count   18 
+ T    13 Bin    3 Count   15 
+ T    13 Bin    4 Count   15 
+ T    13 Bin    5 Count   10 
+ T    13 Bin    6 Count   12 
+ T    13 Bin    7 Count    9 
+ T    13 Bin    8 Count    5 
+ T    13 Bin    9 Count    8 
+>>>>>>> 839c391523a21b339fb2ba1614e8080cd891d9a5
  T    13 Bin   10 Count    0 
  T    13 Bin   11 Count    0 
  T    13 Bin   12 Count    0 
  T    13 Bin   13 Count    0 
  T    13 Bin   14 Count    0 
+<<<<<<< HEAD
  T    14 Bin    0 Count   99 
  T    14 Bin    1 Count   16 
  T    14 Bin    2 Count   15 
@@ -233,11 +410,24 @@
  T    14 Bin    7 Count    7 
  T    14 Bin    8 Count    4 
  T    14 Bin    9 Count    9 
+=======
+ T    14 Bin    0 Count   91 
+ T    14 Bin    1 Count   20 
+ T    14 Bin    2 Count   17 
+ T    14 Bin    3 Count   20 
+ T    14 Bin    4 Count    9 
+ T    14 Bin    5 Count   17 
+ T    14 Bin    6 Count    7 
+ T    14 Bin    7 Count    7 
+ T    14 Bin    8 Count    4 
+ T    14 Bin    9 Count    8 
+>>>>>>> 839c391523a21b339fb2ba1614e8080cd891d9a5
  T    14 Bin   10 Count    0 
  T    14 Bin   11 Count    0 
  T    14 Bin   12 Count    0 
  T    14 Bin   13 Count    0 
  T    14 Bin   14 Count    0 
+<<<<<<< HEAD
  T    15 Bin    0 Count  105 
  T    15 Bin    1 Count   12 
  T    15 Bin    2 Count   19 
@@ -248,11 +438,24 @@
  T    15 Bin    7 Count    8 
  T    15 Bin    8 Count    2 
  T    15 Bin    9 Count    9 
+=======
+ T    15 Bin    0 Count   92 
+ T    15 Bin    1 Count   21 
+ T    15 Bin    2 Count   20 
+ T    15 Bin    3 Count   18 
+ T    15 Bin    4 Count    8 
+ T    15 Bin    5 Count   18 
+ T    15 Bin    6 Count    6 
+ T    15 Bin    7 Count    7 
+ T    15 Bin    8 Count    2 
+ T    15 Bin    9 Count    8 
+>>>>>>> 839c391523a21b339fb2ba1614e8080cd891d9a5
  T    15 Bin   10 Count    0 
  T    15 Bin   11 Count    0 
  T    15 Bin   12 Count    0 
  T    15 Bin   13 Count    0 
  T    15 Bin   14 Count    0 
+<<<<<<< HEAD
  T    16 Bin    0 Count  107 
  T    16 Bin    1 Count   16 
  T    16 Bin    2 Count   21 
@@ -263,11 +466,24 @@
  T    16 Bin    7 Count    7 
  T    16 Bin    8 Count    5 
  T    16 Bin    9 Count    5 
+=======
+ T    16 Bin    0 Count   98 
+ T    16 Bin    1 Count   20 
+ T    16 Bin    2 Count   19 
+ T    16 Bin    3 Count   18 
+ T    16 Bin    4 Count    6 
+ T    16 Bin    5 Count   17 
+ T    16 Bin    6 Count    7 
+ T    16 Bin    7 Count    6 
+ T    16 Bin    8 Count    1 
+ T    16 Bin    9 Count    8 
+>>>>>>> 839c391523a21b339fb2ba1614e8080cd891d9a5
  T    16 Bin   10 Count    0 
  T    16 Bin   11 Count    0 
  T    16 Bin   12 Count    0 
  T    16 Bin   13 Count    0 
  T    16 Bin   14 Count    0 
+<<<<<<< HEAD
  T    17 Bin    0 Count  110 
  T    17 Bin    1 Count   13 
  T    17 Bin    2 Count   25 
@@ -278,11 +494,24 @@
  T    17 Bin    7 Count    3 
  T    17 Bin    8 Count    6 
  T    17 Bin    9 Count    4 
+=======
+ T    17 Bin    0 Count  108 
+ T    17 Bin    1 Count   18 
+ T    17 Bin    2 Count   15 
+ T    17 Bin    3 Count   15 
+ T    17 Bin    4 Count   10 
+ T    17 Bin    5 Count   12 
+ T    17 Bin    6 Count    9 
+ T    17 Bin    7 Count    5 
+ T    17 Bin    8 Count    1 
+ T    17 Bin    9 Count    7 
+>>>>>>> 839c391523a21b339fb2ba1614e8080cd891d9a5
  T    17 Bin   10 Count    0 
  T    17 Bin   11 Count    0 
  T    17 Bin   12 Count    0 
  T    17 Bin   13 Count    0 
  T    17 Bin   14 Count    0 
+<<<<<<< HEAD
  T    18 Bin    0 Count  115 
  T    18 Bin    1 Count   15 
  T    18 Bin    2 Count   19 
@@ -293,11 +522,24 @@
  T    18 Bin    7 Count    4 
  T    18 Bin    8 Count    5 
  T    18 Bin    9 Count    4 
+=======
+ T    18 Bin    0 Count  111 
+ T    18 Bin    1 Count   17 
+ T    18 Bin    2 Count   20 
+ T    18 Bin    3 Count    9 
+ T    18 Bin    4 Count   17 
+ T    18 Bin    5 Count    7 
+ T    18 Bin    6 Count    7 
+ T    18 Bin    7 Count    4 
+ T    18 Bin    8 Count    3 
+ T    18 Bin    9 Count    5 
+>>>>>>> 839c391523a21b339fb2ba1614e8080cd891d9a5
  T    18 Bin   10 Count    0 
  T    18 Bin   11 Count    0 
  T    18 Bin   12 Count    0 
  T    18 Bin   13 Count    0 
  T    18 Bin   14 Count    0 
+<<<<<<< HEAD
  T    19 Bin    0 Count  117 
  T    19 Bin    1 Count   19 
  T    19 Bin    2 Count   13 
@@ -308,11 +550,24 @@
  T    19 Bin    7 Count    2 
  T    19 Bin    8 Count    5 
  T    19 Bin    9 Count    4 
+=======
+ T    19 Bin    0 Count  113 
+ T    19 Bin    1 Count   20 
+ T    19 Bin    2 Count   18 
+ T    19 Bin    3 Count    8 
+ T    19 Bin    4 Count   18 
+ T    19 Bin    5 Count    6 
+ T    19 Bin    6 Count    7 
+ T    19 Bin    7 Count    2 
+ T    19 Bin    8 Count    5 
+ T    19 Bin    9 Count    3 
+>>>>>>> 839c391523a21b339fb2ba1614e8080cd891d9a5
  T    19 Bin   10 Count    0 
  T    19 Bin   11 Count    0 
  T    19 Bin   12 Count    0 
  T    19 Bin   13 Count    0 
  T    19 Bin   14 Count    0 
+<<<<<<< HEAD
  T    20 Bin    0 Count  123 
  T    20 Bin    1 Count   21 
  T    20 Bin    2 Count    5 
@@ -323,11 +578,24 @@
  T    20 Bin    7 Count    5 
  T    20 Bin    8 Count    1 
  T    20 Bin    9 Count    4 
+=======
+ T    20 Bin    0 Count  118 
+ T    20 Bin    1 Count   19 
+ T    20 Bin    2 Count   18 
+ T    20 Bin    3 Count    6 
+ T    20 Bin    4 Count   17 
+ T    20 Bin    5 Count    7 
+ T    20 Bin    6 Count    6 
+ T    20 Bin    7 Count    1 
+ T    20 Bin    8 Count    6 
+ T    20 Bin    9 Count    2 
+>>>>>>> 839c391523a21b339fb2ba1614e8080cd891d9a5
  T    20 Bin   10 Count    0 
  T    20 Bin   11 Count    0 
  T    20 Bin   12 Count    0 
  T    20 Bin   13 Count    0 
  T    20 Bin   14 Count    0 
+<<<<<<< HEAD
  T    21 Bin    0 Count  123 
  T    21 Bin    1 Count   25 
  T    21 Bin    2 Count    4 
@@ -338,11 +606,24 @@
  T    21 Bin    7 Count    6 
  T    21 Bin    8 Count    1 
  T    21 Bin    9 Count    3 
+=======
+ T    21 Bin    0 Count  126 
+ T    21 Bin    1 Count   15 
+ T    21 Bin    2 Count   15 
+ T    21 Bin    3 Count   10 
+ T    21 Bin    4 Count   12 
+ T    21 Bin    5 Count    9 
+ T    21 Bin    6 Count    5 
+ T    21 Bin    7 Count    1 
+ T    21 Bin    8 Count    5 
+ T    21 Bin    9 Count    2 
+>>>>>>> 839c391523a21b339fb2ba1614e8080cd891d9a5
  T    21 Bin   10 Count    0 
  T    21 Bin   11 Count    0 
  T    21 Bin   12 Count    0 
  T    21 Bin   13 Count    0 
  T    21 Bin   14 Count    0 
+<<<<<<< HEAD
  T    22 Bin    0 Count  130 
  T    22 Bin    1 Count   19 
  T    22 Bin    2 Count    8 
@@ -353,11 +634,24 @@
  T    22 Bin    7 Count    5 
  T    22 Bin    8 Count    1 
  T    22 Bin    9 Count    3 
+=======
+ T    22 Bin    0 Count  128 
+ T    22 Bin    1 Count   20 
+ T    22 Bin    2 Count    9 
+ T    22 Bin    3 Count   17 
+ T    22 Bin    4 Count    7 
+ T    22 Bin    5 Count    7 
+ T    22 Bin    6 Count    4 
+ T    22 Bin    7 Count    3 
+ T    22 Bin    8 Count    3 
+ T    22 Bin    9 Count    2 
+>>>>>>> 839c391523a21b339fb2ba1614e8080cd891d9a5
  T    22 Bin   10 Count    0 
  T    22 Bin   11 Count    0 
  T    22 Bin   12 Count    0 
  T    22 Bin   13 Count    0 
  T    22 Bin   14 Count    0 
+<<<<<<< HEAD
  T    23 Bin    0 Count  136 
  T    23 Bin    1 Count   13 
  T    23 Bin    2 Count   12 
@@ -367,12 +661,24 @@
  T    23 Bin    6 Count    2 
  T    23 Bin    7 Count    5 
  T    23 Bin    8 Count    2 
+=======
+ T    23 Bin    0 Count  133 
+ T    23 Bin    1 Count   18 
+ T    23 Bin    2 Count    8 
+ T    23 Bin    3 Count   18 
+ T    23 Bin    4 Count    6 
+ T    23 Bin    5 Count    7 
+ T    23 Bin    6 Count    2 
+ T    23 Bin    7 Count    5 
+ T    23 Bin    8 Count    1 
+>>>>>>> 839c391523a21b339fb2ba1614e8080cd891d9a5
  T    23 Bin    9 Count    2 
  T    23 Bin   10 Count    0 
  T    23 Bin   11 Count    0 
  T    23 Bin   12 Count    0 
  T    23 Bin   13 Count    0 
  T    23 Bin   14 Count    0 
+<<<<<<< HEAD
  T    24 Bin    0 Count  144 
  T    24 Bin    1 Count    5 
  T    24 Bin    2 Count   16 
@@ -383,11 +689,24 @@
  T    24 Bin    7 Count    1 
  T    24 Bin    8 Count    3 
  T    24 Bin    9 Count    1 
+=======
+ T    24 Bin    0 Count  137 
+ T    24 Bin    1 Count   18 
+ T    24 Bin    2 Count    6 
+ T    24 Bin    3 Count   17 
+ T    24 Bin    4 Count    7 
+ T    24 Bin    5 Count    6 
+ T    24 Bin    6 Count    1 
+ T    24 Bin    7 Count    6 
+ T    24 Bin    8 Count    2 
+ T    24 Bin    9 Count    0 
+>>>>>>> 839c391523a21b339fb2ba1614e8080cd891d9a5
  T    24 Bin   10 Count    0 
  T    24 Bin   11 Count    0 
  T    24 Bin   12 Count    0 
  T    24 Bin   13 Count    0 
  T    24 Bin   14 Count    0 
+<<<<<<< HEAD
  T    25 Bin    0 Count  148 
  T    25 Bin    1 Count    4 
  T    25 Bin    2 Count   19 
@@ -397,12 +716,24 @@
  T    25 Bin    6 Count    6 
  T    25 Bin    7 Count    1 
  T    25 Bin    8 Count    3 
+=======
+ T    25 Bin    0 Count  141 
+ T    25 Bin    1 Count   15 
+ T    25 Bin    2 Count   10 
+ T    25 Bin    3 Count   12 
+ T    25 Bin    4 Count    9 
+ T    25 Bin    5 Count    5 
+ T    25 Bin    6 Count    1 
+ T    25 Bin    7 Count    5 
+ T    25 Bin    8 Count    2 
+>>>>>>> 839c391523a21b339fb2ba1614e8080cd891d9a5
  T    25 Bin    9 Count    0 
  T    25 Bin   10 Count    0 
  T    25 Bin   11 Count    0 
  T    25 Bin   12 Count    0 
  T    25 Bin   13 Count    0 
  T    25 Bin   14 Count    0 
+<<<<<<< HEAD
  T    26 Bin    0 Count  149 
  T    26 Bin    1 Count    8 
  T    26 Bin    2 Count   15 
@@ -412,12 +743,24 @@
  T    26 Bin    6 Count    5 
  T    26 Bin    7 Count    1 
  T    26 Bin    8 Count    3 
+=======
+ T    26 Bin    0 Count  148 
+ T    26 Bin    1 Count    9 
+ T    26 Bin    2 Count   17 
+ T    26 Bin    3 Count    7 
+ T    26 Bin    4 Count    7 
+ T    26 Bin    5 Count    4 
+ T    26 Bin    6 Count    3 
+ T    26 Bin    7 Count    3 
+ T    26 Bin    8 Count    2 
+>>>>>>> 839c391523a21b339fb2ba1614e8080cd891d9a5
  T    26 Bin    9 Count    0 
  T    26 Bin   10 Count    0 
  T    26 Bin   11 Count    0 
  T    26 Bin   12 Count    0 
  T    26 Bin   13 Count    0 
  T    26 Bin   14 Count    0 
+<<<<<<< HEAD
  T    27 Bin    0 Count  149 
  T    27 Bin    1 Count   12 
  T    27 Bin    2 Count   13 
@@ -426,6 +769,16 @@
  T    27 Bin    5 Count    2 
  T    27 Bin    6 Count    5 
  T    27 Bin    7 Count    2 
+=======
+ T    27 Bin    0 Count  151 
+ T    27 Bin    1 Count    8 
+ T    27 Bin    2 Count   18 
+ T    27 Bin    3 Count    6 
+ T    27 Bin    4 Count    7 
+ T    27 Bin    5 Count    2 
+ T    27 Bin    6 Count    5 
+ T    27 Bin    7 Count    1 
+>>>>>>> 839c391523a21b339fb2ba1614e8080cd891d9a5
  T    27 Bin    8 Count    2 
  T    27 Bin    9 Count    0 
  T    27 Bin   10 Count    0 
@@ -433,6 +786,7 @@
  T    27 Bin   12 Count    0 
  T    27 Bin   13 Count    0 
  T    27 Bin   14 Count    0 
+<<<<<<< HEAD
  T    28 Bin    0 Count  149 
  T    28 Bin    1 Count   16 
  T    28 Bin    2 Count   11 
@@ -442,12 +796,24 @@
  T    28 Bin    6 Count    1 
  T    28 Bin    7 Count    3 
  T    28 Bin    8 Count    1 
+=======
+ T    28 Bin    0 Count  155 
+ T    28 Bin    1 Count    6 
+ T    28 Bin    2 Count   17 
+ T    28 Bin    3 Count    7 
+ T    28 Bin    4 Count    6 
+ T    28 Bin    5 Count    1 
+ T    28 Bin    6 Count    6 
+ T    28 Bin    7 Count    2 
+ T    28 Bin    8 Count    0 
+>>>>>>> 839c391523a21b339fb2ba1614e8080cd891d9a5
  T    28 Bin    9 Count    0 
  T    28 Bin   10 Count    0 
  T    28 Bin   11 Count    0 
  T    28 Bin   12 Count    0 
  T    28 Bin   13 Count    0 
  T    28 Bin   14 Count    0 
+<<<<<<< HEAD
  T    29 Bin    0 Count  152 
  T    29 Bin    1 Count   19 
  T    29 Bin    2 Count    7 
@@ -456,6 +822,16 @@
  T    29 Bin    5 Count    6 
  T    29 Bin    6 Count    1 
  T    29 Bin    7 Count    3 
+=======
+ T    29 Bin    0 Count  156 
+ T    29 Bin    1 Count   10 
+ T    29 Bin    2 Count   12 
+ T    29 Bin    3 Count    9 
+ T    29 Bin    4 Count    5 
+ T    29 Bin    5 Count    1 
+ T    29 Bin    6 Count    5 
+ T    29 Bin    7 Count    2 
+>>>>>>> 839c391523a21b339fb2ba1614e8080cd891d9a5
  T    29 Bin    8 Count    0 
  T    29 Bin    9 Count    0 
  T    29 Bin   10 Count    0 
@@ -464,6 +840,7 @@
  T    29 Bin   13 Count    0 
  T    29 Bin   14 Count    0 
  T    30 Bin    0 Count  157 
+<<<<<<< HEAD
  T    30 Bin    1 Count   15 
  T    30 Bin    2 Count    8 
  T    30 Bin    3 Count    7 
@@ -471,6 +848,15 @@
  T    30 Bin    5 Count    5 
  T    30 Bin    6 Count    1 
  T    30 Bin    7 Count    3 
+=======
+ T    30 Bin    1 Count   17 
+ T    30 Bin    2 Count    7 
+ T    30 Bin    3 Count    7 
+ T    30 Bin    4 Count    4 
+ T    30 Bin    5 Count    3 
+ T    30 Bin    6 Count    3 
+ T    30 Bin    7 Count    2 
+>>>>>>> 839c391523a21b339fb2ba1614e8080cd891d9a5
  T    30 Bin    8 Count    0 
  T    30 Bin    9 Count    0 
  T    30 Bin   10 Count    0 
@@ -478,6 +864,7 @@
  T    30 Bin   12 Count    0 
  T    30 Bin   13 Count    0 
  T    30 Bin   14 Count    0 
+<<<<<<< HEAD
  T    31 Bin    0 Count  161 
  T    31 Bin    1 Count   13 
  T    31 Bin    2 Count    7 
@@ -485,6 +872,15 @@
  T    31 Bin    4 Count    2 
  T    31 Bin    5 Count    5 
  T    31 Bin    6 Count    2 
+=======
+ T    31 Bin    0 Count  159 
+ T    31 Bin    1 Count   18 
+ T    31 Bin    2 Count    6 
+ T    31 Bin    3 Count    7 
+ T    31 Bin    4 Count    2 
+ T    31 Bin    5 Count    5 
+ T    31 Bin    6 Count    1 
+>>>>>>> 839c391523a21b339fb2ba1614e8080cd891d9a5
  T    31 Bin    7 Count    2 
  T    31 Bin    8 Count    0 
  T    31 Bin    9 Count    0 
@@ -493,6 +889,7 @@
  T    31 Bin   12 Count    0 
  T    31 Bin   13 Count    0 
  T    31 Bin   14 Count    0 
+<<<<<<< HEAD
  T    32 Bin    0 Count  165 
  T    32 Bin    1 Count   11 
  T    32 Bin    2 Count    7 
@@ -501,6 +898,16 @@
  T    32 Bin    5 Count    1 
  T    32 Bin    6 Count    3 
  T    32 Bin    7 Count    1 
+=======
+ T    32 Bin    0 Count  161 
+ T    32 Bin    1 Count   17 
+ T    32 Bin    2 Count    7 
+ T    32 Bin    3 Count    6 
+ T    32 Bin    4 Count    1 
+ T    32 Bin    5 Count    6 
+ T    32 Bin    6 Count    2 
+ T    32 Bin    7 Count    0 
+>>>>>>> 839c391523a21b339fb2ba1614e8080cd891d9a5
  T    32 Bin    8 Count    0 
  T    32 Bin    9 Count    0 
  T    32 Bin   10 Count    0 
@@ -508,6 +915,7 @@
  T    32 Bin   12 Count    0 
  T    32 Bin   13 Count    0 
  T    32 Bin   14 Count    0 
+<<<<<<< HEAD
  T    33 Bin    0 Count  171 
  T    33 Bin    1 Count    7 
  T    33 Bin    2 Count    9 
@@ -515,6 +923,15 @@
  T    33 Bin    4 Count    6 
  T    33 Bin    5 Count    1 
  T    33 Bin    6 Count    3 
+=======
+ T    33 Bin    0 Count  166 
+ T    33 Bin    1 Count   12 
+ T    33 Bin    2 Count    9 
+ T    33 Bin    3 Count    5 
+ T    33 Bin    4 Count    1 
+ T    33 Bin    5 Count    5 
+ T    33 Bin    6 Count    2 
+>>>>>>> 839c391523a21b339fb2ba1614e8080cd891d9a5
  T    33 Bin    7 Count    0 
  T    33 Bin    8 Count    0 
  T    33 Bin    9 Count    0 
@@ -523,6 +940,7 @@
  T    33 Bin   12 Count    0 
  T    33 Bin   13 Count    0 
  T    33 Bin   14 Count    0 
+<<<<<<< HEAD
  T    34 Bin    0 Count  172 
  T    34 Bin    1 Count    8 
  T    34 Bin    2 Count    7 
@@ -530,6 +948,15 @@
  T    34 Bin    4 Count    5 
  T    34 Bin    5 Count    1 
  T    34 Bin    6 Count    3 
+=======
+ T    34 Bin    0 Count  174 
+ T    34 Bin    1 Count    7 
+ T    34 Bin    2 Count    7 
+ T    34 Bin    3 Count    4 
+ T    34 Bin    4 Count    3 
+ T    34 Bin    5 Count    3 
+ T    34 Bin    6 Count    2 
+>>>>>>> 839c391523a21b339fb2ba1614e8080cd891d9a5
  T    34 Bin    7 Count    0 
  T    34 Bin    8 Count    0 
  T    34 Bin    9 Count    0 
@@ -538,12 +965,21 @@
  T    34 Bin   12 Count    0 
  T    34 Bin   13 Count    0 
  T    34 Bin   14 Count    0 
+<<<<<<< HEAD
  T    35 Bin    0 Count  174 
  T    35 Bin    1 Count    7 
  T    35 Bin    2 Count    8 
  T    35 Bin    3 Count    2 
  T    35 Bin    4 Count    5 
  T    35 Bin    5 Count    2 
+=======
+ T    35 Bin    0 Count  177 
+ T    35 Bin    1 Count    6 
+ T    35 Bin    2 Count    7 
+ T    35 Bin    3 Count    2 
+ T    35 Bin    4 Count    5 
+ T    35 Bin    5 Count    1 
+>>>>>>> 839c391523a21b339fb2ba1614e8080cd891d9a5
  T    35 Bin    6 Count    2 
  T    35 Bin    7 Count    0 
  T    35 Bin    8 Count    0 
@@ -553,6 +989,7 @@
  T    35 Bin   12 Count    0 
  T    35 Bin   13 Count    0 
  T    35 Bin   14 Count    0 
+<<<<<<< HEAD
  T    36 Bin    0 Count  176 
  T    36 Bin    1 Count    7 
  T    36 Bin    2 Count    7 
@@ -560,6 +997,15 @@
  T    36 Bin    4 Count    1 
  T    36 Bin    5 Count    3 
  T    36 Bin    6 Count    1 
+=======
+ T    36 Bin    0 Count  178 
+ T    36 Bin    1 Count    7 
+ T    36 Bin    2 Count    6 
+ T    36 Bin    3 Count    1 
+ T    36 Bin    4 Count    6 
+ T    36 Bin    5 Count    2 
+ T    36 Bin    6 Count    0 
+>>>>>>> 839c391523a21b339fb2ba1614e8080cd891d9a5
  T    36 Bin    7 Count    0 
  T    36 Bin    8 Count    0 
  T    36 Bin    9 Count    0 
@@ -570,10 +1016,17 @@
  T    36 Bin   14 Count    0 
  T    37 Bin    0 Count  178 
  T    37 Bin    1 Count    9 
+<<<<<<< HEAD
  T    37 Bin    2 Count    3 
  T    37 Bin    3 Count    6 
  T    37 Bin    4 Count    1 
  T    37 Bin    5 Count    3 
+=======
+ T    37 Bin    2 Count    5 
+ T    37 Bin    3 Count    1 
+ T    37 Bin    4 Count    5 
+ T    37 Bin    5 Count    2 
+>>>>>>> 839c391523a21b339fb2ba1614e8080cd891d9a5
  T    37 Bin    6 Count    0 
  T    37 Bin    7 Count    0 
  T    37 Bin    8 Count    0 
@@ -583,12 +1036,21 @@
  T    37 Bin   12 Count    0 
  T    37 Bin   13 Count    0 
  T    37 Bin   14 Count    0 
+<<<<<<< HEAD
  T    38 Bin    0 Count  180 
  T    38 Bin    1 Count    7 
  T    38 Bin    2 Count    4 
  T    38 Bin    3 Count    5 
  T    38 Bin    4 Count    1 
  T    38 Bin    5 Count    3 
+=======
+ T    38 Bin    0 Count  181 
+ T    38 Bin    1 Count    7 
+ T    38 Bin    2 Count    4 
+ T    38 Bin    3 Count    3 
+ T    38 Bin    4 Count    3 
+ T    38 Bin    5 Count    2 
+>>>>>>> 839c391523a21b339fb2ba1614e8080cd891d9a5
  T    38 Bin    6 Count    0 
  T    38 Bin    7 Count    0 
  T    38 Bin    8 Count    0 
@@ -598,11 +1060,19 @@
  T    38 Bin   12 Count    0 
  T    38 Bin   13 Count    0 
  T    38 Bin   14 Count    0 
+<<<<<<< HEAD
  T    39 Bin    0 Count  181 
  T    39 Bin    1 Count    8 
  T    39 Bin    2 Count    2 
  T    39 Bin    3 Count    5 
  T    39 Bin    4 Count    2 
+=======
+ T    39 Bin    0 Count  183 
+ T    39 Bin    1 Count    7 
+ T    39 Bin    2 Count    2 
+ T    39 Bin    3 Count    5 
+ T    39 Bin    4 Count    1 
+>>>>>>> 839c391523a21b339fb2ba1614e8080cd891d9a5
  T    39 Bin    5 Count    2 
  T    39 Bin    6 Count    0 
  T    39 Bin    7 Count    0 
@@ -613,12 +1083,21 @@
  T    39 Bin   12 Count    0 
  T    39 Bin   13 Count    0 
  T    39 Bin   14 Count    0 
+<<<<<<< HEAD
  T    40 Bin    0 Count  183 
  T    40 Bin    1 Count    7 
  T    40 Bin    2 Count    5 
  T    40 Bin    3 Count    1 
  T    40 Bin    4 Count    3 
  T    40 Bin    5 Count    1 
+=======
+ T    40 Bin    0 Count  185 
+ T    40 Bin    1 Count    6 
+ T    40 Bin    2 Count    1 
+ T    40 Bin    3 Count    6 
+ T    40 Bin    4 Count    2 
+ T    40 Bin    5 Count    0 
+>>>>>>> 839c391523a21b339fb2ba1614e8080cd891d9a5
  T    40 Bin    6 Count    0 
  T    40 Bin    7 Count    0 
  T    40 Bin    8 Count    0 
@@ -629,10 +1108,17 @@
  T    40 Bin   13 Count    0 
  T    40 Bin   14 Count    0 
  T    41 Bin    0 Count  187 
+<<<<<<< HEAD
  T    41 Bin    1 Count    3 
  T    41 Bin    2 Count    6 
  T    41 Bin    3 Count    1 
  T    41 Bin    4 Count    3 
+=======
+ T    41 Bin    1 Count    5 
+ T    41 Bin    2 Count    1 
+ T    41 Bin    3 Count    5 
+ T    41 Bin    4 Count    2 
+>>>>>>> 839c391523a21b339fb2ba1614e8080cd891d9a5
  T    41 Bin    5 Count    0 
  T    41 Bin    6 Count    0 
  T    41 Bin    7 Count    0 
@@ -643,11 +1129,19 @@
  T    41 Bin   12 Count    0 
  T    41 Bin   13 Count    0 
  T    41 Bin   14 Count    0 
+<<<<<<< HEAD
  T    42 Bin    0 Count  187 
  T    42 Bin    1 Count    4 
  T    42 Bin    2 Count    5 
  T    42 Bin    3 Count    1 
  T    42 Bin    4 Count    3 
+=======
+ T    42 Bin    0 Count  188 
+ T    42 Bin    1 Count    4 
+ T    42 Bin    2 Count    3 
+ T    42 Bin    3 Count    3 
+ T    42 Bin    4 Count    2 
+>>>>>>> 839c391523a21b339fb2ba1614e8080cd891d9a5
  T    42 Bin    5 Count    0 
  T    42 Bin    6 Count    0 
  T    42 Bin    7 Count    0 
@@ -658,10 +1152,17 @@
  T    42 Bin   12 Count    0 
  T    42 Bin   13 Count    0 
  T    42 Bin   14 Count    0 
+<<<<<<< HEAD
  T    43 Bin    0 Count  189 
  T    43 Bin    1 Count    2 
  T    43 Bin    2 Count    5 
  T    43 Bin    3 Count    2 
+=======
+ T    43 Bin    0 Count  190 
+ T    43 Bin    1 Count    2 
+ T    43 Bin    2 Count    5 
+ T    43 Bin    3 Count    1 
+>>>>>>> 839c391523a21b339fb2ba1614e8080cd891d9a5
  T    43 Bin    4 Count    2 
  T    43 Bin    5 Count    0 
  T    43 Bin    6 Count    0 
@@ -673,11 +1174,19 @@
  T    43 Bin   12 Count    0 
  T    43 Bin   13 Count    0 
  T    43 Bin   14 Count    0 
+<<<<<<< HEAD
  T    44 Bin    0 Count  190 
  T    44 Bin    1 Count    5 
  T    44 Bin    2 Count    1 
  T    44 Bin    3 Count    3 
  T    44 Bin    4 Count    1 
+=======
+ T    44 Bin    0 Count  191 
+ T    44 Bin    1 Count    1 
+ T    44 Bin    2 Count    6 
+ T    44 Bin    3 Count    2 
+ T    44 Bin    4 Count    0 
+>>>>>>> 839c391523a21b339fb2ba1614e8080cd891d9a5
  T    44 Bin    5 Count    0 
  T    44 Bin    6 Count    0 
  T    44 Bin    7 Count    0 
@@ -688,10 +1197,17 @@
  T    44 Bin   12 Count    0 
  T    44 Bin   13 Count    0 
  T    44 Bin   14 Count    0 
+<<<<<<< HEAD
  T    45 Bin    0 Count  190 
  T    45 Bin    1 Count    6 
  T    45 Bin    2 Count    1 
  T    45 Bin    3 Count    3 
+=======
+ T    45 Bin    0 Count  192 
+ T    45 Bin    1 Count    1 
+ T    45 Bin    2 Count    5 
+ T    45 Bin    3 Count    2 
+>>>>>>> 839c391523a21b339fb2ba1614e8080cd891d9a5
  T    45 Bin    4 Count    0 
  T    45 Bin    5 Count    0 
  T    45 Bin    6 Count    0 
@@ -703,10 +1219,17 @@
  T    45 Bin   12 Count    0 
  T    45 Bin   13 Count    0 
  T    45 Bin   14 Count    0 
+<<<<<<< HEAD
  T    46 Bin    0 Count  191 
  T    46 Bin    1 Count    5 
  T    46 Bin    2 Count    1 
  T    46 Bin    3 Count    3 
+=======
+ T    46 Bin    0 Count  192 
+ T    46 Bin    1 Count    3 
+ T    46 Bin    2 Count    3 
+ T    46 Bin    3 Count    2 
+>>>>>>> 839c391523a21b339fb2ba1614e8080cd891d9a5
  T    46 Bin    4 Count    0 
  T    46 Bin    5 Count    0 
  T    46 Bin    6 Count    0 
@@ -718,9 +1241,15 @@
  T    46 Bin   12 Count    0 
  T    46 Bin   13 Count    0 
  T    46 Bin   14 Count    0 
+<<<<<<< HEAD
  T    47 Bin    0 Count  191 
  T    47 Bin    1 Count    5 
  T    47 Bin    2 Count    2 
+=======
+ T    47 Bin    0 Count  192 
+ T    47 Bin    1 Count    5 
+ T    47 Bin    2 Count    1 
+>>>>>>> 839c391523a21b339fb2ba1614e8080cd891d9a5
  T    47 Bin    3 Count    2 
  T    47 Bin    4 Count    0 
  T    47 Bin    5 Count    0 
@@ -733,10 +1262,17 @@
  T    47 Bin   12 Count    0 
  T    47 Bin   13 Count    0 
  T    47 Bin   14 Count    0 
+<<<<<<< HEAD
  T    48 Bin    0 Count  195 
  T    48 Bin    1 Count    1 
  T    48 Bin    2 Count    3 
  T    48 Bin    3 Count    1 
+=======
+ T    48 Bin    0 Count  192 
+ T    48 Bin    1 Count    6 
+ T    48 Bin    2 Count    2 
+ T    48 Bin    3 Count    0 
+>>>>>>> 839c391523a21b339fb2ba1614e8080cd891d9a5
  T    48 Bin    4 Count    0 
  T    48 Bin    5 Count    0 
  T    48 Bin    6 Count    0 
@@ -748,9 +1284,15 @@
  T    48 Bin   12 Count    0 
  T    48 Bin   13 Count    0 
  T    48 Bin   14 Count    0 
+<<<<<<< HEAD
  T    49 Bin    0 Count  196 
  T    49 Bin    1 Count    1 
  T    49 Bin    2 Count    3 
+=======
+ T    49 Bin    0 Count  193 
+ T    49 Bin    1 Count    5 
+ T    49 Bin    2 Count    2 
+>>>>>>> 839c391523a21b339fb2ba1614e8080cd891d9a5
  T    49 Bin    3 Count    0 
  T    49 Bin    4 Count    0 
  T    49 Bin    5 Count    0 
@@ -763,9 +1305,15 @@
  T    49 Bin   12 Count    0 
  T    49 Bin   13 Count    0 
  T    49 Bin   14 Count    0 
+<<<<<<< HEAD
  T    50 Bin    0 Count  196 
  T    50 Bin    1 Count    1 
  T    50 Bin    2 Count    3 
+=======
+ T    50 Bin    0 Count  195 
+ T    50 Bin    1 Count    3 
+ T    50 Bin    2 Count    2 
+>>>>>>> 839c391523a21b339fb2ba1614e8080cd891d9a5
  T    50 Bin    3 Count    0 
  T    50 Bin    4 Count    0 
  T    50 Bin    5 Count    0 
@@ -778,8 +1326,13 @@
  T    50 Bin   12 Count    0 
  T    50 Bin   13 Count    0 
  T    50 Bin   14 Count    0 
+<<<<<<< HEAD
  T    51 Bin    0 Count  196 
  T    51 Bin    1 Count    2 
+=======
+ T    51 Bin    0 Count  197 
+ T    51 Bin    1 Count    1 
+>>>>>>> 839c391523a21b339fb2ba1614e8080cd891d9a5
  T    51 Bin    2 Count    2 
  T    51 Bin    3 Count    0 
  T    51 Bin    4 Count    0 
@@ -793,9 +1346,15 @@
  T    51 Bin   12 Count    0 
  T    51 Bin   13 Count    0 
  T    51 Bin   14 Count    0 
+<<<<<<< HEAD
  T    52 Bin    0 Count  196 
  T    52 Bin    1 Count    3 
  T    52 Bin    2 Count    1 
+=======
+ T    52 Bin    0 Count  198 
+ T    52 Bin    1 Count    2 
+ T    52 Bin    2 Count    0 
+>>>>>>> 839c391523a21b339fb2ba1614e8080cd891d9a5
  T    52 Bin    3 Count    0 
  T    52 Bin    4 Count    0 
  T    52 Bin    5 Count    0 
@@ -808,8 +1367,13 @@
  T    52 Bin   12 Count    0 
  T    52 Bin   13 Count    0 
  T    52 Bin   14 Count    0 
+<<<<<<< HEAD
  T    53 Bin    0 Count  197 
  T    53 Bin    1 Count    3 
+=======
+ T    53 Bin    0 Count  198 
+ T    53 Bin    1 Count    2 
+>>>>>>> 839c391523a21b339fb2ba1614e8080cd891d9a5
  T    53 Bin    2 Count    0 
  T    53 Bin    3 Count    0 
  T    53 Bin    4 Count    0 
@@ -823,8 +1387,13 @@
  T    53 Bin   12 Count    0 
  T    53 Bin   13 Count    0 
  T    53 Bin   14 Count    0 
+<<<<<<< HEAD
  T    54 Bin    0 Count  197 
  T    54 Bin    1 Count    3 
+=======
+ T    54 Bin    0 Count  198 
+ T    54 Bin    1 Count    2 
+>>>>>>> 839c391523a21b339fb2ba1614e8080cd891d9a5
  T    54 Bin    2 Count    0 
  T    54 Bin    3 Count    0 
  T    54 Bin    4 Count    0 
@@ -853,8 +1422,13 @@
  T    55 Bin   12 Count    0 
  T    55 Bin   13 Count    0 
  T    55 Bin   14 Count    0 
+<<<<<<< HEAD
  T    56 Bin    0 Count  199 
  T    56 Bin    1 Count    1 
+=======
+ T    56 Bin    0 Count  200 
+ T    56 Bin    1 Count    0 
+>>>>>>> 839c391523a21b339fb2ba1614e8080cd891d9a5
  T    56 Bin    2 Count    0 
  T    56 Bin    3 Count    0 
  T    56 Bin    4 Count    0 
@@ -7513,3 +8087,21 @@
  T   499 Bin   12 Count    0 
  T   499 Bin   13 Count    0 
  T   499 Bin   14 Count    0 
+<<<<<<< HEAD
+=======
+ T   500 Bin    0 Count  200 
+ T   500 Bin    1 Count    0 
+ T   500 Bin    2 Count    0 
+ T   500 Bin    3 Count    0 
+ T   500 Bin    4 Count    0 
+ T   500 Bin    5 Count    0 
+ T   500 Bin    6 Count    0 
+ T   500 Bin    7 Count    0 
+ T   500 Bin    8 Count    0 
+ T   500 Bin    9 Count    0 
+ T   500 Bin   10 Count    0 
+ T   500 Bin   11 Count    0 
+ T   500 Bin   12 Count    0 
+ T   500 Bin   13 Count    0 
+ T   500 Bin   14 Count    0 
+>>>>>>> 839c391523a21b339fb2ba1614e8080cd891d9a5

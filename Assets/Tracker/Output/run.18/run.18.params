@@ -1,9 +1,17 @@
  Run_num = 18
+<<<<<<< HEAD
  Seed = 256295000
  Run_num_file = run.num
  Rerun = -1
  Output_path = Output
  Max_steps = 500
+=======
+ Seed = 674348000
+ Run_num_file = run.num
+ Rerun = -1
+ Output_path = Output
+ Max_steps = 501
+>>>>>>> 839c391523a21b339fb2ba1614e8080cd891d9a5
  Print_params = 0
  Print_step = 0
  Pop_size = 200

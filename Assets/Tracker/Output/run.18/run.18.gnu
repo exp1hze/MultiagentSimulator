@@ -232,7 +232,11 @@ unset ylabel
 unset title
 
 set term post eps color
+<<<<<<< HEAD
 set size ratio 2.500000
+=======
+set size ratio 2.505000
+>>>>>>> 839c391523a21b339fb2ba1614e8080cd891d9a5
 set output "run.18.stepagentaction.eps"
 set title "Agent actions, 1=N 2=E 3=S 4=W"
 set xlabel "Agent"
@@ -241,10 +245,17 @@ set palette maxcolors 5
 set palette defined (0 "white", 1 "blue", 2 "yellow", 3 "red", 4 "green")
 set cbrange[-0.5:4.5]
 set view map
+<<<<<<< HEAD
 plot [][501:-2] "run.18.stepagentaction" matrix w image
 
 set term post eps
 set size ratio 0.800000
+=======
+plot [][502:-2] "run.18.stepagentaction" matrix w image
+
+set term post eps
+set size ratio 0.798403
+>>>>>>> 839c391523a21b339fb2ba1614e8080cd891d9a5
 set xlabel "Agent"
 set ylabel "Threshold"
 set output "run.18.threshrangenorth.eps"
@@ -268,6 +279,7 @@ set title "Agent actions\n0=idle, 1=N, 2=E, 3=S, 4=W"
 set xlabel "Timestep"
 unset ytics
 unset ylabel
+<<<<<<< HEAD
 set object 1 rect from 0,0 to 500,8
 set object 2 rect from 0,14 to 500,22
 set object 3 rect from 0,28 to 500,36
@@ -468,6 +480,208 @@ set object 197 rect from 0,2744 to 500,2752
 set object 198 rect from 0,2758 to 500,2766
 set object 199 rect from 0,2772 to 500,2780
 set object 200 rect from 0,2786 to 500,2794
+=======
+set object 1 rect from 0,0 to 501,8
+set object 2 rect from 0,14 to 501,22
+set object 3 rect from 0,28 to 501,36
+set object 4 rect from 0,42 to 501,50
+set object 5 rect from 0,56 to 501,64
+set object 6 rect from 0,70 to 501,78
+set object 7 rect from 0,84 to 501,92
+set object 8 rect from 0,98 to 501,106
+set object 9 rect from 0,112 to 501,120
+set object 10 rect from 0,126 to 501,134
+set object 11 rect from 0,140 to 501,148
+set object 12 rect from 0,154 to 501,162
+set object 13 rect from 0,168 to 501,176
+set object 14 rect from 0,182 to 501,190
+set object 15 rect from 0,196 to 501,204
+set object 16 rect from 0,210 to 501,218
+set object 17 rect from 0,224 to 501,232
+set object 18 rect from 0,238 to 501,246
+set object 19 rect from 0,252 to 501,260
+set object 20 rect from 0,266 to 501,274
+set object 21 rect from 0,280 to 501,288
+set object 22 rect from 0,294 to 501,302
+set object 23 rect from 0,308 to 501,316
+set object 24 rect from 0,322 to 501,330
+set object 25 rect from 0,336 to 501,344
+set object 26 rect from 0,350 to 501,358
+set object 27 rect from 0,364 to 501,372
+set object 28 rect from 0,378 to 501,386
+set object 29 rect from 0,392 to 501,400
+set object 30 rect from 0,406 to 501,414
+set object 31 rect from 0,420 to 501,428
+set object 32 rect from 0,434 to 501,442
+set object 33 rect from 0,448 to 501,456
+set object 34 rect from 0,462 to 501,470
+set object 35 rect from 0,476 to 501,484
+set object 36 rect from 0,490 to 501,498
+set object 37 rect from 0,504 to 501,512
+set object 38 rect from 0,518 to 501,526
+set object 39 rect from 0,532 to 501,540
+set object 40 rect from 0,546 to 501,554
+set object 41 rect from 0,560 to 501,568
+set object 42 rect from 0,574 to 501,582
+set object 43 rect from 0,588 to 501,596
+set object 44 rect from 0,602 to 501,610
+set object 45 rect from 0,616 to 501,624
+set object 46 rect from 0,630 to 501,638
+set object 47 rect from 0,644 to 501,652
+set object 48 rect from 0,658 to 501,666
+set object 49 rect from 0,672 to 501,680
+set object 50 rect from 0,686 to 501,694
+set object 51 rect from 0,700 to 501,708
+set object 52 rect from 0,714 to 501,722
+set object 53 rect from 0,728 to 501,736
+set object 54 rect from 0,742 to 501,750
+set object 55 rect from 0,756 to 501,764
+set object 56 rect from 0,770 to 501,778
+set object 57 rect from 0,784 to 501,792
+set object 58 rect from 0,798 to 501,806
+set object 59 rect from 0,812 to 501,820
+set object 60 rect from 0,826 to 501,834
+set object 61 rect from 0,840 to 501,848
+set object 62 rect from 0,854 to 501,862
+set object 63 rect from 0,868 to 501,876
+set object 64 rect from 0,882 to 501,890
+set object 65 rect from 0,896 to 501,904
+set object 66 rect from 0,910 to 501,918
+set object 67 rect from 0,924 to 501,932
+set object 68 rect from 0,938 to 501,946
+set object 69 rect from 0,952 to 501,960
+set object 70 rect from 0,966 to 501,974
+set object 71 rect from 0,980 to 501,988
+set object 72 rect from 0,994 to 501,1002
+set object 73 rect from 0,1008 to 501,1016
+set object 74 rect from 0,1022 to 501,1030
+set object 75 rect from 0,1036 to 501,1044
+set object 76 rect from 0,1050 to 501,1058
+set object 77 rect from 0,1064 to 501,1072
+set object 78 rect from 0,1078 to 501,1086
+set object 79 rect from 0,1092 to 501,1100
+set object 80 rect from 0,1106 to 501,1114
+set object 81 rect from 0,1120 to 501,1128
+set object 82 rect from 0,1134 to 501,1142
+set object 83 rect from 0,1148 to 501,1156
+set object 84 rect from 0,1162 to 501,1170
+set object 85 rect from 0,1176 to 501,1184
+set object 86 rect from 0,1190 to 501,1198
+set object 87 rect from 0,1204 to 501,1212
+set object 88 rect from 0,1218 to 501,1226
+set object 89 rect from 0,1232 to 501,1240
+set object 90 rect from 0,1246 to 501,1254
+set object 91 rect from 0,1260 to 501,1268
+set object 92 rect from 0,1274 to 501,1282
+set object 93 rect from 0,1288 to 501,1296
+set object 94 rect from 0,1302 to 501,1310
+set object 95 rect from 0,1316 to 501,1324
+set object 96 rect from 0,1330 to 501,1338
+set object 97 rect from 0,1344 to 501,1352
+set object 98 rect from 0,1358 to 501,1366
+set object 99 rect from 0,1372 to 501,1380
+set object 100 rect from 0,1386 to 501,1394
+set object 101 rect from 0,1400 to 501,1408
+set object 102 rect from 0,1414 to 501,1422
+set object 103 rect from 0,1428 to 501,1436
+set object 104 rect from 0,1442 to 501,1450
+set object 105 rect from 0,1456 to 501,1464
+set object 106 rect from 0,1470 to 501,1478
+set object 107 rect from 0,1484 to 501,1492
+set object 108 rect from 0,1498 to 501,1506
+set object 109 rect from 0,1512 to 501,1520
+set object 110 rect from 0,1526 to 501,1534
+set object 111 rect from 0,1540 to 501,1548
+set object 112 rect from 0,1554 to 501,1562
+set object 113 rect from 0,1568 to 501,1576
+set object 114 rect from 0,1582 to 501,1590
+set object 115 rect from 0,1596 to 501,1604
+set object 116 rect from 0,1610 to 501,1618
+set object 117 rect from 0,1624 to 501,1632
+set object 118 rect from 0,1638 to 501,1646
+set object 119 rect from 0,1652 to 501,1660
+set object 120 rect from 0,1666 to 501,1674
+set object 121 rect from 0,1680 to 501,1688
+set object 122 rect from 0,1694 to 501,1702
+set object 123 rect from 0,1708 to 501,1716
+set object 124 rect from 0,1722 to 501,1730
+set object 125 rect from 0,1736 to 501,1744
+set object 126 rect from 0,1750 to 501,1758
+set object 127 rect from 0,1764 to 501,1772
+set object 128 rect from 0,1778 to 501,1786
+set object 129 rect from 0,1792 to 501,1800
+set object 130 rect from 0,1806 to 501,1814
+set object 131 rect from 0,1820 to 501,1828
+set object 132 rect from 0,1834 to 501,1842
+set object 133 rect from 0,1848 to 501,1856
+set object 134 rect from 0,1862 to 501,1870
+set object 135 rect from 0,1876 to 501,1884
+set object 136 rect from 0,1890 to 501,1898
+set object 137 rect from 0,1904 to 501,1912
+set object 138 rect from 0,1918 to 501,1926
+set object 139 rect from 0,1932 to 501,1940
+set object 140 rect from 0,1946 to 501,1954
+set object 141 rect from 0,1960 to 501,1968
+set object 142 rect from 0,1974 to 501,1982
+set object 143 rect from 0,1988 to 501,1996
+set object 144 rect from 0,2002 to 501,2010
+set object 145 rect from 0,2016 to 501,2024
+set object 146 rect from 0,2030 to 501,2038
+set object 147 rect from 0,2044 to 501,2052
+set object 148 rect from 0,2058 to 501,2066
+set object 149 rect from 0,2072 to 501,2080
+set object 150 rect from 0,2086 to 501,2094
+set object 151 rect from 0,2100 to 501,2108
+set object 152 rect from 0,2114 to 501,2122
+set object 153 rect from 0,2128 to 501,2136
+set object 154 rect from 0,2142 to 501,2150
+set object 155 rect from 0,2156 to 501,2164
+set object 156 rect from 0,2170 to 501,2178
+set object 157 rect from 0,2184 to 501,2192
+set object 158 rect from 0,2198 to 501,2206
+set object 159 rect from 0,2212 to 501,2220
+set object 160 rect from 0,2226 to 501,2234
+set object 161 rect from 0,2240 to 501,2248
+set object 162 rect from 0,2254 to 501,2262
+set object 163 rect from 0,2268 to 501,2276
+set object 164 rect from 0,2282 to 501,2290
+set object 165 rect from 0,2296 to 501,2304
+set object 166 rect from 0,2310 to 501,2318
+set object 167 rect from 0,2324 to 501,2332
+set object 168 rect from 0,2338 to 501,2346
+set object 169 rect from 0,2352 to 501,2360
+set object 170 rect from 0,2366 to 501,2374
+set object 171 rect from 0,2380 to 501,2388
+set object 172 rect from 0,2394 to 501,2402
+set object 173 rect from 0,2408 to 501,2416
+set object 174 rect from 0,2422 to 501,2430
+set object 175 rect from 0,2436 to 501,2444
+set object 176 rect from 0,2450 to 501,2458
+set object 177 rect from 0,2464 to 501,2472
+set object 178 rect from 0,2478 to 501,2486
+set object 179 rect from 0,2492 to 501,2500
+set object 180 rect from 0,2506 to 501,2514
+set object 181 rect from 0,2520 to 501,2528
+set object 182 rect from 0,2534 to 501,2542
+set object 183 rect from 0,2548 to 501,2556
+set object 184 rect from 0,2562 to 501,2570
+set object 185 rect from 0,2576 to 501,2584
+set object 186 rect from 0,2590 to 501,2598
+set object 187 rect from 0,2604 to 501,2612
+set object 188 rect from 0,2618 to 501,2626
+set object 189 rect from 0,2632 to 501,2640
+set object 190 rect from 0,2646 to 501,2654
+set object 191 rect from 0,2660 to 501,2668
+set object 192 rect from 0,2674 to 501,2682
+set object 193 rect from 0,2688 to 501,2696
+set object 194 rect from 0,2702 to 501,2710
+set object 195 rect from 0,2716 to 501,2724
+set object 196 rect from 0,2730 to 501,2738
+set object 197 rect from 0,2744 to 501,2752
+set object 198 rect from 0,2758 to 501,2766
+set object 199 rect from 0,2772 to 501,2780
+set object 200 rect from 0,2786 to 501,2794
+>>>>>>> 839c391523a21b339fb2ba1614e8080cd891d9a5
 plot [][-28.000000:2828.000000]\
      "run.18.stepagentactionwtime" using 2:(($3*2)+0) title "" w line lt 1,\
      "run.18.stepagentactionwtime" using 2:(($4*2)+14) title "" w line lt 1,\
@@ -878,7 +1092,11 @@ set ytics
 set xlabel "Agent"
 set ylabel "Count"
 set title "Number of times acted on each task"
+<<<<<<< HEAD
 plot [-1:240.000000][0:550.000000]\
+=======
+plot [-1:240.000000][0:551.100000]\
+>>>>>>> 839c391523a21b339fb2ba1614e8080cd891d9a5
      "run.18.finalagent" using 2:5 title "N" w points pt 1 ps 2 lw 2 lc 1,\
      "run.18.finalagent" using 2:6 title "E" w points pt 2 ps 2 lw 2 lc 2,\
      "run.18.finalagent" using 2:7 title "S" w points pt 4 ps 2 lw 2 lc 3,\
@@ -915,7 +1133,11 @@ set ytics
 set xlabel "Agent"
 set ylabel "Number of switches"
 set title "Number of task switches during run"
+<<<<<<< HEAD
 plot [-1:240.000000][0:550.000000]\
+=======
+plot [-1:240.000000][0:551.100000]\
+>>>>>>> 839c391523a21b339fb2ba1614e8080cd891d9a5
      "run.18.finalagent" using 2:15 title "N" w points pt 7 ps 2 lc 1
 unset xlabel
 unset ylabel
