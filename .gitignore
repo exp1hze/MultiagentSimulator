@@ -5,3 +5,4 @@ Obj/
 Logs/
 Assembly-CSharp-Editor-firstpass.csproj
 Assembly-CSharp.csproj
+*.sln
