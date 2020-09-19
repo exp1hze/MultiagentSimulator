@@ -9,10 +9,12 @@ using UnityEngine.UI;
 public class runButton : MonoBehaviour
 {
     [SerializeField] GameObject[] inputFields;
+    [SerializeField] GameObject[] dropdowns;
     //[SerializeField] Camera cam;
     public string readPath;
     public Hashtable _params;
     public string run_num;
+    public string runNumPath;
     // Start is called before the first frame update
     public GameObject mainCamera;
     void Start()
@@ -22,8 +24,9 @@ public class runButton : MonoBehaviour
         readPath = Application.dataPath + "/Tracker/params";
         ReadParams(readPath);
 
-        readPath = Application.dataPath + "/Tracker/run.num";
-        ReadRunNum(readPath);
+
+        runNumPath = Application.dataPath + "/Tracker/run.num";
+        ReadRunNum(runNumPath);
 
     }
 
@@ -77,11 +80,32 @@ public class runButton : MonoBehaviour
             string value = inputFields[i].GetComponent<InputField>().text;
             GameObject parent = inputFields[i].transform.parent.gameObject;
             string key = parent.GetComponent<Text>().text;
-            Debug.Log(key+" "+ value);
+            //Debug.Log(key+" "+ value);
             if (_params.ContainsKey(key))
             {
-                _params[key] = value;
-                Debug.Log("the modified key is:" + key + " to value:" + value);
+                if (!_params[key].Equals(value))
+                {
+                    _params[key] = value;
+                    Debug.Log("the modified key is:" + key + " to value:" + value);
+                }
+                
+            }
+        }
+
+        for (int i = 0; i < dropdowns.Length; i++)
+        {
+            Dropdown dd = dropdowns[i].GetComponent<Dropdown>();
+            string value = dd.options[dd.value].text;
+            GameObject parent = dropdowns[i].transform.parent.gameObject;
+            string key = parent.GetComponent<Text>().text;
+            //Debug.Log(key + " " + value);
+            if (_params.ContainsKey(key))
+            {
+                if (!_params[key].Equals(value))
+                {
+                    _params[key] = value;
+                    Debug.Log("the modified key is:" + key + " to value:" + value);
+                }
             }
         }
 
@@ -96,10 +120,12 @@ public class runButton : MonoBehaviour
                 //Debug.Log(line);
                 sw.Write(line);
                 sw.Flush();
+                
             }
 
             sw.Close();
             fs.Close();
+            Debug.Log("-------------------------");
             mainCamera = GameObject.Find("Main Camera");
             mainCamera.GetComponent<test>().run();
         }
@@ -107,6 +133,7 @@ public class runButton : MonoBehaviour
         {
             Debug.Log("The params file may opened by another program!");
         }
+        ReadRunNum(runNumPath);
     }
 
 

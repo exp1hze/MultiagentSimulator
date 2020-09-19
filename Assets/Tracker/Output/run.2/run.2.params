@@ -1,5 +1,5 @@
  Run_num = 2
- Seed = 993838000
+ Seed = 945236000
  Run_num_file = run.num
  Rerun = -1
  Output_path = Output
@@ -13,7 +13,7 @@
  Thresh_decrease = 0.100000
  Prob_check = 1.000000
  Task_selection = random
- Target_path = scurve
+ Target_path = square
  Target.amplitude = 20.000000
  Target.period = 40.000000
  Target.step_len = 3.000000
@@ -43,16 +43,16 @@
  Gnuplot_plots = 0
 
  Target parameters:
- Target.abbrev =  scurve
- Target.x =  0.000000
- Target.y =  0.010000
+ Target.abbrev =  squ
+ Target.x =  20.000000
+ Target.y =  20.000000
  Target.step_len =  3.000000
  Target.length =  0.000000
- Target.angle =  1.570796
+ Target.angle =  0.000000
 
  Tracker parameters:
- Tracker.x =  0.000000
- Tracker.y =  0.010000
+ Tracker.x =  20.000000
+ Tracker.y =  20.000000
  Tracker.length =  0.000000
  Tracker.max_step_len =  6.000000
  Tracker.total_difference =  0.000000
