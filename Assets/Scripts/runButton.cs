@@ -12,6 +12,7 @@ public class runButton : MonoBehaviour
     //[SerializeField] Camera cam;
     public string readPath;
     public Hashtable _params;
+    public string run_num;
     // Start is called before the first frame update
     public GameObject mainCamera;
     void Start()
@@ -20,7 +21,26 @@ public class runButton : MonoBehaviour
         _params = new Hashtable();
         readPath = Application.dataPath + "/Tracker/params";
         ReadParams(readPath);
+
+        readPath = Application.dataPath + "/Tracker/run.num";
+        ReadRunNum(readPath);
+
     }
+
+
+
+    public void ReadRunNum(string path)
+    {
+        StreamReader sr = new StreamReader(path, Encoding.Default);
+        string line;
+        if ((line = sr.ReadLine()) != null)
+        {
+            run_num = line;
+        }
+        sr.Close();
+    }
+
+
 
     public void ReadParams(string path)
     {
@@ -39,7 +59,7 @@ public class runButton : MonoBehaviour
     {
         string[] param = Regex.Split(line, "\\s+", RegexOptions.IgnoreCase);
         _params.Add(param[0], param[1]);
-        Debug.Log("reading" + param[0] + " " + param[1]);
+        //Debug.Log("reading" + param[0] + " " + param[1]);
     }
 
     // Update is called once per frame

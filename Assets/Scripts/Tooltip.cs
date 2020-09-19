@@ -13,7 +13,7 @@ public class Tooltip : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
         tooltip.SetActive(true);
         tooltip.transform.SetAsLastSibling();
         tooltip.transform.position = this.transform.position;
-        Debug.Log(key);
+        //Debug.Log(key);
     }
 
     public void OnPointerExit(PointerEventData eventData)
@@ -52,6 +52,9 @@ public class Tooltip : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
             case "Step_ratio":
                 key = "(double) - Ratio of the tracker’s maximum step length to the target’s step length. For example, Step ratio=2.0 means that the maximum distance that the tracker can travel in one timestep is twice the target’s step length or 2.0×Target step len.";
                 break;
+            case "Task_selection":
+                key = "(char *) - If more than one task demand exceeds an agent’s corresponding task thresholds, this parameter determines how the agent selects a task to work on. Two select methods are currently implemented: \n–  random\n–  urgent";
+                break;
             default:
                 break;
         }
@@ -62,6 +65,6 @@ public class Tooltip : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     void Start()
     {
         tooltip = GameObject.Find("Canvas").transform.Find("Tooltip").gameObject;
-        Debug.Log(tooltip.transform.GetChild(0).GetComponent<Text>().text);
+        //Debug.Log(tooltip.transform.GetChild(0).GetComponent<Text>().text);
     }
 }
