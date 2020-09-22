@@ -2,11 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class onclickTest : MonoBehaviour
+public class PDButton : MonoBehaviour
 {
-
-    public GameObject canvas;
-    GameObject fatherPanel ;
+    public GameObject childPanel;
+    GameObject fatherPanel;
 
     void Awake()
     {
@@ -18,10 +17,11 @@ public class onclickTest : MonoBehaviour
     }
     public void onclick()
     {
+        Debug.Log(gameObject.name);
         foreach (Transform child in fatherPanel.transform)
         {
             child.gameObject.SetActive(false);
         }
-        canvas.SetActive(true);
+        childPanel.SetActive(true);
     }
 }
