@@ -10,9 +10,11 @@ public class Tooltip : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     {
         string key = transform.parent.GetComponent<Text>().text;
         (tooltip.transform.GetChild(0)).GetComponent<Text>().text = GetInfo(key);
+      
         tooltip.SetActive(true);
-        tooltip.transform.SetAsLastSibling();
         tooltip.transform.position = this.transform.position;
+        tooltip.transform.SetAsLastSibling();
+        
         //Debug.Log(key);
     }
 

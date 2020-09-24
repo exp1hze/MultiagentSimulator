@@ -18,12 +18,12 @@ public class SceneLoader : MonoBehaviour
     }
     public void LoadStartMenu()
     {
-        
+        SceneManager.LoadScene("MainMenu");
     }
 
-    public void LoadDomain1()
+    public void LoadSetParamTracker()
     {
-        SceneManager.LoadScene("simulation");
+        SceneManager.LoadScene("SetParamTracker");
         
     }
 }
