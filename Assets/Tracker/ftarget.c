@@ -257,11 +257,14 @@ printf("---in path_circle()---\n");
 
    x1 = Target.x;
    y1 = Target.y;
-   r = 30;
+   r = Circle_radius;
+   //r = 30;
    theta0 = 2 * asin(Target.step_len / (2 * r) );
 
+/*
 printf(" x1 %lf y1 %lf r %lf theta0 %lf %lf\n", x1, y1, r, theta0,
 theta0/(2*3.14159)*360);
+*/
 
    if (x1 >= 0 && y1 >= 0)
       {
@@ -673,7 +676,7 @@ printf("---in path_scurve()---\n");
       Target.angle = M_PI/2;
    else
       Target.angle = Target.angle + (Target.direction * Target.change);
-printf("** %lf angle\n", Target.angle/M_PI*180);
+//printf("** %lf angle\n", Target.angle/M_PI*180);
 
 #ifdef DEBUG
 printf("---end path_scurve()---\n");

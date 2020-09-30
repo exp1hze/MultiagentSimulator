@@ -211,7 +211,7 @@ printf("---end step_run()---\n");
 */
 double rand_agent_intensity()
     {
-    #ifdef DEBUG
+#ifdef DEBUG
 printf("---in rand_agent_intensity()---\n");
 #endif
 
@@ -308,10 +308,74 @@ printf("---in init_agent()---\n");
    /* scale thresholds from [0.0,1.0] to [0.0,Range] */
    scale_thresholds(n);
 
+   // set the response_prob value for each agent:
+   // if Response_prob == 3, use normal distribution
+   // if Response_prob == 2, each agent gets a random response_prob value
+   // else if 0 <= Response_prob <= 1, set all agents' response_prob equal
+   // to Response_prob
+   if (Response_prob == 3.0)
+      {
+         do {
+            Agent[n].response_prob = box_muller(RP_gaussian_mu, RP_gaussian_std);
+         }
+         while (Agent[n].response_prob > 1.0 || Agent[n].response_prob < 0.0);
+      }
+   else if (Response_prob == 2.0)
+      {
+      /* initialize to random value */
+      Agent[n].response_prob = knuth_random();
+      }  /* if */
+   else if (Response_prob <=1.0)
+      {
+      Agent[n].response_prob = Response_prob;
+      }  /* else if */
+   else
+      {
+      printf(" Error(init_agent): Invalid value for Response_prob: %lf\n",
+             Response_prob);
+      return ERROR;
+      }  /* else */
+
+   // NB; 2020.06.23
+   // set the spontaneous_response_prob value for each agent:
+   // if Spontaneous_response_prob == 3, use normal distribution
+   // if Spontaneous_response_prob == 2, each agent gets a random value
+   // else if 0 <= Spontaneous_response_prob < 1, set all agents' equal to it
+   // else if Spontaneous_response_prob == 1, set agent = 1-Agent[i].response_prob
+   if (Spontaneous_response_prob == 3.0)
+      {
+         do {
+            Agent[n].spontaneous_response_prob = box_muller(SRP_gaussian_mu, SRP_gaussian_std);
+         }
+         while (Agent[n].spontaneous_response_prob > 1.0 || Agent[n].spontaneous_response_prob < 0.0);
+      }
+   else if (Spontaneous_response_prob == 2.0)
+      {
+      /* initialize to random value */
+      Agent[n].spontaneous_response_prob = knuth_random();
+      }  /* if */
+   else if (Spontaneous_response_prob == 1.0)
+      {
+      Agent[n].spontaneous_response_prob = 1-Agent[n].response_prob;
+      }  /* else if */
+   else if (Spontaneous_response_prob < 1.0)
+      {
+         Agent[n].spontaneous_response_prob = Spontaneous_response_prob;
+      }  /* else if */
+   else
+      {
+      printf(" Error(init_agent): Invalid value for Spontaneous_response_prob: %lf\n",
+             Spontaneous_response_prob);
+      return ERROR;
+      }  /* else */
+
+   // set the prob_check value for each agent:
+   // if Prob_check == 0, each agent gets a random prob_check value
+   // else if 0 < Prob_check <= 1, set all agents' prob_check to Prob_check
    if (Prob_check == 0.0)
       {
       /* initialize to random value */
-      Agent[n].prob_check = funiform(1.0);
+      Agent[n].prob_check = knuth_random();
       }  /* if */
    else if (Prob_check <=1.0)
       {
@@ -319,7 +383,7 @@ printf("---in init_agent()---\n");
       }  /* else if */
    else
       {
-      printf(" Error(init_agent): invalid threshold init value: %lf\n",
+      printf(" Error(init_agent): Invalid value for Prob_check: %lf\n",
              Prob_check);
       return ERROR;
       }  /* else */
@@ -335,6 +399,7 @@ printf("---in init_agent()---\n");
    Agent[n].count_west = 0;
    Agent[n].count_idle = 0;
    Agent[n].count_switch = 0;
+   Agent[n].count_switch_spontaneous = 0;
 
    // initialize agent intensities
    error = init_intensities(n);
@@ -439,8 +504,9 @@ printf("---in init_target()---\n");
       sprintf(Target.abbrev, "cir");
       /* set start location to top center, go clockwise, radius of 30 */
       /* center at 0, 0 */
-      Target.x = 1;
-      Target.y = 30;
+      Target.x = 0;
+      Target.y = Circle_radius;
+      //Target.y = 30;
       }
    else if ( !strcmp(Target_path, "random") )
       {
@@ -696,7 +762,7 @@ printf("---in init_raw_thresholds()---\n");
    Agent[n].raw_thresh_max = 1.0;
 
    // initialize raw thresholds
-   if (Thresh_init <= 1.0 && Thresh_init > 0.0)
+   if (Thresh_init <= 1.0 && Thresh_init >= 0.0)
       {
       /* make sure Thresh_init is within range */
       if (Thresh_init > Agent[n].raw_thresh_max)
@@ -842,7 +908,7 @@ printf("---in init_raw_thresholds()---\n");
       }
    else
       {
-      printf(" Error(init_agent): invalid threshold init value: %lf\n",
+      printf(" Error(init_agent): Invalid value for Thresh_init: %lf\n",
 		Thresh_init);
       return ERROR;
       }  /* else */
@@ -1125,7 +1191,7 @@ printf("---in init_intensities()---\n");
       Agent[n].intensity_east  = random_double(Agent[n].int_aging_min_e, Agent[n].int_aging_max_e);
       Agent[n].intensity_west  = random_double(Agent[n].int_aging_min_w, Agent[n].int_aging_max_w);
 
-      #ifdef DEBUG
+      #ifdef DEBUG_PRINT
       printf("agent: %d   intensity aging ranges:\tn=[%f, %f], s=[%f, %f], e=[%f, %f], w=[%f, %f]\n",
         n,  Agent[n].int_aging_min_n, Agent[n].int_aging_max_n,
             Agent[n].int_aging_min_s, Agent[n].int_aging_max_s,

@@ -125,6 +125,7 @@ typedef struct
 
    /* keep track of number of times agent switches tasks */
    int count_switch;
+   int count_switch_spontaneous;  // NB; Spontaneous Response Prob; 2020.06.03
 
    /* HDM; intensity variation; 2019.09.12 */
    /* agent's intensity factors for each task */
@@ -168,9 +169,9 @@ typedef struct
    double int_aging_min_s;
    double int_aging_min_w;
  
-   // might use these fields later
    double prob_check;		/* prob agent choose task each timestep */
    double response_prob;    /* for heterogeneous response probabilities */
+   double spontaneous_response_prob;   /* for heterogeneous spontaneous response probabilities */
     
    /* HDM; 2020.03.19 */
    int dead;                /* indicates if agent has been killed; values 0 or 1 */

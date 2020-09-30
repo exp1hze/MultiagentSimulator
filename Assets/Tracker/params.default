@@ -75,6 +75,9 @@ Task_selection		random
 #      northeast		move northeast
 #      northeast_accel		move northeast and accelerate
 Target_path		square
+### Extra parameter for specifying the radius of the circle path.
+#   Only applies to the circle path.
+Circle_radius		30
 ### Length of each step that target takes (type double).
 Target_step_len		1
 ### Tracker parameter
@@ -135,10 +138,15 @@ Hetero_radius_std   0.05
 #   Values:
 #       < 1.0 - homogeneous, agent fails to act with probability 1 - p
 #       1.0 - homogeneous, agent acts whenever threshold is met
-#   These two values not yet implemented:
 #       2.0 - heterogeneous, uniformly distributed in [0..1]
-#       3.0 - heterogeneous, Gaussian
+#       3.0 - standard normal distribution
 Response_prob   1.0
+### RP gaussian mu
+# Mean of standard distribution to use when Response_prob is set to 3.0
+RP_gaussian_mu  0.7
+### RP gaussian std
+# Standard deviation of standard distribution to use when Response_prob is set to 3.0
+RP_gaussian_std 0.15
 ### Number of agents to kill
 #   Values:
 #       0 - killing of agents is disabled
@@ -152,5 +160,22 @@ First_extinction    100
 #       0 - repeated extinctions disabled
 #       > 0 - extinctions occur at increments of the specified value
 Extinction_period   0
+### NB; 2020.05.19
+### Spontaneous Response Probability
+#   The probability that an agent will act when their response threshold is not met
+#   Values:
+#       0.0 - Agents will never act when their response threshold is not met
+#       < 1.0 - Homogeneous; Agents will act (when their response threshold is not met) with probability p
+#       1.0 - Homogeneous/Heterogeneous (Depends on Response_prob); 
+#             Agents will act (when their response threshold is not met) with probability 1-Agent[i].response_prob
+#       2.0 - Heterogeneous; uniformly distributed in [0..1]
+#       3.0 - Standard normal distribution
+Spontaneous_response_prob 1.0
+### SRP gaussian mu
+# Mean of standard distribution to use when Spontaneous_response_prob is set to 3.0
+SRP_gaussian_mu  0.2
+### SRP gaussian std
+# Standard deviation of standard distribution to use when Spontaneous_response_prob is set to 3.0
+SRP_gaussian_std 0.15
 ### Create the gnuplot plots for a given run, 1 = true, 0 = false
 Gnuplot_plots		0

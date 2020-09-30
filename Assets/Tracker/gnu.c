@@ -309,6 +309,7 @@ printf("---in gnu_stepsummary()---\n");
       fprintf(fp, "set size square\n");
       }
    fprintf(fp, "set output \"run.%d.stepsummary.paths.line.eps\"\n", Run_num);
+   fprintf(fp, "set size ratio -1\n");
    fprintf(fp, "set title \"Target and Tracker paths\"\n");
    fprintf(fp, "plot\\\n");
    fprintf(fp,
@@ -1007,7 +1008,64 @@ printf("---in gnu_finalagent()---\n");
    fprintf(fp, "     \"run.%d.finalagent\" using 2:15 title \"N\" ", Run_num);
    fprintf(fp,       "w points pt 7 ps 2 lc 1\n");
    fprintf(fp, "unset xlabel\n");
-   fprintf(fp, "unset ylabel\n");
+   fprintf(fp, "unset ylabel\n"); 
+   fprintf(fp, "unset title\n");
+   fprintf(fp, "unset size\n");
+   fprintf(fp, "\n");
+
+   // NB; 2020.06.03
+   // plot number of spontaneous switches for each agent
+   fprintf(fp, "set term post eps color\n");
+   fprintf(fp, "set size ratio 0.5\n");
+   fprintf(fp, "set output \"run.%d.finalagent.spontaneousswitch.eps\"\n", Run_num);
+   fprintf(fp, "set xtics\n");
+   fprintf(fp, "set ytics\n");
+   fprintf(fp, "set xlabel \"Agent\"\n");
+   fprintf(fp, "set ylabel \"Number of spontaneous switches\"\n");
+   fprintf(fp, "set title \"Number of task switches due to spontaneous response prob during run\"\n");
+   fprintf(fp, "plot [-1:%lf][0:%lf]\\\n", Pop_size*1.2, Max_steps*1.1);
+   fprintf(fp, "     \"run.%d.finalagent\" using 2:17 title \"N\" ", Run_num);
+   fprintf(fp,       "w points pt 7 ps 2 lc 1\n");
+   fprintf(fp, "unset xlabel\n");
+   fprintf(fp, "unset ylabel\n"); 
+   fprintf(fp, "unset title\n");
+   fprintf(fp, "unset size\n");
+   fprintf(fp, "\n");
+
+   // NB; 2020.06.29
+   // plot all agents Response prob values
+   fprintf(fp, "set term post eps color\n");
+   fprintf(fp, "set size ratio 0.5\n");
+   fprintf(fp, "set output \"run.%d.finalagent.response_prob.eps\"\n", Run_num);
+   fprintf(fp, "set xtics\n");
+   fprintf(fp, "set ytics\n");
+   fprintf(fp, "set xlabel \"Agent\"\n");
+   fprintf(fp, "set ylabel \"Response prob Value\"\n");
+   fprintf(fp, "set title \"Agent Response prob Values\"\n");
+   fprintf(fp, "plot [-1:%lf][0:1]\\\n", Pop_size*1.1);
+   fprintf(fp, "     \"run.%d.finalagent\" using 2:21 title \"N\" ", Run_num);
+   fprintf(fp,       "w points pt 7 ps 2 lc 1\n");
+   fprintf(fp, "unset xlabel\n");
+   fprintf(fp, "unset ylabel\n"); 
+   fprintf(fp, "unset title\n");
+   fprintf(fp, "unset size\n");
+   fprintf(fp, "\n");
+
+   // NB; 2020.06.29
+   // plot all agents Spontaneous response prob values
+   fprintf(fp, "set term post eps color\n");
+   fprintf(fp, "set size ratio 0.5\n");
+   fprintf(fp, "set output \"run.%d.finalagent.spontaneous_response_prob.eps\"\n", Run_num);
+   fprintf(fp, "set xtics\n");
+   fprintf(fp, "set ytics\n");
+   fprintf(fp, "set xlabel \"Agent\"\n");
+   fprintf(fp, "set ylabel \"Spontaneous Value\"\n");
+   fprintf(fp, "set title \"Agent Spontaneous Values\"\n");
+   fprintf(fp, "plot [-1:%lf][0:1]\\\n", Pop_size*1.1);
+   fprintf(fp, "     \"run.%d.finalagent\" using 2:23 title \"N\" ", Run_num);
+   fprintf(fp,       "w points pt 7 ps 2 lc 1\n");
+   fprintf(fp, "unset xlabel\n");
+   fprintf(fp, "unset ylabel\n"); 
    fprintf(fp, "unset title\n");
    fprintf(fp, "unset size\n");
    fprintf(fp, "\n");

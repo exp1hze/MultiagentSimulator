@@ -150,6 +150,9 @@ printf("---in select_tasks()---\n");
 
    // all live agents get a chance (subject to making it thru Prob_check 
    // and Response_prob) to select a task to work on in next timestep
+   //
+   // 2020-06-09-AW:
+   // Move Response_prob code from this function into agent_select_task()
    for (i=0; i<Pop_size; i++)
       {
       if(!Agent[i].dead)
@@ -163,17 +166,11 @@ printf("---in select_tasks()---\n");
          rand_num = knuth_random();
          if (rand_num <= Agent[i].prob_check)
             {
-            // Apply response probability p = Response_prob
-            // Agent acts on task with probability p.
-            // Does not act on task with probability 1-p.
-            rand_num = knuth_random();
-            if (rand_num <= Response_prob)
+            if (agent_select_task(i) == ERROR)  return ERROR;
+            // NB; Spontaneous_response_prob; 2020.06.23
+            if (Agent[i].current_task == 0)  // If an agent has not already selected a task
                {
-               if (agent_select_task(i) == ERROR)  return ERROR;
-               }
-            else
-               {
-               Agent[i].current_task = 0;
+               if (agent_select_task_spontaneous(i) == ERROR) return ERROR;
                }
             }
 
@@ -217,6 +214,8 @@ int agent_select_task(int agent_num)
    int j;
    int directions[5];
    int sum;		// count # tasks that need work
+   int chosen_task;
+   double rand_num;
 
 #ifdef DEBUG
 printf("---in agent_select_task()---\n");
@@ -232,8 +231,8 @@ printf("---in agent_select_task()---\n");
    for (j=0; j<5; j++)  directions[j] = 0;
 
    /* check to see if direction needs work and agent threshold is less */
-   if (Tracker.diff_to_north > 0 &&
-       Agent[agent_num].thresh_north < Tracker.diff_to_north)
+   if ((Tracker.diff_to_north > 0 &&
+       Agent[agent_num].thresh_north < Tracker.diff_to_north))
       {
 #ifdef TEMP2
 printf("      agent[%d].thresh_north %lf, Tracker.diff_to_north %lf\n",
@@ -274,13 +273,14 @@ agent_num, Agent[agent_num].thresh_west, Tracker.diff_to_west);
       }
 
    /* each agent chooses a direction in which to push */
+   /* selects from among five tasks: 0=none, 1=N, 2=E, 3=S, 4=W */
    if ( strcmp(Task_selection, "random") == 0 )
       {
-      choose_random(agent_num, sum, directions);
+      chosen_task = choose_random(agent_num, sum, directions);
       }
    else if ( strcmp(Task_selection, "urgent") == 0 )
       {
-      choose_urgent(agent_num, sum, directions);
+      chosen_task = choose_urgent(agent_num, sum, directions);
       }
    else
       {
@@ -290,11 +290,140 @@ agent_num, Agent[agent_num].thresh_west, Tracker.diff_to_west);
       return ERROR;
       }
 
+   // 2020-06-09.AW:  apply response probability:
+   // Agent takes on chosen task with probability given by its own 
+   // response_prob; otherwise agent chooses to become idle.
+   rand_num = knuth_random();
+   if (rand_num <= Agent[agent_num].response_prob)
+      {
+      Agent[agent_num].current_task = chosen_task;
+      }
+   else
+      {
+      Agent[agent_num].current_task = 0;
+      }
+
 #ifdef DEBUG
 printf("---end agent_select_task()---\n");
 #endif
    return OK;
    }  /* agent_select_task */
+
+/********** agent_select_task_spontaneous **********/
+/* parameters:	agent_num		index of agent
+   called by:   select_tasks()
+   actions:     A single agent chooses an action for the next time
+		step -- choose a direction in which to push or to be idle.
+		If more than one direction has a non-zero distance,
+		agent selects one randomly for now.  May try other strategies
+		in the future.
+		1 = N, 2 = E, 3 = S, 4 = W, 0 = not active.
+
+      Differs from agent_select_task! This function incorporates 
+      Spontaneous_response_prob and therefore response thresholds
+      do NOT need to be met for an agent to select a task. 
+      Made this a separate function in case we want to add more 
+      differing code for Spontaneous_response_prob specifically.    
+*/
+int agent_select_task_spontaneous(int agent_num)
+   {
+   int j;
+   int directions[5];
+   int sum;		// count # tasks that need work
+   int chosen_task;
+
+#ifdef DEBUG
+printf("---in agent_select_task_spontaneous()---\n");
+#endif
+
+#ifdef TEMP2
+   printf(" *** agent_select_task_spontaneous()\n");
+#endif
+
+   sum = 0;
+
+   /* zero out all directions */
+   for (j=0; j<5; j++)  directions[j] = 0;
+
+   /* check to see if direction needs work and agent threshold is not met (threshold is higher than distance) */
+   if ((Tracker.diff_to_north > 0 &&
+       Agent[agent_num].thresh_north >= Tracker.diff_to_north))
+      {
+#ifdef TEMP2
+printf("      agent[%d].thresh_north %lf, Tracker.diff_to_north %lf\n",
+agent_num, Agent[agent_num].thresh_north, Tracker.diff_to_north);
+#endif
+      directions[1] = 1;
+      sum++;
+      }
+   if (Tracker.diff_to_east > 0 &&
+       Agent[agent_num].thresh_east >= Tracker.diff_to_east)
+      {
+#ifdef TEMP2
+printf("      agent[%d].thresh_east %lf, Tracker.diff_to_east %lf\n",
+agent_num, Agent[agent_num].thresh_east, Tracker.diff_to_east);
+#endif
+      directions[2] = 1;
+      sum++;
+      }
+   if (Tracker.diff_to_south > 0 &&
+       Agent[agent_num].thresh_south >= Tracker.diff_to_south)
+      {
+#ifdef TEMP2
+printf("      agent[%d].thresh_south %lf, Tracker.diff_to_south %lf\n",
+agent_num, Agent[agent_num].thresh_south, Tracker.diff_to_south);
+#endif
+      directions[3] = 1;
+      sum++;
+      }
+   if (Tracker.diff_to_west > 0 &&
+       Agent[agent_num].thresh_west >= Tracker.diff_to_west)
+      {
+#ifdef TEMP2
+printf("      agent[%d].thresh_west %lf, Tracker.diff_to_west %lf\n",
+agent_num, Agent[agent_num].thresh_west, Tracker.diff_to_west);
+#endif
+      directions[4] = 1;
+      sum++;
+      }
+
+   /* each agent chooses a direction in which to push */
+   if ( strcmp(Task_selection, "random") == 0 )
+      {
+      chosen_task = choose_random(agent_num, sum, directions);
+      }
+   else if ( strcmp(Task_selection, "urgent") == 0 )
+      {
+      chosen_task = choose_urgent(agent_num, sum, directions);
+      }
+   else
+      {
+      printf(
+      " Error(agent_select_task): Invalid value for Task_selection: %s\n",
+		Task_selection);
+      return ERROR;
+      }
+
+   // NB; Spontaneous Response Prob; 2020.06.23
+   double rand_num = knuth_random();
+   if (rand_num < Agent[agent_num].spontaneous_response_prob){
+      Agent[agent_num].current_task = chosen_task;
+   }else{
+      Agent[agent_num].current_task = 0;
+   }
+
+   // NB; Spontaneous Response Prob; 2020.06.03
+   // Keep track of how many agents are acting due to Spontaneous_response_prob
+   if (Agent[agent_num].current_task != 0)
+      {
+      Agent[agent_num].count_switch_spontaneous += 1;
+      }
+
+#ifdef DEBUG
+printf("---end agent_select_task_spontaneous()---\n");
+#endif
+   return OK;
+   }  /* agent_select_task_spontaneous */
 
 /********** adjust_agent_thresholds **********/
 /* created:	20.04.17.ASW
@@ -391,12 +520,13 @@ printf("---end adjust_agent_thresholds()---\n");
    actions:     the specified agent selects a task randomly from among the
 		tasks that need work.  Chooses from N/E/S/W.
 */
-void choose_random(int agent_num, int sum, int directions[])
+int choose_random(int agent_num, int sum, int directions[])
    {
    int randnum;
    int count;
    int i;
    int choose_new_task;
+   int current_task;		/* chosen task */
 
 #ifdef DEBUG
 printf("---in choose_random()---\n");
@@ -406,7 +536,8 @@ printf("---in choose_random()---\n");
    printf(" *** choose_random() sum = %d\n", sum);
 #endif
 
-   Agent[agent_num].current_task = 0;
+//   Agent[agent_num].current_task = 0;
+   current_task = 0;
 
    randnum = uniform(sum)+1;
 
@@ -420,7 +551,8 @@ printf("---in choose_random()---\n");
          if (count == randnum)
             {
             choose_new_task = i;
-            Agent[agent_num].current_task = i;
+            //Agent[agent_num].current_task = i;
+            current_task = i;
             break;
             }
          }
@@ -430,12 +562,13 @@ printf("---in choose_random()---\n");
    printf("      agent %d, sum %d, directions %d. %d %d %d %d choose %d current %d\n",
 	agent_num, sum, directions[0],
 	directions[1], directions[2], directions[3], directions[4],
-	choose_new_task, Agent[agent_num].current_task);
+	choose_new_task, current_task);
 #endif
 
 #ifdef DEBUG
 printf("---end choose_random()---\n");
 #endif
+   return current_task;
    }  /* choose_random */
 
 /********** choose_urgent **********/
@@ -447,10 +580,11 @@ printf("---end choose_random()---\n");
    actions:     the specified agent selects the most urgent task that falls
 		under the agent's corresponding threshold.
 */
-void choose_urgent(int agent_num, int sum, int directions[])
+int choose_urgent(int agent_num, int sum, int directions[])
    {
    int most_urgent_task;
    double most_urgent_stimulus;
+   int current_task;
 
 #ifdef DEBUG
 printf("---in choose_urgent()---\n");
@@ -460,7 +594,8 @@ printf("---in choose_urgent()---\n");
    printf(" *** choose_urgent() sum %d\n", sum);
 #endif
 
-   Agent[agent_num].current_task = 0;
+   //Agent[agent_num].current_task = 0;
+   current_task = 0;
 
    if (sum == 1)
       {
@@ -469,10 +604,14 @@ printf(" sum = 1\n");
 #endif
       // if only one task stimulus falls under this agent's corresponding
       // threshold, that is this agent's most urgent task.
-      if (directions[1] == 1)       Agent[agent_num].current_task = 1;
-      else if (directions[2] == 1)  Agent[agent_num].current_task = 2;
-      else if (directions[3] == 1)  Agent[agent_num].current_task = 3;
-      else if (directions[4] == 1)  Agent[agent_num].current_task = 4;
+      //if (directions[1] == 1)       Agent[agent_num].current_task = 1;
+      //else if (directions[2] == 1)  Agent[agent_num].current_task = 2;
+      //else if (directions[3] == 1)  Agent[agent_num].current_task = 3;
+      //else if (directions[4] == 1)  Agent[agent_num].current_task = 4;
+      if (directions[1] == 1)       current_task = 1;
+      else if (directions[2] == 1)  current_task = 2;
+      else if (directions[3] == 1)  current_task = 3;
+      else if (directions[4] == 1)  current_task = 4;
       }
    else
       {
@@ -515,16 +654,18 @@ printf(" south mutask %d mustim %lf\n", most_urgent_task, most_urgent_stimulus);
 printf(" west  mutask %d mustim %lf\n", most_urgent_task, most_urgent_stimulus);
 #endif
          }
-      Agent[agent_num].current_task = most_urgent_task;
+      //Agent[agent_num].current_task = most_urgent_task;
+      current_task = most_urgent_task;
       }
 
 #ifdef TEMP2
-printf("      agent %d, current task %d\n", agent_num, Agent[agent_num].current_task);
+printf("      agent %d, current task %d\n", agent_num, current_task);
 #endif
 
 #ifdef DEBUG
 printf("---end choose_urgent()---\n");
 #endif
+   return current_task;
    }  /* choose_urgent */
 
 // HDM; 2019.09.19

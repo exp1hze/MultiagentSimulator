@@ -15,6 +15,7 @@ extern double Thresh_increase;
 extern double Thresh_decrease;
 extern double Prob_check;
 extern char *Target_path;
+extern double Circle_radius;
 extern double Range;
 extern int Gnuplot_plots;
 extern int Run_num;
@@ -48,3 +49,8 @@ extern int Kill_number;             /* HDM; related to response prob; 2020.03.19
 extern int First_extinction;        /* HDM; time step at which agents are first killed */
 extern int Extinction_period;       /* HDM; period at which extinctions occur */
 extern int Num_alive;               /* HDM; number of agents still alive */
+extern double Spontaneous_response_prob; /* NB; variable spontaneous response when response threshold not met; 2020.05.19; */
+double SRP_gaussian_mu;             /* NB; Spontaneous_response_prob standard distribution; 2020.07.06 */
+double SRP_gaussian_std; 
+double RP_gaussian_mu;              /* NB; Response_prob standard distribution; 2020.07.06 */
+double RP_gaussian_std; 

@@ -1,200 +1,200 @@
- agent    0 count-inesw  366    0   12    5  117 thresh-nesw 6.935128 7.238302 5.654018 0.771495 switch 25 killed -1
- agent    1 count-inesw  500    0    0    0    0 thresh-nesw 6.810612 6.422171 5.610076 6.380332 switch 0 killed -1
- agent    2 count-inesw  335   14  120   31    0 thresh-nesw 5.809334 1.846647 3.816499 7.137420 switch 30 killed -1
- agent    3 count-inesw  360    6   17    0  117 thresh-nesw 7.252192 5.567141 7.934999 0.315016 switch 35 killed -1
- agent    4 count-inesw  245  120   19    0  116 thresh-nesw 0.588596 6.520848 9.237428 0.520537 switch 29 killed -1
- agent    5 count-inesw  279    0  102  119    0 thresh-nesw 7.443479 1.643901 2.687879 7.433071 switch 26 killed -1
- agent    6 count-inesw  398    0   68   34    0 thresh-nesw 8.392812 3.679944 4.240922 8.693062 switch 42 killed -1
- agent    7 count-inesw  440    0   37   23    0 thresh-nesw 9.583740 3.714357 4.569564 8.278203 switch 24 killed -1
- agent    8 count-inesw  316    0   64  120    0 thresh-nesw 8.957961 3.861925 3.030286 6.558372 switch 36 killed -1
- agent    9 count-inesw  321    0   60  119    0 thresh-nesw 6.117617 3.785270 1.519420 6.496671 switch 34 killed -1
- agent   10 count-inesw  257    5  119  119    0 thresh-nesw 8.255757 1.166739 1.774701 8.346245 switch 30 killed -1
- agent   11 count-inesw  351    7   48   94    0 thresh-nesw 5.976115 4.184247 2.583003 9.615409 switch 46 killed -1
- agent   12 count-inesw  399   97    4    0    0 thresh-nesw 2.320983 6.843944 8.304909 6.823448 switch 16 killed -1
- agent   13 count-inesw  379  119    0    0    2 thresh-nesw 1.064437 7.892662 5.336077 5.963062 switch 14 killed -1
- agent   14 count-inesw  266  120    0    0  114 thresh-nesw 1.260837 6.175452 9.123615 2.478386 switch 23 killed -1
- agent   15 count-inesw  259    0  125  116    0 thresh-nesw 7.349957 0.339227 1.074206 8.603456 switch 31 killed -1
- agent   16 count-inesw  409   90    0    0    1 thresh-nesw 2.171705 8.207820 8.177231 6.156097 switch 22 killed -1
- agent   17 count-inesw  311    0  120   61    8 thresh-nesw 8.943967 0.959136 3.672326 6.943409 switch 40 killed -1
- agent   18 count-inesw  499    0    0    1    0 thresh-nesw 8.159600 6.511031 5.054174 6.018109 switch 2 killed -1
- agent   19 count-inesw  382  117    1    0    0 thresh-nesw 1.419016 5.817620 7.902201 8.301386 switch 18 killed -1
- agent   20 count-inesw  388    0   24    9   79 thresh-nesw 8.981296 6.266300 5.257927 0.101062 switch 33 killed -1
- agent   21 count-inesw  347   95    8    0   50 thresh-nesw 1.193279 6.696371 7.366711 4.079892 switch 34 killed -1
- agent   22 count-inesw  430   70    0    0    0 thresh-nesw 2.273301 7.329477 7.438246 7.775684 switch 12 killed -1
- agent   23 count-inesw  278    0  120   32   70 thresh-nesw 8.352228 2.317130 4.411091 3.208197 switch 38 killed -1
- agent   24 count-inesw  310    0  143   43    4 thresh-nesw 7.535418 0.137808 3.813754 5.844648 switch 58 killed -1
- agent   25 count-inesw  471    0   17   12    0 thresh-nesw 8.758941 4.341368 4.116381 7.785405 switch 18 killed -1
- agent   26 count-inesw  318   15   31   64   72 thresh-nesw 5.345642 4.489701 3.913817 2.889981 switch 62 killed -1
- agent   27 count-inesw  205   33   92  120   50 thresh-nesw 6.040036 0.487227 1.275004 5.212838 switch 46 killed -1
- agent   28 count-inesw  204    0  120   70  106 thresh-nesw 7.662298 1.208814 3.930045 2.776634 switch 59 killed -1
- agent   29 count-inesw  313    0   68  119    0 thresh-nesw 9.215201 3.740356 3.121289 6.674473 switch 34 killed -1
- agent   30 count-inesw  409   47    0    0   44 thresh-nesw 2.221083 7.969169 5.588118 4.274686 switch 26 killed -1
- agent   31 count-inesw  259    0  120  120    1 thresh-nesw 7.432180 0.721001 3.056433 8.223417 switch 26 killed -1
- agent   32 count-inesw  372    0   13   32   83 thresh-nesw 8.665999 5.456691 5.194808 2.850972 switch 54 killed -1
- agent   33 count-inesw  359   39   74   28    0 thresh-nesw 2.953093 3.547918 4.409795 6.396476 switch 44 killed -1
- agent   34 count-inesw  319    1  119   61    0 thresh-nesw 8.975302 1.901607 3.687227 9.604075 switch 38 killed -1
- agent   35 count-inesw  380    0    0    3  117 thresh-nesw 8.632283 7.140625 6.534387 0.268422 switch 13 killed -1
- agent   36 count-inesw  353  119   27    1    0 thresh-nesw 1.658336 6.071832 6.694816 7.064694 switch 20 killed -1
- agent   37 count-inesw  337    0   26   58   79 thresh-nesw 8.390414 4.005615 4.011381 2.541659 switch 35 killed -1
- agent   38 count-inesw  408   92    0    0    0 thresh-nesw 1.251965 8.150535 6.913069 8.423102 switch 14 killed -1
- agent   39 count-inesw  367   23    0    0  110 thresh-nesw 5.295661 9.332547 7.574848 0.614514 switch 23 killed -1
- agent   40 count-inesw  388    0   32    0   80 thresh-nesw 8.212246 6.356762 5.963963 3.097011 switch 22 killed -1
- agent   41 count-inesw  372  119    0    9    0 thresh-nesw 0.794310 6.124149 5.748358 8.569259 switch 18 killed -1
- agent   42 count-inesw  141  120  119  120    0 thresh-nesw 2.080602 1.359672 2.625262 6.025095 switch 36 killed -1
- agent   43 count-inesw  303    0   63  120   14 thresh-nesw 8.136893 3.252625 2.164280 7.675259 switch 28 killed -1
- agent   44 count-inesw  373   42   20   65    0 thresh-nesw 3.964824 3.340101 3.451641 9.046256 switch 38 killed -1
- agent   45 count-inesw  357  119    0    0   24 thresh-nesw 2.067031 7.532507 7.783407 5.360083 switch 24 killed -1
- agent   46 count-inesw  274   56  120   50    0 thresh-nesw 3.794227 1.422436 3.797310 8.385146 switch 44 killed -1
- agent   47 count-inesw  322    9   43   10  116 thresh-nesw 6.793215 6.258882 5.885986 0.296264 switch 37 killed -1
- agent   48 count-inesw  381    0    0    3  116 thresh-nesw 8.940770 8.367362 5.746295 0.675627 switch 13 killed -1
- agent   49 count-inesw  343   17   24    0  116 thresh-nesw 6.226621 5.298891 6.377949 0.883774 switch 39 killed -1
- agent   50 count-inesw  376    0   38   86    0 thresh-nesw 9.491547 4.535861 2.892106 8.773797 switch 34 killed -1
- agent   51 count-inesw  380    0    4    0  116 thresh-nesw 9.287109 5.794805 7.510315 0.463388 switch 19 killed -1
- agent   52 count-inesw  149  120  120  110    1 thresh-nesw 1.894490 0.699338 2.196547 7.893157 switch 42 killed -1
- agent   53 count-inesw  142  120  119  119    0 thresh-nesw 2.499228 1.806209 2.523367 7.690243 switch 38 killed -1
- agent   54 count-inesw  380  120    0    0    0 thresh-nesw 0.784505 8.887930 5.531901 7.230657 switch 12 killed -1
- agent   55 count-inesw  402    0    0    0   98 thresh-nesw 8.426639 6.149100 6.589600 2.952755 switch 24 killed -1
- agent   56 count-inesw  310   57  117   16    0 thresh-nesw 3.607355 3.347016 4.653570 6.213863 switch 36 killed -1
- agent   57 count-inesw  267    0  116   82   35 thresh-nesw 7.814732 2.281328 3.481855 4.510770 switch 52 killed -1
- agent   58 count-inesw  358   83    0    0   59 thresh-nesw 2.797863 9.477675 6.845512 3.311905 switch 26 killed -1
- agent   59 count-inesw  149    0  120  120  111 thresh-nesw 6.806053 2.327880 2.260916 2.312026 switch 35 killed -1
- agent   60 count-inesw  382    0   23    0   95 thresh-nesw 6.629236 6.818835 7.527492 2.962251 switch 30 killed -1
- agent   61 count-inesw  380  119    1    0    0 thresh-nesw 0.332984 7.386070 6.789701 6.584279 switch 14 killed -1
- agent   62 count-inesw  311   83    6    0  100 thresh-nesw 2.827543 8.685854 7.723720 2.896385 switch 44 killed -1
- agent   63 count-inesw  380    3    0    1  116 thresh-nesw 6.566972 8.249470 7.742899 2.352171 switch 17 killed -1
- agent   64 count-inesw  317    0   58  118    7 thresh-nesw 9.575890 3.478343 1.883094 8.652006 switch 36 killed -1
- agent   65 count-inesw  146    0  119  120  115 thresh-nesw 9.102109 2.142871 1.772744 0.948498 switch 35 killed -1
- agent   66 count-inesw  439    0    0    0   61 thresh-nesw 9.911050 8.644506 7.788153 3.473566 switch 12 killed -1
- agent   67 count-inesw  403    0   37    0   60 thresh-nesw 8.530990 6.105837 6.833289 3.281447 switch 26 killed -1
- agent   68 count-inesw  434    0    3    0   63 thresh-nesw 7.448236 6.237231 8.396470 3.195280 switch 18 killed -1
- agent   69 count-inesw  297    0   82  121    0 thresh-nesw 6.257297 1.025791 0.601959 9.688228 switch 52 killed -1
- agent   70 count-inesw  494    0    0    6    0 thresh-nesw 7.973943 6.165243 5.009007 6.627822 switch 10 killed -1
- agent   71 count-inesw  285    0  120   95    0 thresh-nesw 8.368898 2.355298 3.337985 7.134343 switch 34 killed -1
- agent   72 count-inesw  371  120    0    0    9 thresh-nesw 1.062232 6.041643 7.868696 7.007651 switch 18 killed -1
- agent   73 count-inesw  267    0   63  169    1 thresh-nesw 7.366858 1.533969 0.561382 6.026276 switch 75 killed -1
- agent   74 count-inesw  268   37   77  118    0 thresh-nesw 5.376270 2.688204 1.315007 5.932716 switch 40 killed -1
- agent   75 count-inesw  383    0    0    0  117 thresh-nesw 6.884717 9.574567 6.466189 0.715772 switch 11 killed -1
- agent   76 count-inesw  500    0    0    0    0 thresh-nesw 7.886642 8.621770 8.117427 6.360531 switch 0 killed -1
- agent   77 count-inesw  381  119    0    0    0 thresh-nesw 1.973534 6.182160 5.970220 8.437076 switch 12 killed -1
- agent   78 count-inesw  293    0   15   75  117 thresh-nesw 7.190997 4.729157 4.447856 0.672427 switch 35 killed -1
- agent   79 count-inesw  250    0   97  149    4 thresh-nesw 9.590100 0.671266 0.713704 9.622225 switch 66 killed -1
- agent   80 count-inesw  358    1   84   31   26 thresh-nesw 6.881375 3.325708 4.458155 4.816221 switch 44 killed -1
- agent   81 count-inesw  227  119   32    6  116 thresh-nesw 1.814229 5.491731 8.195305 2.101042 switch 45 killed -1
- agent   82 count-inesw  392   97    0    0   11 thresh-nesw 2.306548 8.820933 9.125237 6.234780 switch 20 killed -1
- agent   83 count-inesw  263    5  112  120    0 thresh-nesw 5.998469 1.153886 1.834206 6.203887 switch 36 killed -1
- agent   84 count-inesw  210   61  110  118    1 thresh-nesw 4.079230 0.850287 3.128717 7.106599 switch 50 killed -1
- agent   85 count-inesw  401   15   43   41    0 thresh-nesw 5.294020 3.654312 3.875416 8.029078 switch 36 killed -1
- agent   86 count-inesw  331  120   21   28    0 thresh-nesw 0.293776 5.386211 4.963205 8.244173 switch 38 killed -1
- agent   87 count-inesw  265  119    0    0  116 thresh-nesw 0.447177 8.836333 8.977458 1.199897 switch 23 killed -1
- agent   88 count-inesw  371  102    0    0   27 thresh-nesw 2.339413 6.363588 6.132989 4.527967 switch 26 killed -1
- agent   89 count-inesw  287   94    0    3  116 thresh-nesw 2.268772 8.917908 9.409393 2.457811 switch 25 killed -1
- agent   90 count-inesw  264  120    0    0  116 thresh-nesw 2.140015 7.824576 9.154402 1.562257 switch 23 killed -1
- agent   91 count-inesw  410   47    0    0   43 thresh-nesw 3.352067 8.559723 8.241490 4.322359 switch 24 killed -1
- agent   92 count-inesw  329    0   36  120   15 thresh-nesw 8.941546 3.608286 2.069607 7.155783 switch 30 killed -1
- agent   93 count-inesw  423   76    0    0    1 thresh-nesw 1.644974 8.854713 6.415910 6.573949 switch 12 killed -1
- agent   94 count-inesw  384    0    0    0  116 thresh-nesw 9.073552 7.285665 9.673606 2.338834 switch 11 killed -1
- agent   95 count-inesw  336    0  118   46    0 thresh-nesw 9.632725 2.015983 3.895345 6.517614 switch 28 killed -1
- agent   96 count-inesw  274    2  120  104    0 thresh-nesw 7.306926 1.611326 3.142045 6.821223 switch 28 killed -1
- agent   97 count-inesw  424   38    7    0   31 thresh-nesw 2.571379 6.614387 8.019974 4.579021 switch 28 killed -1
- agent   98 count-inesw  191  119   85  105    0 thresh-nesw 2.304403 2.853059 1.236631 6.363230 switch 56 killed -1
- agent   99 count-inesw  376  120    4    0    0 thresh-nesw 0.257382 6.347731 9.203686 8.498880 switch 16 killed -1
- agent  100 count-inesw  380  120    0    0    0 thresh-nesw 1.296158 9.805416 9.760856 9.655902 switch 12 killed -1
- agent  101 count-inesw  395    0    1    0  104 thresh-nesw 7.299443 6.952896 7.232642 2.917073 switch 28 killed -1
- agent  102 count-inesw  383    0    0    0  117 thresh-nesw 6.398245 9.350196 8.793218 0.999164 switch 11 killed -1
- agent  103 count-inesw  438   62    0    0    0 thresh-nesw 0.973454 7.074224 6.846634 9.907424 switch 10 killed -1
- agent  104 count-inesw  365   47   54   34    0 thresh-nesw 3.912849 3.801391 4.256749 9.501350 switch 42 killed -1
- agent  105 count-inesw  454   46    0    0    0 thresh-nesw 3.564250 7.044962 8.373804 8.796545 switch 12 killed -1
- agent  106 count-inesw  220   31  155   94    0 thresh-nesw 6.357090 0.073480 2.855796 8.653593 switch 80 killed -1
- agent  107 count-inesw  288    0   50  132   30 thresh-nesw 8.131792 4.313731 1.033592 4.596996 switch 66 killed -1
- agent  108 count-inesw  260    0  120  120    0 thresh-nesw 5.879801 2.202746 2.175408 8.463443 switch 24 killed -1
- agent  109 count-inesw  380  120    0    0    0 thresh-nesw 1.828298 8.389439 7.346483 6.256547 switch 12 killed -1
- agent  110 count-inesw  263  120    0    0  117 thresh-nesw 1.785073 6.928989 8.774152 1.377468 switch 23 killed -1
- agent  111 count-inesw  500    0    0    0    0 thresh-nesw 7.607443 8.081605 6.674341 5.974186 switch 0 killed -1
- agent  112 count-inesw  244  120    7   22  107 thresh-nesw 0.601488 7.191815 8.314469 2.743775 switch 41 killed -1
- agent  113 count-inesw  264   69  120   47    0 thresh-nesw 3.401693 1.763303 3.839333 9.464768 switch 44 killed -1
- agent  114 count-inesw  248  119    0   16  117 thresh-nesw 0.898913 9.221199 7.340373 0.389619 switch 33 killed -1
- agent  115 count-inesw  379  120    1    0    0 thresh-nesw 2.003610 5.796236 8.601407 8.770061 switch 14 killed -1
- agent  116 count-inesw  458   33    9    0    0 thresh-nesw 2.382904 5.949995 6.714114 8.202785 switch 20 killed -1
- agent  117 count-inesw  379  120    1    0    0 thresh-nesw 0.512231 7.639160 6.400396 9.761713 switch 14 killed -1
- agent  118 count-inesw  279    0   97   24  100 thresh-nesw 7.420713 4.039127 4.872250 2.907141 switch 58 killed -1
- agent  119 count-inesw  370  119   11    0    0 thresh-nesw 1.814187 5.496493 8.463227 5.929653 switch 22 killed -1
- agent  120 count-inesw  319    0   55   10  116 thresh-nesw 6.399931 5.244707 5.448346 0.450477 switch 41 killed -1
- agent  121 count-inesw  451    0   10    0   39 thresh-nesw 7.695953 6.207756 9.477591 2.437686 switch 23 killed -1
- agent  122 count-inesw  332    1   74   44   49 thresh-nesw 7.368999 3.151215 4.144536 3.866467 switch 52 killed -1
- agent  123 count-inesw  103  115   91   74  117 thresh-nesw 2.718174 3.970094 4.364870 0.434851 switch 63 killed -1
- agent  124 count-inesw  464   25    0   11    0 thresh-nesw 3.124810 5.858415 5.267091 7.974286 switch 20 killed -1
- agent  125 count-inesw  437    7    0    0   56 thresh-nesw 5.952824 8.237272 9.334448 3.564730 switch 20 killed -1
- agent  126 count-inesw  401   34    0    0   65 thresh-nesw 4.385090 8.217573 8.735104 3.330917 switch 24 killed -1
- agent  127 count-inesw  282  117   36   65    0 thresh-nesw 2.461866 3.941408 3.597166 8.526727 switch 46 killed -1
- agent  128 count-inesw  244  119   28    0  109 thresh-nesw 1.043747 7.298081 9.884894 2.688512 switch 29 killed -1
- agent  129 count-inesw   61  115   87  120  117 thresh-nesw 3.227901 1.895206 1.535021 1.149035 switch 49 killed -1
- agent  130 count-inesw  269    0   37   78  116 thresh-nesw 6.939862 2.780347 3.646234 1.061752 switch 39 killed -1
- agent  131 count-inesw  280    0   88  132    0 thresh-nesw 8.812892 3.188959 0.888340 6.750178 switch 43 killed -1
- agent  132 count-inesw  280    2   97  121    0 thresh-nesw 6.767455 2.112625 1.107105 8.783124 switch 28 killed -1
- agent  133 count-inesw  129   15  119  120  117 thresh-nesw 5.423204 0.536985 2.770859 1.229611 switch 47 killed -1
- agent  134 count-inesw  395  103    0    0    2 thresh-nesw 1.765965 7.157745 6.403571 7.826168 switch 14 killed -1
- agent  135 count-inesw  464   36    0    0    0 thresh-nesw 3.887400 6.970418 7.123274 6.602879 switch 10 killed -1
- agent  136 count-inesw  500    0    0    0    0 thresh-nesw 6.204656 6.144783 7.415739 7.359142 switch 0 killed -1
- agent  137 count-inesw  362   73    0    0   65 thresh-nesw 2.933598 8.698957 6.919375 3.304310 switch 24 killed -1
- agent  138 count-inesw  277    0   93  118   12 thresh-nesw 7.530273 3.368491 3.188351 5.414470 switch 46 killed -1
- agent  139 count-inesw  259    0  123  118    0 thresh-nesw 6.838505 0.417524 1.781061 8.638878 switch 27 killed -1
- agent  140 count-inesw  372  120    8    0    0 thresh-nesw 0.013887 7.205605 8.103676 9.916014 switch 20 killed -1
- agent  141 count-inesw  284    0   97  119    0 thresh-nesw 5.988360 0.723274 1.209785 7.494331 switch 28 killed -1
- agent  142 count-inesw  400   55    0    1   44 thresh-nesw 3.059529 9.052193 7.194099 2.332384 switch 25 killed -1
- agent  143 count-inesw   29  120  123  117  111 thresh-nesw 2.029459 0.528919 2.693694 2.488632 switch 53 killed -1
- agent  144 count-inesw  255    0  119  119    7 thresh-nesw 9.207126 0.701249 2.304802 7.998208 switch 30 killed -1
- agent  145 count-inesw  349  119    4    0   28 thresh-nesw 0.647600 7.219485 8.932907 4.898257 switch 28 killed -1
- agent  146 count-inesw  192  120   68  120    0 thresh-nesw 1.876301 1.760247 1.332187 7.598922 switch 32 killed -1
- agent  147 count-inesw  362    0   38  100    0 thresh-nesw 9.183111 4.381085 3.308199 7.309410 switch 34 killed -1
- agent  148 count-inesw  124  120  121  120   15 thresh-nesw 1.822015 0.217389 2.201472 5.316445 switch 49 killed -1
- agent  149 count-inesw  143    0  120  120  117 thresh-nesw 8.974891 2.324201 2.414742 0.781560 switch 35 killed -1
- agent  150 count-inesw  350  119   13    0   18 thresh-nesw 0.794427 6.047337 9.285404 6.022276 switch 34 killed -1
- agent  151 count-inesw  442    0    0    0   58 thresh-nesw 6.379106 7.009035 7.867892 3.717409 switch 12 killed -1
- agent  152 count-inesw  367   63   57   12    1 thresh-nesw 3.090054 4.718298 4.652859 8.068698 switch 46 killed -1
- agent  153 count-inesw  199  120   63  118    0 thresh-nesw 1.847287 3.186906 2.320896 9.856170 switch 50 killed -1
- agent  154 count-inesw  280    0  100  120    0 thresh-nesw 9.344576 1.932771 1.545714 6.541609 switch 24 killed -1
- agent  155 count-inesw  272    2  136   90    0 thresh-nesw 9.735807 0.155256 2.323406 7.622358 switch 45 killed -1
- agent  156 count-inesw  374    0   52   74    0 thresh-nesw 6.834757 4.114324 3.171028 8.866169 switch 32 killed -1
- agent  157 count-inesw  335    0   43   57   65 thresh-nesw 8.217208 4.161503 3.468332 3.309068 switch 46 killed -1
- agent  158 count-inesw  356  120    0    0   24 thresh-nesw 0.991829 6.761982 5.370338 5.192368 switch 24 killed -1
- agent  159 count-inesw  183    0   86  120  111 thresh-nesw 7.955059 1.036192 1.749934 2.298894 switch 35 killed -1
- agent  160 count-inesw  491    9    0    0    0 thresh-nesw 4.772231 7.296359 5.874333 8.312114 switch 8 killed -1
- agent  161 count-inesw  390    0    0    0  110 thresh-nesw 6.844297 6.562116 7.453955 0.559017 switch 11 killed -1
- agent  162 count-inesw  315   63    0    6  116 thresh-nesw 3.315319 7.835033 5.976522 0.738464 switch 31 killed -1
- agent  163 count-inesw  346  118    8    0   28 thresh-nesw 2.137748 7.313511 9.852966 4.765718 switch 34 killed -1
- agent  164 count-inesw  379    5    0    0  116 thresh-nesw 6.116167 6.859443 6.321207 1.837613 switch 15 killed -1
- agent  165 count-inesw  354   79   26   11   30 thresh-nesw 0.844153 6.471007 6.043550 4.739806 switch 48 killed -1
- agent  166 count-inesw  369    0   87   44    0 thresh-nesw 9.548157 2.640314 3.941610 6.455472 switch 40 killed -1
- agent  167 count-inesw  269   14  117   96    4 thresh-nesw 5.462776 2.538141 3.155849 6.725815 switch 44 killed -1
- agent  168 count-inesw  286   97    0    1  116 thresh-nesw 2.566158 7.794015 6.905939 2.430547 switch 35 killed -1
- agent  169 count-inesw  357  115   25    3    0 thresh-nesw 2.116785 6.587038 5.565912 7.410899 switch 32 killed -1
- agent  170 count-inesw  399    0    0    0  101 thresh-nesw 7.365829 8.114539 7.690997 2.737351 switch 19 killed -1
- agent  171 count-inesw  377    7    0    0  116 thresh-nesw 6.733239 9.123150 7.960793 1.743905 switch 17 killed -1
- agent  172 count-inesw  437   63    0    0    0 thresh-nesw 1.459573 8.455966 6.650585 7.853486 switch 10 killed -1
- agent  173 count-inesw  429   22    0    0   49 thresh-nesw 4.071299 7.020300 8.350684 4.108341 switch 24 killed -1
- agent  174 count-inesw  381    0    0    3  116 thresh-nesw 9.482090 8.464840 5.627299 2.367504 switch 13 killed -1
- agent  175 count-inesw  179    0  119  120   82 thresh-nesw 7.801140 2.673687 2.902913 3.029175 switch 38 killed -1
- agent  176 count-inesw  181    0  120   83  116 thresh-nesw 8.724770 1.838846 3.869604 1.617813 switch 51 killed -1
- agent  177 count-inesw  379    0    0    5  116 thresh-nesw 9.521608 8.901606 5.333201 1.385862 switch 15 killed -1
- agent  178 count-inesw  465    0   18   17    0 thresh-nesw 9.126565 4.090417 3.768480 7.514462 switch 18 killed -1
- agent  179 count-inesw  260    0  120  120    0 thresh-nesw 6.756984 2.025488 3.063082 8.272730 switch 24 killed -1
- agent  180 count-inesw  445    0   38   17    0 thresh-nesw 9.954165 4.054943 4.670122 6.937622 switch 24 killed -1
- agent  181 count-inesw  142    5  120  118  115 thresh-nesw 5.945397 1.156506 1.356994 1.146198 switch 43 killed -1
- agent  182 count-inesw  404    1   36   59    0 thresh-nesw 5.636829 2.046676 1.866783 6.177863 switch 26 killed -1
- agent  183 count-inesw  224   85   75  101   15 thresh-nesw 3.653096 0.128439 0.650954 5.351779 switch 68 killed -1
- agent  184 count-inesw  285  120    0    0   95 thresh-nesw 0.728629 5.966398 8.325498 1.175334 switch 25 killed -1
- agent  185 count-inesw  370    0    0   13  117 thresh-nesw 8.798574 6.936789 7.003282 2.351623 switch 19 killed -1
- agent  186 count-inesw  370   79    2    0   49 thresh-nesw 2.355990 8.191886 9.054315 4.188481 switch 38 killed -1
- agent  187 count-inesw  322    0  106   60   12 thresh-nesw 8.947019 1.450776 3.700090 7.550042 switch 48 killed -1
- agent  188 count-inesw  244   59  120   77    0 thresh-nesw 3.712055 0.416681 3.510132 9.544672 switch 50 killed -1
- agent  189 count-inesw  445   55    0    0    0 thresh-nesw 3.009776 6.009185 6.409786 8.203229 switch 12 killed -1
- agent  190 count-inesw  371    3    6    4  116 thresh-nesw 7.547907 5.564138 5.859348 0.157491 switch 29 killed -1
- agent  191 count-inesw  198    0   66  119  117 thresh-nesw 7.369587 3.591458 2.291401 0.467146 switch 45 killed -1
- agent  192 count-inesw  329  115   31   25    0 thresh-nesw 2.287003 5.173703 4.750217 9.945399 switch 48 killed -1
- agent  193 count-inesw  167  120  121   92    0 thresh-nesw 2.479643 0.161068 2.442081 7.585177 switch 41 killed -1
- agent  194 count-inesw  362   20    1    0  117 thresh-nesw 5.199602 6.139633 7.612157 1.153563 switch 23 killed -1
- agent  195 count-inesw  380    0    3    1  116 thresh-nesw 9.802622 5.821888 5.240806 2.589464 switch 19 killed -1
- agent  196 count-inesw  382    1    0    0  117 thresh-nesw 5.887209 9.028504 7.221622 1.543897 switch 13 killed -1
- agent  197 count-inesw  343  120   22    0   15 thresh-nesw 0.292785 7.299879 7.826708 5.308052 switch 34 killed -1
- agent  198 count-inesw  383    0    0    0  117 thresh-nesw 7.765061 6.510176 7.169241 0.894892 switch 11 killed -1
- agent  199 count-inesw  380  120    0    0    0 thresh-nesw 1.004196 6.353048 5.888444 5.966614 switch 12 killed -1
+ agent    0 count-inesw  367  133    0    0    0 thresh-nesw 0.447630 9.222345 5.754635 8.600555 switch 12 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent    1 count-inesw  276    0  113  111    0 thresh-nesw 7.834171 3.797230 4.552596 6.386167 switch 28 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent    2 count-inesw  265    0  114  120    1 thresh-nesw 8.105978 3.250067 3.628562 6.183733 switch 26 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent    3 count-inesw   83   19  113  126  159 thresh-nesw 9.260257 1.389218 1.979019 0.011608 switch 36 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent    4 count-inesw  365  114    0   21    0 thresh-nesw 3.050446 7.446527 6.415238 7.734451 switch 24 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent    5 count-inesw  188    0  113  112   87 thresh-nesw 9.193303 3.996762 4.504995 4.502502 switch 39 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent    6 count-inesw  135    0  143  104  118 thresh-nesw 6.794577 0.912453 3.837660 1.321241 switch 63 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent    7 count-inesw  154    0  106  125  115 thresh-nesw 9.587729 4.017138 2.482010 2.004752 switch 47 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent    8 count-inesw   93   64  117  125  101 thresh-nesw 8.811784 1.779581 2.329398 4.806944 switch 43 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent    9 count-inesw  271    0  106  123    0 thresh-nesw 7.015395 4.128324 1.462937 9.636346 switch 36 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent   10 count-inesw  213  104   66  117    0 thresh-nesw 5.104934 1.505403 2.270389 6.420295 switch 42 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent   11 count-inesw  284   98    0    0  118 thresh-nesw 5.089972 8.910622 7.785293 2.057446 switch 23 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent   12 count-inesw  158    1  109  117  115 thresh-nesw 6.908820 3.198102 2.125388 0.585565 switch 47 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent   13 count-inesw   45  119  107  114  115 thresh-nesw 3.929403 3.745083 5.100070 2.396821 switch 49 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent   14 count-inesw  194  147    0   38  121 thresh-nesw 0.958999 8.549109 5.169423 1.087354 switch 48 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent   15 count-inesw  270    0  117  113    0 thresh-nesw 6.992669 0.988546 3.807031 6.836202 switch 35 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent   16 count-inesw  274    0  111  115    0 thresh-nesw 9.727878 0.792477 2.905167 7.360003 switch 33 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent   17 count-inesw  302  136    7   55    0 thresh-nesw 1.023837 3.847392 5.014188 8.454471 switch 42 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent   18 count-inesw  140    0  118  111  131 thresh-nesw 9.887878 2.650340 5.198263 0.208568 switch 39 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent   19 count-inesw  260  118    0    3  119 thresh-nesw 2.834575 7.518542 9.181029 1.428257 switch 29 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent   20 count-inesw  251  124    7    2  116 thresh-nesw 1.947122 7.669604 5.704631 2.216466 switch 37 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent   21 count-inesw  171  110  112  107    0 thresh-nesw 4.650438 1.445461 4.334786 7.936674 switch 54 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent   22 count-inesw  372  128    0    0    0 thresh-nesw 0.497590 8.811775 8.108747 9.795778 switch 12 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent   23 count-inesw  253    0  141  105    1 thresh-nesw 9.601047 1.085933 2.871973 8.064490 switch 43 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent   24 count-inesw  152  103  123  122    0 thresh-nesw 5.001741 1.298696 1.449609 7.670761 switch 39 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent   25 count-inesw  277  114    0    0  109 thresh-nesw 3.354248 9.975882 5.715401 3.796211 switch 23 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent   26 count-inesw  143    0  114  116  127 thresh-nesw 7.581154 1.214165 3.410202 0.421763 switch 41 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent   27 count-inesw  258  114   12    0  116 thresh-nesw 3.937232 7.521085 6.632779 1.243831 switch 37 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent   28 count-inesw  376  123    0    0    1 thresh-nesw 1.639643 9.785816 8.342575 7.186660 switch 14 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent   29 count-inesw  143  117  111  112   17 thresh-nesw 2.713116 2.033206 4.389083 7.520796 switch 48 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent   30 count-inesw  258  115    0    0  127 thresh-nesw 3.138096 8.607366 6.454963 0.596889 switch 18 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent   31 count-inesw  164    0  102  122  112 thresh-nesw 9.061920 4.245086 2.213809 2.441832 switch 51 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent   32 count-inesw  256    0  121  123    0 thresh-nesw 7.149224 1.813211 1.697907 7.356450 switch 24 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent   33 count-inesw  141  120  118  121    0 thresh-nesw 2.633708 0.873734 2.280954 7.138233 switch 32 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent   34 count-inesw  249  133    0    7  111 thresh-nesw 0.908578 7.590709 9.332007 3.098299 switch 37 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent   35 count-inesw  328  132    1   39    0 thresh-nesw 0.302261 6.880322 5.486306 8.021458 switch 18 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent   36 count-inesw  354  120   12   14    0 thresh-nesw 2.364907 5.564275 6.644122 8.672517 switch 64 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent   37 count-inesw  272    0  108  120    0 thresh-nesw 6.555824 2.184640 2.551650 6.858086 switch 40 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent   38 count-inesw  356    0    8    7  129 thresh-nesw 8.939032 8.045816 7.699337 0.650122 switch 41 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent   39 count-inesw  158    0  118  120  104 thresh-nesw 8.445059 1.825791 3.621915 3.553456 switch 37 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent   40 count-inesw  157  124  120   99    0 thresh-nesw 2.347475 1.097541 2.151568 7.145774 switch 29 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent   41 count-inesw  285    0  107  108    0 thresh-nesw 8.381716 1.769890 3.898838 9.935717 switch 50 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent   42 count-inesw  271  109    9    5  106 thresh-nesw 4.163503 8.361469 5.752861 3.922014 switch 51 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent   43 count-inesw  153    0  101  130  116 thresh-nesw 9.837810 4.539041 1.839903 1.488125 switch 36 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent   44 count-inesw  154    0  111  120  115 thresh-nesw 8.069895 1.681582 3.590994 1.726319 switch 45 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent   45 count-inesw  276    0  114  108    2 thresh-nesw 8.741151 4.048008 2.312010 8.702357 switch 44 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent   46 count-inesw  379    0    0    0  121 thresh-nesw 6.228784 9.502385 9.364878 0.654390 switch 11 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent   47 count-inesw  263  126    0    0  111 thresh-nesw 1.086977 7.314163 8.274813 3.067880 switch 23 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent   48 count-inesw  223  113   16   21  127 thresh-nesw 3.635745 5.339639 5.351199 0.473227 switch 86 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent   49 count-inesw  166    0  114  104  116 thresh-nesw 7.683535 3.231333 5.452437 1.653706 switch 47 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent   50 count-inesw  362  133    5    0    0 thresh-nesw 0.328550 9.243852 7.351036 8.321725 switch 22 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent   51 count-inesw  179    0  101  122   98 thresh-nesw 8.520082 3.821236 2.653722 4.481648 switch 45 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent   52 count-inesw  500    0    0    0    0 thresh-nesw 7.183014 6.539664 6.459290 7.329177 switch 0 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent   53 count-inesw  134  127  115  124    0 thresh-nesw 1.987383 2.074694 2.236480 7.873679 switch 34 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent   54 count-inesw  351    0   18    0  131 thresh-nesw 6.858566 8.128381 8.705028 0.129992 switch 13 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent   55 count-inesw  260  123    0    0  117 thresh-nesw 2.281586 9.279538 8.885593 0.426569 switch 20 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent   56 count-inesw  187  130   69  114    0 thresh-nesw 1.070254 4.050801 4.516242 6.817553 switch 76 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent   57 count-inesw  395    0    0    0  105 thresh-nesw 9.245209 9.560705 7.766668 4.858747 switch 11 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent   58 count-inesw  256    0  116  128    0 thresh-nesw 7.446639 1.809423 1.525157 9.991018 switch 28 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent   59 count-inesw  393  106    0    0    1 thresh-nesw 4.825520 8.870045 7.860332 8.803417 switch 14 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent   60 count-inesw  251  120    2   11  116 thresh-nesw 2.621994 7.719349 7.390260 2.094971 switch 43 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent   61 count-inesw  378    0    2    0  120 thresh-nesw 8.301508 8.055582 6.050350 1.230223 switch 15 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent   62 count-inesw  261    0  119  120    0 thresh-nesw 8.805091 2.659612 2.440640 8.496215 switch 24 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent   63 count-inesw  357  116    0   27    0 thresh-nesw 2.524970 8.784427 5.561291 9.567085 switch 30 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent   64 count-inesw  322  123    0   55    0 thresh-nesw 1.074503 5.013340 5.203052 9.710224 switch 60 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent   65 count-inesw  107  121   79   77  116 thresh-nesw 2.490924 5.580558 7.197516 1.045268 switch 65 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent   66 count-inesw  251  114   26    0  109 thresh-nesw 3.687476 5.198451 9.301304 3.663147 switch 65 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent   67 count-inesw  234  118   29    0  119 thresh-nesw 2.887959 5.226689 7.971763 1.807777 switch 47 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent   68 count-inesw  151    1  114  119  115 thresh-nesw 7.184563 3.705418 2.977253 0.185470 switch 37 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent   69 count-inesw  314  125   54    7    0 thresh-nesw 1.667421 6.619758 7.344637 6.420633 switch 39 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent   70 count-inesw  361  139    0    0    0 thresh-nesw 0.055796 8.412302 7.310522 9.765540 switch 12 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent   71 count-inesw  275  114    0    0  111 thresh-nesw 3.249465 8.469176 8.392942 3.383234 switch 23 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent   72 count-inesw  259  127    0    0  114 thresh-nesw 0.696560 8.537125 8.864680 2.732715 switch 20 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent   73 count-inesw  322    0   80   98    0 thresh-nesw 8.916311 2.562994 2.759341 9.267906 switch 56 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent   74 count-inesw  366    0   16    0  118 thresh-nesw 7.307239 6.974265 9.903387 2.558633 switch 17 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent   75 count-inesw  256  125    0    0  119 thresh-nesw 1.936214 9.182827 6.594966 1.285373 switch 19 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent   76 count-inesw  265    0  121  114    0 thresh-nesw 9.958041 1.938778 3.978188 9.857841 switch 24 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent   77 count-inesw  282  110    0    0  108 thresh-nesw 4.230979 6.904587 8.652417 3.133256 switch 25 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent   78 count-inesw  273    0  104  123    0 thresh-nesw 6.011018 3.747118 2.228067 8.061227 switch 40 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent   79 count-inesw  222   34  146   98    0 thresh-nesw 5.573805 0.934655 4.731338 9.276784 switch 52 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent   80 count-inesw  153    0  131  111  105 thresh-nesw 9.087400 1.465259 2.999757 3.224700 switch 47 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent   81 count-inesw  384  114    2    0    0 thresh-nesw 3.365937 8.131400 6.049140 9.934031 switch 16 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent   82 count-inesw   78   65  117  122  118 thresh-nesw 8.620042 0.790520 2.787324 0.579567 switch 41 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent   83 count-inesw  157  133  113   97    0 thresh-nesw 1.223976 1.391796 5.056376 8.886921 switch 56 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent   84 count-inesw  271  123    0    0  106 thresh-nesw 1.556575 9.632725 5.952154 3.745183 switch 25 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent   85 count-inesw  471   29    0    0    0 thresh-nesw 4.701550 8.030808 5.766219 8.241265 switch 4 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent   86 count-inesw  155   81  120  144    0 thresh-nesw 5.097611 2.066624 0.844309 8.889444 switch 35 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent   87 count-inesw  410    0    1    0   89 thresh-nesw 9.594535 6.814990 7.633638 3.046340 switch 15 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent   88 count-inesw  261    0  119  120    0 thresh-nesw 8.954614 2.475637 2.544981 7.733231 switch 24 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent   89 count-inesw  151  120  104  125    0 thresh-nesw 3.189972 3.241198 1.534354 8.714804 switch 52 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent   90 count-inesw  377    0    2    0  121 thresh-nesw 8.506456 9.213036 6.751819 0.546536 switch 15 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent   91 count-inesw  273  114    0    0  113 thresh-nesw 3.915497 9.723380 6.976318 2.641502 switch 23 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent   92 count-inesw  277    0   99  124    0 thresh-nesw 9.358271 2.049543 1.831706 7.741605 switch 22 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent   93 count-inesw  166    0  113  126   95 thresh-nesw 9.350103 3.082655 1.219306 4.267725 switch 36 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent   94 count-inesw  107  119  156  118    0 thresh-nesw 3.186759 0.148357 0.591737 7.788223 switch 76 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent   95 count-inesw  187    0   97  120   96 thresh-nesw 8.202631 3.039751 2.791384 4.205852 switch 37 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent   96 count-inesw  134    0  133  144   89 thresh-nesw 9.867925 1.303286 1.296485 3.603082 switch 52 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent   97 count-inesw  491    0    5    4    0 thresh-nesw 7.002087 5.429840 5.348463 7.408631 switch 18 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent   98 count-inesw  365  123    0   11    1 thresh-nesw 2.061097 8.758110 8.269956 6.982031 switch 30 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent   99 count-inesw  167  123   94  116    0 thresh-nesw 2.560288 2.560250 2.114065 8.723501 switch 54 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent  100 count-inesw  133  126  120  120    1 thresh-nesw 2.179017 0.521110 3.461889 8.562066 switch 31 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent  101 count-inesw  156  121   98  124    1 thresh-nesw 2.822234 3.775788 1.197725 6.604658 switch 48 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent  102 count-inesw  239  124    2    7  128 thresh-nesw 0.619055 7.880294 5.974959 0.536354 switch 38 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent  103 count-inesw  225    0  114  122   39 thresh-nesw 9.236105 3.837877 1.881638 5.271338 switch 33 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent  104 count-inesw  198    0   92   91  119 thresh-nesw 5.900694 3.481503 5.641264 0.914879 switch 95 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent  105 count-inesw  380    0    0    0  120 thresh-nesw 7.837057 7.347664 6.610861 2.069853 switch 11 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent  106 count-inesw  264  123    0    0  113 thresh-nesw 2.162292 9.301608 6.171155 2.785763 switch 20 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent  107 count-inesw   57  119  116   98  110 thresh-nesw 2.932722 3.022100 5.326599 2.967867 switch 67 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent  108 count-inesw  491    0    0    9    0 thresh-nesw 7.230382 6.023088 5.350691 6.583602 switch 18 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent  109 count-inesw  144  120  124  111    1 thresh-nesw 3.045022 1.070841 4.087434 6.133998 switch 37 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent  110 count-inesw  372  114   14    0    0 thresh-nesw 3.594037 6.517972 6.751315 6.857703 switch 22 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent  111 count-inesw  271    0  104  124    1 thresh-nesw 6.742304 3.563736 1.648436 6.130455 switch 42 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent  112 count-inesw  236    0  139  125    0 thresh-nesw 7.561780 0.989913 1.123342 6.255822 switch 38 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent  113 count-inesw  263    0  101  136    0 thresh-nesw 9.985844 2.566792 0.882462 9.867088 switch 26 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent  114 count-inesw  382    0    0    7  111 thresh-nesw 6.190211 8.397847 5.829287 3.341927 switch 25 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent  115 count-inesw  105  126  139  130    0 thresh-nesw 2.203770 0.137484 0.554422 8.980467 switch 57 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent  116 count-inesw  151    0  121  120  108 thresh-nesw 8.600325 1.783243 3.342324 1.669557 switch 36 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent  117 count-inesw  375    0    0    5  120 thresh-nesw 9.316925 8.302797 6.062032 1.851259 switch 21 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent  118 count-inesw  259    0  121  120    0 thresh-nesw 9.114325 1.657459 3.042978 8.980359 switch 23 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent  119 count-inesw  264    0   87  114   35 thresh-nesw 7.947699 2.443429 3.772604 6.009205 switch 40 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent  120 count-inesw  405   87    8    0    0 thresh-nesw 4.193881 8.326331 8.577811 9.349927 switch 26 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent  121 count-inesw  267    0  119  114    0 thresh-nesw 9.857675 2.279877 3.862460 8.494127 switch 24 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent  122 count-inesw  172    0   97  119  112 thresh-nesw 8.764421 0.903865 4.150697 2.063659 switch 41 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent  123 count-inesw  364  129    7    0    0 thresh-nesw 0.510262 5.825092 8.805605 8.511821 switch 26 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent  124 count-inesw  380    0    0    0  120 thresh-nesw 6.586150 9.194322 6.452189 2.364123 switch 11 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent  125 count-inesw  175  117  116   91    1 thresh-nesw 3.587596 1.297863 5.218189 9.102751 switch 67 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent  126 count-inesw  242    0   97  118   43 thresh-nesw 7.888521 3.030562 2.813423 6.630392 switch 32 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent  127 count-inesw  273  114    0    0  113 thresh-nesw 3.929903 6.256351 9.332924 2.816789 switch 23 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent  128 count-inesw  146    0  121  120  113 thresh-nesw 8.278351 2.373608 3.278314 0.753347 switch 34 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent  129 count-inesw  301    0  111   88    0 thresh-nesw 6.609376 2.603644 4.953662 7.641405 switch 38 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent  130 count-inesw  372    0    0    9  119 thresh-nesw 6.798884 9.090957 6.729495 1.281100 switch 29 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent  131 count-inesw  206  123   31   28  112 thresh-nesw 2.302628 8.602491 8.133237 2.429234 switch 65 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent  132 count-inesw  270    0  106  124    0 thresh-nesw 6.867518 1.803930 2.099584 9.091501 switch 36 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent  133 count-inesw  500    0    0    0    0 thresh-nesw 7.050520 7.691901 5.621912 7.218642 switch 0 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent  134 count-inesw  164    0  121  114  101 thresh-nesw 9.639875 2.442756 4.422735 3.966109 switch 35 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent  135 count-inesw  234  131    5   11  119 thresh-nesw 0.585823 7.787934 6.178358 1.691872 switch 45 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent  136 count-inesw  360  127   13    0    0 thresh-nesw 0.747951 6.184135 8.302562 9.749394 switch 23 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent  137 count-inesw  301    0  105   94    0 thresh-nesw 9.806832 3.880594 5.168263 7.461780 switch 66 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent  138 count-inesw  264  125    0    0  111 thresh-nesw 2.267250 8.610727 7.780104 2.441425 switch 22 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent  139 count-inesw  362  133    5    0    0 thresh-nesw 0.444856 6.087453 7.468283 6.828627 switch 22 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent  140 count-inesw  225  110   11   19  135 thresh-nesw 2.655990 7.229467 6.255195 0.129394 switch 48 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent  141 count-inesw  259  114    0    5  122 thresh-nesw 3.633648 9.752609 5.769703 1.009474 switch 32 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent  142 count-inesw  255  112    6    2  125 thresh-nesw 3.704546 7.395723 5.591147 0.286091 switch 35 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent  143 count-inesw  146    0  147  102  105 thresh-nesw 7.578547 0.551829 2.679003 3.549251 switch 64 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent  144 count-inesw  321    0   59  120    0 thresh-nesw 7.288541 4.887897 2.106278 8.062212 switch 78 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent  145 count-inesw  391  109    0    0    0 thresh-nesw 4.609998 7.809181 6.303474 8.063638 switch 12 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent  146 count-inesw  366    0    0    0  134 thresh-nesw 8.180635 8.658586 8.440144 0.315555 switch 11 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent  147 count-inesw  253    0  162   85    0 thresh-nesw 9.217784 0.264433 2.562057 6.557907 switch 60 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent  148 count-inesw  235  127   19    0  119 thresh-nesw 1.353260 5.277017 6.925226 1.678867 switch 57 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent  149 count-inesw  107  129  117  147    0 thresh-nesw 1.715641 2.097092 0.856951 6.525337 switch 30 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent  150 count-inesw  368    0   13    0  119 thresh-nesw 8.388645 8.215685 9.028257 1.127235 switch 23 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent  151 count-inesw  184   11  108   92  105 thresh-nesw 5.590412 2.008358 4.655919 3.552985 switch 61 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent  152 count-inesw  328    0   72  100    0 thresh-nesw 6.907375 2.314206 2.093283 8.617588 switch 58 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent  153 count-inesw  373  114   12    0    1 thresh-nesw 2.655031 6.240245 7.824782 6.802025 switch 28 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent  154 count-inesw  356  114   28    0    2 thresh-nesw 3.633585 7.976458 9.154039 6.238442 switch 36 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent  155 count-inesw  275  118    0    0  107 thresh-nesw 2.674569 9.330876 8.354237 4.010900 switch 23 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent  156 count-inesw   47  118  113  107  115 thresh-nesw 3.544305 3.389303 5.502013 1.928600 switch 53 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent  157 count-inesw  373    0    9    0  118 thresh-nesw 6.664972 9.354349 7.702733 2.396394 switch 29 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent  158 count-inesw  353    0   13    7  127 thresh-nesw 6.145332 8.650638 5.545645 0.726866 switch 49 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent  159 count-inesw  264  114    0    0  122 thresh-nesw 3.718251 9.865059 8.695101 1.256556 switch 22 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent  160 count-inesw  366    0   14    0  120 thresh-nesw 8.385215 5.963542 9.717327 2.266368 switch 21 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent  161 count-inesw  252    1  161   86    0 thresh-nesw 8.081410 0.725215 2.669845 6.338661 switch 61 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent  162 count-inesw  404   93    3    0    0 thresh-nesw 3.513359 7.596526 7.393141 7.077400 switch 16 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent  163 count-inesw  358  112    0   30    0 thresh-nesw 3.909695 8.078775 7.117604 7.396047 switch 30 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent  164 count-inesw  140   45   92  117  106 thresh-nesw 7.595173 4.167775 3.731915 3.138666 switch 61 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent  165 count-inesw  158  125  119   98    0 thresh-nesw 1.706296 0.788846 2.268604 9.342719 switch 28 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent  166 count-inesw  498    0    2    0    0 thresh-nesw 5.867343 5.951267 9.198334 6.536034 switch 4 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent  167 count-inesw  344  123   33    0    0 thresh-nesw 1.052295 6.382399 9.854215 8.919560 switch 26 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent  168 count-inesw  225  117   32   12  114 thresh-nesw 2.925113 7.283705 6.181146 0.494420 switch 64 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent  169 count-inesw  152  100  148   98    2 thresh-nesw 5.134516 0.256775 2.675992 5.986459 switch 69 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent  170 count-inesw  310    0  119   71    0 thresh-nesw 9.601429 2.890432 5.295060 9.595672 switch 64 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent  171 count-inesw  477    0   23    0    0 thresh-nesw 8.586202 5.474789 6.619061 7.644656 switch 28 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent  172 count-inesw  233  117    0   39  111 thresh-nesw 2.988133 9.698743 6.082989 2.997747 switch 27 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent  173 count-inesw   61  119  113  120   87 thresh-nesw 3.807558 2.874274 3.182336 4.995256 switch 47 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent  174 count-inesw  208  116   15   47  114 thresh-nesw 2.840441 5.763264 8.537860 1.554270 switch 71 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent  175 count-inesw  367    0    0    5  128 thresh-nesw 6.920933 8.269487 8.740773 0.154879 switch 21 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent  176 count-inesw  253  126    0    0  121 thresh-nesw 1.771256 8.112290 9.587244 1.444667 switch 18 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent  177 count-inesw  188  124  119   69    0 thresh-nesw 2.117620 2.111202 5.181678 7.522727 switch 68 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent  178 count-inesw  365  133    0    0    2 thresh-nesw 0.394313 8.669131 9.013581 8.357613 switch 16 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent  179 count-inesw  116   34  116  124  110 thresh-nesw 7.969460 2.071373 1.698699 1.906595 switch 38 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent  180 count-inesw  159   19  107   97  118 thresh-nesw 6.308673 2.411977 5.610134 1.604770 switch 73 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent  181 count-inesw  339    0   79   82    0 thresh-nesw 6.096008 3.418392 4.949914 7.223351 switch 60 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent  182 count-inesw  358    0   16   16  110 thresh-nesw 8.100589 7.643360 5.781610 3.167752 switch 75 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent  183 count-inesw  301   21  121   57    0 thresh-nesw 5.616984 0.928097 5.325090 7.681585 switch 66 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent  184 count-inesw  375  125    0    0    0 thresh-nesw 1.941787 7.922753 8.591039 9.132024 switch 12 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent  185 count-inesw  351  107    1   41    0 thresh-nesw 4.651036 6.603289 5.291678 8.622977 switch 34 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent  186 count-inesw  250    0  133  117    0 thresh-nesw 6.947741 0.916462 1.316756 8.889528 switch 34 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent  187 count-inesw  271    0  122  107    0 thresh-nesw 6.810374 0.945308 3.266953 8.992535 switch 41 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent  188 count-inesw  382    0    0    0  118 thresh-nesw 6.080122 9.424495 7.651322 1.089618 switch 11 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent  189 count-inesw  380    0    0    0  120 thresh-nesw 8.728911 9.125600 9.062547 2.212316 switch 11 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent  190 count-inesw  374  114   12    0    0 thresh-nesw 3.636491 8.029146 9.177109 6.629755 switch 26 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent  191 count-inesw  249  118    0   22  111 thresh-nesw 3.016258 6.009410 5.243982 3.195462 switch 59 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent  192 count-inesw  265    0  109  125    1 thresh-nesw 9.072058 2.351887 2.064025 7.808548 switch 42 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent  193 count-inesw  372    0    9    0  119 thresh-nesw 7.949100 8.335852 9.709454 2.061847 switch 29 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent  194 count-inesw  306    0  105   89    0 thresh-nesw 7.760617 4.331522 5.237480 9.740305 switch 70 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent  195 count-inesw  255    0  119  124    2 thresh-nesw 9.289162 2.458707 2.031058 6.417380 switch 28 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent  196 count-inesw  263  108    0    0  129 thresh-nesw 4.258496 7.739620 5.363546 0.711078 switch 22 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent  197 count-inesw  274    1  143   82    0 thresh-nesw 8.145002 0.038078 0.966960 7.640601 switch 45 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent  198 count-inesw  156    0  109  125  110 thresh-nesw 8.054612 1.453674 2.557450 1.324289 switch 50 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000
+ agent  199 count-inesw  268  123    0    0  109 thresh-nesw 1.648680 9.088610 9.008162 3.690837 switch 23 spontaneous-switch 0 killed -1 response_prob 1.000000 spontaneous_response_prob 0.000000 prob check 1.000000

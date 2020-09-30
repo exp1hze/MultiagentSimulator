@@ -1,47 +1,3 @@
-set term post eps
-set xlabel "Timestep"
-set ylabel "Bins"
-set zlabel "Count"
-set output "run.2.stephistnorth.eps"
-set title "Histogram of intensity values, north"
-set dgrid3d 50,50 qnorm 2
-splot "run.2.stephistnorth" using 2:4:6 w lines
-unset size
-unset title
-
-set term post eps
-set xlabel "Timestep"
-set ylabel "Bins"
-set zlabel "Count"
-set output "run.2.stephistsouth.eps"
-set title "Histogram of intensity values, south"
-set dgrid3d 50,50 qnorm 2
-splot "run.2.stephistsouth" using 2:4:6 w lines
-unset size
-unset title
-
-set term post eps
-set xlabel "Timestep"
-set ylabel "Bins"
-set zlabel "Count"
-set output "run.2.stephisteast.eps"
-set title "Histogram of intensity values, east"
-set dgrid3d 50,50 qnorm 2
-splot "run.2.stephisteast" using 2:4:6 w lines
-unset size
-unset title
-
-set term post eps
-set xlabel "Timestep"
-set ylabel "Bins"
-set zlabel "Count"
-set output "run.2.stephistwest.eps"
-set title "Histogram of intensity values, west"
-set dgrid3d 50,50 qnorm 2
-splot "run.2.stephistwest" using 2:4:6 w lines
-unset size
-unset title
-
 set term post eps color
 set xlabel "Timestep"
 set ylabel "Distance"
@@ -88,6 +44,7 @@ unset title
 set term post eps color
 set size square
 set output "run.2.stepsummary.paths.line.eps"
+set size ratio -1
 set title "Target and Tracker paths"
 plot\
      "run.2.stepsummary" using 4:5 title "Target" w line,\
@@ -242,6 +199,54 @@ set palette defined (0 "white", 1 "blue", 2 "yellow", 3 "red", 4 "green")
 set cbrange[-0.5:4.5]
 set view map
 plot [][501:-2] "run.2.stepagentaction" matrix w image
+
+set term post eps color
+set size ratio 2
+set output "run.2.stepthreshnorth.eps"
+set title "Agent thresholds: North"
+set xlabel "Agent"
+set ylabel "Timestep"
+set palette maxcolors 100
+set palette defined (0 "green", 5.000000 "yellow", 10.000000 "red")
+set cbrange[0:10.000000]
+set view map
+plot [-20.000000:220.000000][501:-2] "run.2.stepthreshnorth" matrix title "" w image
+
+set term post eps color
+set size ratio 2
+set output "run.2.stepthreshsouth.eps"
+set title "Agent thresholds: South"
+set xlabel "Agent"
+set ylabel "Timestep"
+set palette maxcolors 100
+set palette defined (0 "green", 5.000000 "yellow", 10.000000 "red")
+set cbrange[0:10.000000]
+set view map
+plot [-20.000000:220.000000][501:-2] "run.2.stepthreshsouth" matrix title "" w image
+
+set term post eps color
+set size ratio 2
+set output "run.2.stepthresheast.eps"
+set title "Agent thresholds: East"
+set xlabel "Agent"
+set ylabel "Timestep"
+set palette maxcolors 100
+set palette defined (0 "green", 5.000000 "yellow", 10.000000 "red")
+set cbrange[0:10.000000]
+set view map
+plot [-20.000000:220.000000][501:-2] "run.2.stepthresheast" matrix title "" w image
+
+set term post eps color
+set size ratio 2
+set output "run.2.stepthreshwest.eps"
+set title "Agent thresholds: West"
+set xlabel "Agent"
+set ylabel "Timestep"
+set palette maxcolors 100
+set palette defined (0 "green", 5.000000 "yellow", 10.000000 "red")
+set cbrange[0:10.000000]
+set view map
+plot [-20.000000:220.000000][501:-2] "run.2.stepthreshwest" matrix title "" w image
 
 set term post eps
 set size ratio 0.800000
@@ -917,6 +922,51 @@ set ylabel "Number of switches"
 set title "Number of task switches during run"
 plot [-1:240.000000][0:550.000000]\
      "run.2.finalagent" using 2:15 title "N" w points pt 7 ps 2 lc 1
+unset xlabel
+unset ylabel
+unset title
+unset size
+
+set term post eps color
+set size ratio 0.5
+set output "run.2.finalagent.spontaneousswitch.eps"
+set xtics
+set ytics
+set xlabel "Agent"
+set ylabel "Number of spontaneous switches"
+set title "Number of task switches due to spontaneous response prob during run"
+plot [-1:240.000000][0:550.000000]\
+     "run.2.finalagent" using 2:17 title "N" w points pt 7 ps 2 lc 1
+unset xlabel
+unset ylabel
+unset title
+unset size
+
+set term post eps color
+set size ratio 0.5
+set output "run.2.finalagent.response_prob.eps"
+set xtics
+set ytics
+set xlabel "Agent"
+set ylabel "Response prob Value"
+set title "Agent Response prob Values"
+plot [-1:220.000000][0:1]\
+     "run.2.finalagent" using 2:21 title "N" w points pt 7 ps 2 lc 1
+unset xlabel
+unset ylabel
+unset title
+unset size
+
+set term post eps color
+set size ratio 0.5
+set output "run.2.finalagent.spontaneous_response_prob.eps"
+set xtics
+set ytics
+set xlabel "Agent"
+set ylabel "Spontaneous Value"
+set title "Agent Spontaneous Values"
+plot [-1:220.000000][0:1]\
+     "run.2.finalagent" using 2:23 title "N" w points pt 7 ps 2 lc 1
 unset xlabel
 unset ylabel
 unset title

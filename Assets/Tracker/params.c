@@ -143,6 +143,7 @@ int set_param(char *aline)
    else if (!strcmp(name, "Prob_check"))  sscanf(temp, "%lf", &Prob_check);
    else if (!strcmp(name, "Task_selection"))  sscanf(temp, "%s", Task_selection);
    else if (!strcmp(name, "Target_path"))  sscanf(temp, "%s", Target_path);
+   else if (!strcmp(name, "Circle_radius"))  sscanf(temp, "%lf", &Circle_radius);
    else if (!strcmp(name, "Target_step_len"))  sscanf(temp, "%lf", &Target.step_len);
    else if (!strcmp(name, "Path_amplitude"))  sscanf(temp, "%lf", &Target.amplitude);
    else if (!strcmp(name, "Path_period"))  sscanf(temp, "%lf", &Target.period);
@@ -174,6 +175,12 @@ int set_param(char *aline)
    else if (!strcmp(name, "Kill_number")) sscanf(temp, "%d", &Kill_number);
    else if (!strcmp(name, "First_extinction")) sscanf(temp, "%d", &First_extinction);
    else if (!strcmp(name, "Extinction_period")) sscanf(temp, "%d", &Extinction_period);
+   /* NB; spontaneous response probs; 2020.05.19 */
+   else if (!strcmp(name, "Spontaneous_response_prob")) sscanf(temp, "%lf", &Spontaneous_response_prob);
+   else if (!strcmp(name, "RP_gaussian_mu")) sscanf(temp, "%lf", &RP_gaussian_mu);
+   else if (!strcmp(name, "RP_gaussian_std")) sscanf(temp, "%lf", &RP_gaussian_std);
+   else if (!strcmp(name, "SRP_gaussian_mu")) sscanf(temp, "%lf", &SRP_gaussian_mu);
+   else if (!strcmp(name, "SRP_gaussian_std")) sscanf(temp, "%lf", &SRP_gaussian_std);
    else if (!strcmp(name, "Gnuplot_plots"))  sscanf(temp, "%d", &Gnuplot_plots);
    else
       {

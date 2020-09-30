@@ -49,8 +49,12 @@ void print_params(FILE *fp)
    fprintf(fp, " Thresh_increase = %lf\n", Thresh_increase);
    fprintf(fp, " Thresh_decrease = %lf\n", Thresh_decrease);
    fprintf(fp, " Prob_check = %lf\n", Prob_check);
+   fprintf(fp, " Response_prob = %lf\n", Response_prob);
+   fprintf(fp, " RP_gaussian_mu = %lf\n", RP_gaussian_mu);
+   fprintf(fp, " RP gaussian_std = %lf\n", RP_gaussian_std);
    fprintf(fp, " Task_selection = %s\n", Task_selection);
    fprintf(fp, " Target_path = %s\n", Target_path);
+   fprintf(fp, " Circle_radius = %lf\n", Circle_radius);
    fprintf(fp, " Target.amplitude = %lf\n", Target.amplitude);
    fprintf(fp, " Target.period = %lf\n", Target.period);
    fprintf(fp, " Target.step_len = %lf\n", Target.step_len);
@@ -79,10 +83,13 @@ void print_params(FILE *fp)
    fprintf(fp, " Hetero_radius_mu = %lf\n", Hetero_radius_mu);
    fprintf(fp, " Hetero_radius_std = %lf\n", Hetero_radius_std);
    /* HDM; response variation probability; 2019.10.24 */
-   fprintf(fp, " Response_prob = %lf\n", Response_prob);
    fprintf(fp, " Kill_number = %d\n", Kill_number);
    fprintf(fp, " First_extinction = %d\n", First_extinction);
    fprintf(fp, " Extinction_period = %d\n", Extinction_period);
+   /* NB; spontaneous response probability; 2020.05.19 */
+   fprintf(fp, " Spontaneous_response_prob = %lf\n", Spontaneous_response_prob);
+   fprintf(fp, " SRP_gaussian_mu = %lf\n", SRP_gaussian_mu);
+   fprintf(fp, " SRP gaussian_std = %lf\n", SRP_gaussian_std);
    fprintf(fp, " Gnuplot_plots = %d\n", Gnuplot_plots);
    }  /* print_params */
 
@@ -741,7 +748,23 @@ printf("---in fprint_finalstats()---\n");
       if (Agent[i].count_switch < min_switches)
          min_switches = Agent[i].count_switch;
       }
-   fprintf(fp, " switch avg %lf max %d min %d\n",
+   fprintf(fp, " switch avg %lf max %d min %d",
+      sum/(double)Pop_size, max_switches, min_switches);
+
+   // NB; Spontaneous response prob switch count; 2020.06.03
+   // Added stats regarding task switches due to Spontaneous_response_prob
+   sum = 0.0;
+   max_switches = -1;
+   min_switches = 2 * Max_steps;
+   for (i=0; i<Pop_size; i++)
+      {
+      sum += Agent[i].count_switch_spontaneous;
+      if (Agent[i].count_switch_spontaneous > max_switches)
+         max_switches = Agent[i].count_switch_spontaneous;
+      if (Agent[i].count_switch_spontaneous < min_switches)
+         min_switches = Agent[i].count_switch_spontaneous;
+      }
+   fprintf(fp, " spontaneous_switch avg %lf max %d min %d\n",
       sum/(double)Pop_size, max_switches, min_switches);
 
 #ifdef DEBUG
@@ -879,7 +902,11 @@ printf("---in fprint_finalagent()---\n");
               Agent[i].thresh_south,
               Agent[i].thresh_west);
       fprintf(fp, " switch %d", Agent[i].count_switch);
-      fprintf(fp, " killed %d\n", Agent[i].time_killed);
+      fprintf(fp, " spontaneous-switch %d", Agent[i].count_switch_spontaneous); // NB; 2020.06.03
+      fprintf(fp, " killed %d", Agent[i].time_killed);
+      fprintf(fp, " response_prob %lf", Agent[i].response_prob);
+      fprintf(fp, " spontaneous_response_prob %lf", Agent[i].spontaneous_response_prob); // NB; 2020.06.23
+      fprintf(fp, " prob check %lf\n", Agent[i].prob_check);
       }
 
 #ifdef DEBUG

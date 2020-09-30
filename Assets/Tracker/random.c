@@ -22,7 +22,7 @@ double knuth_random()
    long r;
    double x;
 
-   r = rand();
+   r = random();
    x = (double)(r % MBIGVAL) / (double)MBIGVAL;
 
    return(x);
@@ -30,7 +30,7 @@ double knuth_random()
 
 long seed_random(long seed)
    {
-   srand((unsigned)seed);
+   srandom((unsigned)seed);
    return seed;
    }
 
@@ -85,8 +85,8 @@ double box_muller(double mu, double st_dev)
   actions:	return a double in a range of two doubles
 */
 double random_double(double a, double b) {
-   double random = ((double) rand()) / (double) RAND_MAX;
+   double random_variable = ((double) random()) / (double) RAND_MAX;
    double diff = b - a;
-   double r = random * diff;
+   double r = random_variable * diff;
    return a + r;
 }

@@ -19,6 +19,7 @@ double Thresh_increase;
 double Thresh_decrease;
 double Prob_check;
 char *Target_path;
+double Circle_radius;		/* if Target_path is circle, specify radius */
 double Range;			/* radius around zero of ok values */
    /* Range gives the range of the distribution of values */
 int Gnuplot_plots;
@@ -64,11 +65,20 @@ double Hetero_radius_min;
 
 /* HDM; intensity variation; 2019.10.24 */
 double Response_prob;
+/* NB; Response_prob standard distribution; 2020.07.06 */
+double RP_gaussian_mu;
+double RP_gaussian_std; 
 
 /* HDM; related to response probability; 2020.03.19 */
 int Kill_number;
 int First_extinction;
 int Extinction_period;
+
+/* NB; Spontaneous Response Probability; 2020.05.19 */
+double Spontaneous_response_prob;
+/* NB; Spontaneous_response_prob standard distribution; 2020.07.06 */
+double SRP_gaussian_mu;
+double SRP_gaussian_std; 
 
 // not currently used
 char *Task_selection;
