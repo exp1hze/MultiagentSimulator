@@ -62,7 +62,7 @@ public class readFile : MonoBehaviour
     public void BuildTimestep(string line)
     {
         string[] ts = Regex.Split(line, "\\s+", RegexOptions.IgnoreCase);
-        int step = 2;
+        int step = 3;
         TimeStep t1 = new TimeStep(int.Parse(ts[2]), step*float.Parse(ts[4]), step * float.Parse(ts[5]), step * float.Parse(ts[7]), step * float.Parse(ts[8]));
         timeSteps.Add(t1);
         //Debug.Log(param[0] + " " + param[1]);
