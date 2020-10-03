@@ -5,11 +5,11 @@ using UnityEngine;
 public class TimeStep : MonoBehaviour
 {
     public int time;
-    public double target_x;
-    public double target_y;
-    public double tracker_x;
-    public double tracker_y;
-    public TimeStep(int t, double tx, double ty, double trx, double ry)
+    public float target_x;
+    public float target_y;
+    public float tracker_x;
+    public float tracker_y;
+    public TimeStep(int t, float tx, float ty, float trx, float ry)
     {
         time = t;
         target_x = tx;

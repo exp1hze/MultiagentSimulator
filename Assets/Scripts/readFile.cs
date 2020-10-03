@@ -9,7 +9,7 @@ public class readFile : MonoBehaviour
 {
     public string readPath;
     public Hashtable _params;
-    void Start()
+    void Awake()
     {
         Debug.Log("hzehzezhezhe");
         _params = new Hashtable();
@@ -51,10 +51,10 @@ public class readFile : MonoBehaviour
         {
             BuildTimestep(line);
         }
-        foreach (TimeStep t1 in timeSteps)
-        {
-            Debug.Log(t1.time+" "+t1.target_x+" "+t1.target_y+" "+t1.tracker_x+" "+t1.tracker_y);
-        }
+        //foreach (TimeStep t1 in timeSteps)
+        //{
+        //    Debug.Log(t1.time+" "+t1.target_x+" "+t1.target_y+" "+t1.tracker_x+" "+t1.tracker_y);
+        //}
         //Debug.Log("Rerun : " + _params["Rerun"]);
         sr.Close();
     }
@@ -62,7 +62,8 @@ public class readFile : MonoBehaviour
     public void BuildTimestep(string line)
     {
         string[] ts = Regex.Split(line, "\\s+", RegexOptions.IgnoreCase);
-        TimeStep t1 = new TimeStep(int.Parse(ts[2]), double.Parse(ts[4]), double.Parse(ts[5]), double.Parse(ts[7]), double.Parse(ts[8]));
+        int step = 2;
+        TimeStep t1 = new TimeStep(int.Parse(ts[2]), step*float.Parse(ts[4]), step * float.Parse(ts[5]), step * float.Parse(ts[7]), step * float.Parse(ts[8]));
         timeSteps.Add(t1);
         //Debug.Log(param[0] + " " + param[1]);
     }
