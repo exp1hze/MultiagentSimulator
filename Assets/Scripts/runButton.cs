@@ -16,6 +16,11 @@ public class runButton : MonoBehaviour
     public Hashtable _params;
     public string run_num;
     public string runNumPath;
+    public GameObject parameterPanel;
+    public GameObject animationPanel;
+    Boolean isFinished = false;
+
+
     // Start is called before the first frame update
     public GameObject mainCamera;
     void Start()
@@ -69,7 +74,19 @@ public class runButton : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (isFinished == true)
+        {
+            ReadRunNum(runNumPath);
+            DirectoryInfo dir = new DirectoryInfo(Application.dataPath + "/Tracker/Output/run." + run_num);
+            if (dir.Exists)
+            {
+                animationPanel.SetActive(true);
+                parameterPanel.SetActive(false);
+                AnimationStart();
+                isFinished = false;
+            }
+            
+        }
     }
 
     public void getFieldText()
@@ -129,20 +146,28 @@ public class runButton : MonoBehaviour
             Debug.Log("-------------------------");
             mainCamera = GameObject.Find("Main Camera");
             mainCamera.GetComponent<test>().run();
+            StartCoroutine(waitImport(10.0f));
+            
+            isFinished = true;
+            
         }
         catch (IOException)
         {
             Debug.Log("The params file may opened by another program!");
         }
-        ReadRunNum(runNumPath);
-        GameObject parameterPanel = GameObject.Find("ParameterSetting");
-        parameterPanel.SetActive(false);
-        AnimationStart();
+        
+        
     }
 
+
+    IEnumerator waitImport(float waitTime)
+    {
+        yield return new WaitForSeconds(waitTime);
+    }
     private void AnimationStart()
     {
-        GameObject animationPanel = GameObject.Find("Animation");
-        animationPanel.SetActive(true);
+        string positionFile = Application.dataPath + "/Tracker/Output/run."+run_num+"/run."+run_num+".stepsummary";
+
+        animationPanel.GetComponent<AnimationControl>().AnimationStart(positionFile);
     }
 }

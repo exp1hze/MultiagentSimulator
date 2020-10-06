@@ -1,5 +1,9 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.IO;
+using System.Text;
+using System.Text.RegularExpressions;
 using UnityEngine;
 
 public class AnimationControl : MonoBehaviour
@@ -12,39 +16,88 @@ public class AnimationControl : MonoBehaviour
 
     public double timeStepSpeed;
     public int curStep;
-    public ArrayList ts;
+    //public ArrayList ts;
+    public ArrayList timeSteps;
+    Boolean toRun = false;
 
-    public void AnimationStart()
+
+    public void AnimationStart(string path)
     {
+        ReadTimestep(path);
+        DrawAndRun();
+    }
 
+    void DrawAndRun()
+    {
+        target.GetComponent<Animation>().draw();
+        tracker.GetComponent<Animation>().draw();
+        toRun = true;
+        //StartCoroutine(WaitAndRun());
+
+    }
+
+    //IEnumerator WaitAndRun()
+    //{
+    //    yield return new WaitForSeconds(0.2f);
+    //    run();
+    //}
+
+    public void ReadTimestep(string path)
+    {
+        StreamReader sr = new StreamReader(path, Encoding.Default);
+        timeSteps = new ArrayList();
+        string line;
+        while ((line = sr.ReadLine()) != null)          //Read from top to bottom, then put variable name as key, value as value to a hashtable.
+        {
+            BuildTimestep(line);
+        }
+        //foreach (TimeStep t1 in timeSteps)
+        //{
+        //    Debug.Log(t1.time+" "+t1.target_x+" "+t1.target_y+" "+t1.tracker_x+" "+t1.tracker_y);
+        //}
+        //Debug.Log("Rerun : " + _params["Rerun"]);
+        sr.Close();
+    }
+
+    public void BuildTimestep(string line)
+    {
+        string[] ts = Regex.Split(line, "\\s+", RegexOptions.IgnoreCase);
+        int step = 3;
+        TimeStep t1 = new TimeStep(int.Parse(ts[2]), step * float.Parse(ts[4]), step * float.Parse(ts[5]), step * float.Parse(ts[7]), step * float.Parse(ts[8]));
+        timeSteps.Add(t1);
+        //Debug.Log(param[0] + " " + param[1]);
     }
     void Start()
     {
         curStep = 0;
         timmer = 0;
-        time = 0.02f;
-        ts = GameObject.Find("Main Camera").GetComponent<readFile>().timeSteps;
+        time = 0.05f;
+        //ts = GameObject.Find("Main Camera").GetComponent<readFile>().timeSteps;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
-        if (timmer > 0)
-            timmer -= Time.deltaTime;
-        if (timmer <= 0)
+        if (toRun == true)
         {
-            run();
-            timmer = time;
+            if (timmer > 0)
+                timmer -= Time.deltaTime;
+            if (timmer <= 0)
+            {
+                run();
+                timmer = time;
+            }
         }
+
     }
 
     void run()
     {
-        if (curStep<=ts.Count-1)
+        //Debug.Log("runrun");
+        if (curStep<=timeSteps.Count-1)
         {
-            target.GetComponent<Animation>().Move(((TimeStep)ts[curStep]).target_x, ((TimeStep)ts[curStep]).target_y, curStep);
-            tracker.GetComponent<Animation>().Move(((TimeStep)ts[curStep]).tracker_x, ((TimeStep)ts[curStep]).tracker_y, curStep);
+            target.GetComponent<Animation>().Move(((TimeStep)timeSteps[curStep]).target_x, ((TimeStep)timeSteps[curStep]).target_y, curStep);
+            tracker.GetComponent<Animation>().Move(((TimeStep)timeSteps[curStep]).tracker_x, ((TimeStep)timeSteps[curStep]).tracker_y, curStep);
             curStep++;
         }
         

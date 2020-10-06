@@ -10,11 +10,13 @@ public class Animation : MonoBehaviour
     public float moveX;
     public float moveY;
     public ArrayList ts;
+    public GameObject animationPanel;
 
-    void Start()
+    public void draw()
     {
-        
-        ts = GameObject.Find("Main Camera").GetComponent<readFile>().timeSteps;
+
+        //ts = GameObject.Find("Main Camera").GetComponent<readFile>().timeSteps;
+        ts = animationPanel.GetComponent<AnimationControl>().timeSteps;
         UILine draw = line.GetComponent<UILine>();
         while (draw.line.Count < ts.Count)
         {
