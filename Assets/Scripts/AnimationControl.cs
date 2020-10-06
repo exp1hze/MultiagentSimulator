@@ -13,6 +13,11 @@ public class AnimationControl : MonoBehaviour
     public double timeStepSpeed;
     public int curStep;
     public ArrayList ts;
+
+    public void AnimationStart()
+    {
+
+    }
     void Start()
     {
         curStep = 0;

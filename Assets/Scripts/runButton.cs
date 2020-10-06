@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
@@ -134,7 +135,14 @@ public class runButton : MonoBehaviour
             Debug.Log("The params file may opened by another program!");
         }
         ReadRunNum(runNumPath);
+        GameObject parameterPanel = GameObject.Find("ParameterSetting");
+        parameterPanel.SetActive(false);
+        AnimationStart();
     }
 
-
+    private void AnimationStart()
+    {
+        GameObject animationPanel = GameObject.Find("Animation");
+        animationPanel.SetActive(true);
+    }
 }
