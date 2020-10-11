@@ -5,7 +5,7 @@ Task_selection     random
 Path_period     80
 Extinction_period     100
 Intensity_aging     0
-Target_path     scurve
+Target_path     square
 Step_ratio     2.0
 Path_amplitude     40
 Intensity_aging_up     0.075
