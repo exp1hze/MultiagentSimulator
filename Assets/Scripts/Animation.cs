@@ -52,11 +52,11 @@ public class Animation : MonoBehaviour
             return false;
         }
         
-        float speed = 5;
+        float scale = transform.parent.GetComponent<Drag>().scale;
         //transform.position = Vector2.MoveTowards(transform.position,new Vector2(moveX,moveY),speed*Time.deltaTime);
-        float movex = (transform.parent.position.x + moveX)*transform.parent.GetComponent<Drag>().scale;
-        float movey = (transform.parent.position.y + moveY) * transform.parent.GetComponent<Drag>().scale;
-        transform.position = new Vector2(movex, movey);
+        float movex = transform.parent.position.x + moveX*scale;
+        float movey = transform.parent.position.y + moveY *scale;
+        transform.position = new Vector2(movex,movey);
         Debug.Log(transform.position.x+" "+ transform.position.y);
         return true;
     }
