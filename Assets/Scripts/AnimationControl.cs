@@ -71,7 +71,7 @@ public class AnimationControl : MonoBehaviour
     {
         curStep = 0;
         timmer = 0;
-        time = 0.05f;
+        time = 0.02f;
         //ts = GameObject.Find("Main Camera").GetComponent<readFile>().timeSteps;
     }
 

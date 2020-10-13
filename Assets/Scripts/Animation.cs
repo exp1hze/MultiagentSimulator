@@ -27,12 +27,12 @@ public class Animation : MonoBehaviour
             if(line.gameObject.name == "TargetLine")
             {
                 Vector2 pos = new Vector2(transform.parent.position.x + ((TimeStep)ts[i]).target_x, transform.parent.position.y + ((TimeStep)ts[i]).target_y);
-                draw.line.EditPoint(i, pos, 1f);
+                draw.line.EditPoint(i, pos, 0.5f);
             }
             else
             {
                 Vector2 pos = new Vector2(transform.parent.position.x +((TimeStep)ts[i]).tracker_x, transform.parent.position.y + ((TimeStep)ts[i]).tracker_y);
-                draw.line.EditPoint(i, pos, 1f);
+                draw.line.EditPoint(i, pos, 0.5f);
             }
            
            
@@ -57,7 +57,7 @@ public class Animation : MonoBehaviour
         float movex = transform.parent.position.x + moveX*scale;
         float movey = transform.parent.position.y + moveY *scale;
         transform.position = new Vector2(movex,movey);
-        Debug.Log(transform.position.x+" "+ transform.position.y);
+        //Debug.Log(transform.position.x+" "+ transform.position.y);
         return true;
     }
 }
