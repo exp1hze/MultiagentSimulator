@@ -54,8 +54,9 @@ public class Animation : MonoBehaviour
         
         float speed = 5;
         //transform.position = Vector2.MoveTowards(transform.position,new Vector2(moveX,moveY),speed*Time.deltaTime);
-        
-        transform.position = new Vector2(transform.parent.position.x+moveX, transform.parent.position.y + moveY);
+        float movex = (transform.parent.position.x + moveX)*transform.parent.GetComponent<Drag>().scale;
+        float movey = (transform.parent.position.y + moveY) * transform.parent.GetComponent<Drag>().scale;
+        transform.position = new Vector2(movex, movey);
         Debug.Log(transform.position.x+" "+ transform.position.y);
         return true;
     }

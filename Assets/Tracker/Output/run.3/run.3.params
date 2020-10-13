@@ -1,5 +1,5 @@
  Run_num = 3
- Seed = 768753000
+ Seed = 398265000
  Run_num_file = run.num
  Rerun = -1
  Output_path = Output
@@ -9,14 +9,14 @@
  Pop_size = 200
  Thresh_init = 2.000000
  Thresh_dynamic = 2
- Thresh_increase = 0.035000
+ Thresh_increase = 0.033000
  Thresh_decrease = 0.100000
  Prob_check = 1.000000
  Response_prob = 1.000000
  RP_gaussian_mu = 0.700000
  RP gaussian_std = 0.150000
  Task_selection = random
- Target_path = square
+ Target_path = circle
  Circle_radius = 10.000000
  Target.amplitude = 40.000000
  Target.period = 80.000000
@@ -49,16 +49,16 @@
  Gnuplot_plots = 1
 
  Target parameters:
- Target.abbrev =  squ
- Target.x =  20.000000
- Target.y =  20.000000
+ Target.abbrev =  cir
+ Target.x =  0.000000
+ Target.y =  10.000000
  Target.step_len =  3.000000
  Target.length =  0.000000
  Target.angle =  0.000000
 
  Tracker parameters:
- Tracker.x =  20.000000
- Tracker.y =  20.000000
+ Tracker.x =  0.000000
+ Tracker.y =  10.000000
  Tracker.length =  0.000000
  Tracker.max_step_len =  6.000000
  Tracker.total_difference =  0.000000
