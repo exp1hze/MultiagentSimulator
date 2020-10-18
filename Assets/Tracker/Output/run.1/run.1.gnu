@@ -32,7 +32,7 @@ unset ylabel
 unset title
 
 set term post eps color
-set size square
+set size ratio 0.5
 set output "run.1.stepsummary.paths.linesp.eps"
 set title "Target and Tracker paths"
 plot\
@@ -42,7 +42,7 @@ unset size
 unset title
 
 set term post eps color
-set size square
+set size ratio 0.5
 set output "run.1.stepsummary.paths.line.eps"
 set size ratio -1
 set title "Target and Tracker paths"

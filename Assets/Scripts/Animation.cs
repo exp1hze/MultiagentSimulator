@@ -45,7 +45,6 @@ public class Animation : MonoBehaviour
     public bool Move(float x, float y,int cts)
     {
         currTimeStep = cts;
-        Debug.Log(cts);
         moveX = x;moveY = y;
         if (moveX == transform.position.x&& moveY == transform.position.y)
         {
@@ -58,6 +57,40 @@ public class Animation : MonoBehaviour
         float movey = transform.parent.position.y + moveY *scale;
         transform.position = new Vector2(movex,movey);
         //Debug.Log(transform.position.x+" "+ transform.position.y);
+        if (gameObject.name.Equals("target"))
+        {
+            if (!inWindow())
+            {
+                setCentral();
+            }
+        }
         return true;
+    }
+    bool inWindow()
+    {
+        bool re = false;
+        Vector2 center = transform.parent.parent.GetComponent<RectTransform>().position;
+        Vector2 self = gameObject.GetComponent<RectTransform>().position;
+        float width = transform.parent.parent.GetComponent<RectTransform>().rect.width;
+        float height = transform.parent.parent.GetComponent<RectTransform>().rect.height;
+        if (self.x <=(center.x+width/2)&&self.x>=(center.x - width / 2))
+        {
+            if (self.y <= (center.y + height / 2) && self.y >= (center.y - height / 2))
+            {
+                re = true;
+            }
+        }
+
+        return re;
+    }
+    void setCentral()
+    {
+        Vector2 center = transform.parent.parent.GetComponent<RectTransform>().position;
+        Vector2 acenter = transform.parent.GetComponent<RectTransform>().position;
+        Vector2 self = gameObject.GetComponent<RectTransform>().position;
+        float X = acenter.x - self.x+center.x;
+        float Y = acenter.y - self.y+center.y;
+        transform.parent.GetComponent<RectTransform>().position = new Vector2(X,Y);
+
     }
 }
