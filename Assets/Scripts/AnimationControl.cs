@@ -19,7 +19,7 @@ public class AnimationControl : MonoBehaviour
     //public ArrayList ts;
     public ArrayList timeSteps;
     Boolean toRun = false;
-
+    public GameObject distanceGraph;
 
     public void AnimationStart(string path)
     {
@@ -31,6 +31,7 @@ public class AnimationControl : MonoBehaviour
     {
         target.GetComponent<Animation>().draw();
         tracker.GetComponent<Animation>().draw();
+        distanceGraph.GetComponent<Window_Graph>().createG(timeSteps);
         toRun = true;
         //StartCoroutine(WaitAndRun());
 
@@ -63,7 +64,7 @@ public class AnimationControl : MonoBehaviour
     {
         string[] ts = Regex.Split(line, "\\s+", RegexOptions.IgnoreCase);
         int step = 3;
-        TimeStep t1 = new TimeStep(int.Parse(ts[2]), step * float.Parse(ts[4]), step * float.Parse(ts[5]), step * float.Parse(ts[7]), step * float.Parse(ts[8]));
+        TimeStep t1 = new TimeStep(int.Parse(ts[2]), step * float.Parse(ts[4]), step * float.Parse(ts[5]), step * float.Parse(ts[7]), step * float.Parse(ts[8]), float.Parse(ts[10]));
         timeSteps.Add(t1);
         //Debug.Log(param[0] + " " + param[1]);
     }
