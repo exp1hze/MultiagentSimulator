@@ -75,10 +75,11 @@ public class Animation : MonoBehaviour
         float height = transform.parent.parent.GetComponent<RectTransform>().rect.height;
         if (self.x <=(center.x+width/2)&&self.x>=(center.x - width / 2))
         {
-            if (self.y <= (center.y + height / 2) && self.y >= (center.y - height / 2))
-            {
-                re = true;
-            }
+            //if (self.y <= (center.y + height / 2) && self.y >= (center.y - height / 2))
+            //{
+            //    re = true;
+            //}
+            re = true;
         }
 
         return re;
@@ -89,7 +90,8 @@ public class Animation : MonoBehaviour
         Vector2 acenter = transform.parent.GetComponent<RectTransform>().position;
         Vector2 self = gameObject.GetComponent<RectTransform>().position;
         float X = acenter.x - self.x+center.x;
-        float Y = acenter.y - self.y+center.y;
+        //float Y = acenter.y - self.y+center.y;
+        float Y = acenter.y;
         transform.parent.GetComponent<RectTransform>().position = new Vector2(X,Y);
 
     }

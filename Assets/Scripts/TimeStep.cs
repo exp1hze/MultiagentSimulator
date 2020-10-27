@@ -10,7 +10,8 @@ public class TimeStep : MonoBehaviour
     public float tracker_x;
     public float tracker_y;
     public float distance;
-    public TimeStep(int t, float tx, float ty, float trx, float ry,float dis)
+    public int idle;
+    public TimeStep(int t, float tx, float ty, float trx, float ry,float dis, int id)
     {
         time = t;
         target_x = tx;
@@ -18,6 +19,7 @@ public class TimeStep : MonoBehaviour
         tracker_x=trx;
         tracker_y=ry;
         distance = dis;
+        idle = id;
     }
 
     void Start()

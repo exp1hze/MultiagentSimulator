@@ -45,7 +45,7 @@ public class Drag : MonoBehaviour, IDragHandler
         }
         if (Input.GetAxis("Mouse ScrollWheel") < 0)
         {
-            if (scale > 1f)
+            if (scale > 0.5f)
             {
                 scale -= 0.2f;
                 setScale();

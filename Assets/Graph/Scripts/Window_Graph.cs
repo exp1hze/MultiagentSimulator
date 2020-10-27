@@ -25,20 +25,41 @@ public class Window_Graph : MonoBehaviour {
     [SerializeField] private RectTransform labelTemplateY;
     [SerializeField] private RectTransform dashTemplateX;
     [SerializeField] private RectTransform dashTemplateY;
-
+    public GameObject[] circles;
+    
     private void Awake() {
         //List<int> valueList = new List<int>() { 5, 98, 56, 45, 30, 22, 17, 15, 13, 17, 25, 37, 40, 36, 33 };
         //ShowGraph(valueList, (int _i) => "Day "+(_i+1), (float _f) => "$" + Mathf.RoundToInt(_f));
     }
 
     public float maxY;
-    public void createG(ArrayList valueList)
+    public void createG_switch(ArrayList valueList)
     {
+        circles = new GameObject[valueList.Count];
         float max=0f;
         List<float> vl = new List<float>();
         foreach (TimeStep t in valueList)
         {
-            if(t.distance > max)
+            if(t.idle > max)
+            {
+                max = t.idle;
+            }
+            vl.Add(t.idle);
+        }
+        //maxY = (int)Math.Ceiling(max);
+        //Debug.Log(max + " " + maxY);
+        maxY = max;
+        ShowGraph(vl, (int _i) => "", (float _f) => "" + Mathf.RoundToInt(_f));
+    }
+
+    public void createG(ArrayList valueList)
+    {
+        circles = new GameObject[valueList.Count];
+        float max = 0f;
+        List<float> vl = new List<float>();
+        foreach (TimeStep t in valueList)
+        {
+            if (t.distance > max)
             {
                 max = t.distance;
             }
@@ -50,9 +71,12 @@ public class Window_Graph : MonoBehaviour {
         ShowGraph(vl, (int _i) => "" + (_i + 1), (float _f) => "" + Mathf.RoundToInt(_f));
     }
     private GameObject CreateCircle(Vector2 anchoredPosition) {
+        //m_SpriteRenderer = GetComponent<SpriteRenderer>();
+        //m_SpriteRenderer.color = Color.red;
         GameObject gameObject = new GameObject("circle", typeof(Image));
         gameObject.transform.SetParent(graphContainer, false);
         gameObject.GetComponent<Image>().sprite = circleSprite;
+        
         RectTransform rectTransform = gameObject.GetComponent<RectTransform>();
         rectTransform.anchoredPosition = anchoredPosition;
         rectTransform.sizeDelta = new Vector2(11, 11);
@@ -78,6 +102,8 @@ public class Window_Graph : MonoBehaviour {
             float xPosition = xSize + i * xSize;
             float yPosition = (valueList[i] / yMaximum) * graphHeight;
             GameObject circleGameObject = CreateCircle(new Vector2(xPosition, yPosition));
+            circles[i] = circleGameObject;
+            
             if (lastCircleGameObject != null) {
                 CreateDotConnection(lastCircleGameObject.GetComponent<RectTransform>().anchoredPosition, circleGameObject.GetComponent<RectTransform>().anchoredPosition);
             }
@@ -94,7 +120,7 @@ public class Window_Graph : MonoBehaviour {
             dashX.gameObject.SetActive(true);
             dashX.anchoredPosition = new Vector2(xPosition, -3f);
         }
-
+        
         int separatorCount = 10;
         for (int i = 0; i <= separatorCount; i++) {
             RectTransform labelY = Instantiate(labelTemplateY);
@@ -126,4 +152,51 @@ public class Window_Graph : MonoBehaviour {
         rectTransform.localEulerAngles = new Vector3(0, 0, UtilsClass.GetAngleFromVectorFloat(dir));
     }
 
+    public void setcurrentDot(int ts)
+    {
+
+        circles[ts].GetComponent<Image>().color = Color.red;
+        if(ts != 0)
+        {
+            circles[ts-1].GetComponent<Image>().color = Color.white;
+        }
+        inWindow(circles[ts]);
+
+        
+    }
+
+    void inWindow(GameObject circle)
+    {
+        bool re = false;
+        Vector2 center = transform.parent.parent.GetComponent<RectTransform>().position;
+        Vector2 acenter = transform.parent.GetComponent<RectTransform>().position;
+        //Vector2 self = gameObject.GetComponent<RectTransform>().position;
+        Vector2 self = circle.GetComponent<RectTransform>().position;
+
+        float width = transform.parent.parent.GetComponent<RectTransform>().rect.width;
+        float height = transform.parent.parent.GetComponent<RectTransform>().rect.height;
+        if (self.x <= (center.x + width / 2) && self.x >= (center.x - width / 2))
+        {
+
+
+        }
+        else
+        {
+            float X = acenter.x - self.x + center.x;
+            float Y = acenter.y;
+            transform.parent.GetComponent<RectTransform>().position = new Vector2(X, Y);
+        }
+
+    }
+
+    void setCentral()
+    {
+        Vector2 center = transform.parent.parent.GetComponent<RectTransform>().position;
+        Vector2 acenter = transform.parent.GetComponent<RectTransform>().position;
+        Vector2 self = gameObject.GetComponent<RectTransform>().position;
+        float X = acenter.x - self.x + center.x;
+        float Y = acenter.y - self.y + center.y;
+        transform.parent.GetComponent<RectTransform>().position = new Vector2(X, Y);
+
+    }
 }

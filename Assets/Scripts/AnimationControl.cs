@@ -20,6 +20,8 @@ public class AnimationControl : MonoBehaviour
     public ArrayList timeSteps;
     Boolean toRun = false;
     public GameObject distanceGraph;
+    public GameObject switchGraph;
+    
 
     public void AnimationStart(string path)
     {
@@ -32,6 +34,8 @@ public class AnimationControl : MonoBehaviour
         target.GetComponent<Animation>().draw();
         tracker.GetComponent<Animation>().draw();
         distanceGraph.GetComponent<Window_Graph>().createG(timeSteps);
+        switchGraph.GetComponent<Window_Graph>().createG_switch(timeSteps);
+        
         toRun = true;
         //StartCoroutine(WaitAndRun());
 
@@ -64,8 +68,11 @@ public class AnimationControl : MonoBehaviour
     {
         string[] ts = Regex.Split(line, "\\s+", RegexOptions.IgnoreCase);
         int step = 3;
-        TimeStep t1 = new TimeStep(int.Parse(ts[2]), step * float.Parse(ts[4]), step * float.Parse(ts[5]), step * float.Parse(ts[7]), step * float.Parse(ts[8]), float.Parse(ts[10]));
+        //Debug.Log(ts.Length);
+        
+        TimeStep t1 = new TimeStep(int.Parse(ts[2]), step * float.Parse(ts[4]), step * float.Parse(ts[5]), step * float.Parse(ts[7]), step * float.Parse(ts[8]), float.Parse(ts[10]), int.Parse(ts[31]));
         timeSteps.Add(t1);
+        //Debug.Log(t1.idle);
         //Debug.Log(param[0] + " " + param[1]);
     }
     void Start()
@@ -94,11 +101,14 @@ public class AnimationControl : MonoBehaviour
 
     void run()
     {
+        
         //Debug.Log("runrun");
         if (curStep<=timeSteps.Count-1)
         {
             target.GetComponent<Animation>().Move(((TimeStep)timeSteps[curStep]).target_x, ((TimeStep)timeSteps[curStep]).target_y, curStep);
             tracker.GetComponent<Animation>().Move(((TimeStep)timeSteps[curStep]).tracker_x, ((TimeStep)timeSteps[curStep]).tracker_y, curStep);
+            distanceGraph.GetComponent<Window_Graph>().setcurrentDot(curStep);
+            switchGraph.GetComponent<Window_Graph>().setcurrentDot(curStep);
             curStep++;
         }
         
