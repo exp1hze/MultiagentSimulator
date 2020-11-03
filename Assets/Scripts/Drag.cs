@@ -35,20 +35,23 @@ public class Drag : MonoBehaviour, IDragHandler
 
     void Update()
     {
-        if (Input.GetAxis("Mouse ScrollWheel") > 0)
+        if (RectTransformUtility.RectangleContainsScreenPoint(transform.parent.GetComponent<RectTransform>(),Input.mousePosition))
         {
-            if (scale <= 5f)
+            if (Input.GetAxis("Mouse ScrollWheel") > 0)
             {
-                scale += 0.2f;
-                setScale();
+                if (scale <= 5f)
+                {
+                    scale += 0.2f;
+                    setScale();
+                }
             }
-        }
-        if (Input.GetAxis("Mouse ScrollWheel") < 0)
-        {
-            if (scale > 0.5f)
+            if (Input.GetAxis("Mouse ScrollWheel") < 0)
             {
-                scale -= 0.2f;
-                setScale();
+                if (scale > 0.5f)
+                {
+                    scale -= 0.2f;
+                    setScale();
+                }
             }
         }
     }

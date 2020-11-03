@@ -29,6 +29,18 @@ public class agentTI : MonoBehaviour
         SetBar("TW", 2.6f);
     }
 
+    public void Set(float iN, float iE, float iS, float iW, float tN, float tE, float tS, float tW,int center)
+    {
+        SetBar("IN", iN);
+        SetBar("TN", tN);
+        SetBar("IE", iE);
+        SetBar("TE", tE);
+        SetBar("IS", iS);
+        SetBar("TS", tS);
+        SetBar("IW", iW);
+        SetBar("TW", tW);
+        Center.transform.GetChild(0).GetComponent<Text>().text = "" + center;
+    }
     public void SetBar(string name, float length)
     {
 
