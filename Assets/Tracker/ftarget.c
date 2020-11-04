@@ -71,6 +71,10 @@ printf("---in move_target()---\n");
       {
       path_scurve(t);
       }
+   else if ( !strcmp(Target_path, "serpentine"))
+      {
+      path_serpentine(t);
+      }
    else if ( !strcmp(Target_path, "sine") )
       {
       path_sine(t);
@@ -682,6 +686,73 @@ printf("---in path_scurve()---\n");
 printf("---end path_scurve()---\n");
 #endif
    }  /* path_scurve */
+
+/********** path_scurve **********/
+/* parameters:  t       current timestep
+   called by:   move_target(), fxn.c
+   actions:     Start at 0, 0.  Move up by Target.amplitude for Target.period/4,
+                then move down by Target.amplitude * 2 for Target.period/2,
+                then move up by Target.amplitude for Target.period/4.  Repeat.
+		Curved like s-curve instead of straight zigzag.
+*/
+void path_serpentine(int t)
+   {
+#ifdef DEBUG
+printf("---in path_serpentine()---\n");
+#endif
+
+   double amplitude = 5;
+   double period = 6;
+   double direction_multiplier;
+
+   double x1, y1, x2, y2;
+   
+
+ // Snippet A
+ // x = sqrt(1 - y^2)
+ // Acos(theta) = y
+ // Snippet B
+ // angle = cos^-1(y) / A
+
+   if (Target.y >=0)
+      {
+      Target.direction = -1;
+      }
+   else if (Target.y < 0) 
+      {
+      Target.direction = 1;
+      }
+
+   x1 = Target.x;
+   y1 = Target.y;
+
+// Target.step_len * sin(M_PI/2 - Target.angle);
+
+   Target.y = y2 = Target.y +
+                   Target.step_len *
+                   (cos(M_PI/2 - Target.angle));
+   Target.x = x2 = Target.x +
+                   Target.step_len * sqrt(1-(y2*y2));
+
+   // update target length
+   printf(" ---------- %lf --\n", sqrt( (x2-x1)*(x2-x1) + (y2-y1)*(y2-y1) ) );
+   Target.length += sqrt( (x2-x1)*(x2-x1) + (y2-y1)*(y2-y1) );
+
+   // update target angle
+   if (y1 >= 0 && y2 < 0)
+     Target.angle = -M_PI/2;
+   else if (y1 < 0 && y2 >= 0)
+      Target.angle = M_PI/2;
+   else
+      Target.angle = Target.angle + acos(y1)/Target.amplitude;
+
+//      Target.angle = Target.angle + (Target.direction * Target.change);
+printf("** %lf angle\n", Target.angle/M_PI*180);
+
+#ifdef DEBUG
+printf("---end path_serpentine()---\n");
+#endif
+   }  /* path_serpentine */
 
 /********** path_sine **********/
 /* parameters:  t       current timestep

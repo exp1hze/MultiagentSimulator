@@ -1,4 +1,4 @@
-28
+29
 # random always has to be first.  Rest of order doesn't matter
 random		1
 params		1
@@ -51,3 +51,4 @@ stephisteast    1
 stephistwest    1
 # intensity ranges
 intensityranges 1
+stepintensity 0

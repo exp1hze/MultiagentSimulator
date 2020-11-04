@@ -34,7 +34,9 @@ Thresh_init 		2.0
 ### flag to turn on dynamic thresholds
 #   0 = off
 #   1 = on, max and min for each agent is [0.0,1.0]
-#   2 = on, max and min for each agent generated using uniform distribution.
+#   2 = on, min is randomly generated from [0.0,0.5]
+#           max is randomly generated from [0.5,1.0]
+#   3 = on, max and min for each agent generated using uniform distribution.
 #       If randomly generated values result in min>max, exchange the two values.
 Thresh_dynamic		0
 ### Thresh_decrease and Thresh_increase

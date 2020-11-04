@@ -14,5 +14,6 @@ void scale_thresholds(int n);
 int init_target();
 int init_tracker();
 int init_raw_thresholds(int n);
-int init_dynamic_threshold_range(int n);
+int init_dynamic_threshold_range_TD2(int n);
+int init_dynamic_threshold_range_TD3(int n);
 int init_intensities(int n);

@@ -266,7 +266,10 @@ printf("---in init_agent()---\n");
    // each agent; else initialize static threshold w/value within range.
    // Thresh_dynamic = 0   dynamic thresholds off, static thresholds
    // Thresh_dynamic = 1   dynamic thresholds on w/range [0.0,1.0]
-   // Thresh_dynamic = 2   dynamic thresholds on, uniformly distributed range
+   // Thresh_dynamic = 2   dynamic thresholds on, range min/max uniformly 
+   //                      distributed within bottom/top half of [0.0,1.0]
+   // Thresh_dynamic = 3   dynamic thresholds on, range within two uniformly
+   //                      random values within [0.0,1.0]
    if (Thresh_dynamic == 0)
       {
       // Static thresholds.  Thresholds expected to fall within [0.0,1.0].
@@ -294,8 +297,18 @@ printf("---in init_agent()---\n");
    else if (Thresh_dynamic == 2)
       {
       // Dynamic thresholds.  Each agent has it's own unique thresh_min and
-      // thresh_max for each task.  Agent threshold randomly initialized.
-      error = init_dynamic_threshold_range(n);
+      // thresh_max for each task.  Minimum of range randomly initialized
+      // within 0 and 0.49; maximum of range randomly initialized within
+      // 0.51 and 1.0.
+      error = init_dynamic_threshold_range_TD2(n);
+      if (error == ERROR)  return ERROR;
+      }
+   else if (Thresh_dynamic == 3)
+      {
+      // Dynamic thresholds.  Each agent has it's own unique thresh_min and
+      // thresh_max for each task.  Minimum and maximum of range are randomly
+      // generated numbers within 0 and 1.0.  Lower value is set to minimum.
+      error = init_dynamic_threshold_range_TD3(n);
       if (error == ERROR)  return ERROR;
       }
    else
@@ -435,7 +448,7 @@ printf("---in scale_thresholds()---\n");
    Agent[n].thresh_west = Agent[n].raw_thresh_west * Range;
 
    // scale threshold ranges
-   if (Thresh_dynamic == 1 || Thresh_dynamic == 2)
+   if (Thresh_dynamic == 1 || Thresh_dynamic == 2 || Thresh_dynamic == 3)
       {
       Agent[n].thresh_min_north = Agent[n].raw_thresh_min_north * Range;
       Agent[n].thresh_min_south = Agent[n].raw_thresh_min_south * Range;
@@ -937,22 +950,24 @@ printf("---end init_raw_thresholds()---\n");
    return OK;
    }  /* init_raw_thresholds */
 
-/********** init_dynamic_threshold_range **********/
+/********** init_dynamic_threshold_range_TD2 **********/
 /* created:     20.04.16.ASW
+   revised:     20.10.15.ASW   Removed code for TD3 and place in new function.
    parameters:  n       agent index number
    called by:   init_agent(), fxn.c
-   actions:     if dynamic thresholds are on (Thresh_dynamic = 1), initialize the
-		threshold range for each agent.
-		Max and min are both uniform distributions.  If min>max, then 
-		reverse the two values.
+   actions:     if dynamic thresholds are set to (Thresh_dynamic = 2),
+                initialize the threshold range for each agent.
+                The minimum of the range is a uniform random value within 
+                [0.0:0.49].  The maximum of the range is a uniform random 
+                value within [0.51:1.0].
 */
-int init_dynamic_threshold_range(int n)
+int init_dynamic_threshold_range_TD2(int n)
    {
    double temp;
    double range;
 
 #ifdef DEBUG
-printf("---in init_dynamic_threshold_range()---\n");
+printf("---in init_dynamic_threshold_range_TD2()---\n");
 #endif
 
    // initialize unique range for each agent by randomly generating a
@@ -966,7 +981,55 @@ printf("---in init_dynamic_threshold_range()---\n");
    Agent[n].raw_thresh_max_east = knuth_random() * 0.49 + 0.51;
    Agent[n].raw_thresh_max_west = knuth_random() * 0.49 + 0.51;
 
-#ifdef REMOVE
+   // initialize threshold uniformly randomly within range
+   range = Agent[n].raw_thresh_max_north - Agent[n].raw_thresh_min_north;
+   Agent[n].raw_thresh_north = knuth_random() * range
+                             + Agent[n].raw_thresh_min_north;
+   range = Agent[n].raw_thresh_max_south - Agent[n].raw_thresh_min_south;
+   Agent[n].raw_thresh_south = knuth_random() * range
+                             + Agent[n].raw_thresh_min_south;
+   range = Agent[n].raw_thresh_max_east - Agent[n].raw_thresh_min_east;
+   Agent[n].raw_thresh_east = knuth_random() * range
+                             + Agent[n].raw_thresh_min_east;
+   range = Agent[n].raw_thresh_max_west - Agent[n].raw_thresh_min_west;
+   Agent[n].raw_thresh_west = knuth_random() * range
+                             + Agent[n].raw_thresh_min_west;
+
+#ifdef DEBUG
+printf("---end init_dynamic_threshold_range_TD2()---\n");
+#endif
+   return OK;
+   }  /* init_dynamic_threshold_range_TD2 */
+
+/********** init_dynamic_threshold_range_TD3 **********/
+/* created:     20.04.16.ASW
+   parameters:  n       agent index number
+   called by:   init_agent(), fxn.c
+   actions:     if dynamic thresholds are set to (Thresh_dynamic = 3), 
+                initialize the threshold range for each agent.
+		Max and min are both uniformly random values within 0 and 1.
+                Lower value is the min; higher value is the max.
+*/
+int init_dynamic_threshold_range_TD3(int n)
+   {
+   double temp;
+   double range;
+
+#ifdef DEBUG
+printf("---in init_dynamic_threshold_range_TD3()---\n");
+#endif
+
+   // initialize unique range for each agent by randomly generating a
+   // min and max for the range
+   Agent[n].raw_thresh_min_north = knuth_random();
+   Agent[n].raw_thresh_min_south = knuth_random();
+   Agent[n].raw_thresh_min_east = knuth_random();
+   Agent[n].raw_thresh_min_west = knuth_random();
+   Agent[n].raw_thresh_max_north = knuth_random();
+   Agent[n].raw_thresh_max_south = knuth_random();
+   Agent[n].raw_thresh_max_east = knuth_random();
+   Agent[n].raw_thresh_max_west = knuth_random();
+
    // make sure that the min of the range is less than the max of the range
    if (Agent[n].raw_thresh_min_north > Agent[n].raw_thresh_max_north)
       {
@@ -992,7 +1055,6 @@ printf("---in init_dynamic_threshold_range()---\n");
       Agent[n].raw_thresh_min_west = Agent[n].raw_thresh_max_west;
       Agent[n].raw_thresh_max_west = temp;
       }
-#endif
 
    // initialize threshold uniformly randomly within range
    range = Agent[n].raw_thresh_max_north - Agent[n].raw_thresh_min_north;
@@ -1009,10 +1071,10 @@ printf("---in init_dynamic_threshold_range()---\n");
                              + Agent[n].raw_thresh_min_west;
 
 #ifdef DEBUG
-printf("---end init_dynamic_threshold_range()---\n");
+printf("---end init_dynamic_threshold_range_TD3()---\n");
 #endif
    return OK;
-   }  /* init_dynamic_threshold_range */
+   }  /* init_dynamic_threshold_range_TD3 */
 
 /********** init_intensities **********/
 /* created:     20.04.16.ASW moved from init_agent into this function
@@ -1030,10 +1092,20 @@ printf("---in init_intensities()---\n");
    /* HDM; intensity variation; 2019.09.12 */
    if (Intensity_variation == 1) // for homogeneous ranges
       {
+      // generate initial intensity values
       Agent[n].intensity_north = rand_agent_intensity();
       Agent[n].intensity_south = rand_agent_intensity();
       Agent[n].intensity_east = rand_agent_intensity();
       Agent[n].intensity_west = rand_agent_intensity();
+      // all range min and max are global values when Intensity_variation is 1
+      Agent[n].int_aging_min_n = Intensity_aging_min;
+      Agent[n].int_aging_max_n = Intensity_aging_max;
+      Agent[n].int_aging_min_e = Intensity_aging_min;
+      Agent[n].int_aging_max_e = Intensity_aging_max;
+      Agent[n].int_aging_min_s = Intensity_aging_min;
+      Agent[n].int_aging_max_s = Intensity_aging_max;
+      Agent[n].int_aging_min_w = Intensity_aging_min;
+      Agent[n].int_aging_max_w = Intensity_aging_max;
       }
    /* LR; intensity range variation; 2020.02.01 */
    else if (Intensity_variation == 2) //for heterogeneous ranges
@@ -1199,12 +1271,20 @@ printf("---in init_intensities()---\n");
             Agent[n].int_aging_min_w, Agent[n].int_aging_max_w);
       }
       #endif
-  } else
+  } else   // Intensity_variation == 0
       {
       Agent[n].intensity_north = 1.0;
       Agent[n].intensity_south = 1.0;
       Agent[n].intensity_east = 1.0;
       Agent[n].intensity_west = 1.0;
+      Agent[n].int_aging_min_n = 1.0;
+      Agent[n].int_aging_max_n = 1.0;
+      Agent[n].int_aging_min_e = 1.0;
+      Agent[n].int_aging_max_e = 1.0;
+      Agent[n].int_aging_min_s = 1.0;
+      Agent[n].int_aging_max_s = 1.0;
+      Agent[n].int_aging_min_w = 1.0;
+      Agent[n].int_aging_max_w = 1.0;
       }
 
     /* HDM; 2019.09.19 */

@@ -28,6 +28,7 @@ void fprint_stephistsouth(FILE *fp, int timestep);
 void fprint_stephisteast(FILE *fp, int timestep);
 void fprint_stephistwest(FILE *fp, int timestep);
 void fprint_intensityranges(FILE *fp);
+void fprint_stepintensity(FILE *fp, int t);
 void fprint_stepthreshnorth(FILE *fp, int t);
 void fprint_stepthreshsouth(FILE *fp, int t);
 void fprint_stepthresheast(FILE *fp, int t);

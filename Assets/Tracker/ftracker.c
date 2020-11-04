@@ -186,7 +186,8 @@ printf("---in select_tasks()---\n");
          else Agent[i].count_idle++;
 
          /* 200414AW Adjust agent thresholds here if dynamic thresholds? */
-         if (Thresh_dynamic == 1 || Thresh_dynamic == 2)
+         if (Thresh_dynamic == 1 || Thresh_dynamic == 2 ||
+             Thresh_dynamic == 3)
             {
             adjust_agent_thresholds(i, Agent[i].current_task);
             }

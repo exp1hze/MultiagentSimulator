@@ -1,5 +1,9 @@
  Run_num = 1
+<<<<<<< HEAD
  Seed = 43208000
+=======
+ Seed = 312669000
+>>>>>>> 33a56f3040c4eaab06b46e340721a13cdb720e60
  Run_num_file = run.num
  Rerun = -1
  Output_path = Output

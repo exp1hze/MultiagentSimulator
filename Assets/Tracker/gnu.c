@@ -760,12 +760,10 @@ printf("---in gnu_stepthreshnorth()---\n");
    fprintf(fp, "set view map\n");
    fprintf(fp, "plot [%lf:%lf][%d:-2] \"run.%d.stepthreshnorth\" matrix title \"\" w image\n",
            Pop_size*0.1*(-1), Pop_size*1.1, Max_steps+1, Run_num);
-/*
    fprintf(fp, "unset size\n");
    fprintf(fp, "unset title\n");
    fprintf(fp, "unset xlabel\n");
    fprintf(fp, "unset ylabel\n");
-*/
    fprintf(fp, "\n");
 
 #ifdef DEBUG
@@ -797,12 +795,10 @@ printf("---in gnu_stepthreshsouth()---\n");
    fprintf(fp, "set view map\n");
    fprintf(fp, "plot [%lf:%lf][%d:-2] \"run.%d.stepthreshsouth\" matrix title \"\" w image\n",
            Pop_size*0.1*(-1), Pop_size*1.1, Max_steps+1, Run_num);
-/*
    fprintf(fp, "unset size\n");
    fprintf(fp, "unset title\n");
    fprintf(fp, "unset xlabel\n");
    fprintf(fp, "unset ylabel\n");
-*/
    fprintf(fp, "\n");
 
 #ifdef DEBUG
@@ -834,12 +830,10 @@ printf("---in gnu_stepthresheast()---\n");
    fprintf(fp, "set view map\n");
    fprintf(fp, "plot [%lf:%lf][%d:-2] \"run.%d.stepthresheast\" matrix title \"\" w image\n",
            Pop_size*0.1*(-1), Pop_size*1.1, Max_steps+1, Run_num);
-/*
    fprintf(fp, "unset size\n");
    fprintf(fp, "unset title\n");
    fprintf(fp, "unset xlabel\n");
    fprintf(fp, "unset ylabel\n");
-*/
    fprintf(fp, "\n");
 
 #ifdef DEBUG
@@ -871,12 +865,10 @@ printf("---in gnu_stepthreshwest()---\n");
    fprintf(fp, "set view map\n");
    fprintf(fp, "plot [%lf:%lf][%d:-2] \"run.%d.stepthreshwest\" matrix title \"\" w image\n",
            Pop_size*0.1*(-1), Pop_size*1.1, Max_steps+1, Run_num);
-/*
    fprintf(fp, "unset size\n");
    fprintf(fp, "unset title\n");
    fprintf(fp, "unset xlabel\n");
    fprintf(fp, "unset ylabel\n");
-*/
    fprintf(fp, "\n");
 
 #ifdef DEBUG
@@ -897,8 +889,7 @@ printf("---in gnu_threshrange()---\n");
 #endif
    
    fprintf(fp, "set term post eps\n");
-   fprintf(fp, "set size ratio %lf\n", 
-           (double)Pop_size/((double)Max_steps*0.5) );
+   fprintf(fp, "set size ratio 0.5\n"); 
    fprintf(fp, "set xlabel \"Agent\"\n");
    fprintf(fp, "set ylabel \"Threshold\"\n");
 
@@ -925,6 +916,7 @@ printf("---in gnu_threshrange()---\n");
    fprintf(fp, 
 	"plot \"run.%d.threshrange\" using 2:16:17:18 title \"\" w errorbars\n",
 	Run_num);
+   fprintf(fp, "unset size\n");
 
    fprintf(fp, "\n");
 

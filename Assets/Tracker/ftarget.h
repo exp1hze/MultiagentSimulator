@@ -16,6 +16,7 @@ void path_sharp(int t);
 void path_random_steep(int t);
 void path_zigzag(int t);
 void path_scurve(int t);
+void path_serpentine(int t);
 void path_sine(int t);
 void path_sine2(int t);
 void path_figure8(int t);

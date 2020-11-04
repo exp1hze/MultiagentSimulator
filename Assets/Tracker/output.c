@@ -208,7 +208,7 @@ void start_output()
       }  /* if */
 
    /* print the initialized aging ranges for each agent */
-   if (file_on("intensityranges") && Intensity_aging && Intensity_variation == 2)
+   if (file_on("intensityranges"))
       {
       array_ptr = get_file_pointer("intensityranges");
       Output_file[array_ptr].fp = fopen(Output_file[array_ptr].filename, "a");
@@ -363,6 +363,13 @@ void step_output(int t)
       fprint_stepthreshwest(Output_file[ptr].fp, t);
       fclose(Output_file[ptr].fp);
       }  /* if */
+   if (file_on("stepintensity"))
+      {
+      ptr = get_file_pointer("stepintensity");
+      Output_file[ptr].fp = fopen(Output_file[ptr].filename, "a");
+      fprint_stepintensity(Output_file[ptr].fp, t);
+      fclose(Output_file[ptr].fp);
+      }  /* if */
 
 #ifdef DEBUG
    printf(" ---end step_output---\n");
@@ -507,8 +514,8 @@ printf("---in fprint_threshrange()---\n");
       // for each direction print init, max, min threshold value
       fprintf(fp, " N %lf %lf %lf E %lf %lf %lf S %lf %lf %lf W %lf %lf %lf ",
       Agent[i].thresh_north,Agent[i].thresh_min_north,Agent[i].thresh_max_north,
-      Agent[i].thresh_south,Agent[i].thresh_min_south,Agent[i].thresh_max_south,
       Agent[i].thresh_east,Agent[i].thresh_min_east,Agent[i].thresh_max_east,
+      Agent[i].thresh_south,Agent[i].thresh_min_south,Agent[i].thresh_max_south,
       Agent[i].thresh_west,Agent[i].thresh_min_west,Agent[i].thresh_max_west);
       fprintf(fp, "\n");
       }
@@ -537,8 +544,8 @@ printf("---in fprint_stepthresh()---\n");
       {
       fprintf(fp, " A %d ", i);
       fprintf(fp, " N %lf E %lf S %lf W %lf ",
-		Agent[i].thresh_north, Agent[i].thresh_south,
-		Agent[i].thresh_east, Agent[i].thresh_west);
+		Agent[i].thresh_north, Agent[i].thresh_east,
+		Agent[i].thresh_south, Agent[i].thresh_west);
       }
    fprintf(fp, "\n");
 
@@ -968,11 +975,11 @@ void fprint_intensities(FILE *fp)
         if(Agent[i].count_west > 0)
             avg_w = Agent[i].int_tot_w/Agent[i].count_west;
 
-        fprintf(fp, " %5d  Avg N: %lf  Avg S: %lf  Avg E: %lf  Avg W: %lf ", i,  avg_n,  avg_s,  avg_e,  avg_w);
+        fprintf(fp, " %5d  Avg N: %lf  Avg E: %lf  Avg S: %lf  Avg W: %lf ", i,  avg_n,  avg_e,  avg_s,  avg_w);
         fprintf(fp, "\n");
-        fprintf(fp, "        Min N: %lf  Min S: %lf  Min E: %lf  Min W: %lf ", Agent[i].int_min_n,  Agent[i].int_min_s,  Agent[i].int_min_e,  Agent[i].int_min_w);
+        fprintf(fp, "        Min N: %lf  Min E: %lf  Min S: %lf  Min W: %lf ", Agent[i].int_min_n,  Agent[i].int_min_e,  Agent[i].int_min_s,  Agent[i].int_min_w);
         fprintf(fp, "\n");
-        fprintf(fp, "        Max N: %lf  Max S: %lf  Max E: %lf  Max W: %lf ", Agent[i].int_max_n,  Agent[i].int_max_s,  Agent[i].int_max_e,  Agent[i].int_max_w);
+        fprintf(fp, "        Max N: %lf  Max E: %lf  Max S: %lf  Max W: %lf ", Agent[i].int_max_n,  Agent[i].int_max_e,  Agent[i].int_max_s,  Agent[i].int_max_w);
         fprintf(fp, "\n\n");
         }
     }  /* fprint_intensities */
@@ -1054,11 +1061,14 @@ printf("---in fprint_intensityranges()---\n");
 
    for (i=0; i<Pop_size; i++)
       {
-        fprintf(fp, "agent: %d   intensity aging ranges:\tn=[%f, %f], s=[%f, %f], e=[%f, %f], w=[%f, %f]\n",
-          i,  Agent[i].int_aging_min_n, Agent[i].int_aging_max_n,
-              Agent[i].int_aging_min_s, Agent[i].int_aging_max_s,
-              Agent[i].int_aging_min_e, Agent[i].int_aging_max_e,
-              Agent[i].int_aging_min_w, Agent[i].int_aging_max_w);
+      fprintf(fp, " Agent %4d ", i);
+      // for each direction print init, max, min threshold value
+      fprintf(fp, " N %lf %lf %lf E %lf %lf %lf S %lf %lf %lf W %lf %lf %lf ",
+      Agent[i].intensity_north,Agent[i].int_aging_min_n,Agent[i].int_aging_max_n,
+      Agent[i].intensity_east,Agent[i].int_aging_min_e, Agent[i].int_aging_max_e,
+      Agent[i].intensity_south,Agent[i].int_aging_min_s, Agent[i].int_aging_max_s,
+      Agent[i].intensity_west,Agent[i].int_aging_min_w, Agent[i].int_aging_max_w);
+      fprintf(fp, "\n");
       }
 
 #ifdef DEBUG
@@ -1189,3 +1199,32 @@ printf("---in fprint_stepthreshwest()---\n");
 printf("---end fprint_stepthreshwest()---\n");
 #endif
    }  /* fprint_stepthreshwest */
+
+/********** fprint_stepintensity ***********/
+/* Called by:           step_output(), output.c
+   Parameters:          t       current timestep
+   Actions:             Called once per step to print intensity parameters.
+*/
+void fprint_stepintensity(FILE *fp, int t)
+   {
+   int i, j;
+
+#ifdef DEBUG
+printf("---in fprint_stepintensity()---\n");
+#endif
+
+   fprintf(fp, " T %4d ", t);
+   for (i=0; i<Pop_size; i++)
+      {
+      fprintf(fp, " A %d ", i);
+      fprintf(fp, " N %lf E %lf S %lf W %lf ",
+		Agent[i].intensity_north, Agent[i].intensity_east,
+		Agent[i].intensity_south, Agent[i].intensity_west);
+      }
+   fprintf(fp, "\n");
+
+#ifdef DEBUG
+printf("---end fprint_stepintensity()---\n");
+#endif
+
+   }  /* fprint_stepintensity */
