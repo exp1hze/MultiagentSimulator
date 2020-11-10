@@ -166,8 +166,13 @@ public class runButton : MonoBehaviour
     }
     private void AnimationStart()
     {
+        // read output file
         string positionFile = Application.dataPath + "/Tracker/Output/run."+run_num+"/run."+run_num+".stepsummary";
+        string IRangeFile = Application.dataPath + "/Tracker/Output/run." + run_num + "/run." + run_num + ".intensityranges";
+        string TRangeFile = Application.dataPath + "/Tracker/Output/run." + run_num + "/run." + run_num + ".threshrange";
+        string IstepFile = Application.dataPath + "/Tracker/Output/run." + run_num + "/run." + run_num + ".stepintensity";
+        string TstepFile = Application.dataPath + "/Tracker/Output/run." + run_num + "/run." + run_num + ".stepthresh";
 
-        animationPanel.GetComponent<AnimationControl>().AnimationStart(positionFile);
+        animationPanel.GetComponent<AnimationControl>().AnimationStart(positionFile, IRangeFile, TRangeFile, IstepFile, TstepFile);
     }
 }
