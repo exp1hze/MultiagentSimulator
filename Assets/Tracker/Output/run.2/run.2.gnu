@@ -1,3 +1,47 @@
+set term post eps
+set xlabel "Timestep"
+set ylabel "Bins"
+set zlabel "Count"
+set output "run.2.stephistnorth.eps"
+set title "Histogram of intensity values, north"
+set dgrid3d 50,50 qnorm 2
+splot "run.2.stephistnorth" using 2:4:6 w lines
+unset size
+unset title
+
+set term post eps
+set xlabel "Timestep"
+set ylabel "Bins"
+set zlabel "Count"
+set output "run.2.stephistsouth.eps"
+set title "Histogram of intensity values, south"
+set dgrid3d 50,50 qnorm 2
+splot "run.2.stephistsouth" using 2:4:6 w lines
+unset size
+unset title
+
+set term post eps
+set xlabel "Timestep"
+set ylabel "Bins"
+set zlabel "Count"
+set output "run.2.stephisteast.eps"
+set title "Histogram of intensity values, east"
+set dgrid3d 50,50 qnorm 2
+splot "run.2.stephisteast" using 2:4:6 w lines
+unset size
+unset title
+
+set term post eps
+set xlabel "Timestep"
+set ylabel "Bins"
+set zlabel "Count"
+set output "run.2.stephistwest.eps"
+set title "Histogram of intensity values, west"
+set dgrid3d 50,50 qnorm 2
+splot "run.2.stephistwest" using 2:4:6 w lines
+unset size
+unset title
+
 set term post eps color
 set xlabel "Timestep"
 set ylabel "Distance"
@@ -211,6 +255,10 @@ set palette defined (0 "green", 5.000000 "yellow", 10.000000 "red")
 set cbrange[0:10.000000]
 set view map
 plot [-20.000000:220.000000][501:-2] "run.2.stepthreshnorth" matrix title "" w image
+unset size
+unset title
+unset xlabel
+unset ylabel
 
 set term post eps color
 set size ratio 2
@@ -223,6 +271,10 @@ set palette defined (0 "green", 5.000000 "yellow", 10.000000 "red")
 set cbrange[0:10.000000]
 set view map
 plot [-20.000000:220.000000][501:-2] "run.2.stepthreshsouth" matrix title "" w image
+unset size
+unset title
+unset xlabel
+unset ylabel
 
 set term post eps color
 set size ratio 2
@@ -235,6 +287,10 @@ set palette defined (0 "green", 5.000000 "yellow", 10.000000 "red")
 set cbrange[0:10.000000]
 set view map
 plot [-20.000000:220.000000][501:-2] "run.2.stepthresheast" matrix title "" w image
+unset size
+unset title
+unset xlabel
+unset ylabel
 
 set term post eps color
 set size ratio 2
@@ -247,9 +303,13 @@ set palette defined (0 "green", 5.000000 "yellow", 10.000000 "red")
 set cbrange[0:10.000000]
 set view map
 plot [-20.000000:220.000000][501:-2] "run.2.stepthreshwest" matrix title "" w image
+unset size
+unset title
+unset xlabel
+unset ylabel
 
 set term post eps
-set size ratio 0.800000
+set size ratio 0.5
 set xlabel "Agent"
 set ylabel "Threshold"
 set output "run.2.threshrangenorth.eps"
@@ -264,6 +324,7 @@ plot "run.2.threshrange" using 2:12:13:14 title "" w errorbars
 set output "run.2.threshrangewest.eps"
 set title "Agent threshold ranges: West"
 plot "run.2.threshrange" using 2:16:17:18 title "" w errorbars
+unset size
 
 set term post eps
 set style rectangle fc rgb "light-blue" fs solid noborder

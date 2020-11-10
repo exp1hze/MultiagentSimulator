@@ -68,7 +68,7 @@ public class AnimationControl : MonoBehaviour
     {
         string[] ts = Regex.Split(line, "\\s+", RegexOptions.IgnoreCase);
         int step = 3;
-        //Debug.Log(ts.Length);
+        Debug.Log(ts.Length);
         
         TimeStep t1 = new TimeStep(int.Parse(ts[2]), step * float.Parse(ts[4]), step * float.Parse(ts[5]), step * float.Parse(ts[7]), step * float.Parse(ts[8]), float.Parse(ts[10]), int.Parse(ts[31]));
         timeSteps.Add(t1);
