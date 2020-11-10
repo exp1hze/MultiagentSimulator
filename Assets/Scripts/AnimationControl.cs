@@ -40,9 +40,10 @@ public class AnimationControl : MonoBehaviour
     public void AnimationStart(string positionFile, string IRangeFile, string TRangeFile, string IstepFile, string TstepFile)
     {
         //isComplete = false;
-        ReadTimestep(positionFile, IRangeFile, TRangeFile, IstepFile, TstepFile);
-        
-        
+        ReadTimestep(positionFile);
+        ReadAgentTI(IRangeFile, TRangeFile, IstepFile, TstepFile);
+        DrawAndRun();
+
     }
 
     private void ReadAgentTI(string irangeFile, string trangeFile, string istepFile, string tstepFile)
@@ -60,7 +61,6 @@ public class AnimationControl : MonoBehaviour
         StreamReader irangeReader = new StreamReader(irangeFile, Encoding.Default);
         StreamReader trangeReader = new StreamReader(trangeFile, Encoding.Default);
 
-        timeSteps = new ArrayList();
         string line;
         int count = 0;
         int count2 = 0;
@@ -68,10 +68,10 @@ public class AnimationControl : MonoBehaviour
         {
             string[] ts = Regex.Split(line, "\\s+", RegexOptions.IgnoreCase);
             //Debug.Log(INmax.Length);
-            INmax[count] = float.Parse(ts[5]);
-            IEmax[count] = float.Parse(ts[9]);
-            ISmax[count] = float.Parse(ts[13]);
-            IWmax[count] = float.Parse(ts[17]);
+            INmax[count] = float.Parse(ts[6]);
+            IEmax[count] = float.Parse(ts[10]);
+            ISmax[count] = float.Parse(ts[14]);
+            IWmax[count] = float.Parse(ts[18]);
             count++;
         }
         irangeReader.Close();
@@ -80,16 +80,16 @@ public class AnimationControl : MonoBehaviour
         if ((line = trangeReader.ReadLine()) != null)          //Read from top to bottom, then put variable name as key, value as value to a hashtable.
         {
             string[] ts = Regex.Split(line, "\\s+", RegexOptions.IgnoreCase);
-            TNmax[count2] = float.Parse(ts[5]);
-            TEmax[count2] = float.Parse(ts[9]);
-            TSmax[count2] = float.Parse(ts[13]);
-            TWmax[count2] = float.Parse(ts[17]);
+            TNmax[count2] = float.Parse(ts[6]);
+            TEmax[count2] = float.Parse(ts[10]);
+            TSmax[count2] = float.Parse(ts[14]);
+            TWmax[count2] = float.Parse(ts[18]);
             count2++;
         }
         trangeReader.Close();
 
         // read istep
-        agents = new agent[timeSteps.Count];
+        agents = new agent[timeSteps.Count-1];
         StreamReader istepReader = new StreamReader(istepFile, Encoding.Default);
         StreamReader tstepReader = new StreamReader(tstepFile, Encoding.Default);
 
@@ -117,7 +117,6 @@ public class AnimationControl : MonoBehaviour
                                     , TWmax[0]
                                     , TSmax[0]
                                     , TEmax[0]);
-            //Debug.Log(i + "_______________");
             i++;
             
         }
@@ -148,12 +147,12 @@ public class AnimationControl : MonoBehaviour
     //    run();
     //}
 
-    public void ReadTimestep(string path, string IRangeFile, string TRangeFile, string IstepFile, string TstepFile)
+    public void ReadTimestep(string path)
     {
         StreamReader sr = new StreamReader(path, Encoding.Default);
         timeSteps = new ArrayList();
         string line;
-        while ((line = sr.ReadLine()) != null )          //Read from top to bottom, then put variable name as key, value as value to a hashtable.
+        while ((line = sr.ReadLine()) != null)          //Read from top to bottom, then put variable name as key, value as value to a hashtable.
         {
             BuildTimestep(line);
         }
@@ -163,21 +162,18 @@ public class AnimationControl : MonoBehaviour
         //}
         //Debug.Log("Rerun : " + _params["Rerun"]);
         sr.Close();
-        ReadAgentTI(IRangeFile, TRangeFile, IstepFile, TstepFile);
-        DrawAndRun();
     }
 
-    public void BuildTimestep(string line)
+    void BuildTimestep(string line)
     {
         string[] ts = Regex.Split(line, "\\s+", RegexOptions.IgnoreCase);
         int step = 3;
-        Debug.Log(ts.Length);
-        
         TimeStep t1 = new TimeStep(int.Parse(ts[2]), step * float.Parse(ts[4]), step * float.Parse(ts[5]), step * float.Parse(ts[7]), step * float.Parse(ts[8]), float.Parse(ts[10]), int.Parse(ts[31]));
         timeSteps.Add(t1);
         //Debug.Log(t1.idle);
         //Debug.Log(param[0] + " " + param[1]);
     }
+
     void Start()
     {
         curStep = 0;
@@ -206,15 +202,18 @@ public class AnimationControl : MonoBehaviour
 
     void run()
     {
-
-        Debug.Log("curstep" + curStep + "timestep  " + timeSteps.Count);
-
-        if (curStep<=timeSteps.Count-1)
+        Debug.Log(timeSteps.Count);
+        if (curStep<=timeSteps.Count-2)
         {
             target.GetComponent<Animation>().Move(((TimeStep)timeSteps[curStep]).target_x, ((TimeStep)timeSteps[curStep]).target_y, curStep);
             tracker.GetComponent<Animation>().Move(((TimeStep)timeSteps[curStep]).tracker_x, ((TimeStep)timeSteps[curStep]).tracker_y, curStep);
             distanceGraph.GetComponent<Window_Graph>().setcurrentDot(curStep);
             switchGraph.GetComponent<Window_Graph>().setcurrentDot(curStep);
+            if (agents[curStep] == null)
+            {
+
+                Debug.Log("curStep: " + curStep + " agents IW: " + agents[curStep].IW + "");
+            }
             tiGraph.GetComponent<agentTI>().Set(agents[curStep]);
             curStep++;
         }
