@@ -119,6 +119,7 @@ public class Window_Graph : MonoBehaviour {
             dashX.SetParent(graphContainer, false);
             dashX.gameObject.SetActive(true);
             dashX.anchoredPosition = new Vector2(xPosition, -3f);
+            dashX.transform.SetSiblingIndex(1);
         }
         
         int separatorCount = 10;
@@ -135,6 +136,7 @@ public class Window_Graph : MonoBehaviour {
             dashY.SetParent(graphContainer, false);
             dashY.gameObject.SetActive(true);
             dashY.anchoredPosition = new Vector2(-4f, normalizedValue * graphHeight);
+            dashY.transform.SetSiblingIndex(1);
         }
     }
 
