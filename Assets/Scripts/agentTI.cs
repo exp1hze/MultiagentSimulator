@@ -14,23 +14,38 @@ public class agentTI : MonoBehaviour
     public GameObject TS;
     public GameObject TE;
     public GameObject Center;
-    public float mul;
+    public float min;
+    public float max;
+
+    public float INMax;
+    public float IWMax;
+    public float ISMax;
+    public float IEMax;
+    public float TNMax;
+    public float TWMax;
+    public float TSMax;
+    public float TEMax;
+
 
     void Start()
     {
-        mul = 20f;
-        SetBar("IN",5.3f);
-        SetBar("TN", 7.6f);
-        SetBar("IE", 8.5f);
-        SetBar("TE", 3.3f);
-        SetBar("IS", 4.6f);
-        SetBar("TS", 7.3f);
-        SetBar("IW", 8.2f);
-        SetBar("TW", 2.6f);
+        max = 120;
+        min=25f;
+
     }
 
-    public void Set(float iN, float iE, float iS, float iW, float tN, float tE, float tS, float tW,int center)
+    public void Set(float iN, float iE, float iS, float iW, float tN, float tE, float tS, float tW,
+        float iNMax, float iEMax, float iSMax, float iWMax, float tNMax, float tEMax, float tSMax, float tWMax, int center)
     {
+        INMax = iNMax;
+        IWMax = iWMax;
+        ISMax = iSMax;
+        IEMax = iEMax;
+        TNMax = tNMax;
+        TWMax = tWMax;
+        TSMax = tSMax;
+        TEMax = tEMax;
+
         SetBar("IN", iN);
         SetBar("TN", tN);
         SetBar("IE", iE);
@@ -40,42 +55,72 @@ public class agentTI : MonoBehaviour
         SetBar("IW", iW);
         SetBar("TW", tW);
         Center.transform.GetChild(0).GetComponent<Text>().text = "" + center;
+}
+
+    public void Set(agent age)
+    {
+        INMax = age.INMax;
+        IWMax = age.IWMax;
+        ISMax = age.ISMax;
+        IEMax = age.IEMax;
+        TNMax = age.TNMax;
+        TWMax = age.TWMax;
+        TSMax = age.TSMax;
+        TEMax = age.TEMax;
+
+        SetBar("IN", age.IN);
+        SetBar("TN", age.TN);
+        SetBar("IE", age.IE);
+        SetBar("TE", age.TE);
+        SetBar("IS", age.IS);
+        SetBar("TS", age.TS);
+        SetBar("IW", age.IW);
+        SetBar("TW", age.TW);
+        Center.transform.GetChild(0).GetComponent<Text>().text = "" + age.id;
     }
     public void SetBar(string name, float length)
     {
-
+        float l = 0f;
         switch (name)
         {
             case "IN":
-                IN.GetComponent<RectTransform>().sizeDelta = new Vector2(10f,length*mul);
+                l = length / INMax;
+                IN.GetComponent<RectTransform>().sizeDelta = new Vector2(10f,l*max + min);
                 IN.transform.GetChild(0).GetComponent<Text>().text = "" + Math.Round(length,2);
                 break;
             case "IE":
-                IE.GetComponent<RectTransform>().sizeDelta = new Vector2(10f, length * mul);
+                l = length / IEMax;
+                IE.GetComponent<RectTransform>().sizeDelta = new Vector2(10f, l* max + min);
                 IE.transform.GetChild(0).GetComponent<Text>().text = "" + Math.Round(length, 2);
                 break;
             case "IW":
-                IW.GetComponent<RectTransform>().sizeDelta = new Vector2(10f, length * mul);
+                l = length / IWMax;
+                IW.GetComponent<RectTransform>().sizeDelta = new Vector2(10f, l * max + min);
                 IW.transform.GetChild(0).GetComponent<Text>().text = "" + Math.Round(length, 2);
                 break;
             case "IS":
-                IS.GetComponent<RectTransform>().sizeDelta = new Vector2(10f, length * mul);
+                l = length / ISMax;
+                IS.GetComponent<RectTransform>().sizeDelta = new Vector2(10f, l * max + min);
                 IS.transform.GetChild(0).GetComponent<Text>().text = "" + Math.Round(length, 2);
                 break;
             case "TN":
-                TN.GetComponent<RectTransform>().sizeDelta = new Vector2(10f, length * mul);
+                l = length / TNMax;
+                TN.GetComponent<RectTransform>().sizeDelta = new Vector2(10f, l * max + min);
                 TN.transform.GetChild(0).GetComponent<Text>().text = "" + Math.Round(length, 2);
                 break;
             case "TE":
-                TE.GetComponent<RectTransform>().sizeDelta = new Vector2(10f, length * mul);
+                l = length / TEMax;
+                TE.GetComponent<RectTransform>().sizeDelta = new Vector2(10f, l * max + min);
                 TE.transform.GetChild(0).GetComponent<Text>().text = "" + Math.Round(length, 2);
                 break;
             case "TW":
-                TW.GetComponent<RectTransform>().sizeDelta = new Vector2(10f, length * mul);
+                l = length / TWMax;
+                TW.GetComponent<RectTransform>().sizeDelta = new Vector2(10f, l * max + min);
                 TW.transform.GetChild(0).GetComponent<Text>().text = "" + Math.Round(length, 2);
                 break;
             case "TS":
-                TS.GetComponent<RectTransform>().sizeDelta = new Vector2(10f, length * mul);
+                l = length / TSMax;
+                TS.GetComponent<RectTransform>().sizeDelta = new Vector2(10f, l * max + min);
                 TS.transform.GetChild(0).GetComponent<Text>().text = "" + Math.Round(length, 2);
                 break;
             default:
