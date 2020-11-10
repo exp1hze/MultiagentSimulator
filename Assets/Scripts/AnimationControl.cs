@@ -21,7 +21,9 @@ public class AnimationControl : MonoBehaviour
     Boolean toRun = false;
     public GameObject distanceGraph;
     public GameObject switchGraph;
-    
+
+    public GameObject tiGraph;
+    public agent[] agents;
 
     public void AnimationStart(string path)
     {

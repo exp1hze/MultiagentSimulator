@@ -56,6 +56,28 @@ public class agentTI : MonoBehaviour
         SetBar("TW", tW);
         Center.transform.GetChild(0).GetComponent<Text>().text = "" + center;
 }
+
+    public void Set(agent age)
+    {
+        INMax = age.INMax;
+        IWMax = age.IWMax;
+        ISMax = age.ISMax;
+        IEMax = age.IEMax;
+        TNMax = age.TNMax;
+        TWMax = age.TWMax;
+        TSMax = age.TSMax;
+        TEMax = age.TEMax;
+
+        SetBar("IN", age.IN);
+        SetBar("TN", age.TN);
+        SetBar("IE", age.IE);
+        SetBar("TE", age.TE);
+        SetBar("IS", age.IS);
+        SetBar("TS", age.TS);
+        SetBar("IW", age.IW);
+        SetBar("TW", age.TW);
+        Center.transform.GetChild(0).GetComponent<Text>().text = "" + age.id;
+    }
     public void SetBar(string name, float length)
     {
         float l = 0f;
