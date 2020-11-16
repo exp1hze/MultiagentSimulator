@@ -59,6 +59,7 @@ public class agentTI : MonoBehaviour
 
     public void Set(agent age)
     {
+
         INMax = age.INMax;
         IWMax = age.IWMax;
         ISMax = age.ISMax;
