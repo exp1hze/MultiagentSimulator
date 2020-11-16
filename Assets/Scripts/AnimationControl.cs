@@ -19,6 +19,7 @@ public class AnimationControl : MonoBehaviour
     //public ArrayList ts;
     public ArrayList timeSteps;
     Boolean toRun = false;
+    public Boolean toPlay = false;
     public GameObject distanceGraph;
     public GameObject switchGraph;
 
@@ -187,7 +188,7 @@ public class AnimationControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (toRun == true)
+        if (toRun == true && toPlay == true)
         {
             if (timmer > 0)
                 timmer -= Time.deltaTime;
@@ -213,7 +214,5 @@ public class AnimationControl : MonoBehaviour
             tiGraph.GetComponent<agentTI>().Set(agents[curStep - 1 ]);
             curStep++;
         }
-        
-        
     }
 }
