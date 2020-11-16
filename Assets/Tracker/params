@@ -5,7 +5,7 @@ Task_selection     random
 Path_period     80
 Extinction_period     100
 Intensity_aging     1
-Target_path     square
+Target_path     scurve
 Step_ratio     2.0
 Path_amplitude     40
 Rerun     -1

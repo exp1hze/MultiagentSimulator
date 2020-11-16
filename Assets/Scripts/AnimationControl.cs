@@ -89,7 +89,7 @@ public class AnimationControl : MonoBehaviour
         trangeReader.Close();
 
         // read istep
-        agents = new agent[timeSteps.Count-1];
+        agents = new agent[timeSteps.Count - 1];
         StreamReader istepReader = new StreamReader(istepFile, Encoding.Default);
         StreamReader tstepReader = new StreamReader(tstepFile, Encoding.Default);
 
@@ -176,7 +176,7 @@ public class AnimationControl : MonoBehaviour
 
     void Start()
     {
-        curStep = 0;
+        curStep = 1;
         timmer = 0;
         time = 0.02f;
         
@@ -202,19 +202,15 @@ public class AnimationControl : MonoBehaviour
 
     void run()
     {
-        Debug.Log(timeSteps.Count);
-        if (curStep<=timeSteps.Count-2)
+        //Debug.Log(timeSteps.Count);
+        if (curStep<=timeSteps.Count-1)
         {
-            target.GetComponent<Animation>().Move(((TimeStep)timeSteps[curStep]).target_x, ((TimeStep)timeSteps[curStep]).target_y, curStep);
-            tracker.GetComponent<Animation>().Move(((TimeStep)timeSteps[curStep]).tracker_x, ((TimeStep)timeSteps[curStep]).tracker_y, curStep);
+            target.GetComponent<Animation>().Move(((TimeStep)timeSteps[curStep ]).target_x, ((TimeStep)timeSteps[curStep ]).target_y, curStep);
+            tracker.GetComponent<Animation>().Move(((TimeStep)timeSteps[curStep ]).tracker_x, ((TimeStep)timeSteps[curStep ]).tracker_y, curStep);
             distanceGraph.GetComponent<Window_Graph>().setcurrentDot(curStep);
             switchGraph.GetComponent<Window_Graph>().setcurrentDot(curStep);
-            if (agents[curStep] == null)
-            {
-
-                Debug.Log("curStep: " + curStep + " agents IW: " + agents[curStep].IW + "");
-            }
-            tiGraph.GetComponent<agentTI>().Set(agents[curStep]);
+            
+            tiGraph.GetComponent<agentTI>().Set(agents[curStep - 1 ]);
             curStep++;
         }
         
