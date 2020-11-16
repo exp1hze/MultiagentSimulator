@@ -153,18 +153,17 @@ public class Window_Graph : MonoBehaviour {
         rectTransform.anchoredPosition = dotPositionA + dir * distance * .5f;
         rectTransform.localEulerAngles = new Vector3(0, 0, UtilsClass.GetAngleFromVectorFloat(dir));
     }
-
+    public int previousDot;
     public void setcurrentDot(int ts)
     {
-
-        circles[ts].GetComponent<Image>().color = Color.red;
-        if(ts != 0)
+        if (ts != 0)
         {
-            circles[ts-1].GetComponent<Image>().color = Color.white;
+            circles[previousDot].GetComponent<Image>().color = Color.white;
         }
+        circles[ts].GetComponent<Image>().color = Color.red;
         inWindow(circles[ts]);
+        previousDot = ts;
 
-        
     }
 
     void inWindow(GameObject circle)

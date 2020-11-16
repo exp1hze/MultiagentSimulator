@@ -5,6 +5,7 @@ using System.IO;
 using System.Text;
 using System.Text.RegularExpressions;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class AnimationControl : MonoBehaviour
 {
@@ -25,6 +26,7 @@ public class AnimationControl : MonoBehaviour
 
     public GameObject tiGraph;
     public agent[] agents;
+    public GameObject tsSlider;
 
     public float[] INmax;
     public float[] IWmax;
@@ -43,7 +45,10 @@ public class AnimationControl : MonoBehaviour
         //isComplete = false;
         ReadTimestep(positionFile);
         ReadAgentTI(IRangeFile, TRangeFile, IstepFile, TstepFile);
+        tsSlider.GetComponent<Slider>().maxValue = timeSteps.Count-1;
+        tsSlider.transform.GetChild(2).GetChild(0).GetChild(0).GetComponent<Text>().text = "" + curStep;
         DrawAndRun();
+        runOneShot();
 
     }
 
@@ -203,9 +208,11 @@ public class AnimationControl : MonoBehaviour
 
     void run()
     {
-        //Debug.Log(timeSteps.Count);
+        Debug.Log(timeSteps.Count);
         if (curStep<=timeSteps.Count-1)
         {
+            tsSlider.GetComponent<Slider>().value = curStep;
+            tsSlider.transform.GetChild(2).GetChild(0).GetChild(0).GetComponent<Text>().text = ""+curStep;
             target.GetComponent<Animation>().Move(((TimeStep)timeSteps[curStep ]).target_x, ((TimeStep)timeSteps[curStep ]).target_y, curStep);
             tracker.GetComponent<Animation>().Move(((TimeStep)timeSteps[curStep ]).tracker_x, ((TimeStep)timeSteps[curStep ]).tracker_y, curStep);
             distanceGraph.GetComponent<Window_Graph>().setcurrentDot(curStep);
@@ -213,6 +220,19 @@ public class AnimationControl : MonoBehaviour
             
             tiGraph.GetComponent<agentTI>().Set(agents[curStep - 1 ]);
             curStep++;
+        }
+    }
+    public void runOneShot()
+    {
+        //Debug.Log(timeSteps.Count);
+        if (curStep <= timeSteps.Count - 1)
+        {
+            target.GetComponent<Animation>().Move(((TimeStep)timeSteps[curStep]).target_x, ((TimeStep)timeSteps[curStep]).target_y, curStep);
+            tracker.GetComponent<Animation>().Move(((TimeStep)timeSteps[curStep]).tracker_x, ((TimeStep)timeSteps[curStep]).tracker_y, curStep);
+            distanceGraph.GetComponent<Window_Graph>().setcurrentDot(curStep);
+            switchGraph.GetComponent<Window_Graph>().setcurrentDot(curStep);
+
+            tiGraph.GetComponent<agentTI>().Set(agents[curStep - 1]);
         }
     }
 }
