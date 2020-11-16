@@ -202,18 +202,13 @@ public class AnimationControl : MonoBehaviour
 
     void run()
     {
-        Debug.Log(timeSteps.Count);
+        //Debug.Log(timeSteps.Count);
         if (curStep<=timeSteps.Count-2)
         {
             target.GetComponent<Animation>().Move(((TimeStep)timeSteps[curStep]).target_x, ((TimeStep)timeSteps[curStep]).target_y, curStep);
             tracker.GetComponent<Animation>().Move(((TimeStep)timeSteps[curStep]).tracker_x, ((TimeStep)timeSteps[curStep]).tracker_y, curStep);
             distanceGraph.GetComponent<Window_Graph>().setcurrentDot(curStep);
             switchGraph.GetComponent<Window_Graph>().setcurrentDot(curStep);
-            if (agents[curStep] == null)
-            {
-
-                Debug.Log("curStep: " + curStep + " agents IW: " + agents[curStep].IW + "");
-            }
             tiGraph.GetComponent<agentTI>().Set(agents[curStep]);
             curStep++;
         }
