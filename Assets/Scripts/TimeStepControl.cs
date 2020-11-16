@@ -33,6 +33,33 @@ public class TimeStepControl : MonoBehaviour
         }
     }
 
+    public void previous()
+    {
+        if (animationControl.GetComponent<AnimationControl>().toPlay == false)
+        {
+            if(animationControl.GetComponent<AnimationControl>().curStep > 0)
+            {
+                animationControl.GetComponent<AnimationControl>().curStep --;
+                tsSlider.GetComponent<Slider>().value = animationControl.GetComponent<AnimationControl>().curStep;
+                tsSlider.transform.GetChild(2).GetChild(0).GetChild(0).GetComponent<Text>().text = "" + (int)tsSlider.GetComponent<Slider>().value;
+                animationControl.GetComponent<AnimationControl>().runOneShot();
+            }
+        }
+    }
+    public void next()
+    {
+        if (animationControl.GetComponent<AnimationControl>().toPlay == false)
+        {
+            if (animationControl.GetComponent<AnimationControl>().curStep < animationControl.GetComponent<AnimationControl>().timeSteps.Count-1)
+            {
+                animationControl.GetComponent<AnimationControl>().curStep++;
+                tsSlider.GetComponent<Slider>().value = animationControl.GetComponent<AnimationControl>().curStep;
+                tsSlider.transform.GetChild(2).GetChild(0).GetChild(0).GetComponent<Text>().text = "" + (int)tsSlider.GetComponent<Slider>().value;
+                animationControl.GetComponent<AnimationControl>().runOneShot();
+            }
+        }
+    }
+
     public void toPlay()
     {
 
