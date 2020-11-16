@@ -68,7 +68,7 @@ public class Window_Graph : MonoBehaviour {
         //maxY = (int)Math.Ceiling(max);
         //Debug.Log(max + " " + maxY);
         maxY = max;
-        ShowGraph(vl, (int _i) => "" + (_i + 1), (float _f) => "" + Mathf.RoundToInt(_f));
+        ShowGraph(vl, (int _i) => "" + (_i ), (float _f) => "" + Mathf.RoundToInt(_f));
     }
     private GameObject CreateCircle(Vector2 anchoredPosition) {
         //m_SpriteRenderer = GetComponent<SpriteRenderer>();
@@ -153,13 +153,12 @@ public class Window_Graph : MonoBehaviour {
         rectTransform.anchoredPosition = dotPositionA + dir * distance * .5f;
         rectTransform.localEulerAngles = new Vector3(0, 0, UtilsClass.GetAngleFromVectorFloat(dir));
     }
-    public int previousDot;
+    public int previousDot = 0;
     public void setcurrentDot(int ts)
     {
-        if (ts != 0)
-        {
-            circles[previousDot].GetComponent<Image>().color = Color.white;
-        }
+        
+        circles[previousDot].GetComponent<Image>().color = Color.white;
+        
         circles[ts].GetComponent<Image>().color = Color.red;
         inWindow(circles[ts]);
         previousDot = ts;

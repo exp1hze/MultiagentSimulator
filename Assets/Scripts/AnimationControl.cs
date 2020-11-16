@@ -20,7 +20,7 @@ public class AnimationControl : MonoBehaviour
     //public ArrayList ts;
     public ArrayList timeSteps;
     Boolean toRun = false;
-    public Boolean toPlay = false;
+    public Boolean toPlay = true;
     public GameObject distanceGraph;
     public GameObject switchGraph;
 
@@ -45,10 +45,13 @@ public class AnimationControl : MonoBehaviour
         //isComplete = false;
         ReadTimestep(positionFile);
         ReadAgentTI(IRangeFile, TRangeFile, IstepFile, TstepFile);
-        tsSlider.GetComponent<Slider>().maxValue = timeSteps.Count-1;
-        tsSlider.transform.GetChild(2).GetChild(0).GetChild(0).GetComponent<Text>().text = "" + curStep;
+        
         DrawAndRun();
-        runOneShot();
+        tsSlider.GetComponent<Slider>().maxValue = timeSteps.Count - 1;
+        //tsSlider.GetComponent<Slider>().minValue = 1;
+
+        tsSlider.transform.GetChild(2).GetChild(0).GetChild(0).GetComponent<Text>().text = "" + curStep;
+        
 
     }
 
@@ -95,7 +98,7 @@ public class AnimationControl : MonoBehaviour
         trangeReader.Close();
 
         // read istep
-        agents = new agent[timeSteps.Count - 1];
+        agents = new agent[timeSteps.Count];
         StreamReader istepReader = new StreamReader(istepFile, Encoding.Default);
         StreamReader tstepReader = new StreamReader(tstepFile, Encoding.Default);
 
@@ -143,6 +146,7 @@ public class AnimationControl : MonoBehaviour
        
         
         toRun = true;
+        //runOneShot();
         //StartCoroutine(WaitAndRun());
 
     }
@@ -158,6 +162,7 @@ public class AnimationControl : MonoBehaviour
         StreamReader sr = new StreamReader(path, Encoding.Default);
         timeSteps = new ArrayList();
         string line;
+        sr.ReadLine();
         while ((line = sr.ReadLine()) != null)          //Read from top to bottom, then put variable name as key, value as value to a hashtable.
         {
             BuildTimestep(line);
@@ -182,7 +187,7 @@ public class AnimationControl : MonoBehaviour
 
     void Start()
     {
-        curStep = 1;
+        curStep = 10;
         timmer = 0;
         time = 0.02f;
         
@@ -218,7 +223,7 @@ public class AnimationControl : MonoBehaviour
             distanceGraph.GetComponent<Window_Graph>().setcurrentDot(curStep);
             switchGraph.GetComponent<Window_Graph>().setcurrentDot(curStep);
             
-            tiGraph.GetComponent<agentTI>().Set(agents[curStep - 1 ]);
+            tiGraph.GetComponent<agentTI>().Set(agents[curStep]);
             curStep++;
         }
     }
@@ -227,12 +232,13 @@ public class AnimationControl : MonoBehaviour
         //Debug.Log(timeSteps.Count);
         if (curStep <= timeSteps.Count - 1)
         {
+            Debug.Log("oneshot");
             target.GetComponent<Animation>().Move(((TimeStep)timeSteps[curStep]).target_x, ((TimeStep)timeSteps[curStep]).target_y, curStep);
             tracker.GetComponent<Animation>().Move(((TimeStep)timeSteps[curStep]).tracker_x, ((TimeStep)timeSteps[curStep]).tracker_y, curStep);
             distanceGraph.GetComponent<Window_Graph>().setcurrentDot(curStep);
             switchGraph.GetComponent<Window_Graph>().setcurrentDot(curStep);
 
-            tiGraph.GetComponent<agentTI>().Set(agents[curStep - 1]);
+            tiGraph.GetComponent<agentTI>().Set(agents[curStep]);
         }
     }
 }

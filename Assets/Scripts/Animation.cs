@@ -46,7 +46,7 @@ public class Animation : MonoBehaviour
     {
         currTimeStep = cts;
         moveX = x;moveY = y;
-        if (moveX == transform.position.x&& moveY == transform.position.y)
+        if (moveX == transform.position.x && moveY == transform.position.y)
         {
             return false;
         }

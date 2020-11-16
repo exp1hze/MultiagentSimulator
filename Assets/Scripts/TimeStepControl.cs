@@ -10,11 +10,11 @@ public class TimeStepControl : MonoBehaviour
     public GameObject prevButton;
     public GameObject tsSlider;
 
-    int previous;
+
     // Start is called before the first frame update
     void Start()
     {
-        previous = 0;
+
     }
 
     // Update is called once per frame
