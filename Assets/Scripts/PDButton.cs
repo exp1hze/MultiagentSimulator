@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class PDButton : MonoBehaviour
@@ -11,7 +12,9 @@ public class PDButton : MonoBehaviour
     public GameObject parent;
     public GameObject listPrefab;
 
-
+    public void gotoSelect(){
+        SceneManager.LoadScene("selectFiles");
+    }
     void Awake()
     {
         

@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SetParamTracker.unity
     guid: b45dd7ccb5e1f4c4ab22927c259b176d
+  - enabled: 1
+    path: Assets/Scenes/selectFiles.unity
+    guid: bd4699f672de741dd82d9d701ec2d2f3
   m_configObjects: {}
