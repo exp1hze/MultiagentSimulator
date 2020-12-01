@@ -17,7 +17,8 @@ public class PDButton : MonoBehaviour
     }
     void Awake()
     {
-        
+        GameObject runPath = GameObject.Find("runPath");
+        runPath.GetComponent<runParam>().history = false;
         fatherPanel = GameObject.Find("rightPanel");
         foreach (Transform child in fatherPanel.transform)
         {

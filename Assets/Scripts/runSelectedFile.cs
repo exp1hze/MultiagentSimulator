@@ -2,11 +2,18 @@
 using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 public class runSelectedFile : MonoBehaviour
 {
     public Text fileName;
+    GameObject runPath;
 
+    void Start()
+    {
+        runPath = GameObject.Find("runPath");
+        GameObject.DontDestroyOnLoad(runPath);
+    }
     // Update is called once per frame
     void Update()
     {
@@ -15,6 +22,23 @@ public class runSelectedFile : MonoBehaviour
 
     public void runASelectedFile()
     {
+        string run_num = transform.GetChild(0).GetComponent<Text>().text;
+        string[] split = run_num.Split('.');
+        run_num = split[1];
+        //Debug.Log(run_num);
+        runPath.GetComponent<runParam>().positionFile = Application.dataPath + "/Tracker/Output/run." + run_num + "/run." + run_num + ".stepsummary";
+        runPath.GetComponent<runParam>().IRangeFile = Application.dataPath + "/Tracker/Output/run." + run_num + "/run." + run_num + ".intensityranges";
+        runPath.GetComponent<runParam>().TRangeFile = Application.dataPath + "/Tracker/Output/run." + run_num + "/run." + run_num + ".threshrange";
+        runPath.GetComponent<runParam>().IstepFile = Application.dataPath + "/Tracker/Output/run." + run_num + "/run." + run_num + ".stepintensity";
+        runPath.GetComponent<runParam>().TstepFile = Application.dataPath + "/Tracker/Output/run." + run_num + "/run." + run_num + ".stepthresh";
+        runPath.GetComponent<runParam>().history = true;
+        SceneManager.LoadScene("SetParamTracker");  
+        //Scene animaScene = SceneManager.GetSceneByName("SetParamTracker");
+        //animaScene.GetRootGameObjects("a);
+        //manimationPanel.SetActive(true);
+        //parameterPanel.SetActive(false);
+
+
 
     }
 

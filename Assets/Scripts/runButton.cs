@@ -164,7 +164,7 @@ public class runButton : MonoBehaviour
     {
         yield return new WaitForSeconds(waitTime);
     }
-    private void AnimationStart()
+    public void AnimationStart()
     {
         // read output file
         string positionFile = Application.dataPath + "/Tracker/Output/run."+run_num+"/run."+run_num+".stepsummary";
