@@ -51,10 +51,7 @@ public class AnimationControl : MonoBehaviour
         //tsSlider.GetComponent<Slider>().minValue = 1;
 
         tsSlider.transform.GetChild(2).GetChild(0).GetChild(0).GetComponent<Text>().text = "" + curStep;
-        //GameObject canvas = GameObject.Find("Canvas");
-        //GameObject loading = canvas.transform.Find("loading").gameObject;
-        //loading.SetActive(false);
-
+        
 
     }
 
