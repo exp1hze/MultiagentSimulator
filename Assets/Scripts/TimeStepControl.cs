@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System;
 public class TimeStepControl : MonoBehaviour
 {
     public GameObject animationControl;
@@ -10,17 +11,22 @@ public class TimeStepControl : MonoBehaviour
     public GameObject prevButton;
     public GameObject tsSlider;
 
-
+    public GameObject gsSlider;
     // Start is called before the first frame update
     void Start()
     {
-
+        gsSlider = animationControl.GetComponent<AnimationControl>().GameSpeedSlider;
     }
 
     // Update is called once per frame
     void Update()
     {
         
+    }
+    public void setGameSpeed()
+    {
+        gsSlider.transform.GetChild(2).GetChild(0).GetChild(0).GetComponent<Text>().text = "" + gsSlider.GetComponent<Slider>().value.ToString("#0.00");
+        Time.timeScale = gsSlider.GetComponent<Slider>().value;
     }
 
     public void setTimeStep()

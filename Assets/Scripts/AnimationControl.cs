@@ -27,7 +27,7 @@ public class AnimationControl : MonoBehaviour
     public GameObject tiGraph;
     public agent[] agents;
     public GameObject tsSlider;
-
+    public GameObject GameSpeedSlider;
     public float[] INmax;
     public float[] IWmax;
     public float[] ISmax;
