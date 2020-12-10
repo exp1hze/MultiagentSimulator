@@ -18,6 +18,7 @@ public class runButton : MonoBehaviour
     public string runNumPath;
     public GameObject parameterPanel;
     public GameObject animationPanel;
+    public GameObject loading;
     Boolean isFinished = false;
 
 
@@ -73,16 +74,18 @@ public class runButton : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
+    {   
         if (isFinished == true)
         {
             ReadRunNum(runNumPath);
             DirectoryInfo dir = new DirectoryInfo(Application.dataPath + "/Tracker/Output/run." + run_num);
             if (dir.Exists)
             {
+               
                 animationPanel.SetActive(true);
                 parameterPanel.SetActive(false);
-                AnimationStart();
+                Invoke("AnimationStart", 1.0f);
+                //AnimationStart();
                 isFinished = false;
             }
             
@@ -91,6 +94,8 @@ public class runButton : MonoBehaviour
 
     public void getFieldText()
     {
+       
+        loading.SetActive(true);
         string line;
         
         for (int i = 0; i<inputFields.Length; i++)
@@ -147,7 +152,6 @@ public class runButton : MonoBehaviour
             mainCamera = GameObject.Find("Main Camera");
             mainCamera.GetComponent<test>().run();
             StartCoroutine(waitImport(10.0f));
-            
             isFinished = true;
             
         }
@@ -155,8 +159,8 @@ public class runButton : MonoBehaviour
         {
             Debug.Log("The params file may opened by another program!");
         }
-        
-        
+       
+
     }
 
 
@@ -172,7 +176,8 @@ public class runButton : MonoBehaviour
         string TRangeFile = Application.dataPath + "/Tracker/Output/run." + run_num + "/run." + run_num + ".threshrange";
         string IstepFile = Application.dataPath + "/Tracker/Output/run." + run_num + "/run." + run_num + ".stepintensity";
         string TstepFile = Application.dataPath + "/Tracker/Output/run." + run_num + "/run." + run_num + ".stepthresh";
-
+        
         animationPanel.GetComponent<AnimationControl>().AnimationStart(positionFile, IRangeFile, TRangeFile, IstepFile, TstepFile);
+        loading.SetActive(false);
     }
 }
