@@ -5,7 +5,7 @@ Task_selection     random
 Path_period     80
 Extinction_period     100
 Intensity_aging     1
-Target_path     square10
+Target_path     zigzag
 Step_ratio     2.0
 Path_amplitude     40
 Kill_number     0
