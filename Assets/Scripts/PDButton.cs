@@ -11,14 +11,14 @@ public class PDButton : MonoBehaviour
     GameObject fatherPanel;
     public GameObject parent;
     public GameObject listPrefab;
-
+                    
     public void gotoSelect(){
         SceneManager.LoadScene("selectFiles");
     }
     void Awake()
     {
         GameObject runPath = GameObject.Find("runPath");
-        runPath.GetComponent<runParam>().history = false;
+        //runPath.GetComponent<runParam>().history = false;
         fatherPanel = GameObject.Find("rightPanel");
         foreach (Transform child in fatherPanel.transform)
         {
@@ -26,7 +26,7 @@ public class PDButton : MonoBehaviour
         }
     }
     public void onclick()
-    {
+    {       
         Debug.Log(gameObject.name);
         foreach (Transform child in fatherPanel.transform)
         {
