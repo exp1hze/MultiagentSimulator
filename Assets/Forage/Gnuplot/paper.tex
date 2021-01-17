@@ -1,0 +1,66 @@
+\documentclass{article}
+\usepackage{graphicx}
+
+\parskip=0.3cm
+\raggedright
+\parindent=0.0cm
+\textheight=8.5in
+\textwidth=7.2in
+\oddsidemargin=-0.2in
+\evensidemargin=-0.2in
+%\textwidth=7in
+%\oddsidemargin=-0.5in
+%\evensidemargin=-0.5in
+\topmargin=-0.3in
+\itemsep=0cm
+
+% Fix up placement of figures & tables.  This keeps latex from shoving big
+% floats to the end of a document when they are somewhat big, which it will
+% do even if you put [htb] as the argument.
+\setcounter{topnumber}{4}
+\setcounter{bottomnumber}{0}
+\def\topfraction{1.0}       %maximum fraction of floats at the top of the page
+%\def\bottomfraction{1.0}    %ditto, for the bottom of the page
+\def\textfraction{.20}        %minimum fraction of text (100% floats is okay)
+\def\floatpagefraction{0.8} %if a page is full of floats, it'd better be FULL
+
+\begin{document}
+
+rp 0.05 \includegraphics[width=3.5in]{rp005_average_stepnest.eps}\\
+rp 0.10 \includegraphics[width=3.5in]{rp010_average_stepnest.eps}\\
+rp 0.15 \includegraphics[width=3.5in]{rp015_average_stepnest.eps}\\
+rp 0.20 \includegraphics[width=3.5in]{rp020_average_stepnest.eps}\\
+rp 0.25 \includegraphics[width=3.5in]{rp025_average_stepnest.eps}\\
+rp 0.30 \includegraphics[width=3.5in]{rp030_average_stepnest.eps}\\
+rp 0.35 \includegraphics[width=3.5in]{rp035_average_stepnest.eps}\\
+rp 0.40 \includegraphics[width=3.5in]{rp040_average_stepnest.eps}\\
+rp 0.45 \includegraphics[width=3.5in]{rp045_average_stepnest.eps}\\
+rp 0.50 \includegraphics[width=3.5in]{rp050_average_stepnest.eps}\\
+rp 0.55 \includegraphics[width=3.5in]{rp055_average_stepnest.eps}\\
+rp 0.60 \includegraphics[width=3.5in]{rp060_average_stepnest.eps}\\
+rp 0.65 \includegraphics[width=3.5in]{rp065_average_stepnest.eps}\\
+rp 0.70 \includegraphics[width=3.5in]{rp070_average_stepnest.eps}\\
+rp 0.75 \includegraphics[width=3.5in]{rp075_average_stepnest.eps}\\
+rp 0.80 \includegraphics[width=3.5in]{rp080_average_stepnest.eps}\\
+rp 0.85 \includegraphics[width=3.5in]{rp085_average_stepnest.eps}\\
+rp 0.90 \includegraphics[width=3.5in]{rp090_average_stepnest.eps}\\
+rp 0.95 \includegraphics[width=3.5in]{rp095_average_stepnest.eps}\\
+rp 1.00 \includegraphics[width=3.5in]{rp100_average_stepnest.eps}\\
+
+\newpage
+
+\includegraphics[width=3.3in]{all-total_food.eps}
+\includegraphics[width=3.3in]{all-pct_need_met.eps}
+\includegraphics[width=3.3in]{all-indv-drop-amount.eps}
+\includegraphics[width=3.3in]{all-ttrecover.eps}
+\includegraphics[width=3.3in]{all-indv-drop-before.eps}
+\includegraphics[width=3.3in]{all-indv-drop-after.eps}
+\includegraphics[width=3.3in]{all-food_div_drop.eps}
+\includegraphics[width=3.3in]{all-food_div_ttrecover.eps}
+\includegraphics[width=3.3in]{all-drop_amount.eps}
+\includegraphics[width=3.3in]{all-drop_level.eps}
+
+%\bibliography{paper}
+%\bibliographystyle{chicago}
+
+\end{document}

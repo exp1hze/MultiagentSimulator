@@ -1,0 +1,67 @@
+Sun Feb 24 11:20:43 EST 2019
+
+copied from /Users/aswu/ucf/code/161119.flairs
+
+Try starting with this to create a 2D foraging problem to test response
+probability work.
+
+================================================================
+Tue Apr 23 16:11:39 EDT 2019
+
+Using this code for the response probability paper.
+Currently, the code allows x agents to forage in each trial, regardless
+of the amount of food the x agents bring in.  I keep track of the food
+brought in and we see that the amount retrieved per trial increases with
+multiple trials (experience improves performance) and when the first
+x agents are killed off, the remaining agents must relearn the task (food
+amount drops and then slowly comes back up).
+
+Freezing this code for now.
+
+Will copy this code into an new directory called
+1902.mas.forage.resprob.foodgoal
+in which the system will continue to send out agents in a trial until
+a specified food amount is brought in.  The number of agents sent out
+should drop over time, as the early agents get more opportunities to learn
+and get better.  This scenario makes more sense from a practical standpoint.
+
+================================================================
+Tue Apr 23 16:38:10 EDT 2019
+
+It turns out the above change is very easy to make. 
+All I need to do is make the following change in step_run() in fxn.c:
+
+Replace
+   //while (num_acted < Nest.need && i < Pop_size)
+with
+   while (Nest.step_income < 3 && i < Pop_size)
+
+so I can specify a fixed amount of food to bring in.
+
+================================================================
+Tue Apr 23 22:19:57 EDT 2019
+
+I'm not making additional changes to the code in 
+1902.mas.forage.resprob.foodgoal
+at this time.  I'd like to keep 1902.mas.forage.resprob as the
+current copy for now.
+
+Holding off an experiments with 1902.mas.forage.resprob.foodgoal
+but keeping the directory for now.
+The initial test runs that I did today gave results that were not conclusive.
+When I have time to get back to that code, might want to track and look 
+at ratio of candidates vs actors.
+
+Will write paper with current experiments for now.
+Paper in ~aswu/ucf/papers/w.1904.resprob
+
+================================================================
+Thu Apr  9 17:17:37 EDT 2020
+
+Copied from ~aswu/ucf.old/code/1902.mas.forage.resprob/.
+Create new bitbucket repository to share with David Mathias at UWL.
+Renamed directory to 2004.forage/, but it originated from 
+1902.mas.forage.resprob/.
+
+To compile:   make
+To run:       sim params opfiles

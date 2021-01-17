@@ -1,0 +1,14 @@
+random		1
+params		1
+initpop		1
+finalagentstats	1
+stepdistance	1
+foodlocations	1
+finalavgmemory  1
+path		1
+gnu		1
+stepnest	1
+finalneststats  1
+finalagentacted 1
+finalagentavgpathlen 1
+finalagentsuccesses 1 

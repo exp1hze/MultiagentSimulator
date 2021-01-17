@@ -1,0 +1,82 @@
+###
+# this is a comment line
+###  
+# Note: this file cannot have blank lines at the end of the file.
+# That will cause a run time error.
+Rerun                   -1
+Run_num_file            run.num
+Output_path             Output
+#
+### Printing params
+# output to screen
+Print_params            1
+#
+### Maximum number of time steps to run. (Trials)
+Max_steps		1000
+#
+### size of population space
+Pop_size                100    
+#
+###### Agent parameters
+### How to initialize the thresholds of the agents in the population: 
+#   Values range from 0.0 to 1.0
+#   if 0.0 = initialize randomly
+#   else initialize all thresholds to the given value
+Init_thresh 		0
+#
+### maximum and minimum values that agent thresholds can reach
+Max_thresh		1.0
+Min_thresh		0.0
+### Probability that agent will stop to reconsider what task to work on.
+#   If the agent does not stop to reconsider, then continues with current
+#   task.
+#   This parameter determines how agents will be assigned their own
+#   individual value of Agent[].prob_check.
+#   Values assigned to agents will range from 0.0 to 1.0
+#   if 0.0 = initialize randomly
+#   else initialize all thresholds to the given value
+#   Once the agents have their own values for this parameter, it will
+#   determine the probability of them stopping to check for new tasks.
+#   For values of Agent[].prob_check lower than 0.1, the probability
+#   with which the agent stops to check will vary randomly in each timestep.
+Prob_check		0.8
+#Prob_check		1.0
+#
+###### Environment parameters
+Grid_height		100
+Grid_width		100
+Num_food		4
+# Indicate how food locations will be set up.  "random" randomly generates
+# locations.  Any other input will be considered the file name from which to
+# read "Num_food" (first) and the row and col of each source (1 on each line).
+# Does not check that user enters valid row/col values.
+Init_food		food
+###### Function parameters
+# Number of agents that need to act in each timestep.  Basically, one timestep
+# is one instance of the task and Need is the number of agents that need to
+# act in order to meet the demands of the task.
+# Agents that act get one round of learning in each timestep.
+Need			20
+# response probability: right now all agents get the same value.
+# value ranges from 0.0 to 1.0
+# might want to set up random later
+Response_prob		1.0
+# Maximum timesteps each time an agent searches for food.
+# Max timestep of agents' individual runs.
+Max_sim_time		1000
+# The reinforcement values range from 0.0 (no reinforcement) to 1.0 max
+# Positive reinforcement means that cells in a path that does lead to food
+# will become more likely to selected for future paths.
+# Negative reinforcement means that cells in a path that does not lead to
+# food will be less likely to be selected for future paths.
+# A zero value for either means that no change will occur if food is or is not
+# found, depending on if we are referencing positive or negative reinforcement.
+Positive_reinforcement	0.3
+Negative_reinforcement	0.3
+# print the paths of the active agents.  Creates one file per path
+Print_agent_paths	0
+# print the memories of each agent in each step.  Creates separate file
+# for each memory
+Print_agent_memory	0
+# print the final memory of each agent.  Separate file for each agent.
+Print_agent_final_memory	1

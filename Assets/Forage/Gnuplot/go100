@@ -1,0 +1,42 @@
+a.out    1  100 100 1000 rp100
+gnuplot plot.gnu
+a.out  101  200 100 1000 rp095
+gnuplot plot.gnu
+a.out  201  300 100 1000 rp090
+gnuplot plot.gnu
+a.out  301  400 100 1000 rp085
+gnuplot plot.gnu
+a.out  401  500 100 1000 rp080
+gnuplot plot.gnu
+a.out  501  600 100 1000 rp075
+gnuplot plot.gnu
+a.out  601  700 100 1000 rp070
+gnuplot plot.gnu
+a.out  701  800 100 1000 rp065
+gnuplot plot.gnu
+a.out  801  900 100 1000 rp060
+gnuplot plot.gnu
+a.out  901 1000 100 1000 rp055
+gnuplot plot.gnu
+a.out 1001 1100 100 1000 rp050
+gnuplot plot.gnu
+a.out 1101 1200 100 1000 rp045
+gnuplot plot.gnu
+a.out 1201 1300 100 1000 rp040
+gnuplot plot.gnu
+a.out 1301 1400 100 1000 rp035
+gnuplot plot.gnu
+a.out 1401 1500 100 1000 rp030
+gnuplot plot.gnu
+a.out 1501 1600 100 1000 rp025
+gnuplot plot.gnu
+a.out 1601 1700 100 1000 rp020
+gnuplot plot.gnu
+a.out 1701 1800 100 1000 rp015
+gnuplot plot.gnu
+a.out 1801 1900 100 1000 rp010
+gnuplot plot.gnu
+a.out 1901 2000 100 1000 rp005
+gnuplot plot.gnu
+cat *plot_results.txt > all-plot_results.txt
+cat *plot_drop_results.txt > all-plot_drop_results.txt

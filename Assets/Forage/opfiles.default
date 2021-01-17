@@ -1,0 +1,27 @@
+14
+# random always has to be first.  Rest of order doesn't matter
+random		1
+params		1
+# initial population
+initpop		1
+# final agent statistics
+finalagentstats	1
+# distance each agent travelled in each step (path_len)
+stepdistance	1
+# how much time each agent spent on each task
+foodlocations	1
+# average memory map at end of run
+finalavgmemory	1
+# times acted and avg path len of each agent
+path		1
+# gnuplot file for plotting data
+gnu		1
+# nest data printed in each timestep
+stepnest	1
+# final nest statistics
+finalneststats	1
+# nest four files contain info in finalagentstats, but separated into
+# individual files
+finalagentacted	1
+finalagentavgpathlen 1
+finalagentsuccesses 1
