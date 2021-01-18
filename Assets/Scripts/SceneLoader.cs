@@ -26,4 +26,10 @@ public class SceneLoader : MonoBehaviour
         SceneManager.LoadScene("SetParamTracker");
         
     }
+
+    public void LoadSetParamForage()
+    {
+        SceneManager.LoadScene("SetParamForage");
+
+    }
 }

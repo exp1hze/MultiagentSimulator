@@ -154,6 +154,185 @@ public class InputText : MonoBehaviour
                     setParam("2.0");
                 }
                 break;
+
+            // Forage
+            case "Init_thresh":
+                if (!CheckNum(text) && !Regex.IsMatch(text, "^([0-9]{1,}[.][0-9]*)$"))
+                {
+                    setParam("0");
+                    break;
+                }
+
+                double s4 = double.Parse(text);
+
+                //Debug.Log(s);
+                if (s4 < 0.0 || s4 > 1.0)
+                {
+                    setParam("0");
+                }
+                break;
+
+            case "Max_thresh":
+                if (!CheckNum(text) && !Regex.IsMatch(text, "^([0-9]{1,}[.][0-9]*)$"))
+                {
+                    setParam("1.0");
+                    break;
+                }
+
+                double s5 = double.Parse(text);
+
+                //Debug.Log(s);
+                if (s5 < 0.0 || s5 > 1.0)
+                {
+                    setParam("1.0");
+                }
+                break;
+
+            case "Min_thresh":
+                if (!CheckNum(text) && !Regex.IsMatch(text, "^([0-9]{1,}[.][0-9]*)$"))
+                {
+                    setParam("0");
+                    break;
+                }
+
+                double s6 = double.Parse(text);
+
+                //Debug.Log(s);
+                if (s6 < 0.0 || s6 > 1.0)
+                {
+                    setParam("0");
+                }
+                break;
+
+            case "Grid_height":
+                if (!CheckNum(text) && !Regex.IsMatch(text, "^([0-9]{1,}[.][0-9]*)$"))
+                {
+                    setParam("100");
+                    break;
+                }
+
+                double s7 = double.Parse(text);
+
+                //Debug.Log(s);
+                if (s7 < 0.0)
+                {
+                    setParam("100");
+                }
+                break;
+
+            case "Grid_width":
+                if (!CheckNum(text) && !Regex.IsMatch(text, "^([0-9]{1,}[.][0-9]*)$"))
+                {
+                    setParam("100");
+                    break;
+                }
+
+                double s8 = double.Parse(text);
+
+                //Debug.Log(s);
+                if (s8 < 0.0)
+                {
+                    setParam("100");
+                }
+                break;
+
+            case "Need":
+                if (!CheckNum(text) && !Regex.IsMatch(text, "^([0-9]{1,}[.][0-9]*)$"))
+                {
+                    setParam("20");
+                    break;
+                }
+
+                double s9 = double.Parse(text);
+
+                //Debug.Log(s);
+                if (s9 < 0.0)
+                {
+                    setParam("20");
+                }
+                break;
+
+            case "Response_prob":
+                if (!CheckNum(text) && !Regex.IsMatch(text, "^([0-9]{1,}[.][0-9]*)$"))
+                {
+                    setParam("1.0");
+                    break;
+                }
+
+                double rp = double.Parse(text);
+
+                //Debug.Log(s);
+                if (rp < 0.0 || rp > 1.0)
+                {
+                    setParam("1.0");
+                }
+                break;
+
+            case "Max_sim_time":
+                if (!CheckNum(text) && !Regex.IsMatch(text, "^([0-9]{1,}[.][0-9]*)$"))
+                {
+                    setParam("1000");
+                    break;
+                }
+
+                double mst = double.Parse(text);
+
+                //Debug.Log(s);
+                if (mst < 0.0)
+                {
+                    setParam("1000");
+                }
+                break;
+
+            case "Positive_reinforcement":
+                if (!CheckNum(text) && !Regex.IsMatch(text, "^([0-9]{1,}[.][0-9]*)$"))
+                {
+                    setParam("0.3");
+                    break;
+                }
+
+                double pos_r = double.Parse(text);
+
+                //Debug.Log(s);
+                if (pos_r < 0.0 || pos_r > 1.0)
+                {
+                    setParam("0.3");
+                }
+                break;
+
+            case "Negative_reinforcement":
+                if (!CheckNum(text) && !Regex.IsMatch(text, "^([0-9]{1,}[.][0-9]*)$"))
+                {
+                    setParam("0.3");
+                    break;
+                }
+
+                double neg_r = double.Parse(text);
+
+                //Debug.Log(s);
+                if (neg_r < 0.0 || neg_r > 1.0)
+                {
+                    setParam("0.3");
+                }
+                break;
+
+            case "Num_food":
+                if (!CheckNum(text) && !Regex.IsMatch(text, "^([0-9]{1,}[.][0-9]*)$"))
+                {
+                    setParam("4");
+                    break;
+                }
+
+                double food = double.Parse(text);
+
+                //Debug.Log(s);
+                if (food < 0.0)
+                {
+                    setParam("4");
+                }
+                break;
+
+
             default:
                 break;
         }
