@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Diagnostics;
 using System.IO;
+using UnityEngine.SceneManagement;
 
 public class test : MonoBehaviour
 {
@@ -11,9 +12,15 @@ public class test : MonoBehaviour
     public string ProjectPath;
     void Start()
     {
-        
-        ProjectPath = Application.dataPath + "/Tracker";
-
+        Scene scene = SceneManager.GetActiveScene();
+        if (scene.name.Equals("SetParamForage"))
+        {
+            ProjectPath = Application.dataPath + "/Forage";
+        }
+        else
+        {
+            ProjectPath = Application.dataPath + "/Tracker";
+        }
     }
 
     public void run()

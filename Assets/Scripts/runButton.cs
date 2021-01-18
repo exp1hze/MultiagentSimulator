@@ -5,6 +5,7 @@ using System.IO;
 using System.Text;
 using System.Text.RegularExpressions;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class runButton : MonoBehaviour
@@ -28,12 +29,21 @@ public class runButton : MonoBehaviour
     {
     
         _params = new Hashtable();
-        readPath = Application.dataPath + "/Tracker/params";
-        ReadParams(readPath);
-
-
-        runNumPath = Application.dataPath + "/Tracker/run.num";
-        ReadRunNum(runNumPath);
+        Scene scene = SceneManager.GetActiveScene();
+        if (scene.name.Equals("SetParamForage"))
+        {
+            readPath = Application.dataPath + "/Forage/params";
+            ReadParams(readPath);
+            runNumPath = Application.dataPath + "/Forage/run.num";
+            ReadRunNum(runNumPath);
+        }
+        else
+        {
+            readPath = Application.dataPath + "/Tracker/params";
+            ReadParams(readPath);
+            runNumPath = Application.dataPath + "/Tracker/run.num";
+            ReadRunNum(runNumPath);
+        }
 
     }
 
@@ -69,7 +79,7 @@ public class runButton : MonoBehaviour
     {
         string[] param = Regex.Split(line, "\\s+", RegexOptions.IgnoreCase);
         _params.Add(param[0], param[1]);
-        //Debug.Log("reading" + param[0] + " " + param[1]);
+        Debug.Log("reading" + param[0] + " " + param[1]);
     }
 
     // Update is called once per frame
@@ -151,8 +161,8 @@ public class runButton : MonoBehaviour
             Debug.Log("-------------------------");
             mainCamera = GameObject.Find("Main Camera");
             mainCamera.GetComponent<test>().run();
-            StartCoroutine(waitImport(10.0f));
-            isFinished = true;
+            //StartCoroutine(waitImport(10.0f));
+            //isFinished = true;
             
         }
         catch (IOException)
