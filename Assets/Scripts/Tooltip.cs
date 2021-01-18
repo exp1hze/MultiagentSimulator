@@ -3,13 +3,24 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
+
 public class Tooltip : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     private GameObject tooltip;
     public void OnPointerEnter(PointerEventData eventData)
     {
         string key = transform.parent.GetComponent<Text>().text;
-        (tooltip.transform.GetChild(0)).GetComponent<Text>().text = GetInfo(key);
+        Scene scene = SceneManager.GetActiveScene();
+        if(scene.name.Equals("SetParamTracker"))
+        {
+            (tooltip.transform.GetChild(0)).GetComponent<Text>().text = GetTrackerInfo(key);
+        }
+        else if (scene.name.Equals("SetParamForage"))
+        {
+            (tooltip.transform.GetChild(0)).GetComponent<Text>().text = GetForageInfo(key);
+        }
+        
       
         tooltip.SetActive(true);
         tooltip.transform.position = this.transform.position;
@@ -23,7 +34,7 @@ public class Tooltip : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
         tooltip.SetActive(false);
     }
 
-    string GetInfo(string key)
+    string GetTrackerInfo(string key)
     {
         switch(key)
         {
@@ -62,8 +73,64 @@ public class Tooltip : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
         }
         return key;
     }
+    string GetForageInfo(string key)
+    {
+        switch (key)
+        {
+            case "Rerun":
+                key = "(integer) - If set to -1, generate a new random seed for the current run. If greater than -1, use the random seed from run number <Rerun> which is stored in the file< Output path >/ run.< Rerun >/ run.< Rerun >.random.Despite using a previous run’s random seed, the current run is still assigned a new run number of its own based on the current value in the file run.num.";
+                break;
+            case "Max_steps":
+                key = "(integer) - Maximum number of timesteps to run the simulation.";
+                break;
+            case "Pop_size":
+                key = "(integer) - size of population space";
+                break;
+            case "Init_thresh":
+                key = "How to initialize the thresholds of the agents in the population: Values range from 0.0 to 1.0, if 0.0 = initialize randomly else initialize all thresholds to the given value";
+                break;
+            case "Max_thresh":
+                key = "maximum values that agent thresholds can reach";
+                break;
+            case "Min_thresh":
+                key = "minimum values that agent thresholds can reach";
+                break;
+            case "Prob_check":
+                key = "Probability that agent will stop to reconsider what task to work on.\nIf the agent does not stop to reconsider, then continues with current task. This parameter determines how agents will be assigned their own individual value of Agent[].prob_check. Values assigned to agents will range from 0.0 to 1.0, if 0.0 = initialize randomly else initialize all thresholds to the given value Once the agents have their own values for this parameter, it will determine the probability of them stopping to check for new tasks. For values of Agent[].prob_check lower than 0.1, the probability with which the agent stops to check will vary randomly in each timestep.";
+                break;
+            case "Grid_height":
+                key = "Environment parameters";
+                break;
+            case "Grid_width":
+                key = "Environment parameters";
+                break;
+            case "Num_food":
+                key = "Environment parameters";
+                break;
+            case "Init_food":
+                key = "Indicate how food locations will be set up.  'random' randomly generates locations.  Any other input will be considered the file name from which to read 'Num_food' (first) and the row and col of each source (1 on each line). Does not check that user enters valid row/col values.";
+                break;
+            case "Need":
+                key = "Number of agents that need to act in each timestep.  Basically, one timestep is one instance of the task and Need is the number of agents that need to act in order to meet the demands of the task.";
+                break;
+            case "Response_prob":
+                key = "response probability: right now all agents get the same value. value ranges from 0.0 to 1.0 might want to set up random later";
+                break;
+            case "Max_sim_time":
+                key = "Maximum timesteps each time an agent searches for food. Max timestep of agents' individual runs.";
+                break;
+            case "Positive_reinforcement":
+                key = "The reinforcement values range from 0.0 (no reinforcement) to 1.0 max. Positive reinforcement means that cells in a path that does lead to food will become more likely to selected for future paths.";
+                break;
+            case "Negative_reinforcement":
+                key = "Negative reinforcement means that cells in a path that does not lead to food will be less likely to be selected for future paths.";
+                break;
+            default:
+                break;
+        }
+        return key;
+    }
 
-    
     void Start()
     {
         tooltip = GameObject.Find("Canvas").transform.Find("Tooltip").gameObject;
