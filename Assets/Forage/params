@@ -3,15 +3,15 @@ Prob_check     0.8
 Max_sim_time     1000
 Grid_width     100
 Response_prob     1.0
+Print_agent_paths  1
 Need     20
+Negative_reinforcement     0.3
 Positive_reinforcement     0.3
 Rerun     -1
 Max_thresh     1.0
 Init_thresh     0
 Min_thresh     0
-Pop_size     100
 Num_food     4
-Negative_reinforcement     0.3
-Max_steps     300
+Pop_size     100
+Max_steps     1000
 Init_food     food
-Print_agent_paths = 1
