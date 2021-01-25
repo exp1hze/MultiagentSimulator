@@ -14,3 +14,4 @@ Num_food     4
 Negative_reinforcement     0.3
 Max_steps     300
 Init_food     food
+Print_agent_paths = 1

@@ -331,14 +331,18 @@ public class InputText : MonoBehaviour
                     setParam("4");
                 }
                 break;
-
-
+                case "Init_food":
+                if(!System.IO.File.Exists(Application.dataPath + "/Forage/" + text))
+                {
+                    (GameObject.Find("Canvas").transform.Find("foodNFWindow")).gameObject.SetActive(true);
+                }
+                break;
             default:
                 break;
         }
         return name;
     }
-
+    
     public bool CheckNum(string text)
     {
         string pattern = @"^\d*$";
