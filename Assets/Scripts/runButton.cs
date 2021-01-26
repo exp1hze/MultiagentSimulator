@@ -87,18 +87,35 @@ public class runButton : MonoBehaviour
     {   
         if (isFinished == true)
         {
-            ReadRunNum(runNumPath);
-            DirectoryInfo dir = new DirectoryInfo(Application.dataPath + "/Tracker/Output/run." + run_num);
-            if (dir.Exists)
+            Scene scene = SceneManager.GetActiveScene();
+            if (scene.name.Equals("SetParamForage"))
             {
-               
-                animationPanel.SetActive(true);
-                parameterPanel.SetActive(false);
-                Invoke("AnimationStart", 1.0f);
-                //AnimationStart();
-                isFinished = false;
+                ReadRunNum(runNumPath);
+                DirectoryInfo dir = new DirectoryInfo(Application.dataPath + "/Forage/Output/run." + run_num);
+                if (dir.Exists)
+                {
+
+                    animationPanel.SetActive(true);
+                    parameterPanel.SetActive(false);
+                    Invoke("ForageAnimationStart", 1.0f);
+                    //AnimationStart();
+                    isFinished = false;
+                }
             }
-            
+            else
+            {
+                ReadRunNum(runNumPath);
+                DirectoryInfo dir = new DirectoryInfo(Application.dataPath + "/Tracker/Output/run." + run_num);
+                if (dir.Exists)
+                {
+
+                    animationPanel.SetActive(true);
+                    parameterPanel.SetActive(false);
+                    Invoke("AnimationStart", 1.0f);
+                    //AnimationStart();
+                    isFinished = false;
+                }
+            }
         }
     }
 
@@ -161,8 +178,8 @@ public class runButton : MonoBehaviour
             Debug.Log("-------------------------");
             mainCamera = GameObject.Find("Main Camera");
             mainCamera.GetComponent<test>().run();
-            //StartCoroutine(waitImport(10.0f));
-            //isFinished = true;
+            StartCoroutine(waitImport(10.0f));
+            isFinished = true;
             
         }
         catch (IOException)
@@ -188,6 +205,16 @@ public class runButton : MonoBehaviour
         string TstepFile = Application.dataPath + "/Tracker/Output/run." + run_num + "/run." + run_num + ".stepthresh";
         
         animationPanel.GetComponent<AnimationControl>().AnimationStart(positionFile, IRangeFile, TRangeFile, IstepFile, TstepFile);
+        loading.SetActive(false);
+    }
+
+    public void ForageAnimationStart()
+    {
+        // read output file
+        int agentnum = 0; int stepnum = 0;
+        string positionFile = Application.dataPath + "/Forage/Output/run." + run_num + "/run." + run_num + ".agent"+agentnum+".step"+stepnum+".path";
+
+        animationPanel.GetComponent<AnimationControl>().ForageAnimationStart(positionFile);
         loading.SetActive(false);
     }
 }

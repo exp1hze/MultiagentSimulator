@@ -5,6 +5,7 @@ using System.IO;
 using System.Text;
 using System.Text.RegularExpressions;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class AnimationControl : MonoBehaviour
@@ -19,6 +20,7 @@ public class AnimationControl : MonoBehaviour
     public int curStep;
     //public ArrayList ts;
     public ArrayList timeSteps;
+    public ArrayList forageTimeSteps;
     Boolean toRun = false;
     public Boolean toPlay = true;
     public GameObject distanceGraph;
@@ -40,6 +42,8 @@ public class AnimationControl : MonoBehaviour
 
     public int capacity ;
     public bool isComplete;
+    public GameObject agent0;
+    Scene scene;
     public void AnimationStart(string positionFile, string IRangeFile, string TRangeFile, string IstepFile, string TstepFile)
     {
         //isComplete = false;
@@ -51,8 +55,39 @@ public class AnimationControl : MonoBehaviour
         //tsSlider.GetComponent<Slider>().minValue = 1;
 
         tsSlider.transform.GetChild(2).GetChild(0).GetChild(0).GetComponent<Text>().text = "" + curStep;
-        
+    }
 
+    public void ForageAnimationStart(string positionFile)
+    {
+        ReadForageTimestep(positionFile);
+        ForageDrawAndRun();
+    }
+    void ForageDrawAndRun()
+    {
+
+        toRun = true;
+    }
+    public void ReadForageTimestep(string path)
+    {
+        StreamReader sr = new StreamReader(path, Encoding.Default);
+        forageTimeSteps = new ArrayList();
+        string line;
+        sr.ReadLine();
+        while ((line = sr.ReadLine()) != null)          //Read from top to bottom, then put variable name as key, value as value to a hashtable.
+        {
+            BuildForageTimestep(line);
+        }
+        sr.Close();
+    }
+
+    void BuildForageTimestep(string line)
+    {
+        string[] ts = Regex.Split(line, "\\s+", RegexOptions.IgnoreCase);
+        int step = 3; int offset = 200;
+        ForageTimeStep t1 = new ForageTimeStep(step * int.Parse(ts[0])- offset, step * int.Parse(ts[1])-offset);
+        forageTimeSteps.Add(t1);
+        //Debug.Log(t1.idle);
+        //Debug.Log(param[0] + " " + param[1]);
     }
 
     private void ReadAgentTI(string irangeFile, string trangeFile, string istepFile, string tstepFile)
@@ -190,10 +225,11 @@ public class AnimationControl : MonoBehaviour
         curStep = 10;
         timmer = 0;
         time = 0.02f;
-        
+        scene = SceneManager.GetActiveScene();
 
-        //ts = GameObject.Find("Main Camera").GetComponent<readFile>().timeSteps;
-    }
+
+            //ts = GameObject.Find("Main Camera").GetComponent<readFile>().timeSteps;
+        }
 
     // Update is called once per frame
     void Update()
@@ -204,13 +240,31 @@ public class AnimationControl : MonoBehaviour
                 timmer -= Time.deltaTime;
             if (timmer <= 0)
             {
-                run();
+                Scene scene = SceneManager.GetActiveScene();
+                if (scene.name.Equals("SetParamForage"))
+                {
+                    ForageRun();
+                }
+                else
+                {
+                    run();
+                }
                 timmer = time;
             }
         }
 
     }
-
+    void ForageRun()
+    {
+        Debug.Log(forageTimeSteps.Count);
+        if (curStep <= forageTimeSteps.Count - 1)
+        {
+    
+            agent0.GetComponent<Animation>().Move(((ForageTimeStep)forageTimeSteps[curStep]).x, ((ForageTimeStep)forageTimeSteps[curStep]).y, curStep);
+           
+            curStep++;
+        }
+    }
     void run()
     {
         Debug.Log(timeSteps.Count);
@@ -227,6 +281,9 @@ public class AnimationControl : MonoBehaviour
             curStep++;
         }
     }
+
+
+
     public void runOneShot()
     {
         //Debug.Log(timeSteps.Count);
@@ -242,3 +299,4 @@ public class AnimationControl : MonoBehaviour
         }
     }
 }
+

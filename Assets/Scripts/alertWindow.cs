@@ -20,4 +20,5 @@ public class alertWindow : MonoBehaviour
         gameObject.transform.parent.gameObject.SetActive(false);
     }
 
+
 }
