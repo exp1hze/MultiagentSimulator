@@ -64,7 +64,8 @@ public class AnimationControl : MonoBehaviour
     }
     void ForageDrawAndRun()
     {
-
+        Debug.Log("asdasdsa");
+        agent0.GetComponent<Animation>().forageDraw();
         toRun = true;
     }
     public void ReadForageTimestep(string path)
@@ -256,7 +257,7 @@ public class AnimationControl : MonoBehaviour
     }
     void ForageRun()
     {
-        Debug.Log(forageTimeSteps.Count);
+        //Debug.Log(forageTimeSteps.Count);
         if (curStep <= forageTimeSteps.Count - 1)
         {
     
@@ -267,7 +268,7 @@ public class AnimationControl : MonoBehaviour
     }
     void run()
     {
-        Debug.Log(timeSteps.Count);
+        //Debug.Log(timeSteps.Count);
         if (curStep<=timeSteps.Count-1)
         {
             tsSlider.GetComponent<Slider>().value = curStep;

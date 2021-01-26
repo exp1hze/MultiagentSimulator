@@ -1,4 +1,5 @@
 ﻿using geniikw.DataRenderer2D;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -66,6 +67,27 @@ public class Animation : MonoBehaviour
         }
         return true;
     }
+
+    public void forageDraw()
+    {
+        Debug.Log("1111111");
+        //ts = GameObject.Find("Main Camera").GetComponent<readFile>().timeSteps;
+        ts = animationPanel.GetComponent<AnimationControl>().forageTimeSteps;
+        UILine draw = line.GetComponent<UILine>();
+        while (draw.line.Count < ts.Count)
+        {
+            draw.line.Push();
+            Debug.Log("2222222");
+        }
+        for (int i = 0; i < ts.Count; i++)
+        {
+            Debug.Log("333333");
+            Vector2 pos = new Vector2(transform.parent.position.x + ((ForageTimeStep)ts[i]).x, transform.parent.position.y + ((ForageTimeStep)ts[i]).y);
+            draw.line.EditPoint(i, pos, 0.5f);
+        }
+        
+    }
+
     bool inWindow()
     {
         bool re = false;
