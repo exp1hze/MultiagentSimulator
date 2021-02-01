@@ -210,11 +210,31 @@ public class runButton : MonoBehaviour
 
     public void ForageAnimationStart()
     {
-        // read output file
+        // create gnuplot sheldcode script
         int agentnum = 0; int stepnum = 0;
-        string positionFile = Application.dataPath + "/Forage/Output/run." + run_num + "/run." + run_num + ".agent"+agentnum+".step"+stepnum+".path";
+        string positionFilePath = Application.dataPath + "/Forage/Output/run." + run_num + "/gnuplot.sh";
+        try
+        {
+            FileStream fs = new FileStream(positionFilePath, FileMode.Create);
+            StreamWriter sw = new StreamWriter(fs);
+            string line = "gnuplot run." + run_num + ".agentstepmemory.gnu";
+            Debug.Log(line);
+            sw.Write(line);
+            sw.Flush();
 
-        animationPanel.GetComponent<AnimationControl>().ForageAnimationStart(positionFile);
+            sw.Close();
+            fs.Close();
+            
+
+        }
+        catch (IOException)
+        {
+            Debug.Log("The file may opened by another program!");
+        }
+        string path = "/Output/run." + run_num;
+        string name = "gnuplot.sh";
+        mainCamera.GetComponent<test>().runPath(name, path);
+        animationPanel.GetComponent<AnimationControl>().ForageAnimationStart(run_num.ToString());
         loading.SetActive(false);
     }
 }

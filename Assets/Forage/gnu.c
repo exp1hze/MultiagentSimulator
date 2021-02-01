@@ -182,7 +182,7 @@ void fprint_agentstepmemory_gnu()
 		Output_path, Run_num, Run_num);
    fp = fopen(filename, "w");
 
-   fprintf(fp, "set term post eps color\n");
+   fprintf(fp, "set term png\n");
    fprintf(fp, "set size ratio -1\n");
    fprintf(fp, "unset key\n");
    fprintf(fp, "set tic scale 0\n");
@@ -200,7 +200,7 @@ void fprint_agentstepmemory_gnu()
          {
          fprintf(fp, "#\n");
          fprintf(fp, "# plot agent %d step %d memory\n", i, t);
-         fprintf(fp, "set output \"run.%d.agent%d.step%d.memory.eps\"\n",
+         fprintf(fp, "set output \"run.%d.agent%d.step%d.memory.png\"\n",
 		Run_num, i, t);
          fprintf(fp, "set title \"run.%d: agent %d step %d memory map\"\n",
                 Run_num, i, t);

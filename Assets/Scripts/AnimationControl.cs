@@ -59,8 +59,9 @@ public class AnimationControl : MonoBehaviour
 
     public void ForageAnimationStart(string positionFile)
     {
-        ReadForageTimestep(positionFile);
-        ForageDrawAndRun();
+        Debug.Log("run." + positionFile);
+        //ReadForageTimestep(positionFile);
+        //ForageDrawAndRun();
     }
     void ForageDrawAndRun()
     {

@@ -8,11 +8,11 @@ Positive_reinforcement     0.3
 Rerun     -1
 Max_thresh     1.0
 Init_thresh     0
-Print_agent_paths     1
+Print_agent_paths     0
 Min_thresh     0
-Pop_size     100
+Pop_size     20
 Num_food     4
 Negative_reinforcement     0.3
 Max_steps     2
-Print_agent_memory     0
+Print_agent_memory     1
 Init_food     food
