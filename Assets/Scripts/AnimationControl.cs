@@ -75,11 +75,19 @@ public class AnimationControl : MonoBehaviour
             curagent.transform.parent = gridContent.transform;
             gridAgent.Add(curagent);
         }
-
+        toRun = true;
+        toPlay = true;
     }
 
+    public GameObject loading;
     void changeSprite()
     {
+        if(loading.active == true)
+        {
+            loading.SetActive(false);
+        }
+        
+    
         for (int i = 0; i < forageAgentNum; i++)
         {
             gridAgent[i].GetComponent<Image>().sprite = (Sprite)LoadSprite[curStep*forageAgentNum+i];
@@ -216,11 +224,13 @@ public class AnimationControl : MonoBehaviour
         //Debug.Log(param[0] + " " + param[1]);
     }
 
+    float timeForage;
     void Start()
     {
-        curStep = 10;
+        curStep = 0;
         timmer = 0;
         time = 0.02f;
+        timeForage = 1f;
         scene = SceneManager.GetActiveScene();
 
 
@@ -230,25 +240,36 @@ public class AnimationControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (toRun == true && toPlay == true)
+        Scene scene = SceneManager.GetActiveScene();
+        if (scene.name.Equals("SetParamForage"))
         {
             if (timmer > 0)
                 timmer -= Time.deltaTime;
             if (timmer <= 0)
             {
-                Scene scene = SceneManager.GetActiveScene();
-                if (scene.name.Equals("SetParamForage"))
-                {
-                    ForageRun();
-                }
-                else
-                {
-                    run();
-                }
-                timmer = time;
+               
+                
+                ForageRun();
+
+                timmer = timeForage;
             }
         }
+        else
+        {
+            if (toRun == true && toPlay == true)
+            {
+                if (timmer > 0)
+                    timmer -= Time.deltaTime;
+                if (timmer <= 0)
+                {
 
+
+                    run();
+
+                    timmer = time;
+                }
+            }
+        }   
     }
     void ForageRun()
     {

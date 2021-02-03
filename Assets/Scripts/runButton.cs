@@ -96,7 +96,7 @@ public class runButton : MonoBehaviour
                 {
 
                     animationPanel.SetActive(true);
-                    parameterPanel.SetActive(false);
+                    //parameterPanel.SetActive(false);
                     Invoke("ForageAnimationStart", 1.0f);
                     //AnimationStart();
                     isFinished = false;
@@ -239,7 +239,7 @@ public class runButton : MonoBehaviour
 
         animationPanel.GetComponent<AnimationControl>().ForageAnimationStart(run_num.ToString(), inputFields[2].GetComponent<InputField>().text,
         inputFields[1].GetComponent<InputField>().text,loadsprite);
-        loading.SetActive(false);
+        //loading.SetActive(false);
     }
 
     public List<Sprite> loadsprite;
