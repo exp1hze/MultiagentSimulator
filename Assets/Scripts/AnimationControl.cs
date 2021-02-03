@@ -56,40 +56,34 @@ public class AnimationControl : MonoBehaviour
 
         tsSlider.transform.GetChild(2).GetChild(0).GetChild(0).GetComponent<Text>().text = "" + curStep;
     }
+    public GameObject gridContent;
+    public GameObject gridPrefab;
+    public List<GameObject> gridAgent;
 
-    public void ForageAnimationStart(string positionFile)
+    List<Sprite> LoadSprite;
+    int forageStepNum;
+    int forageAgentNum;
+    public void ForageAnimationStart(string positionFile,string agent_num, string step_num, List<Sprite> loadSprite)
     {
+        LoadSprite = loadSprite;
+        gridAgent = new List<GameObject>();
         Debug.Log("run." + positionFile);
-        //ReadForageTimestep(positionFile);
-        //ForageDrawAndRun();
-    }
-    void ForageDrawAndRun()
-    {
-        Debug.Log("asdasdsa");
-        agent0.GetComponent<Animation>().forageDraw();
-        toRun = true;
-    }
-    public void ReadForageTimestep(string path)
-    {
-        StreamReader sr = new StreamReader(path, Encoding.Default);
-        forageTimeSteps = new ArrayList();
-        string line;
-        sr.ReadLine();
-        while ((line = sr.ReadLine()) != null)          //Read from top to bottom, then put variable name as key, value as value to a hashtable.
-        {
-            BuildForageTimestep(line);
+        forageAgentNum = int.Parse(agent_num);
+        forageStepNum = int.Parse(step_num);
+        for (int i = 0; i< forageAgentNum; i++) {
+            GameObject curagent = Instantiate(gridPrefab);
+            curagent.transform.parent = gridContent.transform;
+            gridAgent.Add(curagent);
         }
-        sr.Close();
+
     }
 
-    void BuildForageTimestep(string line)
+    void changeSprite()
     {
-        string[] ts = Regex.Split(line, "\\s+", RegexOptions.IgnoreCase);
-        int step = 3; int offset = 200;
-        ForageTimeStep t1 = new ForageTimeStep(step * int.Parse(ts[0])- offset, step * int.Parse(ts[1])-offset);
-        forageTimeSteps.Add(t1);
-        //Debug.Log(t1.idle);
-        //Debug.Log(param[0] + " " + param[1]);
+        for (int i = 0; i < forageAgentNum; i++)
+        {
+            gridAgent[i].GetComponent<Image>().sprite = (Sprite)LoadSprite[curStep*forageAgentNum+i];
+        }
     }
 
     private void ReadAgentTI(string irangeFile, string trangeFile, string istepFile, string tstepFile)
@@ -259,11 +253,10 @@ public class AnimationControl : MonoBehaviour
     void ForageRun()
     {
         //Debug.Log(forageTimeSteps.Count);
-        if (curStep <= forageTimeSteps.Count - 1)
+        if (curStep <= forageStepNum - 1)
         {
-    
-            agent0.GetComponent<Animation>().Move(((ForageTimeStep)forageTimeSteps[curStep]).x, ((ForageTimeStep)forageTimeSteps[curStep]).y, curStep);
-           
+
+            changeSprite();
             curStep++;
         }
     }

@@ -234,7 +234,47 @@ public class runButton : MonoBehaviour
         string path = "/Output/run." + run_num;
         string name = "gnuplot.sh";
         mainCamera.GetComponent<test>().runPath(name, path);
-        animationPanel.GetComponent<AnimationControl>().ForageAnimationStart(run_num.ToString());
+        LoadTexture2Sprite(run_num, inputFields[2].GetComponent<InputField>().text,
+        inputFields[1].GetComponent<InputField>().text);
+
+        animationPanel.GetComponent<AnimationControl>().ForageAnimationStart(run_num.ToString(), inputFields[2].GetComponent<InputField>().text,
+        inputFields[1].GetComponent<InputField>().text,loadsprite);
         loading.SetActive(false);
+    }
+
+    public List<Sprite> loadsprite;
+    // read img to sprite
+    private void LoadTexture2Sprite(string runNum, string AgentNum, string StepNum)
+    {
+        int agentNum = int.Parse(AgentNum);
+        int stepNum = int.Parse(StepNum);
+
+
+        loadsprite = new List<Sprite>();
+        for (int i = 0; i < stepNum; i++)
+        {
+            for (int j = 0; j < agentNum; j++)
+            {
+                String imgPath = Application.dataPath + "/Forage/Output/run." + runNum + "/run." +
+                    runNum + ".agent" + j + ".step" + i + ".memory.png";
+                Texture2D t2d = new Texture2D(200, 200);
+                t2d.LoadImage(getImageByte(imgPath));
+                Sprite sprite = Sprite.Create(t2d, new Rect(0, 0, t2d.width, t2d.height), Vector2.zero);
+                loadsprite.Add(sprite);
+            }
+        }
+
+    }
+
+
+
+    // read img byte
+    public static byte[] getImageByte(string imagePath)
+    {
+        FileStream files = new FileStream(imagePath, FileMode.Open);
+        byte[] imgByte = new byte[files.Length];
+        files.Read(imgByte, 0, imgByte.Length);
+        files.Close();
+        return imgByte;
     }
 }
