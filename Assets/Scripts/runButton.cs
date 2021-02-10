@@ -232,6 +232,10 @@ public class runButton : MonoBehaviour
             Debug.Log("The file may opened by another program!");
         }
         string path = "/Output/run." + run_num;
+
+        ReadStepNest(Application.dataPath + "/Forage" + path+"/run."+run_num+".stepnest");
+
+
         string name = "gnuplot.sh";
         mainCamera.GetComponent<test>().runPath(name, path);
         LoadTexture2Sprite(run_num, inputFields[2].GetComponent<InputField>().text,
@@ -241,7 +245,29 @@ public class runButton : MonoBehaviour
         inputFields[1].GetComponent<InputField>().text,loadsprite);
         //loading.SetActive(false);
     }
-
+    ArrayList stepNest_foodin;
+    ArrayList stepNest_numactors;
+    public void ReadStepNest(string path)
+    {
+        stepNest_foodin = new ArrayList();
+        stepNest_numactors = new ArrayList();
+        StreamReader sr = new StreamReader(path, Encoding.Default);
+        string line;
+        while ((line = sr.ReadLine()) != null)    
+        {
+            BuildStepNest(line);
+        }
+        Debug.Log("-------------------complete--------------");
+        sr.Close();
+    }
+    
+    public void BuildStepNest(string line)
+    {
+        string[] param = Regex.Split(line, "\\s+", RegexOptions.IgnoreCase);
+        stepNest_foodin.Add(param[3]);
+        stepNest_numactors.Add(param[5]);
+        Debug.Log("reading" + param[3] + " " + param[5]);
+    }
     public List<Sprite> loadsprite;
     // read img to sprite
     private void LoadTexture2Sprite(string runNum, string AgentNum, string StepNum)

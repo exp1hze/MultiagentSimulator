@@ -63,8 +63,14 @@ public class AnimationControl : MonoBehaviour
     List<Sprite> LoadSprite;
     int forageStepNum;
     int forageAgentNum;
-    public void ForageAnimationStart(string positionFile,string agent_num, string step_num, List<Sprite> loadSprite)
+
+    ArrayList stepNest_foodin;
+    ArrayList stepNest_numactors;
+    public void ForageAnimationStart(string positionFile,string agent_num, string step_num, List<Sprite> loadSprite, ArrayList stepNest_foodin,
+    ArrayList stepNest_numactors)
     {
+        this.stepNest_foodin = stepNest_foodin;
+        this.stepNest_numactors = stepNest_numactors;
         LoadSprite = loadSprite;
         gridAgent = new List<GameObject>();
         Debug.Log("run." + positionFile);
@@ -75,6 +81,10 @@ public class AnimationControl : MonoBehaviour
             curagent.transform.parent = gridContent.transform;
             gridAgent.Add(curagent);
         }
+
+        distanceGraph.GetComponent<Window_ForageGraph>().createG_foodin(stepNest_foodin);
+        switchGraph.GetComponent<Window_ForageGraph>().createG_numactors(stepNest_numactors);
+
         toRun = true;
         toPlay = true;
     }
@@ -182,7 +192,7 @@ public class AnimationControl : MonoBehaviour
         tracker.GetComponent<Animation>().draw();
         distanceGraph.GetComponent<Window_Graph>().createG(timeSteps);
         switchGraph.GetComponent<Window_Graph>().createG_switch(timeSteps);
-       
+        
         
         toRun = true;
         //runOneShot();
