@@ -182,7 +182,7 @@ void fprint_agentstepmemory_gnu()
 		Output_path, Run_num, Run_num);
    fp = fopen(filename, "w");
 
-   fprintf(fp, "set term png\n");
+   fprintf(fp, "set term pngcairo\n");
    fprintf(fp, "set size ratio -1\n");
    fprintf(fp, "unset key\n");
    fprintf(fp, "set tic scale 0\n");
@@ -191,6 +191,10 @@ void fprint_agentstepmemory_gnu()
    fprintf(fp, "set cblabel \"Score\"\n");
    fprintf(fp, "set xrange [-1:%d]\n", Envr.width);
    fprintf(fp, "set yrange [-1:%d] reverse\n", Envr.height);
+   fprintf(fp, "set lmargin at screen 0.08\n");
+   fprintf(fp, "set rmargin at screen 0.85\n");
+   fprintf(fp, "set bmargin at screen 0.08\n");
+   fprintf(fp, "set tmargin at screen 0.93\n");
    fprintf(fp, "set view map\n\n");
 
    for (i=0; i<Pop_size; i++)
