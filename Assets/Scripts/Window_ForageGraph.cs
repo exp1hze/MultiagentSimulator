@@ -30,11 +30,12 @@ public class Window_ForageGraph : MonoBehaviour
         List<float> vl = new List<float>();
         foreach (string t in valueList)
         {
-            if (t.idle > max)
+            float food = float.Parse(t);
+            if (food > max)
             {
-                max = t.idle;
+                max = food;
             }
-            vl.Add(t.idle);
+            vl.Add(food);
         }
         //maxY = (int)Math.Ceiling(max);
         //Debug.Log(max + " " + maxY);
@@ -47,13 +48,14 @@ public class Window_ForageGraph : MonoBehaviour
         circles = new GameObject[valueList.Count];
         float max = 0f;
         List<float> vl = new List<float>();
-        foreach (TimeStep t in valueList)
+        foreach (string t in valueList)
         {
-            if (t.distance > max)
+            float actors = float.Parse(t);
+            if (actors > max)
             {
-                max = t.distance;
+                max = actors;
             }
-            vl.Add(t.distance);
+            vl.Add(actors);
         }
         //maxY = (int)Math.Ceiling(max);
         //Debug.Log(max + " " + maxY);

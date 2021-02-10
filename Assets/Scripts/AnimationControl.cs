@@ -63,12 +63,13 @@ public class AnimationControl : MonoBehaviour
     List<Sprite> LoadSprite;
     int forageStepNum;
     int forageAgentNum;
-
+    int step_num;
     ArrayList stepNest_foodin;
     ArrayList stepNest_numactors;
     public void ForageAnimationStart(string positionFile,string agent_num, string step_num, List<Sprite> loadSprite, ArrayList stepNest_foodin,
     ArrayList stepNest_numactors)
     {
+        this.step_num = int.Parse(step_num);
         this.stepNest_foodin = stepNest_foodin;
         this.stepNest_numactors = stepNest_numactors;
         LoadSprite = loadSprite;
@@ -84,7 +85,10 @@ public class AnimationControl : MonoBehaviour
 
         distanceGraph.GetComponent<Window_ForageGraph>().createG_foodin(stepNest_foodin);
         switchGraph.GetComponent<Window_ForageGraph>().createG_numactors(stepNest_numactors);
+        tsSlider.GetComponent<Slider>().maxValue = int.Parse(step_num) - 1;
+        //tsSlider.GetComponent<Slider>().minValue = 1;
 
+        tsSlider.transform.GetChild(2).GetChild(0).GetChild(0).GetComponent<Text>().text = "" + curStep;
         toRun = true;
         toPlay = true;
     }
@@ -253,15 +257,18 @@ public class AnimationControl : MonoBehaviour
         Scene scene = SceneManager.GetActiveScene();
         if (scene.name.Equals("SetParamForage"))
         {
-            if (timmer > 0)
-                timmer -= Time.deltaTime;
-            if (timmer <= 0)
+            if (toRun == true && toPlay == true)
             {
-               
-                
-                ForageRun();
+                if (timmer > 0)
+                    timmer -= Time.deltaTime;
+                if (timmer <= 0)
+                {
 
-                timmer = timeForage;
+
+                    ForageRun();
+
+                    timmer = timeForage;
+                }
             }
         }
         else
@@ -286,7 +293,10 @@ public class AnimationControl : MonoBehaviour
         //Debug.Log(forageTimeSteps.Count);
         if (curStep <= forageStepNum - 1)
         {
-
+            tsSlider.GetComponent<Slider>().value = curStep;
+            tsSlider.transform.GetChild(2).GetChild(0).GetChild(0).GetComponent<Text>().text = "" + curStep;
+            distanceGraph.GetComponent<Window_ForageGraph>().setcurrentDot(curStep);
+            switchGraph.GetComponent<Window_ForageGraph>().setcurrentDot(curStep);
             changeSprite();
             curStep++;
         }
@@ -312,16 +322,31 @@ public class AnimationControl : MonoBehaviour
 
     public void runOneShot()
     {
-        //Debug.Log(timeSteps.Count);
-        if (curStep <= timeSteps.Count - 1)
+        Scene scene = SceneManager.GetActiveScene();
+        if (scene.name.Equals("SetParamForage"))
         {
-            Debug.Log("oneshot");
-            target.GetComponent<Animation>().Move(((TimeStep)timeSteps[curStep]).target_x, ((TimeStep)timeSteps[curStep]).target_y, curStep);
-            tracker.GetComponent<Animation>().Move(((TimeStep)timeSteps[curStep]).tracker_x, ((TimeStep)timeSteps[curStep]).tracker_y, curStep);
-            distanceGraph.GetComponent<Window_Graph>().setcurrentDot(curStep);
-            switchGraph.GetComponent<Window_Graph>().setcurrentDot(curStep);
+            if (curStep <= step_num - 1)
+            {
+                for (int i = 0; i < forageAgentNum; i++)
+                {
+                    gridAgent[i].GetComponent<Image>().sprite = (Sprite)LoadSprite[curStep * forageAgentNum + i];
+                }
+                distanceGraph.GetComponent<Window_ForageGraph>().setcurrentDot(curStep);
+                switchGraph.GetComponent<Window_ForageGraph>().setcurrentDot(curStep);
+            }
+        }
+        else if (scene.name.Equals("SetParamTracker"))
+        {
+            if (curStep <= timeSteps.Count - 1)
+            {
+                Debug.Log("oneshot");
+                target.GetComponent<Animation>().Move(((TimeStep)timeSteps[curStep]).target_x, ((TimeStep)timeSteps[curStep]).target_y, curStep);
+                tracker.GetComponent<Animation>().Move(((TimeStep)timeSteps[curStep]).tracker_x, ((TimeStep)timeSteps[curStep]).tracker_y, curStep);
+                distanceGraph.GetComponent<Window_Graph>().setcurrentDot(curStep);
+                switchGraph.GetComponent<Window_Graph>().setcurrentDot(curStep);
 
-            tiGraph.GetComponent<agentTI>().Set(agents[curStep]);
+                tiGraph.GetComponent<agentTI>().Set(agents[curStep]);
+            }
         }
     }
 }

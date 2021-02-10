@@ -242,7 +242,7 @@ public class runButton : MonoBehaviour
         inputFields[1].GetComponent<InputField>().text);
 
         animationPanel.GetComponent<AnimationControl>().ForageAnimationStart(run_num.ToString(), inputFields[2].GetComponent<InputField>().text,
-        inputFields[1].GetComponent<InputField>().text,loadsprite);
+        inputFields[1].GetComponent<InputField>().text,loadsprite,stepNest_foodin,stepNest_numactors);
         //loading.SetActive(false);
     }
     ArrayList stepNest_foodin;
@@ -266,7 +266,7 @@ public class runButton : MonoBehaviour
         string[] param = Regex.Split(line, "\\s+", RegexOptions.IgnoreCase);
         stepNest_foodin.Add(param[3]);
         stepNest_numactors.Add(param[5]);
-        Debug.Log("reading" + param[3] + " " + param[5]);
+        Debug.Log("-----------------------reading" + param[3] + " " + param[5]);
     }
     public List<Sprite> loadsprite;
     // read img to sprite
