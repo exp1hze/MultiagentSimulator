@@ -32,7 +32,18 @@ public class runSelectedFile : MonoBehaviour
     {
         
     }
-
+    public void runFile()
+    {
+        Scene scene = SceneManager.GetActiveScene();
+        if (scene.name.Equals("selectForageFiles"))
+        {
+            runASelectedForageFile();
+        }
+        else
+        {
+            runASelectedFile();
+        }
+    }
     public void runASelectedFile()
     {
         GameObject canvas = GameObject.Find("Canvas");
@@ -85,8 +96,8 @@ public class runSelectedFile : MonoBehaviour
         string run_num = transform.GetChild(0).GetComponent<Text>().text;
         string[] split = run_num.Split('.');
         run_num = split[1];
-
-        SceneManager.LoadScene("SetParamForage");
+        runPath.GetComponent<runParam>().history = true;
+        
         ReadStepNest(Application.dataPath + "/Forage/Output/run." + run_num + "/run." + run_num + ".stepnest");
         ReadFromParams(Application.dataPath + "/Forage/Output/run." + run_num+"/run."+ run_num + ".params");
         LoadTexture2Sprite(run_num, agent_num, step_num);
@@ -97,6 +108,7 @@ public class runSelectedFile : MonoBehaviour
         runPath.GetComponent<runParam>().stepNest_numactors = stepNest_numactors;
         runPath.GetComponent<runParam>().stepNest_foodin = stepNest_foodin;
         runPath.GetComponent<runParam>().loadSprite = loadsprite;
+        SceneManager.LoadScene("SetParamForage");
     }
 
     public void ReadFromParams(string path)
@@ -106,10 +118,14 @@ public class runSelectedFile : MonoBehaviour
         while ((line = sr.ReadLine()) != null)          //Read from top to bottom, then put variable name as key, value as value to a hashtable.
         {
             string[] param = Regex.Split(line, "\\s+", RegexOptions.IgnoreCase);
-            if (param[0].Equals("Max_steps")){
-                step_num = param[2];
-            } else if (param[0].Equals("Pop_size")) {
-                agent_num = param[2];
+            //Debug.Log(param[1]);
+            if (param[1].Equals("Max_steps")){
+                step_num = param[3];
+                //Debug.Log(param[2] + "asdasdsas");
+            } else if (param[1].Equals("Pop_size")) {
+                agent_num = param[3];
+                //Debug.Log(param[2] + "asdasdsas");
+
             } }
         sr.Close();
     }
@@ -149,7 +165,7 @@ public class runSelectedFile : MonoBehaviour
     public void delete()
     {
 
-        string path= filePath+ "Output/"+fileName.text;
+        string path= filePath+fileName.text;
 
         DirectoryInfo di = new DirectoryInfo(path);
         di.Delete(true);

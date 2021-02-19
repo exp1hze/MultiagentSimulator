@@ -92,6 +92,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fileName: {fileID: 3769702121674192965}
+  loadsprite: []
 --- !u!1 &2849802283986562016
 GameObject:
   m_ObjectHideFlags: 0
@@ -342,7 +343,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 2866401423589778512}
-        m_MethodName: runASelectedFile
+        m_MethodName: runFile
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
