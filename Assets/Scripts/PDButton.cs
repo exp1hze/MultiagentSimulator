@@ -15,6 +15,11 @@ public class PDButton : MonoBehaviour
     public void gotoSelect(){
         SceneManager.LoadScene("selectFiles");
     }
+
+    public void gotoForageSelect()
+    {
+        SceneManager.LoadScene("selectForageFiles");
+    }
     void Awake()
     {
         GameObject runPath = GameObject.Find("runPath");

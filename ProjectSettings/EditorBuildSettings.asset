@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SetParamForage.unity
     guid: 404c11c8a566646feba54cbb4b925c01
+  - enabled: 1
+    path: Assets/Scenes/selectForageFiles.unity
+    guid: 107c3e278aa0e4aaabce49199776c108
   m_configObjects: {}

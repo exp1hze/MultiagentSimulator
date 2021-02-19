@@ -12,7 +12,9 @@ public class selectFile : MonoBehaviour
     public GameObject listPrefab;
     void Start()
     {
+        
         getFileName();
+
     }
 
     public void refresh()
@@ -29,7 +31,19 @@ public class selectFile : MonoBehaviour
     }
     public void getFileName()
     {
-        string filePath = Application.dataPath + "/Tracker/Output/";
+        string filePath;
+        Scene scene = SceneManager.GetActiveScene();
+        if (scene.name.Equals("selectForageFiles"))
+        {
+            filePath = Application.dataPath + "/Forage/Output/";
+        }
+        else
+        {
+            filePath = Application.dataPath + "/Tracker/Output/";
+        }
+
+
+        
         List<string> allFiles = new List<string>();
         DirectoryInfo dir = new DirectoryInfo(filePath);
         if (!dir.Exists)

@@ -281,7 +281,7 @@ public class runButton : MonoBehaviour
         {
             for (int j = 0; j < agentNum; j++)
             {
-                String imgPath = Application.dataPath + "/Forage/Output/run." + runNum + "/run." +
+                string imgPath = Application.dataPath + "/Forage/Output/run." + runNum + "/run." +
                     runNum + ".agent" + j + ".step" + i + ".memory.png";
                 Texture2D t2d = new Texture2D(200, 200);
                 t2d.LoadImage(getImageByte(imgPath));

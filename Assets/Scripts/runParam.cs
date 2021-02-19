@@ -10,6 +10,12 @@ public class runParam : MonoBehaviour
     public string IstepFile ;
     public string TstepFile ;
     public bool history;
+
+    public string agent_num;
+    public string step_num;
+    public List<Sprite> loadSprite;
+    public ArrayList stepNest_foodin;
+    public ArrayList stepNest_numactors;
     // Start is called before the first frame update
     void Start()
     {
