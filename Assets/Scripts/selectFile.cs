@@ -35,11 +35,11 @@ public class selectFile : MonoBehaviour
         Scene scene = SceneManager.GetActiveScene();
         if (scene.name.Equals("selectForageFiles"))
         {
-            filePath = Application.dataPath + "/Forage/Output/";
+            filePath = System.IO.Directory.GetCurrentDirectory() + "/Forage/Output/";
         }
         else
         {
-            filePath = Application.dataPath + "/Tracker/Output/";
+            filePath = System.IO.Directory.GetCurrentDirectory() + "/Tracker/Output/";
         }
 
 

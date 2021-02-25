@@ -10,7 +10,7 @@ public class readOutput : MonoBehaviour
     public string readPath;
     void Start()
     {
-        readPath = Application.dataPath + "/Tracker/Output";
+        readPath = System.IO.Directory.GetCurrentDirectory() + "/Tracker/Output";
 
     }
 

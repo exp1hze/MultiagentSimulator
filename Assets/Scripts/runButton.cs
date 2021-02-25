@@ -32,16 +32,16 @@ public class runButton : MonoBehaviour
         Scene scene = SceneManager.GetActiveScene();
         if (scene.name.Equals("SetParamForage"))
         {
-            readPath = Application.dataPath + "/Forage/params";
+            readPath = System.IO.Directory.GetCurrentDirectory() + "/Forage/params";
             ReadParams(readPath);
-            runNumPath = Application.dataPath + "/Forage/run.num";
+            runNumPath = System.IO.Directory.GetCurrentDirectory() + "/Forage/run.num";
             ReadRunNum(runNumPath);
         }
         else
         {
-            readPath = Application.dataPath + "/Tracker/params";
+            readPath = System.IO.Directory.GetCurrentDirectory() + "/Tracker/params";
             ReadParams(readPath);
-            runNumPath = Application.dataPath + "/Tracker/run.num";
+            runNumPath = System.IO.Directory.GetCurrentDirectory() + "/Tracker/run.num";
             ReadRunNum(runNumPath);
         }
 
@@ -91,7 +91,7 @@ public class runButton : MonoBehaviour
             if (scene.name.Equals("SetParamForage"))
             {
                 ReadRunNum(runNumPath);
-                DirectoryInfo dir = new DirectoryInfo(Application.dataPath + "/Forage/Output/run." + run_num);
+                DirectoryInfo dir = new DirectoryInfo(System.IO.Directory.GetCurrentDirectory() + "/Forage/Output/run." + run_num);
                 if (dir.Exists)
                 {
 
@@ -105,7 +105,7 @@ public class runButton : MonoBehaviour
             else
             {
                 ReadRunNum(runNumPath);
-                DirectoryInfo dir = new DirectoryInfo(Application.dataPath + "/Tracker/Output/run." + run_num);
+                DirectoryInfo dir = new DirectoryInfo(System.IO.Directory.GetCurrentDirectory() + "/Tracker/Output/run." + run_num);
                 if (dir.Exists)
                 {
 
@@ -198,11 +198,11 @@ public class runButton : MonoBehaviour
     public void AnimationStart()
     {
         // read output file
-        string positionFile = Application.dataPath + "/Tracker/Output/run."+run_num+"/run."+run_num+".stepsummary";
-        string IRangeFile = Application.dataPath + "/Tracker/Output/run." + run_num + "/run." + run_num + ".intensityranges";
-        string TRangeFile = Application.dataPath + "/Tracker/Output/run." + run_num + "/run." + run_num + ".threshrange";
-        string IstepFile = Application.dataPath + "/Tracker/Output/run." + run_num + "/run." + run_num + ".stepintensity";
-        string TstepFile = Application.dataPath + "/Tracker/Output/run." + run_num + "/run." + run_num + ".stepthresh";
+        string positionFile = System.IO.Directory.GetCurrentDirectory() + "/Tracker/Output/run."+run_num+"/run."+run_num+".stepsummary";
+        string IRangeFile = System.IO.Directory.GetCurrentDirectory() + "/Tracker/Output/run." + run_num + "/run." + run_num + ".intensityranges";
+        string TRangeFile = System.IO.Directory.GetCurrentDirectory() + "/Tracker/Output/run." + run_num + "/run." + run_num + ".threshrange";
+        string IstepFile = System.IO.Directory.GetCurrentDirectory() + "/Tracker/Output/run." + run_num + "/run." + run_num + ".stepintensity";
+        string TstepFile = System.IO.Directory.GetCurrentDirectory() + "/Tracker/Output/run." + run_num + "/run." + run_num + ".stepthresh";
         
         animationPanel.GetComponent<AnimationControl>().AnimationStart(positionFile, IRangeFile, TRangeFile, IstepFile, TstepFile);
         loading.SetActive(false);
@@ -212,7 +212,7 @@ public class runButton : MonoBehaviour
     {
         // create gnuplot sheldcode script
         int agentnum = 0; int stepnum = 0;
-        string positionFilePath = Application.dataPath + "/Forage/Output/run." + run_num + "/gnuplot.sh";
+        string positionFilePath = System.IO.Directory.GetCurrentDirectory() + "/Forage/Output/run." + run_num + "/gnuplot.sh";
         try
         {
             FileStream fs = new FileStream(positionFilePath, FileMode.Create);
@@ -224,25 +224,28 @@ public class runButton : MonoBehaviour
 
             sw.Close();
             fs.Close();
+            string path = "/Output/run." + run_num;
+            string name = "gnuplot.sh";
             
+            mainCamera.GetComponent<test>().runPath(name, path);
+            
+
+            ReadStepNest(System.IO.Directory.GetCurrentDirectory() + "/Forage" + path + "/run." + run_num + ".stepnest");
+
+
+            
+            LoadTexture2Sprite(run_num, inputFields[2].GetComponent<InputField>().text,
+            inputFields[1].GetComponent<InputField>().text);
+
+            animationPanel.GetComponent<AnimationControl>().ForageAnimationStart(run_num.ToString(), inputFields[2].GetComponent<InputField>().text,
+            inputFields[1].GetComponent<InputField>().text, loadsprite, stepNest_foodin, stepNest_numactors);
 
         }
         catch (IOException)
         {
             Debug.Log("The file may opened by another program!");
         }
-        string path = "/Output/run." + run_num;
-
-        ReadStepNest(Application.dataPath + "/Forage" + path+"/run."+run_num+".stepnest");
-
-
-        string name = "gnuplot.sh";
-        mainCamera.GetComponent<test>().runPath(name, path);
-        LoadTexture2Sprite(run_num, inputFields[2].GetComponent<InputField>().text,
-        inputFields[1].GetComponent<InputField>().text);
-
-        animationPanel.GetComponent<AnimationControl>().ForageAnimationStart(run_num.ToString(), inputFields[2].GetComponent<InputField>().text,
-        inputFields[1].GetComponent<InputField>().text,loadsprite,stepNest_foodin,stepNest_numactors);
+        
         //loading.SetActive(false);
     }
     ArrayList stepNest_foodin;
@@ -281,7 +284,7 @@ public class runButton : MonoBehaviour
         {
             for (int j = 0; j < agentNum; j++)
             {
-                string imgPath = Application.dataPath + "/Forage/Output/run." + runNum + "/run." +
+                string imgPath = System.IO.Directory.GetCurrentDirectory() + "/Forage/Output/run." + runNum + "/run." +
                     runNum + ".agent" + j + ".step" + i + ".memory.png";
                 Texture2D t2d = new Texture2D(200, 200);
                 t2d.LoadImage(getImageByte(imgPath));

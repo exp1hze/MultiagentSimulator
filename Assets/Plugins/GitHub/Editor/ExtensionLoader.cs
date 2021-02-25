@@ -50,7 +50,7 @@ namespace GitHub.Unity
             // we should probably detect if our assets change and re-run this instead of doing it every time
             //if (!ExtensionLoader.instance.Initialized)
             {
-                var scriptPath = Path.Combine(Application.dataPath, "Editor" + Path.DirectorySeparatorChar + "GitHub.Unity" + Path.DirectorySeparatorChar + "EntryPoint.cs");
+                var scriptPath = Path.Combine(System.IO.Directory.GetCurrentDirectory(), "Editor" + Path.DirectorySeparatorChar + "GitHub.Unity" + Path.DirectorySeparatorChar + "EntryPoint.cs");
                 inSourceMode = File.Exists(scriptPath);
                 ToggleAssemblies();
                 //ExtensionLoader.instance.Initialized = true;

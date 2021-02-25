@@ -25,16 +25,17 @@ public class PDButton : MonoBehaviour
         GameObject runPath = GameObject.Find("runPath");
         //runPath.GetComponent<runParam>().history = false;
         fatherPanel = GameObject.Find("rightPanel");
-        foreach (Transform child in fatherPanel.transform)
-        {
-            child.gameObject.SetActive(false);
-        }
+        //foreach (Transform child in fatherPanel.transform)
+        //{
+        //    child.gameObject.SetActive(false);
+        //}
     }
     public void onclick()
     {       
-        Debug.Log(gameObject.name);
+        Debug.Log("click");
         foreach (Transform child in fatherPanel.transform)
         {
+            
             child.gameObject.SetActive(false);
         }
         childPanel.SetActive(true);
@@ -42,7 +43,7 @@ public class PDButton : MonoBehaviour
 
     public void getFileName()
     {
-        string filePath = Application.dataPath + "/Tracker/Output/";
+        string filePath = System.IO.Directory.GetCurrentDirectory() + "/Tracker/Output/";
         List<string> allFiles = new List<string>();
         DirectoryInfo dir = new DirectoryInfo(filePath);
         if (!dir.Exists)

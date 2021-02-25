@@ -4,22 +4,24 @@ using UnityEngine;
 using System.Diagnostics;
 using System.IO;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class test : MonoBehaviour
 {
     public string result;
     public string state;
     public string ProjectPath;
+  
     void Start()
     {
         Scene scene = SceneManager.GetActiveScene();
         if (scene.name.Equals("SetParamForage"))
         {
-            ProjectPath = Application.dataPath + "/Forage";
+            ProjectPath = System.IO.Directory.GetCurrentDirectory() + "/Forage";
         }
         else
         {
-            ProjectPath = Application.dataPath + "/Tracker";
+            ProjectPath = System.IO.Directory.GetCurrentDirectory() + "/Tracker";
         }
     }
 
@@ -36,7 +38,6 @@ public class test : MonoBehaviour
         process.StartInfo.RedirectStandardInput = true;
         process.StartInfo.WorkingDirectory = ProjectPath;
         process.Start();
-        UnityEngine.Debug.Log("process start rojectPath = !!" + ProjectPath);
         string output = process.StandardOutput.ReadToEnd();
         process.WaitForExit();
         process.Close();
@@ -56,7 +57,6 @@ public class test : MonoBehaviour
         process.StartInfo.RedirectStandardInput = true;
         process.StartInfo.WorkingDirectory = ProjectPath;
         process.Start();
-        UnityEngine.Debug.Log("process start rojectPath = !!" + ProjectPath);
         string output = process.StandardOutput.ReadToEnd();
         process.WaitForExit();
         process.Close();

@@ -332,7 +332,7 @@ public class InputText : MonoBehaviour
                 }
                 break;
                 case "Init_food":
-                if(!System.IO.File.Exists(Application.dataPath + "/Forage/" + text))
+                if(!System.IO.File.Exists(System.IO.Directory.GetCurrentDirectory() + "/Forage/" + text))
                 {
                     (GameObject.Find("Canvas").transform.Find("foodNFWindow")).gameObject.SetActive(true);
                 }

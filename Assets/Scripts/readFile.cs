@@ -12,10 +12,10 @@ public class readFile : MonoBehaviour
     void Awake()
     {
         _params = new Hashtable();
-        readPath = Application.dataPath + "/Tracker/params";
+        readPath = System.IO.Directory.GetCurrentDirectory() + "/Tracker/params";
         ReadParams(readPath);
         //this.gameObject.GetComponent<writeFile>().WriteParams(readPath);
-        //string rp = Application.dataPath + "/Tracker/Output/run.1/run.1.stepsummary";
+        //string rp = System.IO.Directory.GetCurrentDirectory() + "/Tracker/Output/run.1/run.1.stepsummary";
         //ReadTimestep(rp);
     }
 

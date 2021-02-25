@@ -14,8 +14,8 @@ public class historyRun : MonoBehaviour
         Scene scene = SceneManager.GetActiveScene();
         if (history.GetComponent<runParam>().history == true)
         {
-
-            if (scene.name.Equals("setParamTracker"))
+            history.GetComponent<runParam>().history = false;
+            if (scene.name.Equals("SetParamTracker"))
             {
                 string positionFile = history.GetComponent<runParam>().positionFile;
                 string IRangeFile = history.GetComponent<runParam>().IRangeFile;
@@ -40,15 +40,12 @@ public class historyRun : MonoBehaviour
                 runButton.GetComponent<runButton>().animationPanel.
                     GetComponent<AnimationControl>().ForageAnimationStart(positionFile, agent_num, step_num, loadSprite, stepNest_foodin,
                     stepNest_numactors);
-            }   
-
-
-
-
-
+            } 
 
         }
         
+
+
     }
 
     // Update is called once per frame

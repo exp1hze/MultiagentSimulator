@@ -20,11 +20,11 @@ public class runSelectedFile : MonoBehaviour
         Scene scene = SceneManager.GetActiveScene();
         if (scene.name.Equals("selectForageFiles"))
         {
-            filePath = Application.dataPath + "/Forage/Output/";
+            filePath = System.IO.Directory.GetCurrentDirectory() + "/Forage/Output/";
         }
         else
         {
-            filePath = Application.dataPath + "/Tracker/Output/";
+            filePath = System.IO.Directory.GetCurrentDirectory() + "/Tracker/Output/";
         }
     }
     // Update is called once per frame
@@ -53,11 +53,11 @@ public class runSelectedFile : MonoBehaviour
         string[] split = run_num.Split('.');
         run_num = split[1];
         //Debug.Log(run_num);
-        runPath.GetComponent<runParam>().positionFile = Application.dataPath + "/Tracker/Output/run." + run_num + "/run." + run_num + ".stepsummary";
-        runPath.GetComponent<runParam>().IRangeFile = Application.dataPath + "/Tracker/Output/run." + run_num + "/run." + run_num + ".intensityranges";
-        runPath.GetComponent<runParam>().TRangeFile = Application.dataPath + "/Tracker/Output/run." + run_num + "/run." + run_num + ".threshrange";
-        runPath.GetComponent<runParam>().IstepFile = Application.dataPath + "/Tracker/Output/run." + run_num + "/run." + run_num + ".stepintensity";
-        runPath.GetComponent<runParam>().TstepFile = Application.dataPath + "/Tracker/Output/run." + run_num + "/run." + run_num + ".stepthresh";
+        runPath.GetComponent<runParam>().positionFile = System.IO.Directory.GetCurrentDirectory() + "/Tracker/Output/run." + run_num + "/run." + run_num + ".stepsummary";
+        runPath.GetComponent<runParam>().IRangeFile = System.IO.Directory.GetCurrentDirectory() + "/Tracker/Output/run." + run_num + "/run." + run_num + ".intensityranges";
+        runPath.GetComponent<runParam>().TRangeFile = System.IO.Directory.GetCurrentDirectory() + "/Tracker/Output/run." + run_num + "/run." + run_num + ".threshrange";
+        runPath.GetComponent<runParam>().IstepFile = System.IO.Directory.GetCurrentDirectory() + "/Tracker/Output/run." + run_num + "/run." + run_num + ".stepintensity";
+        runPath.GetComponent<runParam>().TstepFile = System.IO.Directory.GetCurrentDirectory() + "/Tracker/Output/run." + run_num + "/run." + run_num + ".stepthresh";
         runPath.GetComponent<runParam>().history = true;
         SceneManager.LoadScene("SetParamTracker");
 
@@ -98,8 +98,8 @@ public class runSelectedFile : MonoBehaviour
         run_num = split[1];
         runPath.GetComponent<runParam>().history = true;
         
-        ReadStepNest(Application.dataPath + "/Forage/Output/run." + run_num + "/run." + run_num + ".stepnest");
-        ReadFromParams(Application.dataPath + "/Forage/Output/run." + run_num+"/run."+ run_num + ".params");
+        ReadStepNest(System.IO.Directory.GetCurrentDirectory() + "/Forage/Output/run." + run_num + "/run." + run_num + ".stepnest");
+        ReadFromParams(System.IO.Directory.GetCurrentDirectory() + "/Forage/Output/run." + run_num+"/run."+ run_num + ".params");
         LoadTexture2Sprite(run_num, agent_num, step_num);
 
         runPath.GetComponent<runParam>().positionFile = run_num.ToString();
@@ -143,7 +143,7 @@ public class runSelectedFile : MonoBehaviour
         {
             for (int j = 0; j < agentNum; j++)
             {
-                string imgPath = Application.dataPath + "/Forage/Output/run." + runNum + "/run." +
+                string imgPath = System.IO.Directory.GetCurrentDirectory() + "/Forage/Output/run." + runNum + "/run." +
                     runNum + ".agent" + j + ".step" + i + ".memory.png";
                 Texture2D t2d = new Texture2D(200, 200);
                 t2d.LoadImage(getImageByte(imgPath));

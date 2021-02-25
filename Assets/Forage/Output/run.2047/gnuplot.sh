@@ -1,1 +1,0 @@
-gnuplot run.2047.agentstepmemory.gnu
