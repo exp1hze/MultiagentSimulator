@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
-public class Drag : MonoBehaviour, IDragHandler
+public class Drag : MonoBehaviour, IDragHandler, IPointerDownHandler
 {
 
     [SerializeField]
@@ -13,6 +13,7 @@ public class Drag : MonoBehaviour, IDragHandler
     public void OnDrag(PointerEventData evenData)
     {
         gameObject.GetComponent<RectTransform>().anchoredPosition += evenData.delta / canvas.scaleFactor;
+        GameObject.Find("Canvas").GetComponent<selectedWindow>().selected = this.transform.parent.parent.gameObject;
     }
 
 
@@ -37,20 +38,22 @@ public class Drag : MonoBehaviour, IDragHandler
     {
         if (RectTransformUtility.RectangleContainsScreenPoint(transform.parent.GetComponent<RectTransform>(),Input.mousePosition))
         {
-            if (Input.GetAxis("Mouse ScrollWheel") > 0)
-            {
-                if (scale <= 5f)
+            if (GameObject.Find("Canvas").GetComponent<selectedWindow>().selected == this.transform.parent.parent.gameObject) {
+                if (Input.GetAxis("Mouse ScrollWheel") > 0)
                 {
-                    scale += 0.2f;
-                    setScale();
+                    if (scale <= 5f)
+                    {
+                        scale += 0.2f;
+                        setScale();
+                    }
                 }
-            }
-            if (Input.GetAxis("Mouse ScrollWheel") < 0)
-            {
-                if (scale > 0.5f)
+                if (Input.GetAxis("Mouse ScrollWheel") < 0)
                 {
-                    scale -= 0.2f;
-                    setScale();
+                    if (scale > 0.5f)
+                    {
+                        scale -= 0.2f;
+                        setScale();
+                    }
                 }
             }
         }
@@ -59,5 +62,10 @@ public class Drag : MonoBehaviour, IDragHandler
     void setScale()
     {
         gameObject.GetComponent<Transform>().localScale = new Vector3(scale, scale, 1f);
+    }
+
+    public void OnPointerDown(PointerEventData eventData)
+    {
+        GameObject.Find("Canvas").GetComponent<selectedWindow>().selected = this.transform.parent.parent.gameObject;
     }
 }

@@ -83,4 +83,15 @@ public class TimeStepControl : MonoBehaviour
         }
         
     }
+    public void toStop()
+    {
+
+        if (animationControl.GetComponent<AnimationControl>().toPlay == true)
+        {
+            animationControl.GetComponent<AnimationControl>().toPlay = false;
+            playButton.transform.GetChild(1).gameObject.SetActive(true);
+            playButton.transform.GetChild(0).gameObject.SetActive(false);
+        }
+
+    }
 }

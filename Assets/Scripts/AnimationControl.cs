@@ -300,6 +300,10 @@ public class AnimationControl : MonoBehaviour
             changeSprite();
             curStep++;
         }
+        else
+        {
+            tsSlider.transform.parent.GetComponent<TimeStepControl>().toStop();
+        }
     }
     void run()
     {
@@ -315,6 +319,10 @@ public class AnimationControl : MonoBehaviour
             
             tiGraph.GetComponent<agentTI>().Set(agents[curStep]);
             curStep++;
+        }
+        else
+        {
+            tsSlider.transform.parent.GetComponent<TimeStepControl>().toStop();
         }
     }
 

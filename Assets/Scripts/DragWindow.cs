@@ -11,10 +11,12 @@ public class DragWindow : MonoBehaviour, IDragHandler, IPointerDownHandler
     public void OnDrag(PointerEventData eventData)
     {
         dragRectTransform.anchoredPosition += eventData.delta / canvas.scaleFactor;
+        
     }
 
     public void OnPointerDown(PointerEventData eventData)
     {
         dragRectTransform.SetAsLastSibling();
+        GameObject.Find("Canvas").GetComponent<selectedWindow>().selected = this.transform.parent.gameObject;
     }
 }
