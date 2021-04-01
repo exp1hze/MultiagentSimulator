@@ -21,25 +21,7 @@ public class Window_Graph : MonoBehaviour {
     }
 
     public float maxY;
-    public void createG_switch(ArrayList valueList)
-    {
-        circles = new GameObject[valueList.Count];
-        float max=0f;
-        List<float> vl = new List<float>();
-        foreach (TimeStep t in valueList)
-        {
-            if(t.idle > max)
-            {
-                max = t.idle;
-            }
-            vl.Add(t.idle);
-        }
-        //maxY = (int)Math.Ceiling(max);
-        //Debug.Log(max + " " + maxY);
-        maxY = max;
-        ShowGraph(vl, (int _i) => "", (float _f) => "" + Mathf.RoundToInt(_f));
-    }
-
+    
     public void createG(ArrayList valueList)
     {
         circles = new GameObject[valueList.Count];
@@ -57,6 +39,26 @@ public class Window_Graph : MonoBehaviour {
         //Debug.Log(max + " " + maxY);
         maxY = max;
         ShowGraph(vl, (int _i) => "" + (_i ), (float _f) => "" + Mathf.RoundToInt(_f));
+    }
+
+    public void createG_switch(ArrayList valueList)
+    {
+        circles = new GameObject[valueList.Count];
+        float max = 0f;
+        List<float> vl = new List<float>();
+        foreach (TimeStep t in valueList)
+        {
+            if (t.idle > max)
+            {
+                max = t.idle;
+            }
+            vl.Add(t.idle);
+        }
+        //maxY = (int)Math.Ceiling(max);
+        //Debug.Log(max + " " + maxY);
+        maxY = max;
+
+        ShowGraph(vl, (int _i) => "", (float _f) => "" + Mathf.RoundToInt(_f));
     }
     private GameObject CreateCircle(Vector2 anchoredPosition) {
         //m_SpriteRenderer = GetComponent<SpriteRenderer>();
@@ -102,7 +104,15 @@ public class Window_Graph : MonoBehaviour {
             labelX.gameObject.SetActive(true);
             labelX.anchoredPosition = new Vector2(xPosition, -7f);
             labelX.GetComponent<Text>().text = getAxisLabelX(i);
+            try{
+                if (int.Parse(getAxisLabelX(i)) % 2 == 1)
+                {
+                    labelX.GetComponent<Text>().text = "";
+                }
+            }
+            catch (Exception e) { }
             
+
             RectTransform dashX = Instantiate(dashTemplateX);
             dashX.SetParent(graphContainer, false);
             dashX.gameObject.SetActive(true);

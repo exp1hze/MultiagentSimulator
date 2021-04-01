@@ -21,7 +21,7 @@ Hetero_center_mu     1.2
 Intensity_aging_down     0.025
 Target_step_len     3
 Thresh_decrease     0.1
-Max_steps     10
+Max_steps     200
 RP_gaussian_mu     0.7
 Thresh_increase     0.033
 Circle_radius     10

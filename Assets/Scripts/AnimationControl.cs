@@ -82,7 +82,7 @@ public class AnimationControl : MonoBehaviour
             curagent.transform.parent = gridContent.transform;
             gridAgent.Add(curagent);
         }
-
+        
         distanceGraph.GetComponent<Window_ForageGraph>().createG_foodin(stepNest_foodin);
         switchGraph.GetComponent<Window_ForageGraph>().createG_numactors(stepNest_numactors);
         tsSlider.GetComponent<Slider>().maxValue = int.Parse(step_num) - 1;
