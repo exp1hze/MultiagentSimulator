@@ -23,8 +23,9 @@ public class agent : MonoBehaviour
     public float TSMax;
     public float TEMax;
 
-    public agent(int id,float iN, float iW, float iS, float iE, float tN, float tW, float tS, float tE, float iNMax, float iWMax, float iSMax, float iEMax, float tNMax, float tWMax, float tSMax, float tEMax)
+    public agent(int ID,float iN, float iW, float iS, float iE, float tN, float tW, float tS, float tE, float iNMax, float iWMax, float iSMax, float iEMax, float tNMax, float tWMax, float tSMax, float tEMax)
     {
+        id = ID;
         IN = iN;
         IW = iW;
         IS = iS;

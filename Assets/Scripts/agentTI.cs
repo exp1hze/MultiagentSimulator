@@ -78,6 +78,7 @@ public class agentTI : MonoBehaviour
         SetBar("IW", age.IW);
         SetBar("TW", age.TW);
         Center.transform.GetChild(0).GetComponent<Text>().text = "" + age.id;
+        Debug.Log("agentId is"+age.id);
     }
     public void SetBar(string name, float length)
     {
