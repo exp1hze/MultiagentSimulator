@@ -1110,10 +1110,9 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1155070305}
-  - {fileID: 1663899056}
+  - {fileID: 1755439380}
   - {fileID: 2144563059}
   - {fileID: 898927733}
-  - {fileID: 1755439380}
   m_Father: {fileID: 978287610}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1256,7 +1255,8 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1663899056}
   m_Father: {fileID: 945077640}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2446,13 +2446,13 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 945077640}
-  m_RootOrder: 1
+  m_Father: {fileID: 1155070305}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -262.26672, y: 107.768906}
-  m_SizeDelta: {x: -183.11682, y: -282.8412}
+  m_AnchoredPosition: {x: -0.000061035156, y: -2.8291779}
+  m_SizeDelta: {x: 0.000061035156, y: 5.658203}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1663899057
 MonoBehaviour:
@@ -2485,12 +2485,13 @@ MonoBehaviour:
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 5
+    m_LineSpacing: 1
   m_Text: 'INTRODUCTION OF FORAGE
 
 
 
-    FORAGE'
+    The goal of the forage problem is to find
+    the food locations from the nest.'
 --- !u!222 &1663899058
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2529,7 +2530,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 945077640}
-  m_RootOrder: 4
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
@@ -2668,8 +2669,13 @@ MonoBehaviour:
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 5
-  m_Text: INTRODUCTION OF TRACKER
+    m_LineSpacing: 1
+  m_Text: 'INTRODUCTION OF TRACKER
+
+
+
+    The goal of the problem is to move the
+    tracker to match the target''s movement.'
 --- !u!222 &1900464116
 CanvasRenderer:
   m_ObjectHideFlags: 0

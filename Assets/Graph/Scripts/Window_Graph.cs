@@ -24,6 +24,9 @@ public class Window_Graph : MonoBehaviour {
     
     public void createG(ArrayList valueList)
     {
+        graphContainer.sizeDelta = new Vector2(graphContainer.sizeDelta.x / 500 * valueList.Count, graphContainer.sizeDelta.y);
+        dashTemplateY.sizeDelta = new Vector2(dashTemplateY.sizeDelta.x / 500 * valueList.Count, dashTemplateY.sizeDelta.y);
+
         circles = new GameObject[valueList.Count];
         float max = 0f;
         List<float> vl = new List<float>();
@@ -43,6 +46,8 @@ public class Window_Graph : MonoBehaviour {
 
     public void createG_switch(ArrayList valueList)
     {
+        graphContainer.sizeDelta = new Vector2(graphContainer.sizeDelta.x / 500 * valueList.Count, graphContainer.sizeDelta.y);
+        dashTemplateY.sizeDelta = new Vector2(dashTemplateY.sizeDelta.x / 500 * valueList.Count, dashTemplateY.sizeDelta.y);
         circles = new GameObject[valueList.Count];
         float max = 0f;
         List<float> vl = new List<float>();

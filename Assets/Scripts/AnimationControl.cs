@@ -52,11 +52,9 @@ public class AnimationControl : MonoBehaviour
         grids = gridContent.transform.GetComponentsInChildren<agentTI>();
         ReadTimestep(positionFile);
         ReadAgentTI(IRangeFile, TRangeFile, IstepFile, TstepFile);
-        
         DrawAndRun();
         tsSlider.GetComponent<Slider>().maxValue = timeSteps.Count - 1;
         //tsSlider.GetComponent<Slider>().minValue = 1;
-
         tsSlider.transform.GetChild(2).GetChild(0).GetChild(0).GetComponent<Text>().text = "" + curStep;
     }
     public GameObject gridContent;
